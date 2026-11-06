@@ -1,0 +1,17 @@
+_site/
+.quarto/
+__pycache__/
+*_files/
+
+/.quarto/
+**/*.quarto_ipynb
+
+# Fichiers .typ intermédiaires des pages (keep-typ: true, pour les PDF complets)
+/algebre/*.typ
+/geometrie/*.typ
+/trigonometrie/*.typ
+/analyse/*.typ
+/statistique/*.typ
+/melange/*.typ
+/mise-en-situation/*.typ
+/autoevaluation/*.typ

@@ -1,0 +1,221 @@
+num_2026;provenance;theme;usage;reponse_disponible;figure;doublon_de;debut_enonce
+1;Examen 2017;Algèbre;séance;corrigée en séance;;;Un commerçant propose une réduction de $40\%$ sur les prix affichés. Quel est le prix affiché si la réduction 
+2;Examen 2018;Algèbre;séance;corrigée en séance;;;Considérons le système de deux équations à deux inconnues $\dis{\begin{cases}3x+2y=5\\2x+3y=10\end{cases} }$.\
+3;Examen 2018;Algèbre;séance;corrigée en séance;;;Quel est l'ensemble des nombres réels $m$ tels que l'équation $(m-3)x^2-2x+2=0$ admette exactement deux racine
+4;Examen 2018;Algèbre;séance;corrigée en séance;;;Anna fait du babysitting pour gagner de l'argent de poche. Elle demande par séance de babysitting une somme fi
+5;Examen 2022;Algèbre;séance;corrigée en séance;;;On considère les nombres réels positifs $a$ et $b$ tels que $a^2\ge b$.\\ Parmi les propositions suivantes, la
+6;Examen 2022;Algèbre;séance;corrigée en séance;;;On considère le polynôme $P$ défini par $P(x) = ax^2+bx+c$ où $a$, $b$ et $c$ sont trois nombres réels. On sai
+7;Examen 2019;Algèbre;séance;corrigée en séance;;;Parmi les propositions suivantes, une seule est égale à $\dis{1+\frac{x}{1-\frac{2}{2+\frac{1}{4x}}} }$ en tou
+8;Examen 2022;Algèbre;séance;corrigée en séance;;;On considère le système linéaire $$\begin{cases} (t^2-9)x+(2t-6)y=15-t\\ (t+3)x+(t-3)y=t \end{cases} $$ Parmi 
+9;Examen 2021;Algèbre;séance;corrigée en séance;;;On considère le nombre entier $n$. Que vaut l'expression $\dis{3^{n+1}+3^{n-2}- \frac{1}{3^{1-n}}}$?
+10;Prépa UMONS;Algèbre;séance;corrigée en séance;;;Parmi les propositions suivantes, laquelle est vraie?
+11;Examen 2017;Géométrie;séance;corrigée en séance;oui;;La \figref{poly} est composée de trois hexagones réguliers identiques.\\ \begin{figure}[h!] \centering \define
+12;Examen 2020;Géométrie;séance;corrigée en séance;;;"Dans le plan muni d'un repère orthonormé, on considère la droite passant par les points $(0;3)$ et $(2;0)$. On"
+13;Examen 2021;Géométrie;séance;corrigée en séance;;;Dans un repère cartésien orthonormé $Oxy$, considérons la droite $d_1$ d'équation $y=2x-1$ et la droite $d_2$ 
+14;Examen 2019;Géométrie;séance;corrigée en séance;;;"Dans le plan muni d'un repère orthonormé, on considère les points $A$ de coordonnées $(2;2)$, $B$ de coordonné"
+15;Examen 2022;Géométrie;séance;corrigée en séance;;;On considère quatre points $P$, $Q$, $R$ et $S$ formant un parallélogramme tel que $\vect{PQ}$ a la même direc
+16;Examen 2019;Géométrie;séance;corrigée en séance;;;Dans le plan muni d'un repère orthonormé, on considère les trois droites suivantes : $d_1\equiv y =3x+1$, $\di
+17;Examen 2020;Géométrie;séance;corrigée en séance;;;Dans le plan muni d'un repère orthonormé, on considère la droite $d_1$ d'équation $y+2x-4=0$ ainsi que la droi
+18;Examen 2020;Géométrie;séance;corrigée en séance;;;On considère dans le plan quatre points $P$, $Q$, $R$ et $S$ formant un parallélogramme et $M$ le milieu des d
+19;Examen 2022;Géométrie;séance;corrigée en séance;;;"Dans le plan cartésien orthonormé, on considère le parallélogramme de sommets $A(2;1)$, $B(5;4)$, $C(\alpha;\b"
+20;Prépa UMONS;Géométrie;séance;corrigée en séance;;;"Dans le plan muni d'un repère orthonormé, on considère les points $A(2;-1)$, $B(3;4)$ et $C(-4;6)$. Posons $\v"
+21;Examen 2017;Analyse;séance;corrigée en séance;;;Quel est le domaine de définition de la fonction $f$ définie par $\dis{f(x) = \frac{x+3}{-2x^2+3x}}$?
+22;Examen 2020;Analyse;séance;corrigée en séance;;;On considère la fonction définie explicitement par $f(x) = x^3-3x^2+3x-5$. Quelle est la proposition correcte 
+23;Examen 2022;Analyse;séance;corrigée en séance;;;Une culture de cellules croît de manière exponentielle. On constate que le nombre de cellules double en vingt 
+24;Examen 2022;Analyse;séance;corrigée en séance;;;Soit $f$ une fonction réelle, définie pour tout nombre réel $x$ et dérivable au moins deux fois, croissante et
+25;Examen 2018;Analyse;séance;corrigée en séance;;;Que vaut la pente de la tangente au graphe de la fonction réelle définie par $\dis{f(x) = \e^{\sin(3x)\cos(3x)
+26;Examen 2018;Analyse;séance;corrigée en séance;oui;;Considérons la fonction $f$ de domaine $\RR\bs\{\pm 1\}$ et dont la dérivée première $f'$ admet un graphe dont
+27;Examen 2018;Analyse;séance;corrigée en séance;;;Que vaut $\dis{\int_0^3 x \e^{2x} \dx}$?
+28;Examen 2018;Analyse;séance;corrigée en séance;;;Que vaut la limite suivante : $\dis{\lim\limits_{x \to 2} \frac{2-x}{x^2-4}}$?
+29;Examen 2021;Analyse;séance;corrigée en séance;;;On considère la fonction $f$ définie explicitement par $\dis{f(x) = \ln(2\e^x+1+\e^{2x})}$ où $x$ est une vari
+30;Examen 2022;Analyse;séance;corrigée en séance;;;On considère la fonction $f$ définie pour tout nombre réel $x$ différent de $-1$ par $\dis{f(x) = \frac{x}{x+1
+31;Examen 2022;Analyse;séance;corrigée en séance;;;On considère la fonction $f$ définie explicitement par $$\dis{f(x) = \frac{3}{x}-2+\frac{4x^2-2}{x^2+1}}$$ On 
+32;Examen 2017;Trigonométrie;séance;corrigée en séance;;;Quel est le périmètre d'un rectangle dont la diagonale mesure $13\centi\meter$ et dont un des côtés mesure $5\
+33;Examen 2017;Trigonométrie;séance;corrigée en séance;;;Sachant que $\dis{0 \le \alpha \le \frac{\pi}{2}}$ et que $\sin (\alpha) = \sin (2\alpha)$, que vaut $\alpha$?
+34;Examen 2019;Trigonométrie;séance;corrigée en séance;oui;;Considérons un parallélogramme $ABCD$ tel que représenté ci-dessous. Supposons que l'aire du parallélogramme v
+35;Examen 2018;Trigonométrie;séance;corrigée en séance;;;Considérons les trois nombres suivants : $A=\cos(15^\circ)$, $B=\cos(30^\circ)$ et $C= \cos^2(30^\circ)$. Parm
+36;Examen 2019;Trigonométrie;séance;corrigée en séance;;;Considérons la somme $I = \sin (\alpha) + \sin(2\alpha) + \sin (3\alpha) + \ldots + \sin(98\alpha) +\sin(99\al
+37;Examen 2019;Trigonométrie;séance;corrigée en séance;;;Parmi les propositions suivantes, laquelle est égale à $\dis{\cos(3\pi-x) +\cos \left( \frac{\pi}{2}+x \right)
+38;Examen 2019;Trigonométrie;séance;corrigée en séance;oui;;Je veux vendre des glaces. Pour cela, j'imprime des affiches avec un grand cornet de glace. Le cornet est un t
+39;Examen 2020;Trigonométrie;séance;corrigée en séance;;;Considérons un angle $\alpha$ situé dans le premier quadrant du cercle trigonométrique, tel que $\sin(\alpha) 
+40;Examen 2020;Trigonométrie;séance;corrigée en séance;;;Considérons un triangle $ABC$ pour lequel $a$ désigne la longueur du côté $[BC]$, $b$ désigne la longueur du c
+41;Examen 2022;Trigonométrie;séance;corrigée en séance;;;On considère un angle $\alpha$, exprimé en radians, qui vérifie les inégalités $\dis{\frac{\pi}{2} \le \alpha 
+42;Examen 2020;Statistique;séance;corrigée en séance;;;Considérons la série statistique composée des nombres strictement positifs suivants : $1$, $x$, et $x+1$ dont 
+43;Examen 2019;Statistique;séance;corrigée en séance;;;Considérons la série statistique composée des $5$ termes distincts suivants : $a$, $3$, $4$, $5$ et $a+4$ avec
+44;Examen 2018;Statistique;séance;corrigée en séance;;;"Considérons les trois séries de données : \begin{itemt} \item série (1) : $\{1;3;5;7;9;11\}$ \hspace*{3.7cm} \"
+45;Examen 2022;Statistique;séance;corrigée en séance;;;Vous obtenez un écart-type pour une série de vingt données. Après vérification, deux de ces données paraissent
+46;Prépa UMONS;Statistique;séance;corrigée en séance;;;"Considérons la série statistique suivante : $8,10,14;15,15,16,18,20,50,80,100,120$. Parmi les propositions sui"
+47;Examen 2021;Algèbre;exercices suppl.;oui (2026_solutions);;;Les pays $A$ et $B$ ont, ensemble, vacciné $20$ millions de personnes au total. S'il avait vacciné $4$ million
+48;Examen 2019;Algèbre;exercices suppl.;oui (2026_solutions);;;Parmi les expressions suivantes, une seule est égale à $\sqrt{x^2+9-6x}$ pour tout réel $x$ où cette expressio
+49;Examen 2020;Algèbre;exercices suppl.;oui (2026_solutions);;;Soient $a$ et $b$ deux réels tels que $a\not= b$. Sachant que $a^2-b^2=(a-b)^2$, laquelle des propositions ci-
+50;Examen 2020;Algèbre;exercices suppl.;oui (2026_solutions);;;Au premier octobre prochain, l'université M. dans l'état de P. augmentera les loyers de tous les logements étu
+51;Examen 2020;Algèbre;exercices suppl.;oui (2026_solutions);;;L'équation $ax^2+bx+1=0$ a comme solution $x=1$ et $x=2$. Que valent $a$ et $b$?
+52;Examen 2020;Algèbre;exercices suppl.;oui (2026_solutions);;;Parmi les propositions suivantes, une seule présente des nombres classés par ordre croissant. Laquelle?
+53;Examen 2021;Algèbre;exercices suppl.;oui (2026_solutions);;;Dans une grande chaine de magasin d'habillement, il y a une opération déstockage : $-50\%$ sur les \og prix ro
+54;Examen 2021;Algèbre;exercices suppl.;oui (2026_solutions);;;Ma voiture consomme $6$ litres de carburants par $100\kilo\meter$ lors des trajets en ville et $4$ litres par 
+55;Examen 2021;Algèbre;exercices suppl.;oui (2026_solutions);oui;;Considérons la parabole dont une portion est représentée ci-dessous. \begin{center} \definecolor{cqcqcq}{rgb}{
+56;Examen 2018;Algèbre;exercices suppl.;oui (2026_solutions);;;Soit $a$ un nombre réel non nul et considérons l'équation $x^2+x-a^2=2$. Combien de solutions réelles distinct
+57;Examen 2020;Algèbre;exercices suppl.;oui (2026_solutions);;;Je dispose d'un compteur électrique qui différencie la consommation en heures creuses (nuit + weekend) et en h
+58;Examen 2019;Algèbre;exercices suppl.;oui (2026_solutions);;;Soit $a$ une constante réelle. Considérons l'équation $(a^2+1)x^2+a^2x-1=0$.\\Parmi les propositions suivantes
+59;Examen 2021;Algèbre;exercices suppl.;oui (2026_solutions);;;On considère quatre expression mathématiques. Parmi ces expressions, laquelle est égale à $\sqrt{x^5}$ pour $x
+60;Examen 2017;Algèbre;exercices suppl.;oui (2026_solutions);oui;;La \figref{fonction} donne une partie de la représentation graphique d'une fonction $f$ du deuxième degré, déf
+61;Examen 2019;Algèbre;exercices suppl.;oui (2026_solutions);;;Soit $(x,y)$ une solution du système suivant de deux équations à deux inconnues réelles $\dis{\begin{cases} 4x
+62;Examen 2022;Algèbre;exercices suppl.;oui (2026_solutions);;;On considère le système linéaire $\begin{cases} a_1x+b_1y =c_1\\ a_2x+b_2y =c_2\\ \end{cases} $ où $a_1$, $a_2
+63;Examen 2020;Algèbre;exercices suppl.;oui (2026_solutions);;;Parmi les nombres suivants, lequel est égal à $0,25^{1,5}$?
+64;Examen 2018;Algèbre;exercices suppl.;oui (2026_solutions);;;Parmi les propositions suivantes, laquelle est égale à $\dis{ \left( \frac{8 \left(\frac{a^4}{b^3} \right)^2 }
+65;Examen 2021;Géométrie;exercices suppl.;oui (2026_solutions);;;"Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère les points $A(1;2)$, $B(x;8)$ et $C(10;y)$ te"
+66;Examen 2018;Géométrie;exercices suppl.;oui (2026_solutions);;;Dans le plan muni d'un repère orthonormé, on considère les trois droites suivantes : \begin{tabenum}[\puceT] \
+67;Examen 2017;Géométrie;exercices suppl.;oui (2026_solutions);;;Dans le plan muni d'un système d'axes orthonormés, on considère une droite $L$ de pente négative qui coupe l'a
+68;Examen 2022;Géométrie;exercices suppl.;oui (2026_solutions);;;Dans le plan muni d'un repère cartésien orthonormé, on considère la courbe $(C)$ d'équation $y=2x^2-8$. Soit $
+69;Examen 2020;Géométrie;exercices suppl.;oui (2026_solutions);;;"Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère la droite $d_1$ d'équation $y+2x-10=0$ et la "
+70;Prépa UMONS;Géométrie;exercices suppl.;oui (2026_solutions);oui;;Considérons le vecteur $\vec v$ représenté dans le repère cartésien donné ci-après. \begin{center} \begin{tikz
+71;Examen 2018;Géométrie;exercices suppl.;oui (2026_solutions);;;Dans le plan muni d'un repère orthonormé, on considère la droite $d$ d'équation $3y=2x+1$ et le point $A$ de c
+72;Examen 2024;Géométrie;exercices suppl.;oui (2026_solutions);;;"Dans le plan muni d'un repère cartésien $Oxy$, on considère la droite $d$ passant par le point $(1;5)$ et para"
+73;Examen 2020;Analyse;exercices suppl.;oui (2026_solutions);;;Étant donné des constantes réelles et non nulles $A$, $B$, $a$, $b$, $c$ et $\omega$, quelle est l'expression 
+74;Examen 2019;Analyse;exercices suppl.;oui (2026_solutions);;;Considérons la fonction réelle $f$ dont l'expression analytique est donnée par $f(x) = \ln (-2x^2+x+1)$.\\Quel
+75;Examen 2018;Analyse;exercices suppl.;oui (2026_solutions);;;Considérons la fonction $f$ dont l'expression analytique est $\dis{f(x) = \frac{\e^{1-x}}{1+x^2}}$. Que vaut l
+76;Examen 2020;Analyse;exercices suppl.;oui (2026_solutions);;;On considère l'unique extremum de la fonction du second degré $f$ définie explicitement par $$f(x) = 4x^2-1-8x
+77;Examen 2021;Analyse;exercices suppl.;oui (2026_solutions);;;On considère la fonction $f$ définie explicitement par l'expression $\dis{f(x) = \frac{x^2-9}{x^2+x-2}}$. Quel
+78;Examen 2020;Analyse;exercices suppl.;oui (2026_solutions);;;On considère la limite pour $x$ tendant vers $2$ de $\dis{\frac{x^2-4}{\sqrt{2}-\sqrt{x}}}$. Cette limite a po
+79;Examen 2018;Analyse;exercices suppl.;oui (2026_solutions);;;Parmi les quatre graphiques ci-dessous (tous représentés dans le même repère orthonormé), un seul peut corresp
+80;Examen 2020;Analyse;exercices suppl.;oui (2026_solutions);;;Considérons la fonction définie explicitement par $f(x) = 2 \sqrt[3]{x^4}-\sqrt{x}+1$. Que vaut la dérivée de 
+81;Examen 2019;Analyse;exercices suppl.;oui (2026_solutions);;;Quel est l'ensemble des nombres réels $m$ tels que la fonction réelle définie par $f(x) = x^2-(1-m)x+m-2$ adme
+82;Examen 2021;Analyse;exercices suppl.;oui (2026_solutions);;;On considère la fonction $f$ définie sur l'ensemble des nombres réels strictement positifs par l'expression $f
+83;Examen 2022;Analyse;exercices suppl.;oui (2026_solutions);;;On considère la droite d'équation $y=x+1$ et la parabole d'équation $y=x^2-3x+1$. Que vaut l'aire de la région
+84;Examen 2021;Analyse;exercices suppl.;oui (2026_solutions);;;Au cours de l'étude d'une fonction $f$ d'une variable réelle $x$, on note l'observation suivante pour la valeu
+85;Examen 2018;Trigonométrie;exercices suppl.;oui (2026_solutions);;;Soit un triangle rectangle $A$ dont un des angles a une amplitude de $30^\circ$ et dont l'hypoténuse mesure $8
+86;Prépa UMONS;Trigonométrie;exercices suppl.;oui (2026_solutions);;;Considérons $ABC$ un triangle quelconque dont les côtés $a$, $b$ et $c$ sont opposés respectivement aux sommet
+87;Examen 2017;Trigonométrie;exercices suppl.;oui (2026_solutions);oui;;En considérant l'illustration donnée à la \figref{triangle} (pas à l'échelle), si $\alpha = 60^\circ$ et $s=3\
+88;Examen 2021;Trigonométrie;exercices suppl.;oui (2026_solutions);;;On considère le nombre $x$ tel que $0<x<2\pi$ et vérifiant $\dis{\cos \left( x-\frac{\pi}{2}\right)=1}$. Que v
+89;Examen 2020;Trigonométrie;exercices suppl.;oui (2026_solutions);;;On considère le nombre $x$ tel que $\dis{-\frac{\pi}{2}<x<0}$ et vérifiant $\sin(x) = -2/3$. Que vaut $\cos(x)
+90;Examen 2020;Trigonométrie;exercices suppl.;oui (2026_solutions);;;Considérons un triangle $ABC$. Supposons que le côté $[BC]$ mesure $5\centi\meter$, que l'angle $\widehat{ACB}
+91;Examen 2018;Trigonométrie;exercices suppl.;oui (2026_solutions);oui;;La figure ci-dessous présente un triangle rectangle. \begin{figure}[h!] \centering \definecolor{qqwuqq}{rgb}{0
+92;Examen 2021;Trigonométrie;exercices suppl.;oui (2026_solutions);;;Considérons le cosinus et le sinus d'un angle $\alpha$ dont l'amplitude est strictement comprise entre $3\pi/4
+93;Prépa UMONS;Trigonométrie;exercices suppl.;oui (2026_solutions);;;Un poteau parfaitement vertical par rapport au sol parfaitement horizontal projette une ombre sur le sol. La l
+94;Examen 2021;Trigonométrie;exercices suppl.;oui (2026_solutions);;;Considérons un triangle $ABC$ pour lequel les côtés $[AB]$ et $[BC]$ ont la même longueur et où $$\dis{\cos (\
+95;Examen 2022;Trigonométrie;exercices suppl.;oui (2026_solutions);;;"Dans le plan muni d'un repère cartésien orthonormé, on considère les points $A(0;0))$, $B(x;3)$, $C(x;0)$, où "
+96;Examen 2018;Statistique;exercices suppl.;oui (2026_solutions);oui;;Dans une Faculté de médecine de $3000$ étudiants, il y a trois sections : les Sciences biomédicales, la Médeci
+97;Examen 2022;Statistique;exercices suppl.;oui (2026_solutions);;;On considère la série statistique suivante : $-1$, $-x^2$, $2x$, $-3x^2$, $-1$ dont la moyenne est notée $m$. 
+98;Examen 2022;Statistique;exercices suppl.;oui (2026_solutions);;;Un étudiant a présenté successivement trois examens. Si au quatrième examen il obtient une note égale à celle 
+99;Examen 2022;Statistique;exercices suppl.;oui (2026_solutions);oui;;Le diagramme en bâtons ci-dessous correspond au nombre d'enfants, dans l'ensemble des différentes écoles d'une
+100;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);;;Une entreprise donne les renseignements suivants sur le salaire mensuel brut des employés. \begin{center} \tab
+101;Examen 2017;Statistique;exercices suppl.;oui (2026_solutions);;;Des quatre histogrammes représentés ci-dessous, lequel correspond au jeu de données ayant le plus petit écart-
+102;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);oui;;Considérons le diagramme en bâtonnets donné ci-après, illustrant le nombre de personnes ayant lu une certaine 
+103;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);oui;;Au concours de Mathématiques sans Frontières, le nombre de points obtenus par les écoles de Belgique se répart
+104;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);oui;;Considérons le diagramme circulaire donné ci-après, représentant les fréquences d'un sondage sur la couleur pr
+105;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);oui;;Considérons le graphe des effectifs donné ci-après. \begin{center} \includegraphics[scale=0.5]{questionStatPre
+106;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);;;Considérons une série statistique quelconque. Laquelle des valeurs suivantes peut toujours être déterminées?
+107;Prépa UMONS;Statistique;exercices suppl.;oui (2026_solutions);;;Les résultats de Luke aux dernières évaluations sont les suivants : $12/20$, $20/30$ et $8/10$. La dernière év
+108;Examen 2022;Analyse;mise en situation;oui (correctif PDF 108-118);oui;;On considère la fonction $f$ définie explicitement par l'expression $\dis{f(x) = x \e^{x^2/2}}$. \\ \begin{cen
+109;Prépa UMONS;Géométrie;mise en situation;oui (correctif PDF 108-118);;;Soit le plan muni d'un repère orthonormé. Considérons le vecteur $\vec u$ dont la norme vaut $3$ et le vecteur
+110;Prépa UMONS;Géométrie;mise en situation;oui (correctif PDF 108-118);;;Considérons $\vec u$ et $\vec v$ tels que leur produit scalaire soit égal à $-20$, en sachant que $\|\vec u\| 
+111;Prépa UMONS;Géométrie;mise en situation;oui (correctif PDF 108-118);;;"Soit le plan muni d'un repère orthonormé. Considérons les points $A(3;2)$ et $B(11;-2)$ ainsi que la droite $d"
+112;Prépa UMONS;Analyse;mise en situation;oui (correctif PDF 108-118);;;Considérons l'équation suivante, où $x$ est une inconnue à valeur dans $\RR$ : $$\ln(2x)+\ln(x+2)-\ln(12+x)=\l
+113;Examen 2021;Trigonométrie;mise en situation;oui (correctif PDF 108-118);;;On considère un angle $\alpha$ tel que $\dis{\frac{\pi}{2} \le \alpha \le \pi}$ et $\dis{\cos(\alpha) = - \fra
+114;Examen 2021;Algèbre;mise en situation;oui (correctif PDF 108-118);;;Un gouvernement a prévu une aide $A$ pour les cafés et restaurants fermés en raison de l'épidémie de la COVID-
+115;Examen 2019;Analyse;mise en situation;oui (correctif PDF 108-118);oui;;La courbe ci-dessous est une partie de la représentation graphique d'une fonction $f$ définie sur $\RR$. \begi
+116;Prépa UMONS;Analyse;mise en situation;oui (correctif PDF 108-118);;;Soit $f$ une fonction paire dont le domaine de définition est l'ensemble des réels. Posons $a$ un réel. Parmi 
+117;Examen 2022;Trigonométrie;mise en situation;oui (correctif PDF 108-118);oui;;Un publicitaire crée un logo en forme de K (voir le schéma). Ce logo est formé d'une ligne verticale de $30\ce
+118;Examen 2022;Algèbre;mise en situation;oui (correctif PDF 108-118);;;Dans un magasin, chaque article possède un prix de base auquel on ajoute $20\%$ de ce prix pour établir le pri
+119;Examen 2020;Analyse;« encore et encore »;oui (2026_solutions);;;On considère la limite pour $x$ tendant vers l'infini de $\dis{\frac{4x^2-3x+1}{3-2x^2}}$. Cette limite a pour
+120;Examen 2017;Géométrie;« encore et encore »;oui (2026_solutions);;;"Dans le plan muni d'un système d'axes orthonormés, on considère $A(1;1)$ et $B(3;2)$. Quelle est la norme (lon"
+121;Examen 2018;Algèbre;« encore et encore »;oui (2026_solutions);;;Dans le cadre d'une expérience de remise en forme appelée \og un kiwi pour la vie \fg, Julie mange un kiwi tou
+122;Examen 2019;Analyse;« encore et encore »;oui (2026_solutions);;;Considérons la limite $$\dis{L = \lim\limits_{x \to -\infty} \frac{\frac{4x+1}{x^2}}{\frac{1}{x}+\frac{2}{x^3}
+123;Examen 2019;Analyse;« encore et encore »;oui (2026_solutions);;;Considérons la fonction $f$ dont l'expression analytique est donnée par $\dis{f(x) = \arcsin\left(\frac{x^2}{2
+124;Examen 2019;Analyse;« encore et encore »;oui (2026_solutions);;;Considérons la fonction réelle $f$ dont l'expression analytique est donnée par $\dis{f(x) = \frac{\sin\left(\f
+125;Examen 2017;Algèbre;« encore et encore »;oui (2026_solutions);;;Une patiente hospitalisée en réanimation chirurgicale nécessite du Loxen IV selon la prescription : $3\milli\g
+126;Examen 2024;Statistique;« encore et encore »;oui (2026_solutions);;;Étant donné un nombre réel $x$, on considère les deux séries statistiques suivantes : \begin{itemt} \item Séri
+127;Examen 2024;Trigonométrie;« encore et encore »;oui (2026_solutions);;;"On considère le cosinus et le sinus d'un angle $\alpha \in ]3\pi/2;7\pi/4[$ (en radians). Laquelle des combina"
+128;Examen 2024;Analyse;« encore et encore »;oui (2026_solutions);;;Étant donné la fonction $f$ définie pour tout nombre réel $x$ par $\dis{f(x) = \ln (x^2+3)}$, on considère la 
+129;Examen 2024;Trigonométrie;« encore et encore »;oui (2026_solutions);;;Parmi les quatre expressions suivantes, laquelle est équivalente à $\cos^4(x)-\sin^4(x)$ pour tout réel $x$?
+130;Examen 2024;Analyse;« encore et encore »;oui (2026_solutions);;;Que vaut l'expression $\dis{\lim\limits_{x \to -3} \left(\frac{x+3}{x^3+27} \right)^{1/3}}$?
+131;Examen 2024;Trigonométrie;« encore et encore »;oui (2026_solutions);;;Un triangle rectangle définit une aire de $200\sqrt{3}\centi\meter\squared$ et un de ses angles a une amplitud
+132;Examen 2024;Algèbre;« encore et encore »;oui (2026_solutions);;;Étant donné un paramètre $\beta$ réel, on considère le système suivant : $$\begin{cases} \beta x + \beta y = 1
+133;Examen 2024;Algèbre;« encore et encore »;oui (2026_solutions);;;On considère l'expression $\dis{\sqrt{\frac{a+b}{a-b}} + \sqrt{\frac{a-b}{a+b}} }$. Parmi les quatre expressio
+134;Examen 2024;Analyse;« encore et encore »;oui (2026_solutions);;;Que vaut $\dis{\int \e ^{-2\ln(x)} \ln(x) \dx}$ à une constante additive près?
+135;Examen 2022;Statistique;« encore et encore »;oui (2026_solutions);;97;On considère la série statistique suivante : $-1$, $-x^2$, $2x$, $-3x^2$, $-1$ dont la moyenne est notée $m$. 
+136;TOSS 2017;Statistique;« encore et encore »;oui (2026_solutions);;;Arthur a une moyenne de $12/20$ à l'issue de ses cinq premières interrogations. Quel doit être le résultat à l
+137;Examen 2018;Algèbre;« encore et encore »;oui (2026_solutions);;;Soient $a$, $b$ et $c$ trois nombres réels strictement positifs et $\dis{R = \frac{a^2b}{c}}$.\\Parmi les égal
+138;Examen 2020;Analyse;« encore et encore »;oui (2026_solutions);;;Soit $f$ la fonction définie explicitement par $f(x) = \ln \big( 1-2|x-1|\big)$. Quel est le domaine de défini
+139;Examen 2020;Trigonométrie;« encore et encore »;oui (2026_solutions);;;On considère un triangle $ABC$ qui est rectangle en $C$ et dont l'hypoténuse est deux fois plus longue que le 
+140;TOSS 2017;Géométrie;« encore et encore »;oui (2026_solutions);;;"On se place dans un repère du plan et on se donne les points $A(1;0)$, $B(5;4)$ et $C(1;8)$. Soit $X$ le point"
+;Examen 2020;Analyse;non utilisée en 2026 (après \end{document});non;;;Un virus se propage à une vitesse exponentielle dans une population. D'après le modèle calculé par les épidémi
+;Examen 2019;Algèbre;non utilisée en 2026 (après \end{document});non;;;Dans le pays P, il y a deux types de médecins : ceux qui sont conventionnés et ceux qui ne le sont pas. Si je 
+;Examen 2019;Algèbre;non utilisée en 2026 (après \end{document});non;;7;Parmi les propositions suivantes, une seule est égale à $\dis{1+\frac{x}{1-\frac{2}{2+\frac{1}{4x}}} }$ en tou
+;Examen 2020;Algèbre;non utilisée en 2026 (après \end{document});non;;;La consommation en carburant d'un véhicule est proportionnelle à sa vitesse $v$ (supposée constante) et à la l
+;Examen 2022;Algèbre;non utilisée en 2026 (après \end{document});non;;;Un médecin doit administrer $50\milli\liter$ d'une solution glucosée contenant $5\milli\gram$ de glucose par $
+;Examen 2019;Algèbre;non utilisée en 2026 (après \end{document});non;;;Soient $a$ et $b$ deux nombres réels non nuls tels que $\dis{0> \frac{1}{a} > \frac{1}{b}}$. Parmi les proposi
+;Examen 2020;Algèbre;non utilisée en 2026 (après \end{document});non;;;Pour fabriquer un litre de désinfectant, il faut $0,832\liter$ d'alcool, $42\milli\liter$ d'eau oxygénée, $15\
+;Examen 2020;Algèbre;non utilisée en 2026 (après \end{document});non;;;Laquelle de ces expressions est égale à $\sqrt{4-2\sqrt{3}}$?
+;Examen 2021;Algèbre;non utilisée en 2026 (après \end{document});non;;;On considère l'ensemble $A$ des nombres réels $a$ pour lesquels l'expression $a^2-9-a-3$ est strictement posit
+;Examen 2018;Algèbre;non utilisée en 2026 (après \end{document});non;;;Une grand-mère a décidé de récompenser le travail scolaire de ses petits-enfants en leur donnant une somme d'a
+;Examen 2018;Algèbre;non utilisée en 2026 (après \end{document});non;;;Parmi les expressions suivantes supposées définies, une seule est égale à $$\dis{\frac{1}{(x-y)(y-z)} - \frac{
+;Examen 2021;Statistique;non utilisée en 2026 (après \end{document});non;;;On considère la série de données suivantes : $2$, $4$, $6$, $8$. Parmi les données ci-dessous, laquelle fera d
+;Examen 2021;Algèbre;non utilisée en 2026 (après \end{document});non;;114;Un gouvernement a prévu une aide $A$ pour les cafés et restaurants fermés en raison de l'épidémie de la COVID-
+;Examen 2021;Algèbre;non utilisée en 2026 (après \end{document});non;;;Une friterie vend son petit paquet de frites au prix de $2,5$ euros et son grand paquet au prix de $4$ euros. 
+;Examen 2021;Algèbre;non utilisée en 2026 (après \end{document});non;;;Un citoyen veut constituer un stock de gel hydroalcoolique. Sur un premier site Internet, il constate que l'on
+;Examen 2020;Géométrie;non utilisée en 2026 (après \end{document});non;;;Dans le plan muni d'un repère orthonormé où les axes sont gradués en centimètres, on considère les points $A(7
+;Examen 2019;Géométrie;non utilisée en 2026 (après \end{document});non;;;Dans le plan muni d'un repère orthonormé, on considère les droites $d_1$ d'équation $x+5y+9=0$, $d_2$ d'équati
+;Examen 2021;Géométrie;non utilisée en 2026 (après \end{document});non;;;"Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère les points $A(2;2)$, $B(4;1)$, $C(5;-2)$. Soi"
+;Examen 2018;Géométrie;non utilisée en 2026 (après \end{document});non;;;"Dans le plan muni d'un repère orthonormé, on considère :\begin{itemt} \item les points $A(2;6)$ et $B(0,10)$; "
+;Examen 2021;Analyse;non utilisée en 2026 (après \end{document});non;;;Que vaut la limite suivante : $\dis{\lim\limits_{x\to 2} \frac{8-6x^2}{x^2+2x-8}}$?
+;Examen 2017;Analyse;non utilisée en 2026 (après \end{document});non;;;Que vaut la limite $\dis{\lim\limits_{x \to + \infty} \frac{(x-2)x}{8+3x^2}}$?
+;Examen 2018;Analyse;non utilisée en 2026 (après \end{document});non;;;Que vaut la limite suivante : $\dis{\lim\limits_{x \to -\infty} \frac{x^5-2x^7-2}{3x^7+2x^5+4}}$? 
+;Examen 2018;Analyse;non utilisée en 2026 (après \end{document});non;;;Que vaut $\dis{\int_{-\frac{\pi}{2}}^\pi x \cos(2x) \dx}$? 
+;Examen 2019;Analyse;non utilisée en 2026 (après \end{document});non;;;Parmi les propositions suivantes, laquelle est égale à l'intégrale $\dis{\int_1^2 3x \sqrt{x^2+1}\dx}$?
+;Examen 2019;Analyse;non utilisée en 2026 (après \end{document});non;;;Considérons la fonction $f$ dont l'expression analytique est donnée par $\dis{f(x) = \ln \left( \frac{3x+1}{1-
+;Examen 2019;Algèbre;non utilisée en 2026 (après \end{document});non;;;Je souhaite fabriquer une flûte de Pan. Cette flûte est constituée de plusieurs tubes de longueurs différentes
+;Examen 2018;Analyse;non utilisée en 2026 (après \end{document});non;;;Soit la fonction réelle définie par $f(x) = 3x^5-5x^3$. Combien d'extrema locaux possède-t-elle?
+;Examen 2019;Analyse;non utilisée en 2026 (après \end{document});non;;;Considérons la fonction $f$ définie par $\dis{f(x) = 1+\frac{2}{x}}$ pour tout réel $x$ strictement positif. D
+;Examen 2019;Analyse;non utilisée en 2026 (après \end{document});non;;;Notons $\e$ la base des logarithmes naturels. Parmi les propositions suivantes, laquelle est égale à l'intégra
+;Examen 2018;Analyse;non utilisée en 2026 (après \end{document});non;;;Parmi les figures ci-dessous, une seule peut être une partie de la représentation graphique de la fonction $f$
+;Examen 2020;Analyse;non utilisée en 2026 (après \end{document});non;;;À un stade de l'épidémie de COVID-19, il a été indiqué qu'en Belgique le nombre de patients positifs à la COVI
+;Examen 2021;Géométrie;non utilisée en 2026 (après \end{document});non;;;"Dans un repère cartésien orthonormé, on considère le triangle de sommets $A(0;3)$, $B(3;6)$, $C(4;4)$. Que vau"
+;TOSS 2017;Trigonométrie;non utilisée en 2026 (après \end{document});non;;;Parmi les égalités suivantes, quelle est celle qui est vraie quels que soient les nombres réels $x$ et $y$ tel
+;Examen 2019;Géométrie;non utilisée en 2026 (après \end{document});non;;;La norme d'un vecteur $\vec v$ est notée $\|\vec v \|$ et le produit scalaire des vecteurs $\vec u$ et $\vec v
+;Examen 2017;Statistique;non utilisée en 2026 (après \end{document});non;;;"Pour quelle valeur de $x$ l'échantillon $\{1;3;5;7;x\}$ a-t-il une moyenne égale à $3$?"
+;TOSS 2017;Trigonométrie;non utilisée en 2026 (après \end{document});non;;;Soit $\alpha$ la mesure d'un angle en degrés comprise entre $0^\circ$ et $360^\circ$. Supposons que $\sin(\alp
+;TOSS 2017;Géométrie;non utilisée en 2026 (après \end{document});non;;;Dans le plan muni d'un repère orthonormé, on considère la droite $d$ d'équation cartésienne $3x+2y=6$. La droi
+;Examen 2021;Géométrie;non utilisée en 2026 (après \end{document});non;;65;"Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère les points $A(1;2)$, $B(x;8)$ et $C(10;y)$ te"
+;Examen 2020;Analyse;non utilisée en 2026 (après \end{document});non;;;Soit $f$ la fonction définie explicitement par $\dis{f(x) = \frac{x-2}{x+1}}$. On sait que la courbe d'équatio
+;Examen 2023;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;Le patron d'une jardinerie a trois types de fertilisant pour le gazon : $F_1$, $F_2$ et $F_3$, contenant respectivement 
+;Examen 2023;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;Auparavant, les honoraires pour un traitement chez un dentiste étaient de $50$ euros. Le patient ne payait que $22\,\%$ 
+;Examen 2023;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;On considère le système
+;Examen 2025;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;Le prix d'entrée pour une pièce de théâtre était de $10$ euros pour les étudiants, $15$ euros pour les seniors et $20$ e
+;Examen 2025;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;On considère l'équation
+;Examen 2025;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;Un jeune enfant s'amuse avec une calculatrice à faire des additions de nombres de plus en plus grands.
+;Examen 2026;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;Pour un trajet en train entre deux villes, le voyageur a le choix entre le tarif de 1^ère^ classe, le tarif de 2^ème^ cl
+;Examen 2026;Algèbre;exercices suppl.;oui (PDF officiel du concours);;;On considère l'expression
+;Examen 2023;Analyse;exercices suppl.;oui (PDF officiel du concours);;;On considère la fonction $f$ définie pour tout nombre réel $x$ par l'expression
+;Examen 2023;Analyse;exercices suppl.;oui (PDF officiel du concours);;;On considère la fonction $f$ définie pour tout nombre réel non nul $x$ par l'expression
+;Examen 2025;Analyse;exercices suppl.;oui (PDF officiel du concours);;;On considère une fonction $f$ définie pour tout nombre réel $x\neq 0$, vérifiant
+;Examen 2025;Analyse;exercices suppl.;oui (PDF officiel du concours);;;Dans un grand lac apprécié par les pêcheurs à la ligne, il a été déterminé que l'évolution du nombre de truites $N(t)$ (
+;Examen 2026;Analyse;exercices suppl.;oui (PDF officiel du concours);;;On considère les fonctions $f$ et $g$ définies pour tout nombre réel $x$ par
+;Examen 2026;Analyse;exercices suppl.;oui (PDF officiel du concours);oui;;On considère la fonction $f'$ dont le graphique est donné par la figure suivante :
+;Examen 2026;Analyse;exercices suppl.;oui (PDF officiel du concours);;;L'intensité sonore $I$ d'un bruit est caractérisée par le nombre
+;Examen 2023;Géométrie;exercices suppl.;oui (PDF officiel du concours);;;Dans un plan muni d'un repère cartésien orthonormé, on considère la droite qui passe par les points $(0,16)$ et $(10,0)$
+;Examen 2023;Géométrie;exercices suppl.;oui (PDF officiel du concours);oui;;Le dessin ci-dessous représente le parallélogramme $PQRS$ (les droites $PQ$ et $SR$ sont parallèles et les droites $PS$ 
+;Examen 2025;Géométrie;exercices suppl.;oui (PDF officiel du concours);;;Dans un plan muni d'un repère cartésien orthonormé, considérons la droite $d$ de pente $m=\sqrt{2}$ passant par le point
+;Examen 2025;Géométrie;exercices suppl.;oui (PDF officiel du concours);oui;;Dans le plan euclidien, on considère quatre points $P$, $Q$, $R$, $S$ qui forment un carré $PQRS$ de côtés de longueur $
+;Examen 2026;Géométrie;exercices suppl.;oui (PDF officiel du concours);;;On donne trois points $P$, $Q$ et $R$ tels que les vecteurs $\overrightarrow{PQ}$ et $\overrightarrow{QR}$ sont orthogon
+;Examen 2026;Géométrie;exercices suppl.;oui (PDF officiel du concours);;;Dans un plan muni d'un repère cartésien $Oxy$, on considère la droite $d$ passant par le point $(3,0)$ et parallèle à la
+;Examen 2023;Statistique;exercices suppl.;oui (PDF officiel du concours);oui;;Voici un graphique représentant le taux d'accès à l'enseignement supérieur des hommes et des femmes ayant obtenu un dipl
+;Examen 2025;Statistique;exercices suppl.;oui (PDF officiel du concours);oui;;Un hôpital emploie $2\,000$ personnes soignantes. On retrouve la répartition de ce personnel dans le diagramme circulair
+;Examen 2026;Statistique;exercices suppl.;oui (PDF officiel du concours);;;On considère la série définie par les quatre nombres suivants : $-1$ , $-1$ , $1$ , $1$.
+;Examen 2023;Trigonométrie;exercices suppl.;oui (PDF officiel du concours);;;Le périmètre d'un losange vaut $80\,\mathrm{m}$ et l'amplitude d'un de ses angles vaut $60^\circ$.
+;Examen 2023;Trigonométrie;exercices suppl.;oui (PDF officiel du concours);;;Si $x$ est un angle quelconque, quelle est, parmi les relations suivantes, celle qui est toujours vérifiée?
+;Examen 2025;Trigonométrie;exercices suppl.;oui (PDF officiel du concours);;;On considère l'équation
+;Examen 2025;Trigonométrie;exercices suppl.;oui (PDF officiel du concours);;;Quelle est la valeur de l'expression $\cos\left(\dfrac{17\pi}{3}\right)$ parmi les propositions ci-dessous?
+;Examen 2026;Trigonométrie;exercices suppl.;oui (PDF officiel du concours);;;On considère l'équation
+;Examen 2026;Trigonométrie;exercices suppl.;oui (PDF officiel du concours);;;On considère les relations $\sin(x)=-\dfrac{1}{2}$ et $\cos(x)>0$.
+;Simulation 2026 (Prépa UMONS);Algèbre;exercices suppl.;oui (correctif de la simulation);;;On considère $a,b,c\in\mathbb{R}$ tels que $$a+b+c=12\quad\text{et}\quad 2a+b=10.$$ Quelle est la valeur de $b+2c$ ?
+;Simulation 2026 (Prépa UMONS);Algèbre;exercices suppl.;oui (correctif de la simulation);;;On considère la fonction $f(x)=x^2-5x+6$. Combien de racines a la fonction $f\big(f(x)\big)$ ?
+;Simulation 2026 (Prépa UMONS);Analyse;exercices suppl.;oui (correctif de la simulation);;;On considère $${\displaystyle f(x)=\frac{x^2-1}{x-1}-x}.$$ Laquelle des affirmations suivantes est correcte ?
+;Simulation 2026 (Prépa UMONS);Analyse;exercices suppl.;oui (correctif de la simulation);;;On considère $f(x)=x^3-3x$. Laquelle des affirmations suivantes est correcte ?
+;Simulation 2026 (Prépa UMONS);Analyse;exercices suppl.;oui (correctif de la simulation);;;On considère une fonction $f$ dérivable sur $\mathbb{R}$ telle que $f(9)=1$ et $f'(9)=-3$. Soit la fonction $g(x)=f(x^2)
+;Simulation 2026 (Prépa UMONS);Analyse;exercices suppl.;oui (correctif de la simulation);oui;;Soit $f$ la fonction représentée ci-dessous. Parmi les nombres suivants, lequel est le plus proche de ${\displaystyle \i
+;Simulation 2026 (Prépa UMONS);Géométrie;exercices suppl.;oui (correctif de la simulation);;;Dans un repère orthonormé, on considère les points $A(0,0)$, $B(2,1)$ et $C(t,2)$, où $t$ est un nombre réel.
+;Simulation 2026 (Prépa UMONS);Géométrie;exercices suppl.;oui (correctif de la simulation);;;On considère les points $A(2,1)$, $B(8,4)$ et $C(-3,-1)$. Soit $d$ la droite perpendiculaire à $AB$ et passant par $C$. 
+;Simulation 2026 (Prépa UMONS);Statistique;exercices suppl.;oui (correctif de la simulation);;;Une série de $7$ valeurs a une moyenne de $12$. On ajoute une valeur $x$ et la nouvelle moyenne devient $13$. Que vaut $
+;Simulation 2026 (Prépa UMONS);Statistique;exercices suppl.;oui (correctif de la simulation);;;Une série statistique de $4$ valeurs a une moyenne de $10$ et un écart-type de $2$ (écart-type de la série, avec divisio
+;Simulation 2026 (Prépa UMONS);Trigonométrie;exercices suppl.;oui (correctif de la simulation);;;On considère un angle $\alpha\in\left[0,\frac{\pi}{2}\right]$ tel que ${\displaystyle \sin(\alpha)=\frac{3}{5}}$. Que va

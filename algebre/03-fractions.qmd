@@ -1,0 +1,36 @@
+---
+title: "1.3 Fractions"
+subtitle: "Algèbre"
+prepa:
+  theme: algebre
+  chapitre: 3
+---
+
+Pour additionner deux fractions, il faut d'abord les écrire avec un même dénominateur. En prenant le produit des dénominateurs, on obtient la formule générale ci-dessous. Diviser par une fraction revient à multiplier par son inverse.
+
+::: {.encadre #alge-frac-op nature="Propriété" titre="opérations sur les fractions"}
+Pour des réels $a$, $c$ et des réels non nuls $b$, $d$ :
+$$\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}\qquad\text{et}\qquad \frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}.$$
+Si de plus $c\neq 0$ :
+$$\frac{a/b}{c/d}=\frac{a}{b}\cdot\frac{d}{c}=\frac{ad}{bc}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+$\dfrac{1}{3}+\dfrac{7}{4}=\dfrac{4+21}{12}=\dfrac{25}{12}$ et $\dfrac{1/3}{7/4}=\dfrac{1}{3}\cdot\dfrac{4}{7}=\dfrac{4}{21}$.
+:::
+
+Une fraction étagée contient des fractions à son numérateur ou à son dénominateur. On la simplifie en partant de l'étage le plus bas, en appliquant chaque fois la règle de la division.
+
+::: {.encadre #alge-frac-etagee nature="Propriété" titre="fraction étagée"}
+Pour $a$ réel et $b$, $c$ réels non nuls :
+$$\frac{a}{b/c}=\frac{ac}{b}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+Pour $x\notin\{-1;0\}$ :
+$$\frac{1}{1+\frac{1}{x}}=\frac{1}{\frac{x+1}{x}}=\frac{x}{x+1}.$$
+:::
+
+::: {.encadre nature="Remarque" titre="on ne simplifie que des facteurs"}
+Dans $\dfrac{x+2}{x+5}$, on ne peut rien simplifier : $x$ n'est pas un facteur commun au numérateur et au dénominateur, c'est un terme. Par contre, $\dfrac{x(x+2)}{x(x+5)}=\dfrac{x+2}{x+5}$ pour $x\neq 0$.
+:::

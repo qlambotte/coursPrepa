@@ -1,0 +1,29 @@
+---
+title: "Analyse"
+format: html
+---
+
+Les chapitres rassemblent ce qu'il faut maîtriser pour les QCM d'analyse : les fonctions et leur domaine, les fonctions de référence, les limites, les dérivées et les primitives. Les limites et les dérivées servent avant tout à obtenir des informations sur le graphique d'une fonction : ses asymptotes, ses tangentes, ses variations et sa concavité.
+
+## Chapitres
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="01-fonctions.html"><strong>4.1 Fonctions</strong></a>
+  <a class="tuile" href="02-degre.html"><strong>4.2 Fonctions du premier et du second degré</strong></a>
+  <a class="tuile" href="03-trigo.html"><strong>4.3 Fonctions trigonométriques et réciproques</strong></a>
+  <a class="tuile" href="04-explog.html"><strong>4.4 Exponentielle et logarithme</strong></a>
+  <a class="tuile" href="05-limites.html"><strong>4.5 Limites et continuité</strong></a>
+  <a class="tuile" href="06-derivees.html"><strong>4.6 Dérivées</strong></a>
+  <a class="tuile" href="07-integrales.html"><strong>4.7 Primitives et intégrales</strong></a>
+</div>
+```
+
+## Concours
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="qcm.html"><strong>QCM de la séance</strong><span>11 questions, indices et solutions.</span></a>
+  <a class="tuile" href="exercices.html"><strong>Exercices supplémentaires</strong><span>23 QCM corrigés à la fin.</span></a>
+</div>
+```

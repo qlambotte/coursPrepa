@@ -1,0 +1,401 @@
+---
+title: "Théorie essentielle — Analyse"
+prepa:
+  theme: analyse
+---
+
+Cette page rassemble ce qu'il faut maîtriser pour les QCM d'analyse : les fonctions et leur domaine, les fonctions de référence, les limites, les dérivées et les primitives. Les limites et les dérivées servent avant tout à obtenir des informations sur le graphique d'une fonction : ses asymptotes, ses tangentes, ses variations et sa concavité.
+
+## Fonctions {#ana-s-fonctions}
+
+::: {.encadre #ana-domaine nature="Définition" titre="fonction, domaine, image"}
+Une **fonction** $f$ associe à chaque réel $x$ **au plus un** réel $f(x)$, l'**image** de $x$.
+
+Le **domaine** de $f$ est l'ensemble des réels qui ont une image. L'**ensemble image** est l'ensemble des valeurs $f(x)$ prises par la fonction.
+:::
+
+Graphiquement, on lit le domaine sur l'axe des abscisses et l'ensemble image sur l'axe des ordonnées : on projette le graphique sur chacun des deux axes. Le point du graphique d'abscisse $x$ a pour ordonnée $f(x)$ ; le point d'abscisse $0$ donne l'ordonnée à l'origine $f(0)$, et les points d'ordonnée $0$ donnent les racines.
+
+![](../static/figures/th-ana-domaine.svg){.th}
+
+Lorsque la fonction est donnée par une expression, son domaine est l'ensemble des réels pour lesquels chaque opération de l'expression a un sens.
+
+::: {.encadre #ana-conditions nature="Propriété" titre="conditions d'existence"}
+Pour déterminer le domaine, on exclut les réels pour lesquels :
+
+- un **dénominateur** s'annule ;
+- l'expression sous une **racine d'indice pair** est strictement négative ;
+- l'argument d'un **logarithme** est négatif ou nul ;
+- l'argument d'un $\arcsin$ ou d'un $\arccos$ sort de $[-1;1]$.
+:::
+
+::: {.encadre nature="Exemple"}
+$f(x)=\dfrac{x+1}{3x-x^2}$ : le dénominateur $x(3-x)$ s'annule en $0$ et en $3$, donc $\mathrm{dom}\,f=\mathbb{R}\backslash\{0;3\}$.
+
+$g(x)=\ln(-x^2+2x+3)$ : il faut $-x^2+2x+3>0$. Le trinôme a pour racines $-1$ et $3$ et $a=-1<0$ : il est positif entre ses racines. Donc $\mathrm{dom}\,g=\left]-1;3\right[$.
+:::
+
+::: {.encadre #ana-composee nature="Définition" titre="opérations sur les fonctions, composée"}
+La somme $f+g$ et le produit $f\cdot g$ sont définis là où $f$ et $g$ le sont toutes les deux. Le quotient $\frac fg$ demande en plus $g(x)\neq0$.
+
+La **composée** $f\circ g$ est définie par $(f\circ g)(x)=f\big(g(x)\big)$ : on applique d'abord $g$, puis $f$. Elle est définie pour les $x$ du domaine de $g$ tels que $g(x)$ est dans le domaine de $f$.
+:::
+
+![](../static/figures/th-ana-composee.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Avec $f(x)=\dfrac{x}{x-3}$ : $(f\circ f)(x)$ demande $x\neq3$ et $f(x)\neq3$. Or $\dfrac{x}{x-3}=3\iff x=3x-9\iff x=\frac92$. Donc $\mathrm{dom}(f\circ f)=\mathbb{R}\backslash\left\{3;\frac92\right\}$.
+:::
+
+::: {.encadre nature="Remarque" titre="simplifier ne change pas le domaine"}
+Après simplification, $(f\circ f)(x)=\dfrac{x}{9-2x}$, expression qui semble définie en $3$. Mais $3$ n'appartient pas au domaine de $f$, donc pas à celui de $f\circ f$. On détermine le domaine **avant** de simplifier.
+:::
+
+::: {.encadre #ana-reciproque nature="Définition" titre="fonction réciproque"}
+Si $f$ prend chaque valeur de son ensemble image une seule fois, sa **réciproque** $f^{-1}$ fait le chemin inverse : $f^{-1}(y)=x\iff f(x)=y$.
+
+Les graphiques de $f$ et de $f^{-1}$ sont symétriques par rapport à la droite $y=x$.
+:::
+
+![](../static/figures/th-ana-reciproque.svg){.th}
+
+## Fonctions du premier et du second degré {#ana-s-degre}
+
+::: {.encadre #ana-affine nature="Propriété" titre="fonction du premier degré"}
+Le graphique de $f(x)=mx+p$ est une droite de pente $m$ et d'ordonnée à l'origine $p$. La fonction est croissante si $m>0$ et décroissante si $m<0$.
+:::
+
+![](../static/figures/th-ana-affine.svg){.th}
+
+En complétant le carré (voir la théorie d'algèbre), on écrit $ax^2+bx+c=a\left(x+\frac{b}{2a}\right)^2+f\!\left(-\frac{b}{2a}\right)$. Le carré est minimal (nul) en $x=-\frac{b}{2a}$.
+
+::: {.encadre #ana-2deg nature="Propriété" titre="extremum d'une fonction du second degré"}
+La fonction $f(x)=ax^2+bx+c$ ($a\neq0$) atteint son extremum en $x_S=-\dfrac{b}{2a}$ :
+
+- un **minimum** si $a>0$ (parabole tournée vers le haut) ;
+- un **maximum** si $a<0$ (parabole tournée vers le bas).
+
+La droite $x=x_S$ est l'axe de symétrie de la parabole ; elle passe au milieu des deux racines lorsqu'elles existent.
+:::
+
+Les trois écritures d'une fonction du second degré et leur lecture sur le graphique sont détaillées dans la théorie d'algèbre (forme développée, canonique et factorisée).
+
+![](../static/figures/th-alge-lecture.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$f(x)=2x^2+8x+3$ : $x_S=-\frac{8}{4}=-2$ et $f(-2)=8-16+3=-5$. Comme $a=2>0$, la fonction atteint son minimum $-5$ en $x=-2$.
+:::
+
+## Fonctions trigonométriques et réciproques {#ana-s-trigo}
+
+Les fonctions $\sin$ et $\cos$ sont définies sur $\mathbb{R}$, à valeurs dans $[-1;1]$, de période $2\pi$ ; $\tan$ est définie sauf en $\frac\pi2+k\pi$ et est de période $\pi$ (voir la théorie de trigonométrie). Ces fonctions prennent plusieurs fois chaque valeur ; pour définir une réciproque, on se limite à un intervalle où elles ne prennent chaque valeur qu'une fois.
+
+![](../static/figures/th-ana-trig.svg){.th}
+
+::: {.encadre #ana-arc nature="Définition" titre="arcsin, arccos, arctg"}
+- Pour $y\in[-1;1]$, $\arcsin y$ est l'unique réel de $\left[-\frac\pi2;\frac\pi2\right]$ dont le sinus vaut $y$.
+- Pour $y\in[-1;1]$, $\arccos y$ est l'unique réel de $[0;\pi]$ dont le cosinus vaut $y$.
+- Pour $y\in\mathbb{R}$, $\mathrm{arctg}\,y$ est l'unique réel de $\left]-\frac\pi2;\frac\pi2\right[$ dont la tangente vaut $y$.
+:::
+
+![](../static/figures/th-ana-arcsin.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$\arcsin\frac12=\frac\pi6$ ; $\arccos\left(-\frac12\right)=\frac{2\pi}{3}$ ; $\mathrm{arctg}\,1=\frac\pi4$ ; $\arcsin\left(\sin\frac{5\pi}{6}\right)=\arcsin\frac12=\frac\pi6$ et non $\frac{5\pi}{6}$.
+:::
+
+## Exponentielle et logarithme {#ana-s-explog}
+
+Une grandeur à **croissance exponentielle** est multipliée par le même nombre pendant des durées égales. Si elle triple en $5$ ans, elle est multipliée par $3$ en $5$ ans, par $9=3^2$ en $10$ ans, par $27=3^3$ en $15$ ans.
+
+::: {.encadre #ana-exp nature="Définition" titre="fonction exponentielle"}
+Pour une base $a>0$, la fonction $x\mapsto a^x$ est définie sur $\mathbb{R}$ et strictement positive. Elle est croissante si $a>1$ et décroissante si $0<a<1$.
+
+La fonction **exponentielle** $x\mapsto\mathrm{e}^x$ utilise la base $\mathrm{e}$, l'unique base pour laquelle la pente de la tangente au point $(0;1)$ vaut $1$.
+:::
+
+![](../static/figures/th-ana-exp.svg){.th}
+
+::: {.encadre #ana-log nature="Définition" titre="logarithme"}
+Pour $a>0$, $a\neq1$ et $y>0$, le **logarithme en base $a$** de $y$ est l'exposant auquel il faut élever $a$ pour obtenir $y$ :
+$$\log_a y=x\iff a^x=y.$$
+On note $\ln=\log_\mathrm{e}$ (logarithme népérien) et $\log=\log_{10}$ (logarithme décimal).
+:::
+
+::: {.encadre nature="Exemple"}
+$\log1000=3$ car $10^3=1000$ ; $\ln\mathrm{e}^5=5$ ; $\mathrm{e}^{\ln7}=7$ ; $\log_2\frac18=-3$.
+:::
+
+Les règles de calcul des logarithmes traduisent celles des puissances : multiplier deux puissances de même base, c'est additionner les exposants.
+
+::: {.encadre #ana-log-prop nature="Propriété" titre="règles de calcul"}
+Pour $x>0$, $y>0$, $r$ réel et une base $a$ :
+$$\log_a(xy)=\log_ax+\log_ay\qquad\log_a\frac xy=\log_ax-\log_ay\qquad\log_a(x^r)=r\log_ax$$
+$$\log_a1=0\qquad\log_aa=1\qquad\log_ax=\frac{\ln x}{\ln a}.$$
+Pour les exponentielles : $\mathrm{e}^{x+y}=\mathrm{e}^x\,\mathrm{e}^y$, $\mathrm{e}^{-x}=\dfrac{1}{\mathrm{e}^x}$ et $\left(\mathrm{e}^x\right)^r=\mathrm{e}^{rx}$.
+:::
+
+::: {.encadre nature="Remarque" titre="pas de règle pour une somme"}
+$\ln(x+y)\neq\ln x+\ln y$ et $\ln^2x=(\ln x)^2\neq\ln(x^2)=2\ln x$. Pour simplifier le logarithme d'une somme, on cherche à la **factoriser** : $\ln\left(\mathrm{e}^{2x}+2\mathrm{e}^x+1\right)=\ln\left(\mathrm{e}^x+1\right)^2=2\ln\left(\mathrm{e}^x+1\right)$.
+:::
+
+::: {.encadre #ana-explog-eq nature="Propriété" titre="équations et inéquations"}
+Les fonctions $\mathrm{e}^x$ et $\ln x$ sont strictement croissantes. Donc, pour $x,y>0$ : $\ln x=\ln y\iff x=y$ et $\ln x<\ln y\iff x<y$ ; de même pour l'exponentielle sur $\mathbb{R}$.
+:::
+
+::: {.encadre nature="Exemple"}
+Avec $\alpha(I)=10\log\frac{I}{I_0}$ : $\alpha(I_B)-\alpha(I_A)=10\log\frac{I_B}{I_A}$. Une différence de $20$ décibels donne $\log\frac{I_B}{I_A}=2$, donc $I_B=100\,I_A$.
+:::
+
+## Limites et continuité {#ana-s-limites}
+
+Pour parler de limite, il faut savoir ce que signifie « se rapprocher » d'un nombre, mais aussi de $+\infty$ ou de $-\infty$. Se rapprocher autant qu'on veut de $+\infty$, c'est devenir plus grand que n'importe quel nombre choisi à l'avance, aussi grand soit-il ($10$, $1000$, $10^{6}$…). Se rapprocher autant qu'on veut de $-\infty$, c'est devenir plus petit que n'importe quel nombre choisi à l'avance. Avec ce sens, une seule définition couvre tous les cas.
+
+::: {.encadre #ana-limite nature="Définition" titre="limite"}
+Soit $a$ et $b$ des réels, ou $+\infty$, ou $-\infty$. On écrit $\lim\limits_{x\to a}f(x)=b$ si, lorsque $x$ se rapproche autant qu'on veut de $a$ (en restant dans le domaine de $f$), $f(x)$ se rapproche autant qu'on veut de $b$.
+
+La question n'a de sens que si on peut se rapprocher de $a$ autant qu'on veut en restant dans le domaine.
+:::
+
+::: {.encadre nature="Exemple"}
+- $\lim\limits_{x\to+\infty}\dfrac1x=0$ ($a=+\infty$, $b$ réel) : dès que $x$ dépasse $1000$, $\frac1x$ est compris entre $0$ et $0{,}001$.
+- $\lim\limits_{x\to0}\dfrac{1}{x^2}=+\infty$ ($a$ réel, $b=+\infty$) : dès que $0<|x|<0{,}001$, $\frac{1}{x^2}$ dépasse $10^{6}$.
+- $\lim\limits_{x\to-\infty}x^3=-\infty$ ($a$ et $b$ infinis) : dès que $x<-10$, $x^3<-1000$.
+:::
+
+Une limite peut donc exister (finie ou infinie), ne pas exister, ou ne pas avoir de sens. Lorsque $f(x)$ ne se comporte pas de la même façon à gauche et à droite de $a$, on étudie séparément les deux côtés.
+
+::: {.encadre #ana-limite-cote nature="Définition" titre="limite à gauche, à droite"}
+$\lim\limits_{x\overset{<}{\to}a}f(x)$ (limite à gauche) : dans la définition de la limite, on ne considère que les $x<a$. $\lim\limits_{x\overset{>}{\to}a}f(x)$ (limite à droite) : on ne considère que les $x>a$.
+:::
+
+::: {.encadre #ana-limite-gd nature="Propriété" titre="limite et limites à gauche et à droite"}
+On suppose qu'on peut se rapprocher de $a$ à la fois par la gauche et par la droite en restant dans le domaine de $f$ ($a$ est à l'intérieur du domaine, ou à l'intérieur du domaine privé de $a$). Alors
+$$\lim\limits_{x\to a}f(x)=b\iff\lim\limits_{x\overset{<}{\to}a}f(x)=\lim\limits_{x\overset{>}{\to}a}f(x)=b,$$
+avec en plus $f(a)=b$ lorsque $a$ appartient au domaine (la définition de la limite permet de prendre $x=a$).
+:::
+
+::: {.encadre nature="Remarque" titre="au bord du domaine"}
+Si on ne peut se rapprocher de $a$ que d'un côté, seule la limite de ce côté a un sens, et c'est la limite en $a$. Par exemple, $\sqrt x$ n'est défini que pour $x\ge0$ : la limite à gauche en $0$ n'a pas de sens, et $\lim\limits_{x\to0}\sqrt x=\lim\limits_{x\overset{>}{\to}0}\sqrt x=0$.
+:::
+
+![](../static/figures/th-ana-limites-cas.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Les quatre situations possibles, de gauche à droite sur la figure :
+
+1. **La limite existe et est finie.** $f(x)=\dfrac{x^2-1}{x-1}$ n'est pas définie en $1$, mais on peut s'approcher de $1$ dans son domaine. Pour $x\neq1$, $f(x)=\dfrac{(x-1)(x+1)}{x-1}=x+1$, qui se rapproche de $2$ : $\lim\limits_{x\to1}f(x)=2$. Le graphique est une droite privée du point $(1;2)$.
+2. **La limite existe et est infinie.** $f(x)=\dfrac{1}{x^2}$ : lorsque $x$ se rapproche de $0$, $x^2$ est positif et très petit, donc $\dfrac1{x^2}$ devient aussi grand qu'on veut, des deux côtés : $\lim\limits_{x\to0}f(x)=+\infty$. La droite $x=0$ est une asymptote verticale.
+3. **La limite n'existe pas.** $f(x)=\dfrac{|x|}{x}$ vaut $-1$ pour $x<0$ et $1$ pour $x>0$. Donc $\lim\limits_{x\overset{<}{\to}0}f(x)=-1$ et $\lim\limits_{x\overset{>}{\to}0}f(x)=1$ : les deux limites sont différentes, $\lim\limits_{x\to0}f(x)$ n'existe pas. Le graphique « saute » en $0$.
+4. **La limite n'a pas de sens.** $f(x)=\sqrt x$ a pour domaine $[0;+\infty[$. Aucun réel du domaine n'est proche de $-1$ : on ne peut pas se rapprocher de $-1$ en restant dans le domaine, et la question $\lim\limits_{x\to-1}\sqrt x$ n'a pas de sens.
+:::
+
+![](../static/figures/th-ana-1x.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$f(x)=\dfrac1x$ : $\lim\limits_{x\overset{<}{\to}0}f(x)=-\infty$ et $\lim\limits_{x\overset{>}{\to}0}f(x)=+\infty$, donc $\lim\limits_{x\to0}f(x)$ n'existe pas. Par contre, $\lim\limits_{x\to+\infty}f(x)=0$.
+:::
+
+Pour calculer une limite, on remplace d'abord $x$ par $a$. Si l'expression a une valeur, c'est la limite (pour les fonctions usuelles sur leur domaine). Si on obtient un quotient dont le numérateur et le dénominateur tendent tous deux vers $0$, ce calcul ne permet pas de conclure : il faut transformer l'expression.
+
+::: {.encadre #ana-lim-calcul nature="Méthode" titre="quotient dont les deux termes tendent vers 0"}
+Si le numérateur et le dénominateur d'une fraction rationnelle s'annulent en $a$, ils ont tous deux le facteur $x-a$. On factorise, on simplifie par $x-a$ (permis car $x\neq a$ près de $a$), puis on remplace $x$ par $a$.
+
+Avec des racines, on multiplie par le binôme conjugué pour faire apparaître le facteur.
+:::
+
+::: {.encadre nature="Exemple"}
+$\lim\limits_{x\to1}\dfrac{x^2-1}{x^2+2x-3}=\lim\limits_{x\to1}\dfrac{(x-1)(x+1)}{(x-1)(x+3)}=\lim\limits_{x\to1}\dfrac{x+1}{x+3}=\dfrac12$.
+
+$\lim\limits_{x\to4}\dfrac{x-4}{\sqrt x-2}=\lim\limits_{x\to4}\dfrac{(x-4)(\sqrt x+2)}{x-4}=\lim\limits_{x\to4}\left(\sqrt x+2\right)=4$.
+:::
+
+Pourquoi le terme de plus haut degré l'emporte-t-il ? On le met en évidence : par exemple, $2x^3-5x^2+1=2x^3\left(1-\dfrac{5}{2x}+\dfrac{1}{2x^3}\right)$. Quand $x\to\pm\infty$, les fractions de la parenthèse se rapprochent de $0$ et la parenthèse se rapproche de $1$ : le polynôme se comporte comme $2x^3$.
+
+::: {.encadre #ana-lim-infini nature="Propriété" titre="polynôme et fraction rationnelle à l'infini"}
+Soit $P(x)=a_nx^n+\cdots+a_1x+a_0$ avec $a_n\neq0$ et $Q(x)=b_mx^m+\cdots+b_1x+b_0$ avec $b_m\neq0$. Alors
+$$\lim\limits_{x\to\pm\infty}P(x)=\lim\limits_{x\to\pm\infty}a_nx^n\qquad\text{et}\qquad\lim\limits_{x\to\pm\infty}\frac{P(x)}{Q(x)}=\lim\limits_{x\to\pm\infty}\frac{a_nx^n}{b_mx^m}.$$
+Pour la fraction, on obtient donc :
+
+- si $n<m$ : la limite vaut $0$ ;
+- si $n=m$ : la limite vaut $\dfrac{a_n}{b_m}$ ;
+- si $n>m$ : la limite vaut $+\infty$ ou $-\infty$, selon le signe de $\dfrac{a_n}{b_m}\,x^{n-m}$.
+:::
+
+::: {.encadre nature="Exemple"}
+- $n=m$ : $\lim\limits_{x\to+\infty}\dfrac{6x^2+1}{2x^2-x}=\lim\limits_{x\to+\infty}\dfrac{6x^2}{2x^2}=3$.
+- $n<m$ : $\lim\limits_{x\to+\infty}\dfrac{5x}{x^2+1}=\lim\limits_{x\to+\infty}\dfrac{5x}{x^2}=\lim\limits_{x\to+\infty}\dfrac5x=0$.
+- $n>m$ : $\lim\limits_{x\to-\infty}\dfrac{x^3+1}{2x}=\lim\limits_{x\to-\infty}\dfrac{x^2}{2}=+\infty$, et $\lim\limits_{x\to-\infty}\left(-x^3+4x\right)=\lim\limits_{x\to-\infty}\left(-x^3\right)=+\infty$.
+:::
+
+![](../static/figures/th-ana-lim-infini.svg){.th}
+
+::: {.encadre #ana-asymptotes nature="Définition" titre="asymptotes"}
+- La droite $x=a$ est une **asymptote verticale** du graphique de $f$ si la limite à gauche ou la limite à droite de $f$ en $a$ est infinie ($+\infty$ ou $-\infty$).
+- La droite $y=b$ est une **asymptote horizontale** du graphique de $f$ si $\lim\limits_{x\to+\infty}f(x)=b$ ou $\lim\limits_{x\to-\infty}f(x)=b$.
+
+Une seule des deux limites suffit.
+:::
+
+![](../static/figures/th-ana-asymptotes.svg){.th}
+
+::: {.encadre nature="Exemple"}
+De gauche à droite sur la figure :
+
+1. $f(x)=\dfrac1x$ : $\lim\limits_{x\overset{<}{\to}0}f(x)=-\infty$ et $\lim\limits_{x\overset{>}{\to}0}f(x)=+\infty$. Les deux limites sont infinies : la droite $x=0$ est une asymptote verticale.
+2. $f(x)=\mathrm{e}^{1/x}$ : pour $x<0$ proche de $0$, $\frac1x$ tend vers $-\infty$, donc $\lim\limits_{x\overset{<}{\to}0}f(x)=0$ ; pour $x>0$ proche de $0$, $\frac1x$ tend vers $+\infty$, donc $\lim\limits_{x\overset{>}{\to}0}f(x)=+\infty$. Une seule limite est infinie, et cela suffit : $x=0$ est une asymptote verticale.
+3. $f(x)=\ln x$ a pour domaine $]0;+\infty[$ : seule la limite à droite en $0$ a un sens, et $\lim\limits_{x\overset{>}{\to}0}\ln x=-\infty$. La droite $x=0$ est une asymptote verticale.
+4. $f(x)=\mathrm{e}^x$ : $\lim\limits_{x\to-\infty}\mathrm{e}^x=0$, alors que $\lim\limits_{x\to+\infty}\mathrm{e}^x=+\infty$. La droite $y=0$ est une asymptote horizontale, du côté de $-\infty$ seulement.
+:::
+
+::: {.encadre nature="Remarque" titre="valeur interdite sans asymptote"}
+Une valeur qui annule le dénominateur ne donne pas toujours une asymptote verticale : $f(x)=\dfrac{x^2-1}{x^2-x-6}=\dfrac{(x-1)(x+1)}{(x-3)(x+2)}$ a deux asymptotes verticales, $x=3$ et $x=-2$ ; mais $\dfrac{x^2-4}{x-2}$ n'en a pas en $2$, car elle vaut $x+2$ pour $x\neq2$.
+:::
+
+![](../static/figures/th-ana-trou.svg){.th}
+
+::: {.encadre #ana-continuite nature="Définition" titre="continuité"}
+Une fonction $f$ est **continue** en un réel $a$ de son domaine si $\lim\limits_{x\to a}f(x)=f(a)$. Elle est continue sur un intervalle si elle l'est en chaque point de cet intervalle : son graphique s'y trace sans lever le crayon.
+:::
+
+![](../static/figures/th-ana-continuite.svg){.th}
+
+
+::: {.encadre nature="Exemple"}
+Les fonctions polynômes, rationnelles, racines, exponentielles, logarithmes et trigonométriques sont continues sur leur domaine, ainsi que leurs sommes, produits, quotients et composées. Par exemple, $f(x)=\dfrac{\sqrt{x}+\mathrm{e}^x}{x-2}$ est continue sur son domaine $[0;2[\,\cup\,]2;+\infty[$.
+
+Par contre, la fonction qui vaut $-1$ pour $x<0$ et $1$ pour $x\ge0$ n'est pas continue en $0$ : son graphique « saute » en ce point.
+:::
+
+## Dérivées {#ana-s-derivees}
+
+La pente de la sécante qui joint les points d'abscisses $a$ et $a+h$ du graphique vaut $\dfrac{f(a+h)-f(a)}{h}$. Quand $h$ se rapproche de $0$, la sécante se rapproche de la tangente.
+
+::: {.encadre #ana-derivee-def nature="Définition" titre="nombre dérivé et tangente"}
+Le **nombre dérivé** de $f$ en $a$ est
+$$f'(a)=\lim\limits_{h\to0}\frac{f(a+h)-f(a)}{h},$$
+lorsque cette limite existe et est finie. C'est la **pente de la tangente** au graphique au point $(a;f(a))$, qui a pour équation
+$$y=f(a)+f'(a)\,(x-a).$$
+:::
+
+![](../static/figures/th-ana-tangente.svg){.th}
+
+::: {.encadre #ana-derivees-usuelles nature="Propriété" titre="dérivées usuelles"}
+| $f(x)$ | $c$ | $x^r$ ($r$ réel) | $\mathrm{e}^x$ | $\ln x$ | $\sin x$ | $\cos x$ | $\tan x$ |
+|:--|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| $f'(x)$ | $0$ | $r\,x^{r-1}$ | $\mathrm{e}^x$ | $\dfrac1x$ | $\cos x$ | $-\sin x$ | $\dfrac{1}{\cos^2x}$ |
+
+En particulier, $\left(\sqrt x\right)'=\dfrac{1}{2\sqrt x}$ et $\left(\dfrac1x\right)'=-\dfrac{1}{x^2}$. Pour une racine, on l'écrit d'abord comme une puissance : $\sqrt[3]{x^4}=x^{4/3}$.
+:::
+
+::: {.encadre #ana-derivees-regles nature="Propriété" titre="règles de dérivation"}
+$$(f+g)'=f'+g'\qquad(kf)'=kf'\qquad(fg)'=f'g+fg'\qquad\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$$
+Dérivée d'une composée : $\big(f(g(x))\big)'=f'\big(g(x)\big)\cdot g'(x)$.
+:::
+
+::: {.encadre nature="Exemple"}
+$\left(\mathrm{e}^{u(x)}\right)'=u'(x)\,\mathrm{e}^{u(x)}$ ; $\big(\ln u(x)\big)'=\dfrac{u'(x)}{u(x)}$ ; $\big(\sin(3x)\big)'=3\cos(3x)$ ; $\left(f(x^2)\right)'=2x\,f'(x^2)$.
+:::
+
+Si la tangente monte, la fonction monte au voisinage du point. Le signe de la dérivée donne donc les variations.
+
+::: {.encadre #ana-variations nature="Propriété" titre="variations et extrema"}
+Sur un intervalle :
+
+- si $f'>0$ (sauf en des points isolés), $f$ est strictement croissante ;
+- si $f'<0$ (sauf en des points isolés), $f$ est strictement décroissante.
+
+Si $f'$ s'annule en $a$ **en changeant de signe**, $f$ change de variation en $a$ et y atteint un extremum local : un minimum si $f'$ passe de $-$ à $+$, un maximum si $f'$ passe de $+$ à $-$.
+:::
+
+![](../static/figures/th-ana-variations.svg){.th}
+
+::: {.encadre nature="Remarque" titre="dérivée nulle et extremum"}
+Une dérivée nulle ne suffit pas pour avoir un extremum, et un extremum ne demande pas toujours une dérivée nulle. C'est le **changement de signe de $f'$**, en un réel **du domaine**, qui compte. De gauche à droite sur la figure :
+
+1. $f(x)=x^2$ : $f'(x)=2x$ est négative pour $x<0$ et positive pour $x>0$. Elle change de signe en $0$ : $f$ décroît puis croît, et $f(0)=0$ est un minimum.
+2. $f(x)=x^3$ : $f'(x)=3x^2$ est nulle en $0$, mais positive de part et d'autre. $f$ est croissante sur $\mathbb{R}$ : il n'y a pas d'extremum en $0$. La tangente en $(0;0)$ est horizontale et traverse la courbe : c'est un point d'inflexion.
+3. $f(x)=\dfrac{1}{x^2}$ : $f'(x)=-\dfrac{2}{x^3}$ est positive pour $x<0$ et négative pour $x>0$. Le signe change en $0$, mais $0$ n'est pas dans le domaine : $f$ n'a pas de maximum, ses valeurs deviennent aussi grandes qu'on veut près de $0$.
+4. $f(x)=|x|$ : $f$ n'est pas dérivable en $0$ (le graphique y forme un angle), mais $f$ décroît puis croît : $f(0)=0$ est un minimum. Un extremum peut donc aussi se trouver là où la dérivée n'existe pas.
+:::
+
+![](../static/figures/th-ana-extrema.svg){.th}
+
+
+::: {.encadre #ana-concavite nature="Propriété" titre="concavité et point d'inflexion"}
+- Si $f''>0$ sur un intervalle, $f'$ y est croissante : le graphique est **tourné vers le haut** (concavité vers le haut).
+- Si $f''<0$, le graphique est **tourné vers le bas**.
+
+Un **point d'inflexion** est un point où la concavité change, c'est-à-dire où $f''$ change de signe.
+:::
+
+![](../static/figures/th-ana-inflexion.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$f(x)=x^3+3x^2+3x+2$ : $f'(x)=3(x+1)^2\ge0$, donc $f$ est croissante et n'a pas d'extremum. $f''(x)=6(x+1)$ change de signe en $-1$ : le point d'abscisse $-1$ est un point d'inflexion (à tangente horizontale).
+:::
+
+## Primitives et intégrales {#ana-s-integrales}
+
+::: {.encadre #ana-primitive nature="Définition" titre="primitive"}
+Une **primitive** de $f$ sur un intervalle $I$ est une fonction $F$ telle que $F'(x)=f(x)$ pour tout $x\in I$.
+
+Si $F$ est une primitive de $f$ sur l'intervalle $I$, les primitives de $f$ sur $I$ sont les fonctions $F+c$, où $c$ est une constante.
+:::
+
+Deux primitives d'une même fonction ont la même dérivée : en chaque $x$, leurs graphiques ont la même pente. Sur un intervalle, ils se déduisent donc l'un de l'autre par un déplacement vertical.
+
+![](../static/figures/th-ana-primitives.svg){.th}
+
+
+::: {.encadre nature="Remarque" titre="sur un intervalle"}
+Sur $\mathbb{R}_0$, qui n'est pas un intervalle, $\dfrac1x$ a plus de primitives que $\ln|x|+c$ : on peut choisir une constante différente sur $]-\infty;0[$ et sur $]0;+\infty[$. Une condition comme $f(1)=1$ ne fixe la constante que sur l'intervalle qui contient $1$.
+:::
+
+::: {.encadre #ana-primitives-usuelles nature="Propriété" titre="primitives usuelles"}
+| $f(x)$ | $x^r$ ($r\neq-1$) | $\dfrac1x$ | $\mathrm{e}^x$ | $\cos x$ | $\sin x$ | $\dfrac{1}{\cos^2x}$ |
+|:--|:-:|:-:|:-:|:-:|:-:|:-:|
+| $F(x)$ | $\dfrac{x^{r+1}}{r+1}$ | $\ln\lvert x\rvert$ | $\mathrm{e}^x$ | $\sin x$ | $-\cos x$ | $\tan x$ |
+
+Une primitive de $f(ax+b)$ est $\dfrac1a\,F(ax+b)$ : par exemple, $\mathrm{e}^{2x}$ a pour primitive $\dfrac12\mathrm{e}^{2x}$.
+:::
+
+En lisant à l'envers la dérivée d'une composée, on obtient la méthode de substitution. En lisant à l'envers la dérivée d'un produit, on obtient l'intégration par parties.
+
+::: {.encadre #ana-substitution nature="Propriété" titre="substitution"}
+Si $F$ est une primitive de $f$, alors $F\big(u(x)\big)$ est une primitive de $f\big(u(x)\big)\cdot u'(x)$.
+:::
+
+::: {.encadre nature="Exemple"}
+$2x\,\mathrm{e}^{x^2}$ a pour primitive $\mathrm{e}^{x^2}$ ; $\dfrac{2x}{x^2+1}$ a pour primitive $\ln\left(x^2+1\right)$ ; $\cos x\sin^2x$ a pour primitive $\dfrac{\sin^3x}{3}$.
+:::
+
+::: {.encadre #ana-parties nature="Propriété" titre="intégration par parties"}
+Pour des fonctions $u$ et $v$ dérivables :
+$$\int u\,v'\,\mathrm{d}x=u\,v-\int u'\,v\,\mathrm{d}x.$$
+On choisit pour $u$ le facteur qui se simplifie en le dérivant (souvent un polynôme).
+:::
+
+::: {.encadre #ana-integrale nature="Propriété" titre="intégrale définie"}
+Si $F$ est une primitive de $f$ sur un intervalle contenant $a$ et $b$ :
+$$\int_a^bf(x)\,\mathrm{d}x=\big[F(x)\big]_a^b=F(b)-F(a).$$
+Si $f\ge0$ sur $[a;b]$, cette intégrale est l'aire de la région comprise entre le graphique de $f$ et l'axe des abscisses, entre $x=a$ et $x=b$.
+:::
+
+![](../static/figures/th-ana-integrale.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Avec $u=x$ et $v'=\mathrm{e}^x$ : $\displaystyle\int_0^1x\,\mathrm{e}^{x}\,\mathrm{d}x=\big[x\,\mathrm{e}^{x}\big]_0^1-\int_0^1\mathrm{e}^{x}\,\mathrm{d}x=\mathrm{e}-(\mathrm{e}-1)=1$.
+:::
+
+::: {.encadre #ana-aire nature="Propriété" titre="aire entre deux courbes"}
+L'aire de la région comprise entre les graphiques de $f$ et de $g$, entre $x=a$ et $x=b$, vaut $\displaystyle\int_a^b\big|f(x)-g(x)\big|\,\mathrm{d}x$.
+
+En pratique, on calcule les abscisses des points d'intersection, puis on additionne les valeurs absolues des intégrales de $f-g$ entre deux intersections consécutives.
+:::
+
+![](../static/figures/th-ana-aire.svg){.th}
+
+::: {.encadre nature="Exemple"}
+La droite $y=x$ et la parabole $y=x^2-2x$ se coupent en $x=0$ et $x=3$. Aire : $\left|\displaystyle\int_0^3\left(x^2-3x\right)\mathrm{d}x\right|=\left|\left[\frac{x^3}{3}-\frac{3x^2}{2}\right]_0^3\right|=\left|9-\frac{27}{2}\right|=\frac92$.
+:::

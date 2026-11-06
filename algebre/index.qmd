@@ -1,0 +1,32 @@
+---
+title: "Algèbre"
+format: html
+---
+
+Calcul numérique et littéral : pourcentages, fractions, puissances et racines, valeur absolue, systèmes de deux équations, équations du second degré.
+
+Les chapitres rassemblent ce qu'il faut maîtriser pour les QCM d'algèbre. Rien n'y est nouveau : tout a été vu au secondaire. Les questions du concours ne demandent pas de longs calculs, mais elles piègent souvent sur un détail (un signe, une racine carrée, un cas oublié). Les remarques signalent ces détails.
+
+## Chapitres
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="01-calcul.html"><strong>1.1 Calcul littéral</strong></a>
+  <a class="tuile" href="02-pourcentages.html"><strong>1.2 Pourcentages et proportionnalité</strong></a>
+  <a class="tuile" href="03-fractions.html"><strong>1.3 Fractions</strong></a>
+  <a class="tuile" href="04-puissances.html"><strong>1.4 Puissances</strong></a>
+  <a class="tuile" href="05-racines.html"><strong>1.5 Racines</strong></a>
+  <a class="tuile" href="06-abs.html"><strong>1.6 Valeur absolue et produits remarquables</strong></a>
+  <a class="tuile" href="07-systemes.html"><strong>1.7 Équations et systèmes du premier degré</strong></a>
+  <a class="tuile" href="08-second-degre.html"><strong>1.8 Second degré</strong></a>
+</div>
+```
+
+## Concours
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="qcm.html"><strong>QCM de la séance</strong><span>10 questions, indices et solutions.</span></a>
+  <a class="tuile" href="exercices.html"><strong>Exercices supplémentaires</strong><span>28 QCM corrigés à la fin.</span></a>
+</div>
+```

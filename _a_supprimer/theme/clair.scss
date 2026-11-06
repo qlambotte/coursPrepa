@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+$primary: #a4572a;
+$body-bg: #f6f5f2;
+$body-color: #1f2328;
+$link-color: #a4572a;
+$navbar-bg: #2f3b47;
+$navbar-fg: #d8dee5;
+$navbar-hl: #ffffff;
+$footer-bg: #f6f5f2;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+/*-- scss:rules --*/
+:root {
+  --carte: #ffffff;
+  --doux: #5b6470;
+  --bord: #d9d6cf;
+  --accent: #a4572a;
+  --accent-doux: #f3e6dc;
+  --ardoise: #2f3b47;
+  --ok: #1d7a46;
+  --ok-fond: #e3f3e9;
+  --ko: #b3261e;
+  --ko-fond: #fbe5e3;
+  --theorie: #eef2f6;
+  --fond: #f6f5f2;
+}

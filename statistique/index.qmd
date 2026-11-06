@@ -1,0 +1,25 @@
+---
+title: "Statistique"
+format: html
+---
+
+Les chapitres rassemblent ce qu'il faut maîtriser pour les QCM de statistique : lire une représentation graphique, calculer une moyenne et un écart-type, et interpréter ces nombres. Les questions demandent rarement de longs calculs ; elles vérifient surtout que l'on sait ce que mesure chaque indicateur.
+
+## Chapitres
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="01-representations.html"><strong>5.1 Vocabulaire et représentations</strong></a>
+  <a class="tuile" href="02-position.html"><strong>5.2 Indicateurs de position</strong></a>
+  <a class="tuile" href="03-dispersion.html"><strong>5.3 Écart-type</strong></a>
+</div>
+```
+
+## Concours
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="qcm.html"><strong>QCM de la séance</strong><span>5 questions, indices et solutions.</span></a>
+  <a class="tuile" href="exercices.html"><strong>Exercices supplémentaires</strong><span>17 QCM corrigés à la fin.</span></a>
+</div>
+```

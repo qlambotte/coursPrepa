@@ -1,0 +1,79 @@
+% !TEX TS-program = lualatex
+\documentclass[11pt]{article}
+
+% LuaLaTeX lit directement les fichiers source en UTF-8.
+% Le package moodle génère alors le fichier <jobname>-moodle.xml en UTF-8.
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage{moodle}
+
+\setmainfont{Latin Modern Roman}
+
+\begin{document}
+
+\begin{quiz}[tags={mathématiques,diagnostique,2026-2027}]{Test diagnostique -- cours préparatoires au concours d'entrée et d'accès en médecine et dentisterie}
+
+\begin{multi}[shuffle=true,numbering=ABCD]{Algèbre}
+On considère \(a,b,c\in\mathbb{R}\) tels que
+\[
+a+b+c=12
+\qquad\text{et}\qquad
+2a+b=10.
+\]
+Quelle est la valeur de \(b+2c\) ?
+
+\item[feedback={Exact. En soustrayant \(2a+b=10\) de \(2a+2b+2c=24\), on obtient \(b+2c=14\).}] * \(14\)
+\item[feedback={**Erreur :** on ne peut pas déterminer \(b+2c\) en utilisant seulement une des équations. En doublant \(a+b+c=12\), puis en retranchant \(2a+b=10\), on obtient directement \(b+2c=14\).}] \(6\)
+\item[feedback={**Erreur :** \(10\) est le second membre de l'équation \(2a+b=10\), mais la question demande \(b+2c\). En combinant les deux équations, on trouve \(b+2c=14\).}] \(10\)
+\item[feedback={**Erreur :** \(12\) est le second membre de \(a+b+c=12\), mais ce n'est pas \(b+2c\). Il faut multiplier cette équation par \(2\), puis retrancher \(2a+b=10\), ce qui donne \(14\).}] \(12\)
+\end{multi}
+
+\begin{multi}[shuffle=true,numbering=ABCD]{Géométrie}
+Dans un repère orthonormé, on considère les points
+\(A(0,0)\), \(B(2,1)\) et \(C(t,2)\), où \(t\in\mathbb{R}\).
+On considère le triangle \(ABC\). Quelle affirmation est correcte ?
+
+\item[feedback={**Erreur :** on ne teste ici qu'une partie des angles. L'angle en \(A\) est droit pour \(t=-1\) et l'angle en \(B\) est droit pour \(t=\frac32\). Il y a donc **deux** valeurs distinctes de \(t\).}] Le triangle est rectangle pour exactement une valeur de \(t\).
+\item[feedback={Exact. Un angle droit en \(A\) donne \(t=-1\), tandis qu'un angle droit en \(B\) donne \(t=\frac32\). L'angle en \(C\) ne peut jamais être droit.}] * Le triangle est rectangle pour exactement deux valeurs distinctes de \(t\).
+\item[feedback={**Erreur :** l'étude des trois angles ne donne pas trois solutions. On obtient \(t=-1\) pour l'angle en \(A\), \(t=\frac32\) pour l'angle en \(B\), et aucune solution pour l'angle en \(C\).}] Le triangle est rectangle pour exactement trois valeurs distinctes de \(t\).
+\item[feedback={**Erreur :** il existe bien des valeurs donnant un angle droit. Le produit scalaire \(\vec{AB}\cdot\vec{AC}\) s'annule pour \(t=-1\), et \(\vec{BA}\cdot\vec{BC}\) s'annule pour \(t=\frac32\).}] Le triangle n'est rectangle pour aucune valeur de \(t\).
+\end{multi}
+
+\begin{multi}[shuffle=true,numbering=ABCD]{Trigonométrie}
+On considère un angle \(\alpha\in[0,\pi/2]\) tel que
+\[
+\sin(\alpha)=\frac35.
+\]
+Que vaut \(1+\tan^2(\alpha)\) ?
+
+\item[feedback={**Erreur :** \(\frac{25}{9}\) correspondrait à \(1+\frac{16}{9}\), et non à la valeur obtenue ici. Avec \(\sin\alpha=\frac35\), on a \(\cos\alpha=\frac45\), donc \(\tan\alpha=\frac34\) et \(1+\tan^2\alpha=\frac{25}{16}\).}] \(\frac{25}{9}\)
+\item[feedback={Exact. \(\cos(\alpha)=\frac45\). Donc \(1+\tan^2(\alpha)=\frac{1}{\cos^2(\alpha)}=\frac{25}{16}\).}] * \(\frac{25}{16}\)
+\item[feedback={**Erreur :** \(\frac9{16}\) est seulement \(\tan^2(\alpha)\). Il reste à ajouter \(1\) : \(1+\frac9{16}=\frac{25}{16}\).}] \(\frac9{16}\)
+\item[feedback={**Erreur :** \(\frac{16}{9}\) est l'inverse de \(\tan^2(\alpha)=\frac9{16}\). La quantité demandée est \(1+\tan^2(\alpha)\), donc \(\frac{25}{16}\).}] \(\frac{16}{9}\)
+\end{multi}
+
+\begin{multi}[shuffle=true,numbering=ABCD]{Statistiques}
+Une série statistique de quatre valeurs a une moyenne égale à \(5\) et un écart-type égal à \(\sqrt{5}\).
+On ajoute la valeur \(5\) à cette série. Quel est le nouvel écart-type ?
+\item[feedback={Erreur : vous avez probablement confondu la variance et l'écart-type. La variance initiale vaut \(5\), mais il faut recalculer la nouvelle variance après l'ajout de la valeur \(5\).}] \(5\)
+\item[feedback={Erreur : \(\sqrt{5}\) est l'écart-type initial. Après avoir ajouté une valeur égale à la moyenne, l'écart-type diminue car on ajoute une valeur dont l'écart à la moyenne est nul.}] \(\sqrt{5}\)
+\item[feedback={Erreur : vous avez probablement calculé la nouvelle variance \(4\), mais l'écart-type est la racine carrée de la variance.}] \(4\)
+\item[feedback={Bonne réponse. La moyenne reste \(5\). La somme initiale des carrés des écarts vaut \(4\times5=20\). La nouvelle valeur a un écart nul à la moyenne, donc la nouvelle variance vaut \(20/5=4\), et le nouvel écart-type vaut \(\sqrt{4}=2\).}] *\(2\)
+
+\end{multi}
+
+\begin{multi}[shuffle=true,numbering=ABCD]{Analyse}
+On considère \(f\) dérivable sur \(\mathbb{R}\) telle que
+\(f(9)=1\) et \(f'(9)=-3\).
+Soit \(g(x)=f(x^2)\).
+Quel est le point d'intersection entre la tangente au graphe de \(g\) au point d'abscisse \(3\) et l'axe \(Ox\) ?
+
+\item[feedback={**Erreur :** \(55\) est le terme constant de l'équation de la tangente \(y=-18x+55\), mais ce n'est pas l'abscisse de son intersection avec \(Ox\). Il faut imposer \(y=0\), d'où \(x=\frac{55}{18}\).}] \((55,0)\)
+\item[feedback={**Erreur :** le facteur \(2x\) de la règle de la chaîne ne doit pas être oublié. On a \(g'(3)=2\cdot3\,f'(9)=-18\). La tangente est \(y=-18x+55\), donc son intersection avec \(Ox\) est \((55/18,0)\).}] \((1/18,0)\)
+\item[feedback={Exact. \(g(3)=1\) et \(g'(3)=6f'(9)=-18\). La tangente est \(y-1=-18(x-3)\), soit \(y=-18x+55\). Pour \(y=0\), \(x=55/18\).}] \(\left(\frac{55}{18},0\right)\)
+\item[feedback={**Erreur :** une erreur de résolution de \( -18x+55=0\) conduit à cette valeur. La résolution correcte donne \(18x=55\), donc \(x=\frac{55}{18}\).}] \(\left(\frac{28}{9},0\right)\)
+\end{multi}
+
+\end{quiz}
+
+\end{document}

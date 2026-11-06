@@ -1,0 +1,28 @@
+#set page(width: auto, height: auto, margin: 4pt)
+#set text(size: 9pt)
+#import "commun.typ": *
+#canvas(length: 1.3cm, {
+  import draw: *
+  line((-0.4,0.0), (5.6,0.0), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,0.6), (5.6,0.6), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,1.2), (5.6,1.2), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,1.7999999999999998), (5.6,1.7999999999999998), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,2.4), (5.6,2.4), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,3.0), (5.6,3.0), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,3.5999999999999996), (5.6,3.5999999999999996), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((-0.4,4.2), (5.6,4.2), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((0,-0.45), (0,4.5), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((1,-0.45), (1,4.5), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((2,-0.45), (2,4.5), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((3,-0.45), (3,4.5), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((4,-0.45), (4,4.5), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((5,-0.45), (5,4.5), stroke: (paint: luma(150), thickness: 0.4pt, dash: "dashed"))
+  line((0,0), (5.6,0), stroke: 1pt); line((0,0), (0,4.5), stroke: 1pt)
+  content((-0.2,0), anchor: "east", [0]); content((-0.2,0.6), anchor: "east", [20]); content((0.1,4.2), anchor: "west", [Effectif])
+  line((1,0), (1,1.7999999999999998), stroke: 2pt); content((1,-0.2), anchor: "north", [bleu])
+  line((2,0), (2,1.2), stroke: 2pt); content((2,-0.2), anchor: "north", [rouge])
+  line((3,0), (3,3.0), stroke: 2pt); content((3,-0.2), anchor: "north", [vert])
+  line((4,0), (4,3.5999999999999996), stroke: 2pt); content((4,-0.2), anchor: "north", [jaune])
+  line((5,0), (5,2.4), stroke: 2pt); content((5,-0.2), anchor: "north", [violet])
+
+})

@@ -1,0 +1,27 @@
+---
+title: "Géométrie"
+format: html
+---
+
+Les chapitres rassemblent ce qu'il faut maîtriser pour les QCM de géométrie : les propriétés des angles et des triangles, le calcul vectoriel et les équations de droites. Les questions du concours mélangent souvent ces trois outils : une question sur un triangle se résout parfois plus vite avec des vecteurs ou des coordonnées.
+
+## Chapitres
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="01-angles.html"><strong>2.1 Angles, parallélisme et triangles</strong></a>
+  <a class="tuile" href="02-pythagore.html"><strong>2.2 Pythagore et sa généralisation</strong></a>
+  <a class="tuile" href="03-vecteurs.html"><strong>2.3 Vecteurs</strong></a>
+  <a class="tuile" href="04-scalaire.html"><strong>2.4 Norme et produit scalaire</strong></a>
+  <a class="tuile" href="05-droites.html"><strong>2.5 Droites dans un repère</strong></a>
+</div>
+```
+
+## Concours
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="qcm.html"><strong>QCM de la séance</strong><span>10 questions, indices et solutions.</span></a>
+  <a class="tuile" href="exercices.html"><strong>Exercices supplémentaires</strong><span>16 QCM corrigés à la fin.</span></a>
+</div>
+```

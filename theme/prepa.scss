@@ -1,0 +1,54 @@
+/*-- scss:rules --*/
+// Compléments propres au site de la prépa (QCM, quiz, ticket, solutions verrouillées),
+// dans les couleurs de la charte « Ardoise et cuivre » (jetons de theme.scss).
+
+// Provenance de la question, dans l'en-tête de l'exercice
+.exo-tete .exo-source {
+  margin-left: auto; font-family: $font-family-sans-serif; font-size: .82rem; font-weight: 600;
+  letter-spacing: .02em; background: var(--carte); color: var(--cu-f); border-radius: 99px; padding: .05rem .65rem;
+}
+
+// Propositions A–D en deux colonnes
+.qcm-options { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem 1.2rem; margin: .8rem 0 .2rem; }
+@media (max-width: 560px) { .qcm-options { grid-template-columns: 1fr; } }
+.qcm-option { display: flex; gap: .6rem; align-items: baseline; padding: .3rem .55rem; border-radius: 10px; border: 1.5px solid transparent; margin: 0; }
+.qcm-option > p { margin: 0; }
+.qcm-lettre { font-family: var(--serif-t); font-weight: 700; color: var(--cu-f); min-width: 1.1rem; }
+label.qcm-option { cursor: pointer; }
+label.qcm-option:hover { background: var(--q); }
+.qcm-option input { margin: 0; accent-color: var(--cu); }
+.qcm-option.juste { background: var(--ol-t); border-color: var(--ol); }
+.qcm-option.faux { background: var(--cu-t); border-color: var(--cu); }
+
+// Solution et pièges verrouillés jusqu'à la fin de l'entraînement
+.verrou-attente { color: var(--muted); font-style: italic; }
+.verrou-attente::before { content: "🔒  "; font-style: normal; }
+
+// Ticket de sortie
+.ticket { border-radius: 22px; background: var(--cu-t); padding: .4rem 1.25rem 1rem; margin: 1rem 0 2rem; }
+.ticket > h2 { margin-top: .8rem !important; }
+
+// Quiz d'autoévaluation
+.verdict { font-weight: 600; margin: .4rem 0 0; }
+.verdict.ok { color: var(--ol-f); }
+.verdict.ko { color: var(--cu-f); }
+.actions-quiz { position: sticky; bottom: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: .8rem; align-items: center;
+  padding: .8rem 0; background: var(--page-bg); }
+.actions-quiz button { font: 600 .95rem $font-family-sans-serif; color: #fff; background: var(--cu-f); border: 0;
+  border-radius: 99px; padding: .45rem 1.2rem; cursor: pointer; }
+.actions-quiz button.nouvelle-serie { background: var(--ard); }
+.score { margin: 0; font-weight: 600; color: var(--h); }
+
+// Tuiles des pages d'accueil
+.tuiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.tuile { display: flex; flex-direction: column; gap: .3rem; background: var(--carte); border-radius: 22px; padding: 1rem 1.25rem;
+  text-decoration: none !important; color: var(--text) !important; box-shadow: 0 1px 2px var(--ombre), 0 10px 28px var(--ombre); }
+.tuile strong { font-family: var(--serif-t); font-size: 1.15rem; color: var(--h); }
+.tuile span { color: var(--muted); font-size: .92rem; }
+.tuile:hover { box-shadow: 0 0 0 2px var(--cu-t), 0 10px 28px var(--ombre); }
+.tuile.grise { opacity: .55; }
+
+// Figures de théorie : centrées, jamais plus larges que la colonne
+img.th { display: block; margin: 1.1rem auto 1.4rem; max-width: 100%; height: auto; }
+// Mode sombre : les figures (traits noirs) sont inversées pour rester lisibles
+:root[data-theme="dark"] main img[src*="static/figures/"] { filter: invert(.92) hue-rotate(180deg); }

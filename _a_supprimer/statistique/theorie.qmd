@@ -1,0 +1,158 @@
+---
+title: "Théorie essentielle — Statistique"
+prepa:
+  theme: statistique
+---
+
+Cette page rassemble ce qu'il faut maîtriser pour les QCM de statistique : lire une représentation graphique, calculer une moyenne et un écart-type, et interpréter ces nombres. Les questions demandent rarement de longs calculs ; elles vérifient surtout que l'on sait ce que mesure chaque indicateur.
+
+## Vocabulaire et représentations {#sta-s-representations}
+
+::: {.encadre #sta-vocabulaire nature="Définition" titre="série statistique, effectif, fréquence"}
+Une **série statistique** est la liste des valeurs d'une variable observée sur les individus d'une population (ou d'un échantillon).
+
+- L'**effectif** $n_i$ d'une valeur est le nombre d'individus qui ont cette valeur ; l'effectif total $n$ est la somme des effectifs.
+- La **fréquence** d'une valeur est $f_i=\dfrac{n_i}{n}$. Elle s'exprime souvent en pourcentage ; la somme des fréquences vaut $1$ (ou $100\,\%$).
+:::
+
+Le choix des calculs et des graphiques dépend de la nature de la variable observée. Il faut donc la déterminer avant tout calcul.
+
+::: {.encadre #sta-variables nature="Définition" titre="nature d'une variable"}
+- Une variable est **qualitative** si ses valeurs sont des catégories, qui ne se mesurent pas : la couleur des yeux, la section d'études, le groupe sanguin. Ses valeurs s'appellent des **modalités**. Même codées par des nombres (un code postal, un numéro de local), elles restent qualitatives : additionner deux codes postaux n'a pas de sens.
+- Une variable est **quantitative** si ses valeurs sont des nombres obtenus par un comptage ou une mesure, sur lesquels les opérations ont un sens : un nombre d'enfants, une taille, une note.
+
+Une variable quantitative est :
+
+- **discrète** si ses valeurs possibles peuvent être **énumérées**, c'est-à-dire écrites l'une après l'autre dans une liste (finie ou non) : une première valeur, une deuxième, une troisième, et ainsi de suite, sans en oublier. Le nombre d'enfants ($0$, $1$, $2$, $3$…) ou le nombre de questions réussies sur $11$ ($0$, $1$, …, $11$) sont discrets. Entre deux valeurs possibles voisines, il n'y a aucune autre valeur possible ;
+- **continue** si elle peut prendre toutes les valeurs d'un intervalle : une taille, une masse, une durée, une concentration. Entre deux valeurs possibles, aussi proches soient-elles, il y en a toujours une autre (leur moyenne, par exemple) : on ne peut pas les écrire l'une après l'autre. Ses valeurs proviennent d'une mesure, et on les regroupe en **classes** $[a;b[$.
+:::
+
+::: {.encadre nature="Remarque" titre="les données, elles, sont toujours en nombre fini"}
+Une série statistique ne contient qu'un nombre fini de données, mesurées avec une précision limitée : des tailles relevées au centimètre près ne prennent que des valeurs comme $172$, $173$, $174$… À priori, toutes les données quantitatives récoltées sont donc « discrètes ». C'est la **nature de la variable étudiée** qui est discrète ou continue : la taille peut prendre toutes les valeurs d'un intervalle, même si on ne la relève qu'au centimètre près. Pour une variable continue, on regroupe les données en classes et on les représente par un histogramme.
+:::
+
+::: {.encadre nature="Exemple"}
+Pour un groupe d'étudiants : la section (médecine, dentisterie) est qualitative ; le nombre de frères et sœurs est quantitative discrète ; la taille en centimètres est quantitative continue.
+:::
+
+::: {.encadre #sta-nature-outils nature="Propriété" titre="ce que l'on peut calculer et représenter"}
+| nature de la variable | représentation | indicateurs |
+|:--|:--|:--|
+| qualitative | diagramme en bâtons, diagramme circulaire | mode (et médiane si les modalités sont ordonnées) |
+| quantitative discrète | diagramme en bâtons | mode, médiane, quartiles, moyenne, écart-type |
+| quantitative continue (en classes) | histogramme | classe modale, médiane, quartiles, moyenne et écart-type à partir des centres des classes |
+:::
+
+::: {.encadre nature="Remarque" titre="pas de moyenne pour une variable qualitative"}
+La moyenne des sections d'études n'a pas de sens, et la médiane non plus, car ces modalités ne sont pas rangées dans un ordre naturel : seul le mode peut être donné. Lorsque les modalités sont naturellement ordonnées (insuffisant, satisfaisant, bien, très bien), la variable est dite qualitative **ordinale** : on peut alors donner une médiane, mais toujours pas de moyenne.
+:::
+
+::: {.encadre nature="Remarque" titre="les codes postaux de Wallonie"}
+Les codes postaux sont des nombres, mais ils désignent des communes : la variable « code postal » est qualitative. Par exemple, Mons a le code $7000$, Liège $4000$, Namur $5000$, Charleroi $6000$, Wavre $1300$ et Arlon $6700$.^[Source : bpost, liste des codes postaux belges.]
+
+La « moyenne » de $7000$ (Mons) et de $4000$ (Liège) vaut $5500$, le code de Dinant : ce calcul n'a aucun sens, Dinant n'est pas une commune « moyenne » entre Mons et Liège. La médiane n'en a pas davantage : les codes sont rangés par zone géographique (le premier chiffre correspond à une zone), pas selon une grandeur. Une série de codes postaux, par exemple les domiciles des inscrits aux cours préparatoires, se décrit comme toute variable qualitative : par l'effectif ou la fréquence de chaque commune, représentés par un diagramme en bâtons ou un diagramme circulaire. Le mode indique alors seulement la commune la plus représentée.
+:::
+
+::: {.encadre #sta-graphiques nature="Propriété" titre="lire un graphique"}
+- **Diagramme en bâtons** (variable discrète ou qualitative) : la hauteur de chaque bâton est l'effectif (ou la fréquence) de la valeur.
+- **Diagramme circulaire** : chaque secteur a un angle proportionnel à la fréquence ; une fréquence $f$ correspond à un angle $f\cdot360^\circ$. Un demi-disque représente $50\,\%$, un quart $25\,\%$.
+- **Histogramme** (variable regroupée en classes) : chaque classe est représentée par un rectangle dont l'**aire** est proportionnelle à l'effectif. Si toutes les classes ont la même amplitude, la hauteur est proportionnelle à l'effectif.
+:::
+
+![](../static/figures/th-sta-graphiques.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Sur $600$ personnes interrogées, un secteur de $90^\circ$ représente $\frac{90}{360}=25\,\%$, soit $150$ personnes.
+:::
+
+::: {.encadre nature="Remarque" titre="lire l'axe avant de calculer"}
+Avant toute lecture, on vérifie ce que porte l'axe vertical (effectifs ou fréquences) et si les classes d'un histogramme ont la même amplitude. Avec un graphique de fréquences seules, on ne peut pas retrouver les effectifs sans connaître l'effectif total.
+:::
+
+## Indicateurs de position {#sta-s-position}
+
+La moyenne répartit équitablement le total : si chacun recevait la même valeur, ce serait la moyenne.
+
+::: {.encadre #sta-moyenne nature="Définition" titre="moyenne"}
+La **moyenne** des valeurs $x_1,x_2,\dots,x_n$ est
+$$\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}.$$
+Si les valeurs $x_i$ apparaissent avec les effectifs $n_i$ : $\overline{x}=\dfrac{\sum n_ix_i}{n}=\sum f_ix_i$.
+
+Pour des données regroupées en classes, on remplace chaque classe par son **centre**.
+:::
+
+Si on place des masses égales sur une règle, à l'endroit de chaque valeur, la règle tient en équilibre sur la moyenne : la somme des écarts à la moyenne est nulle, les écarts positifs compensant les écarts négatifs. Pour la série $8$, $10$, $11$, $12$, $12$, $13$, $14$, $14$, $15$, $21$, la moyenne vaut $\frac{130}{10}=13$. Les écarts négatifs ($-5$, $-3$, $-2$, $-1$, $-1$) ont pour somme $-12$, les écarts positifs ($1$, $1$, $2$, $8$) ont pour somme $12$ : la seule valeur $21$, éloignée, compense pour une grande part les valeurs situées sous la moyenne.
+
+![](../static/figures/th-sta-moyenne.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Les notes $12$, $15$, $15$, $18$ ont pour moyenne $\dfrac{12+2\cdot15+18}{4}=15$. Le total des notes vaut $n\cdot\overline{x}=60$.
+:::
+
+::: {.encadre #sta-moyenne-prop nature="Propriété" titre="propriétés de la moyenne"}
+- Le total des valeurs vaut $n\,\overline{x}$ : connaître la moyenne et l'effectif donne la somme.
+- Si on ajoute une constante $c$ à chaque valeur, la moyenne augmente de $c$ ; si on multiplie chaque valeur par $k$, la moyenne est multipliée par $k$.
+- Ajouter à la série une valeur égale à la moyenne ne change pas la moyenne.
+:::
+
+::: {.encadre nature="Remarque" titre="moyenne et valeurs extrêmes"}
+La moyenne est sensible aux valeurs extrêmes : une seule valeur très grande peut la tirer bien au-dessus de la plupart des données. Elle ne coïncide en général ni avec la médiane ni avec une valeur de la série.
+:::
+
+::: {.encadre #sta-mediane nature="Définition" titre="mode, médiane, quartiles"}
+- Le **mode** est la valeur (ou la classe) de plus grand effectif.
+- La **médiane** partage la série **ordonnée** en deux groupes de même effectif : si $n$ est impair, c'est la valeur du milieu ; si $n$ est pair, c'est la moyenne des deux valeurs du milieu.
+- Le **premier quartile** $Q_1$ est la médiane de la moitié inférieure de la série ordonnée, et le **troisième quartile** $Q_3$ la médiane de la moitié supérieure (lorsque $n$ est impair, on laisse la médiane hors des deux moitiés).
+:::
+
+![](../static/figures/th-sta-quartiles.svg){.th}
+
+Environ un quart des valeurs sont inférieures à $Q_1$, la moitié inférieures à la médiane et trois quarts inférieures à $Q_3$. Entre $Q_1$ et $Q_3$ se trouve environ la moitié des valeurs.
+
+::: {.encadre nature="Exemple"}
+Série ordonnée $3,5,6,8,9,10,12,15$ ($n=8$) : médiane $\frac{8+9}{2}=8{,}5$ ; moitié inférieure $3,5,6,8$, d'où $Q_1=\frac{5+6}{2}=5{,}5$ ; moitié supérieure $9,10,12,15$, d'où $Q_3=11$.
+:::
+
+::: {.encadre nature="Remarque" titre="conventions"}
+Plusieurs conventions de calcul des quartiles existent ; elles donnent des valeurs proches mais parfois différentes. Sur ce site, on utilise celle ci-dessus. La médiane, elle, est définie sans ambiguïté.
+:::
+
+## Écart-type {#sta-s-dispersion}
+
+Deux séries peuvent avoir la même moyenne et être très différentes : $9,10,11$ et $0,10,20$ ont toutes deux pour moyenne $10$. Pour mesurer la dispersion autour de la moyenne, on regarde les écarts $x_i-\overline{x}$. Leur moyenne est toujours nulle (les écarts positifs compensent les négatifs) ; on fait donc la moyenne de leurs **carrés**.
+
+::: {.encadre #sta-ecart-type nature="Définition" titre="variance et écart-type"}
+La **variance** d'une série est la moyenne des carrés des écarts à la moyenne :
+$$V=\frac{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\cdots+(x_n-\overline{x})^2}{n}.$$
+L'**écart-type** est sa racine carrée : $\sigma=\sqrt V$. Il s'exprime dans la même unité que les données.
+:::
+
+![](../static/figures/th-sta-dispersion.svg){.th}
+
+En développant les carrés, on obtient une formule plus rapide : il suffit de connaître la moyenne des valeurs et la moyenne de leurs carrés.
+
+::: {.encadre #sta-variance-calcul nature="Propriété" titre="formule de calcul"}
+La variance est la moyenne des carrés moins le carré de la moyenne :
+$$V=\overline{x^2}-\overline{x}^{\,2}\qquad\text{où}\qquad\overline{x^2}=\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+Série $1,2,4,5$ : $\overline x=3$. Par la définition, $V=\dfrac{4+1+1+4}{4}=\dfrac52$. Par la formule, $\overline{x^2}=\dfrac{1+4+16+25}{4}=\dfrac{23}{2}$ et $V=\dfrac{23}{2}-9=\dfrac52$. Donc $\sigma=\sqrt{\dfrac52}$.
+:::
+
+::: {.encadre #sta-ecart-type-prop nature="Propriété" titre="propriétés de l'écart-type"}
+- $\sigma\ge0$, et $\sigma=0$ si et seulement si toutes les valeurs sont égales.
+- Plus les valeurs sont éloignées de la moyenne, plus l'écart-type est grand.
+- Ajouter une constante à chaque valeur ne change pas l'écart-type ; multiplier chaque valeur par $k$ multiplie l'écart-type par $|k|$.
+:::
+
+![](../static/figures/th-sta-translation.svg){.th}
+
+
+::: {.encadre nature="Exemple"}
+Les séries $\{1;5;9\}$ et $\{3;5;7\}$ ont la même moyenne $5$ ; la première est plus dispersée et a le plus grand écart-type ($\sqrt{32/3}$ contre $\sqrt{8/3}$). La série $\{101;105;109\}$ a le même écart-type que $\{1;5;9\}$.
+:::
+
+::: {.encadre nature="Remarque" titre="retirer ou ajouter des données"}
+Retirer des données peut faire augmenter, diminuer ou laisser inchangé l'écart-type : tout dépend de leur position par rapport à la moyenne. Retirer des valeurs très éloignées de la moyenne le diminue ; retirer des valeurs proches de la moyenne l'augmente.
+:::

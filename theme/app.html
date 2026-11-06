@@ -1,0 +1,128 @@
+<script>
+// Site prépa : solutions verrouillées par etat.json, réponses masquées, ticket de sortie,
+// quiz d'autoévaluation (avec tirage aléatoire sur la page globale).
+(function () {
+  "use strict";
+  const meta = document.getElementById("prepa-meta");
+  if (!meta) return;
+  const themeId = meta.dataset.theme;
+  const racine = meta.dataset.racine || "";
+  const activees = new Set(); // ids dont la réponse masquée est publiée
+
+  function masquee(el, id) {
+    return el.dataset.masquee === "true" && !activees.has(id);
+  }
+  function titre(boite, texte) {
+    const t = boite.querySelector(".exo-titre");
+    if (t) t.textContent = "✎ " + texte;
+  }
+
+  // ---------- Solutions verrouillées et ticket de sortie
+  fetch(racine + "etat.json?t=" + Date.now(), { cache: "no-store" })
+    .then((r) => (r.ok ? r.json() : {}))
+    .catch(() => ({}))
+    .then((etat) => {
+      (etat.reponses_activees || []).forEach((id) => activees.add(id));
+      const e = etat[themeId] || {};
+      document.querySelectorAll(".verrou").forEach((v) => {
+        const ouvert = e[v.dataset.verrou] === true && !masquee(v, v.dataset.id);
+        v.querySelector(".verrou-attente").hidden = ouvert;
+        v.querySelector(".verrou-contenu").hidden = !ouvert;
+      });
+      const ticket = document.getElementById("ticket");
+      if (ticket) {
+        const choix = Array.isArray(e.ticket) ? e.ticket : [];
+        let n = 0;
+        ticket.querySelectorAll(".jumeau").forEach((j) => {
+          const visible = choix.includes(j.dataset.jumeauDe);
+          j.hidden = !visible;
+          if (visible) { n += 1; titre(j, "Ticket " + n); }
+        });
+        ticket.hidden = n === 0;
+      }
+    });
+
+  // ---------- Quiz d'autoévaluation
+  document.querySelectorAll("form.quiz").forEach((form) => {
+    const corriger = form.querySelector(".corriger");
+    const recommencer = form.querySelector(".recommencer");
+    const nouvelle = form.querySelector(".nouvelle-serie");
+    const score = form.querySelector(".score");
+    const actions = form.querySelector(".actions-quiz");
+    const tous = Array.from(form.querySelectorAll(".qcm-exo"));
+    const tirage = parseInt(form.dataset.tirage || "0", 10);
+    let exos = tous;
+
+    function renumeroter() { exos.forEach((ex, i) => titre(ex, "Exercice " + (i + 1))); }
+    function tirer() {
+      const melange = tous.slice();
+      for (let i = melange.length - 1; i > 0; i--) {
+        const k = Math.floor(Math.random() * (i + 1));
+        [melange[i], melange[k]] = [melange[k], melange[i]];
+      }
+      exos = melange.slice(0, Math.min(tirage, tous.length));
+      tous.forEach((ex) => { ex.hidden = !exos.includes(ex); });
+      exos.forEach((ex) => form.insertBefore(ex, actions));
+      renumeroter();
+    }
+    function remettre() {
+      form.reset();
+      tous.forEach((ex) => {
+        ex.querySelectorAll(".qcm-option").forEach((o) => o.classList.remove("juste", "faux"));
+        ex.querySelectorAll("input").forEach((i) => (i.disabled = false));
+        ex.querySelector(".verdict").hidden = true;
+      });
+      score.hidden = true; corriger.hidden = false; recommencer.hidden = true;
+      delete form.dataset.confirme;
+    }
+    if (tirage > 0) tirer();
+
+    corriger.addEventListener("click", () => {
+      const vides = exos.filter((ex) => !ex.querySelector("input:checked")).length;
+      if (vides > 0 && !form.dataset.confirme) {
+        score.hidden = false;
+        score.textContent = vides + " exercice(s) sans réponse. Clique à nouveau sur « Corriger » pour corriger quand même.";
+        form.dataset.confirme = "1";
+        return;
+      }
+      let bons = 0, comptes = 0;
+      exos.forEach((ex) => {
+        const verdict = ex.querySelector(".verdict");
+        ex.querySelectorAll("input").forEach((i) => (i.disabled = true));
+        verdict.hidden = false;
+        if (masquee(ex, ex.id)) {
+          verdict.textContent = "Réponse non publiée : elle est donnée en séance.";
+          verdict.className = "verdict";
+          return;
+        }
+        comptes += 1;
+        const attendu = ex.dataset.reponse;
+        const coche = ex.querySelector("input:checked");
+        ex.querySelectorAll(".qcm-option").forEach((o) => {
+          o.classList.toggle("juste", o.dataset.lettre === attendu);
+          o.classList.toggle("faux", !!coche && o.dataset.lettre === coche.value && coche.value !== attendu);
+        });
+        if (coche && coche.value === attendu) {
+          bons += 1; verdict.textContent = "Correct."; verdict.className = "verdict ok";
+        } else {
+          verdict.textContent = (coche ? "Incorrect" : "Pas de réponse") + " : la bonne réponse est " + attendu + ".";
+          verdict.className = "verdict ko";
+        }
+      });
+      score.hidden = false;
+      score.textContent = "Score : " + bons + " / " + comptes + (comptes < exos.length ? " (questions à réponse publiée)" : "");
+      corriger.hidden = true; recommencer.hidden = false;
+      delete form.dataset.confirme;
+    });
+
+    recommencer.addEventListener("click", () => {
+      remettre();
+      window.scrollTo({ top: form.offsetTop - 80, behavior: "smooth" });
+    });
+    if (nouvelle) nouvelle.addEventListener("click", () => {
+      remettre(); tirer();
+      window.scrollTo({ top: form.offsetTop - 80, behavior: "smooth" });
+    });
+  });
+})();
+</script>

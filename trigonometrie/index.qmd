@@ -1,0 +1,27 @@
+---
+title: "Trigonométrie"
+format: html
+---
+
+Les chapitres rassemblent ce qu'il faut maîtriser pour les QCM de trigonométrie : les nombres trigonométriques dans un triangle rectangle, puis sur le cercle trigonométrique, les formules qui les relient et la résolution d'équations simples. Presque toutes les questions se résolvent avec les valeurs des angles usuels, la relation fondamentale et un dessin du cercle.
+
+## Chapitres
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="01-triangle.html"><strong>3.1 Triangle rectangle</strong></a>
+  <a class="tuile" href="02-cercle.html"><strong>3.2 Cercle trigonométrique</strong></a>
+  <a class="tuile" href="03-associes.html"><strong>3.3 Angles associés</strong></a>
+  <a class="tuile" href="04-addition.html"><strong>3.4 Formules d'addition</strong></a>
+  <a class="tuile" href="05-equations.html"><strong>3.5 Équations trigonométriques</strong></a>
+</div>
+```
+
+## Concours
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="qcm.html"><strong>QCM de la séance</strong><span>10 questions, indices et solutions.</span></a>
+  <a class="tuile" href="exercices.html"><strong>Exercices supplémentaires</strong><span>18 QCM corrigés à la fin.</span></a>
+</div>
+```

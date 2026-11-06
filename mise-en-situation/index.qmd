@@ -1,0 +1,10 @@
+---
+title: "Mise en situation"
+format: html
+---
+
+11 questions en 50 minutes, dans les conditions du concours, à la fin de la dernière séance.
+
+La mise en situation n'est pas corrigée en séance. Son correctif est publié sur ce site, et tu peux poser tes questions lors de la séance de questions-réponses.
+
+[Commencer l'épreuve](epreuve.qmd)

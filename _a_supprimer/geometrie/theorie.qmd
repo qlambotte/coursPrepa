@@ -1,0 +1,252 @@
+---
+title: "Théorie essentielle — Géométrie"
+prepa:
+  theme: geometrie
+---
+
+Cette page rassemble ce qu'il faut maîtriser pour les QCM de géométrie : les propriétés des angles et des triangles, le calcul vectoriel et les équations de droites. Les questions du concours mélangent souvent ces trois outils : une question sur un triangle se résout parfois plus vite avec des vecteurs ou des coordonnées.
+
+## Angles, parallélisme et triangles {#geo-s-angles}
+
+Deux droites sécantes forment quatre angles. Les angles opposés par le sommet sont égaux, et deux angles adjacents sur une même droite sont supplémentaires (leur somme vaut $180^\circ$). Lorsqu'une droite coupe deux droites parallèles, on retrouve les mêmes angles aux deux points d'intersection.
+
+::: {.encadre #geo-angles nature="Propriété" titre="angles et droites parallèles"}
+Une sécante coupe deux droites. Ces deux droites sont parallèles si et seulement si :
+
+- deux angles **correspondants** sont égaux ;
+- ou, de façon équivalente, deux angles **alternes-internes** sont égaux.
+:::
+
+![](../static/figures/th-geo-angles.svg){.th}
+
+::: {.encadre #geo-triangle nature="Propriété" titre="somme des angles d'un triangle"}
+La somme des amplitudes des angles d'un triangle vaut $180^\circ$ (ou $\pi$ radians).
+
+Dans un triangle équilatéral, chaque angle vaut $60^\circ$ ; dans un triangle rectangle isocèle, les deux angles aigus valent $45^\circ$.
+:::
+
+La propriété se voit en traçant, par un sommet, la parallèle au côté opposé : les deux angles alternes-internes ainsi formés et l'angle du sommet remplissent un angle plat.
+
+![](../static/figures/th-geo-triangle.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Un hexagone régulier se découpe, à partir de son centre, en $6$ triangles équilatéraux. Chaque angle de l'hexagone vaut donc $2\cdot 60^\circ=120^\circ$, et chaque côté a la même longueur que le rayon du cercle circonscrit.
+:::
+
+::: {.encadre #geo-perp nature="Définition" titre="droites perpendiculaires, médiatrice, hauteur"}
+Deux droites sont **perpendiculaires** si elles se coupent en formant un angle droit.
+
+La **médiatrice** d'un segment $[AB]$ est la droite perpendiculaire à $[AB]$ passant par son milieu ; c'est l'ensemble des points situés à égale distance de $A$ et de $B$.
+
+La **hauteur** issue d'un sommet $C$ d'un triangle $ABC$ est la droite passant par $C$ et perpendiculaire à $(AB)$. Le point où elle coupe $(AB)$ est le **pied** de la hauteur.
+:::
+
+![](../static/figures/th-geo-hauteur.svg){.th}
+
+::: {.encadre nature="Remarque" titre="hauteur et médiane"}
+Le pied de la hauteur issue de $C$ n'est en général **pas** le milieu de $[AB]$. Il ne l'est que si le triangle est isocèle en $C$ ($CA=CB$).
+:::
+
+## Pythagore et sa généralisation {#geo-s-pythagore}
+
+::: {.encadre #geo-pythagore nature="Propriété" titre="théorème de Pythagore"}
+Le triangle $ABC$ est rectangle en $A$ si et seulement si $BC^2=AB^2+AC^2$.
+:::
+
+![](../static/figures/th-geo-pythagore.svg){.th}
+
+
+::: {.encadre nature="Exemple"}
+Un rectangle de côtés $9$ et $12$ a une diagonale de longueur $\sqrt{81+144}=\sqrt{225}=15$. Le triangle de côtés $3$, $4$, $5$ est rectangle car $9+16=25$.
+:::
+
+Dans un triangle quelconque, $BC^2$ n'est plus égal à $AB^2+AC^2$ : il faut tenir compte de l'angle en $A$. Le calcul vectoriel ci-dessous donne la correction. En notant $a=BC$, $b=AC$, $c=AB$ et $\hat A$ l'angle en $A$ :
+$$a^2=\left\|\overrightarrow{AC}-\overrightarrow{AB}\right\|^2=b^2+c^2-2\,\overrightarrow{AB}\cdot\overrightarrow{AC}=b^2+c^2-2bc\cos\hat A.$$
+
+::: {.encadre #geo-alkashi nature="Propriété" titre="Pythagore généralisé (formule d'Al-Kashi)"}
+Dans un triangle $ABC$ où $a=BC$, $b=AC$, $c=AB$ :
+$$a^2=b^2+c^2-2bc\cos\hat A.$$
+Si $\hat A=90^\circ$, $\cos\hat A=0$ et on retrouve Pythagore.
+:::
+
+![](../static/figures/th-geo-alkashi.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Si $\hat A=45^\circ$, alors $\cos\hat A=\frac{\sqrt2}{2}$ et $a^2=b^2+c^2-\sqrt2\,bc$. Si $\hat A=150^\circ$, alors $\cos\hat A=-\frac{\sqrt3}{2}$ et $a^2=b^2+c^2+\sqrt3\,bc$.
+:::
+
+## Vecteurs {#geo-s-vecteurs}
+
+Un vecteur décrit un déplacement : il a une **direction** (celle d'une droite), un **sens** sur cette direction et une **norme** (une longueur). Le vecteur $\overrightarrow{AB}$ est le déplacement qui amène $A$ en $B$.
+
+::: {.encadre #geo-vect-def nature="Définition" titre="égalité de vecteurs"}
+Deux vecteurs sont **égaux** s'ils ont même direction, même sens et même norme.
+
+$\overrightarrow{AB}=\overrightarrow{DC}$ si et seulement si $ABCD$ est un parallélogramme (éventuellement aplati).
+
+Le vecteur $\overrightarrow{BA}$ est l'**opposé** de $\overrightarrow{AB}$ : $\overrightarrow{BA}=-\overrightarrow{AB}$.
+:::
+
+::: {.encadre nature="Exemple"}
+Dans un parallélogramme $PQRS$ (sommets dans l'ordre), $\overrightarrow{PQ}=\overrightarrow{SR}$ et $\overrightarrow{PS}=\overrightarrow{QR}$. Dans un hexagone régulier, tous les côtés parallèles et de même sens représentent le même vecteur : on peut donc remplacer un vecteur par un autre, plus commode, qui lui est égal.
+:::
+
+Enchaîner deux déplacements, c'est les additionner : aller de $A$ en $B$ puis de $B$ en $C$ revient à aller de $A$ en $C$.
+
+::: {.encadre #geo-chasles nature="Propriété" titre="relation de Chasles"}
+Pour tous points $A$, $B$, $C$ :
+$$\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}.$$
+Pour une différence de deux vecteurs de même origine :
+$$\overrightarrow{AC}-\overrightarrow{AB}=\overrightarrow{BC}.$$
+:::
+
+![](../static/figures/th-geo-chasles.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$\overrightarrow{AB}+\overrightarrow{CA}=\overrightarrow{CA}+\overrightarrow{AB}=\overrightarrow{CB}$. Pour tout point $O$ : $\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}$.
+:::
+
+::: {.encadre #geo-parallelogramme nature="Propriété" titre="règle du parallélogramme"}
+Si $ABCD$ est un parallélogramme, alors $\overrightarrow{AB}+\overrightarrow{AD}=\overrightarrow{AC}$ et $\overrightarrow{AD}-\overrightarrow{AB}=\overrightarrow{BD}$.
+
+Ses diagonales se coupent en leur milieu $M$ : $\overrightarrow{MC}=-\overrightarrow{MA}$ et $\overrightarrow{MD}=-\overrightarrow{MB}$.
+:::
+
+![](../static/figures/th-geo-parallelogramme.svg){.th}
+
+::: {.encadre #geo-mult nature="Définition" titre="multiplication par un réel, colinéarité"}
+Pour un réel $k$ et un vecteur $\vec u$ non nul, $k\,\vec u$ a la même direction que $\vec u$, le même sens si $k>0$ et le sens contraire si $k<0$, et pour norme $|k|\,\|\vec u\|$.
+
+Deux vecteurs sont **colinéaires** si l'un est un multiple de l'autre. Trois points $A$, $B$, $C$ sont alignés si et seulement si $\overrightarrow{AB}$ et $\overrightarrow{AC}$ sont colinéaires.
+:::
+
+![](../static/figures/th-geo-mult.svg){.th}
+
+
+::: {.encadre #geo-milieu nature="Propriété" titre="milieu d'un segment"}
+$M$ est le milieu de $[AB]$ si et seulement si $\overrightarrow{AM}=\frac12\overrightarrow{AB}$, ou encore $\overrightarrow{MA}+\overrightarrow{MB}=\vec 0$.
+:::
+
+Dans le plan, deux vecteurs non colinéaires $\vec u$ et $\vec v$ suffisent pour atteindre n'importe quel point : on avance d'un certain nombre de fois $\vec u$, puis d'un certain nombre de fois $\vec v$.
+
+::: {.encadre #geo-base nature="Définition" titre="base et coordonnées"}
+Deux vecteurs non colinéaires $\vec u$ et $\vec v$ forment une **base** du plan. Tout vecteur $\vec w$ s'écrit alors d'une seule façon $\vec w=x\,\vec u+y\,\vec v$ (on dit que $\vec w$ est une **combinaison linéaire** de $\vec u$ et $\vec v$). Les réels $x$ et $y$ sont les **coordonnées** de $\vec w$ dans cette base.
+:::
+
+![](../static/figures/th-geo-base.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Dans un triangle $ABC$, soit $M$ le milieu de $[BC]$. Dans la base $\left(\overrightarrow{AB};\overrightarrow{AC}\right)$ :
+$$\overrightarrow{AM}=\overrightarrow{AB}+\overrightarrow{BM}=\overrightarrow{AB}+\tfrac12\overrightarrow{BC}=\overrightarrow{AB}+\tfrac12\left(\overrightarrow{AC}-\overrightarrow{AB}\right)=\tfrac12\overrightarrow{AB}+\tfrac12\overrightarrow{AC}.$$
+Les coordonnées de $\overrightarrow{AM}$ dans cette base sont $\left(\frac12;\frac12\right)$. La méthode : passer par Chasles, puis remplacer chaque vecteur qui n'est pas dans la base par une combinaison des vecteurs de la base.
+:::
+
+Dans un repère, on utilise la base formée des vecteurs unités des axes. Les coordonnées d'un vecteur sont alors les déplacements horizontal et vertical.
+
+::: {.encadre #geo-coord nature="Propriété" titre="coordonnées dans un repère"}
+Si $A(x_A;y_A)$ et $B(x_B;y_B)$ :
+$$\overrightarrow{AB}=(x_B-x_A\,;\,y_B-y_A)\qquad\text{et le milieu de }[AB]\text{ est }\left(\frac{x_A+x_B}{2};\frac{y_A+y_B}{2}\right).$$
+On additionne deux vecteurs et on les multiplie par un réel coordonnée par coordonnée.
+:::
+
+::: {.encadre nature="Exemple"}
+Avec $A(1;3)$ et $B(4;-1)$ : $\overrightarrow{AB}=(3;-4)$ et $3\overrightarrow{AB}=(9;-12)$. Le quatrième sommet $D$ du parallélogramme $ABCD$ vérifie $\overrightarrow{AD}=\overrightarrow{BC}$, donc $D=A+C-B$ (coordonnée par coordonnée).
+:::
+
+## Norme et produit scalaire {#geo-s-scalaire}
+
+Une base est **orthonormée** si ses deux vecteurs sont perpendiculaires et de norme $1$. Les repères des questions sont presque toujours orthonormés ; c'est indispensable pour calculer des longueurs avec les coordonnées, car on applique alors Pythagore.
+
+::: {.encadre #geo-norme nature="Propriété" titre="norme et distance dans une base orthonormée"}
+Si $\vec u=(x;y)$ dans une base orthonormée : $\|\vec u\|=\sqrt{x^2+y^2}$.
+
+La distance entre $A$ et $B$ vaut $AB=\left\|\overrightarrow{AB}\right\|=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$.
+:::
+
+![](../static/figures/th-geo-coord.svg){.th}
+
+::: {.encadre nature="Remarque" titre="la norme d'une somme"}
+Une norme est toujours positive ou nulle. Pour un réel $k$, $\|k\,\vec u\|=|k|\,\|\vec u\|$. Par contre, $\|\vec u+\vec v\|$ n'est en général **pas** égal à $\|\vec u\|+\|\vec v\|$ : on calcule d'abord les coordonnées de $\vec u+\vec v$, puis sa norme.
+:::
+
+::: {.encadre #geo-ps-def nature="Définition" titre="produit scalaire"}
+Le **produit scalaire** de deux vecteurs non nuls $\vec u$ et $\vec v$ qui forment un angle $\theta$ est le réel
+$$\vec u\cdot\vec v=\|\vec u\|\,\|\vec v\|\cos\theta.$$
+Si l'un des vecteurs est nul, $\vec u\cdot\vec v=0$.
+:::
+
+Le produit scalaire est positif si l'angle est aigu, négatif s'il est obtus, et nul si l'angle est droit. En développant comme un produit, on obtient une formule de calcul avec les coordonnées : dans une base orthonormée $(\vec\imath;\vec\jmath)$, on a $\vec\imath\cdot\vec\imath=\vec\jmath\cdot\vec\jmath=1$ et $\vec\imath\cdot\vec\jmath=0$.
+
+![](../static/figures/th-geo-ps.svg){.th}
+
+::: {.encadre #geo-ps-prop nature="Propriété" titre="calcul du produit scalaire"}
+Pour tous vecteurs $\vec u$, $\vec v$, $\vec w$ et tout réel $k$ :
+$$\vec u\cdot\vec v=\vec v\cdot\vec u,\qquad \vec u\cdot(\vec v+\vec w)=\vec u\cdot\vec v+\vec u\cdot\vec w,\qquad (k\vec u)\cdot\vec v=k\,(\vec u\cdot\vec v),\qquad \vec u\cdot\vec u=\|\vec u\|^2.$$
+Dans une base orthonormée, si $\vec u=(x;y)$ et $\vec v=(x';y')$ : $\vec u\cdot\vec v=xx'+yy'$.
+:::
+
+::: {.encadre #geo-ortho nature="Propriété" titre="orthogonalité"}
+Deux vecteurs sont orthogonaux si et seulement si leur produit scalaire est nul : $\vec u\perp\vec v\iff\vec u\cdot\vec v=0$.
+:::
+
+::: {.encadre nature="Exemple"}
+Dans un carré $ABCD$ de côté $3$, $\overrightarrow{AB}$ et $\overrightarrow{AC}$ forment un angle de $45^\circ$ et $AC=3\sqrt2$, donc $\overrightarrow{AB}\cdot\overrightarrow{AC}=3\cdot3\sqrt2\cdot\frac{\sqrt2}{2}=9$. Avec des coordonnées $A(0;0)$, $B(3;0)$, $C(3;3)$ : $(3;0)\cdot(3;3)=9$.
+:::
+
+::: {.encadre nature="Remarque" titre="décomposer avec Chasles"}
+Pour calculer un produit scalaire dans une figure, on décompose les vecteurs en vecteurs dont on connaît les normes et les angles (souvent des vecteurs orthogonaux), puis on développe. Ainsi, si $\vec u\perp\vec v$ : $(\vec u+\vec v)\cdot(\vec u-\vec v)=\|\vec u\|^2-\|\vec v\|^2$.
+:::
+
+## Droites dans un repère {#geo-s-droites}
+
+Une droite non verticale monte ou descend régulièrement : quand on avance de $1$ horizontalement, on monte toujours de la même quantité $m$, sa **pente**.
+
+::: {.encadre #geo-droite-eq nature="Propriété" titre="équations d'une droite"}
+- Une droite non verticale a une équation de la forme $y=mx+p$ : $m$ est sa **pente** et $p$ son **ordonnée à l'origine** (elle passe par $(0;p)$).
+- Une droite verticale a une équation de la forme $x=k$.
+- Toute droite a une équation **cartésienne** $ax+by+c=0$, avec $a$ et $b$ non tous deux nuls. Si $b\neq0$, sa pente vaut $-\dfrac{a}{b}$.
+:::
+
+::: {.encadre #geo-pente nature="Propriété" titre="pente, tangente et vecteur directeur"}
+La pente de la droite passant par $A(x_A;y_A)$ et $B(x_B;y_B)$, avec $x_A\neq x_B$, vaut
+$$m=\frac{y_B-y_A}{x_B-x_A}.$$
+Si la droite fait un angle $\alpha$ avec l'axe des abscisses, $m=\tan\alpha$. Le vecteur $(1;m)$ est un vecteur directeur de la droite.
+:::
+
+![](../static/figures/th-geo-pente.svg){.th}
+
+::: {.encadre #geo-droite-point nature="Propriété" titre="droite de pente donnée passant par un point"}
+La droite de pente $m$ passant par le point $(x_0;y_0)$ a pour équation
+$$y-y_0=m\,(x-x_0).$$
+:::
+
+::: {.encadre nature="Exemple"}
+La droite passant par $(0;4)$ et $(3;0)$ a pour pente $\dfrac{0-4}{3-0}=-\dfrac43$ et pour équation $y=-\dfrac43x+4$, ou encore $4x+3y-12=0$.
+:::
+
+Deux droites parallèles montent de la même façon : elles ont la même pente. Pour deux droites perpendiculaires, on utilise des vecteurs directeurs $(1;m)$ et $(1;m')$ : leur produit scalaire $1+mm'$ doit être nul.
+
+::: {.encadre #geo-par-perp nature="Propriété" titre="droites parallèles, droites perpendiculaires"}
+Deux droites non verticales de pentes $m$ et $m'$ sont :
+
+- **parallèles** si et seulement si $m=m'$ ;
+- **perpendiculaires** si et seulement si $m\cdot m'=-1$, c'est-à-dire $m'=-\dfrac{1}{m}$.
+:::
+
+![](../static/figures/th-geo-perp.svg){.th}
+
+::: {.encadre nature="Exemple"}
+La droite de pente $3$ a pour perpendiculaires les droites de pente $-\frac13$. La perpendiculaire à $y=3x+2$ passant par $(1;4)$ a pour équation $y-4=-\frac13(x-1)$.
+:::
+
+::: {.encadre nature="Remarque" titre="inverse et opposé"}
+La pente d'une perpendiculaire est l'**opposé de l'inverse** : il faut à la fois inverser et changer le signe. Prendre seulement l'inverse ou seulement l'opposé est l'erreur la plus fréquente.
+:::
+
+::: {.encadre #geo-intersection nature="Propriété" titre="intersection de deux droites"}
+Le point d'intersection de deux droites a des coordonnées qui vérifient les deux équations : on résout le système formé par ces équations. Avec deux équations $y=mx+p$ et $y=m'x+p'$, on égale les seconds membres.
+:::
+
+::: {.encadre nature="Exemple"}
+Pied de la perpendiculaire : soit $d\equiv y=x+1$ et $A(5;0)$. La perpendiculaire à $d$ par $A$ a pour pente $-1$ : $y=-(x-5)=5-x$. On égale : $x+1=5-x$, d'où $x=2$ et $y=3$. Le point $(2;3)$ est le pied de la perpendiculaire, c'est le point de $d$ le plus proche de $A$.
+:::

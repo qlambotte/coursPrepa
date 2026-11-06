@@ -1,0 +1,94 @@
+/*-- scss:rules --*/
+// Variante « Onglet » (V3) : l'étiquette de chaque encadré est posée sur son bord,
+// comme l'onglet d'un intercalaire. Cadres fins, pas d'ombres, fond blanc.
+// Remplace le rendu « cartes » de theme.scss ; pour revenir en arrière, retirer ce fichier de _quarto.yml.
+
+:root, :root[data-theme="light"] { --fond: #ffffff; --trait: #d5dbe2; }
+:root[data-theme="dark"] { --fond: #1f262f; --trait: #3a4552; }
+
+body, main, #quarto-content, .page-columns, #quarto-margin-sidebar { background: var(--fond) !important; }
+
+// ---------- Titre de page et intertitres
+#title-block-header { margin-bottom: 1.6rem; }
+h1.title { font-size: 2.4rem; margin-bottom: .35rem; }
+#title-block-header::after { content: ""; display: block; width: 4.5rem; height: 3px; background: var(--cu); border-radius: 2px; }
+main h2 { font-size: 1.55rem; margin-top: 2.8rem; padding-bottom: .3rem; border-bottom: 1px solid var(--trait) !important; }
+
+// ---------- Menu latéral : entrée active marquée d'un onglet cuivre
+#quarto-sidebar .sidebar-title { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+#quarto-sidebar { background: var(--page-bg) !important; border-right: 1px solid var(--trait) !important; }
+.sidebar-navigation .sidebar-link.active, .sidebar-navigation .active {
+  background: transparent !important; border-radius: 0 !important; margin-left: 0 !important;
+  padding: 1px 8px !important; box-shadow: inset 3px 0 0 var(--cu); color: var(--h) !important; }
+.sidebar-navigation .sidebar-item-section > .sidebar-item-container .sidebar-item-text { color: var(--h); font-weight: 600; }
+.sidebar-navigation .sidebar-item-text { color: var(--muted); }
+
+// ---------- Table des matières de droite
+#TOC { border-left: 1px solid var(--trait); padding-left: .8rem; }
+#toc-title { color: var(--muted); }
+#TOC .nav-link.active { color: var(--cu-f) !important; box-shadow: inset 2px 0 0 var(--cu); margin-left: -.8rem; padding-left: calc(.8rem - 2px); }
+
+// ---------- Encadrés de théorie
+.theo { --k: var(--trait); --kf: var(--h);
+  position: relative; overflow: visible !important; background: var(--fond) !important; box-shadow: none !important;
+  border: 1.5px solid var(--k) !important; border-radius: 10px !important;
+  margin: 2.1rem 0 1.3rem !important; padding: 1.2rem 1.15rem .85rem; }
+.theo-head { position: absolute; top: -.82rem; left: .85rem; max-width: calc(100% - 1.7rem);
+  background: var(--fond) !important; padding: 0 .5rem !important; font-size: 1.04rem !important; line-height: 1.5;
+  color: var(--h) !important; font-weight: 600 !important; }
+.theo-head::before { display: none !important; }
+.theo-head > p { margin: 0; }
+.theo-head strong { color: var(--kf); font-weight: 700; }
+.theo-body { padding: 0 !important; }
+.theo-definition { --k: var(--ard);  --kf: var(--ard); }
+.theo-propriete  { --k: var(--cu);   --kf: var(--cu-f); }
+.theo-exemple    { --k: var(--ol);   --kf: var(--ol-f); }
+.theo-remarque   { --k: #b3bac2;     --kf: var(--muted); }
+:root[data-theme="dark"] .theo-remarque { --k: #66717d; }
+// un exemple glissé dans un encadré : pas de second cadre
+.theo .theo { border-width: 0 0 0 2px !important; border-radius: 0 !important; padding: .1rem 0 .1rem .9rem; margin: .8rem 0 0 !important; }
+.theo .theo .theo-head { position: static; padding: 0 !important; }
+
+// ---------- Questions (QCM, exercices) : même principe, numéro à gauche, source à droite
+.exo { --k: var(--cu);
+  position: relative; overflow: visible !important; background: var(--fond) !important; box-shadow: none !important;
+  border: 1.5px solid var(--k) !important; border-radius: 10px !important; margin: 2.2rem 0 .5rem !important; }
+.exo-tete { position: absolute; top: -.85rem; left: .85rem; right: .85rem; background: transparent !important; padding: 0 !important; }
+.exo-tete > p { justify-content: space-between; }
+.exo-tete .exo-titre { background: var(--fond); padding: 0 .5rem; color: var(--cu-f); font-size: 1.06rem; }
+.exo-tete .exo-source { background: var(--fond) !important; border: 1.5px solid var(--k); color: var(--cu-f) !important;
+  padding: 0 .6rem !important; font-size: .8rem !important; line-height: 1.45rem; }
+.exo-corps { padding: 1.25rem 1.2rem .9rem !important; }
+.qcm-option { border-radius: 7px; }
+label.qcm-option:hover { background: var(--q); }
+
+// ---------- Coups de pouce : vrais onglets d'intercalaire
+.aides { margin: .45rem 0 1.6rem .2rem; }
+.aides-toggle { background: transparent !important; padding: .2rem .1rem !important; color: var(--cu-f) !important; font-size: .92rem !important; }
+.aides-toggle:hover { text-decoration: underline; }
+.aides .panel-tabset { background: transparent !important; box-shadow: none !important; border-radius: 0 !important; padding: 0 !important; margin-top: .4rem !important; }
+.aides .panel-tabset > .nav-tabs { display: flex !important; background: transparent !important; border-radius: 0 !important; padding: 0 0 0 .6rem !important;
+  gap: .25rem !important; border-bottom: 1.5px solid var(--trait) !important; }
+.aides .nav-tabs .nav-link { border: 1.5px solid transparent !important; border-bottom: 0 !important; border-radius: 8px 8px 0 0 !important;
+  margin-bottom: -1.5px; padding: .3rem .9rem !important; color: var(--muted) !important; background: var(--q) !important; box-shadow: none !important; font-size: .92rem; }
+.aides .nav-tabs .nav-link.active { background: var(--fond) !important; color: var(--h) !important;
+  border-color: var(--trait) !important; border-bottom: 1.5px solid var(--fond) !important; }
+.aides .tab-content { border: 1.5px solid var(--trait) !important; border-top: 0 !important; border-radius: 0 0 10px 10px !important;
+  padding: .85rem 1rem .6rem !important; background: var(--fond); }
+
+// ---------- Ticket, actions du quiz, tuiles
+.ticket { background: transparent !important; border: 1.5px dashed var(--cu); border-radius: 12px; }
+.actions-quiz { background: var(--fond) !important; border-top: 1px solid var(--trait); }
+.tuile { position: relative; background: var(--fond) !important; box-shadow: none !important; border: 1.5px solid var(--trait); border-radius: 10px !important; padding-top: 1.2rem !important; }
+.tuile:hover { border-color: var(--cu); box-shadow: none !important; }
+
+@media (max-width: 575.98px) {
+  .theo-head { font-size: .95rem !important; }
+  .exo-tete .exo-source { font-size: .72rem !important; }
+}
+
+// ---------- Intitulés du menu (Chapitres, Concours, Infos) : éléments sans lien
+.sidebar-navigation li.sidebar-item > .menu-text {
+  display: block; margin: .9rem 0 .15rem; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted) !important; font-weight: 600;
+}

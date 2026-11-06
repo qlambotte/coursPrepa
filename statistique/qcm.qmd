@@ -1,0 +1,323 @@
+---
+title: "QCM de la séance — Statistique"
+prepa:
+  theme: statistique
+  version: eleve
+---
+
+Résous d'abord les questions sur papier, sans calculatrice. Les solutions sont publiées à la fin de la phase d'entraînement.
+
+<!-- Ticket de sortie : les jumeaux apparaissent quand la page de pilotage les sélectionne (etat.json). -->
+
+:::::: ticket
+
+::::: {.qcm .jumeau #sta-j01 source="Prépa UMONS" reponse="C" theorie="sta-moyenne" jumeau-de="sta-q01"}
+Considérons la série statistique composée des nombres strictement positifs suivants : $3$, $x$ et $x+2$ dont la moyenne vaut $\sqrt{5}$. Que vaut $x$ ?
+
+::: options
+- $(3\sqrt{5}-5)/4$
+- $3\sqrt{5}/2$
+- $(3\sqrt{5}-5)/2$
+- $(3\sqrt{5}-3)/2$
+:::
+
+::: details
+Réponse C. La moyenne vaut $\dfrac{3+x+(x+2)}{3}=\dfrac{2x+5}{3}=\sqrt5$, donc $2x+5=3\sqrt5$ et $x=\dfrac{3\sqrt5-5}{2}$, qui est bien strictement positif.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #sta-j02 source="Prépa UMONS" reponse="C" theorie="sta-ecart-type sta-variance-calcul" jumeau-de="sta-q02"}
+Considérons la série statistique composée des $5$ termes distincts suivants : $a$, $3$, $5$, $7$ et $a+8$ avec $a$ un entier strictement positif. Notons $\overline{x}$ la moyenne de la série et supposons que $\overline{x}=5$. Que vaut l'écart-type de la série ?
+
+::: options
+- $0$
+- ${\displaystyle \frac{2\sqrt{10}}{5}}$
+- $2\sqrt{2}$
+- $2\sqrt{10}$
+:::
+
+::: details
+Réponse C. La somme des termes vaut $2a+23=5\cdot5=25$, donc $a=1$ et la série est $1,3,5,7,9$. Les écarts à la moyenne $5$ sont $-4,-2,0,2,4$ ; la variance vaut $\dfrac{16+4+0+4+16}{5}=8$ et l'écart-type $\sqrt8=2\sqrt2$.
+
+La proposition $2\sqrt{10}$ est $\sqrt{40}$ : on a oublié de diviser la somme des carrés par $5$ ; la proposition $\frac{2\sqrt{10}}{5}$ divise la racine par $5$ au lieu de diviser sous la racine.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #sta-j03 source="Prépa UMONS" reponse="B" theorie="sta-ecart-type sta-ecart-type-prop" jumeau-de="sta-q03"}
+Considérons les trois séries de données :
+
+- série (1) : $\{2;4;6;8;10;12\}$
+- série (2) : $\{2;3;6;8;11;12\}$
+- série (3) : $\{2;5;6;8;9;12\}$
+
+Laquelle a le plus grand écart-type ?
+
+::: options
+- La série (1)
+- La série (2)
+- La série (3)
+- Les trois séries ont le même écart-type.
+:::
+
+::: details
+Réponse B. Les trois séries ont la même moyenne, $7$. Les sommes des carrés des écarts à la moyenne valent $25+9+1+1+9+25=70$ pour la série (1), $25+16+1+1+16+25=84$ pour la série (2) et $25+4+1+1+4+25=60$ pour la série (3). Le nombre de données étant le même, la série (2) a le plus grand écart-type : ses valeurs sont les plus éloignées de la moyenne.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #sta-j04 source="Prépa UMONS" reponse="A" theorie="sta-ecart-type sta-moyenne-prop" jumeau-de="sta-q04"}
+Vous obtenez la moyenne et l'écart-type d'une série de vingt données qui ne sont pas toutes égales. Vous ajoutez ensuite deux nouvelles données, chacune égale à la moyenne des vingt premières, puis vous recalculez l'écart-type sur les vingt-deux données. Parmi les affirmations suivantes concernant le nouvel écart-type par rapport à l'ancien, laquelle est nécessairement vraie ?
+
+::: options
+- Il va nécessairement diminuer par rapport à l'ancien.
+- Il va nécessairement rester inchangé par rapport à l'ancien.
+- Il va nécessairement augmenter par rapport à l'ancien.
+- Il peut diminuer, augmenter ou rester inchangé par rapport à l'ancien.
+:::
+
+::: details
+Réponse A. La moyenne ne change pas, car les nouvelles données sont égales à la moyenne. Les nouveaux écarts valent $0$, donc la somme $S$ des carrés des écarts est inchangée, avec $S>0$ puisque les données ne sont pas toutes égales. La variance passe de $\dfrac{S}{20}$ à $\dfrac{S}{22}$ : elle diminue, et l'écart-type aussi.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #sta-j05 source="Prépa UMONS" reponse="B" theorie="sta-mediane sta-moyenne" jumeau-de="sta-q05"}
+Considérons la série statistique suivante : $2,3,5,6,6,7,9,10,30,40,60,62$. Parmi les propositions suivantes, laquelle est correcte ?
+
+::: options
+- Le premier quartile vaut $3$
+- La médiane vaut $8$
+- $75\,\%$ des valeurs sont strictement inférieures à $30$
+- La moyenne vaut $8$
+:::
+
+::: details
+Réponse B. Il y a $12$ valeurs : la médiane est la moyenne des 6e et 7e valeurs, $\frac{7+9}{2}=8$.
+
+Les autres propositions sont fausses : le premier quartile est compris entre $5$ et $6$ quelle que soit la convention de calcul (ce n'est pas $3$) ; $8$ valeurs sur $12$ (soit $66{,}7\,\%$) sont strictement inférieures à $30$ ; la moyenne vaut $\frac{240}{12}=20$.
+
+:::
+
+:::::
+
+::::::
+
+::::: {.qcm #sta-q01 source="Examen 2020" reponse="A" theorie="sta-moyenne"}
+<!-- support 2026 : Q42 -->
+Considérons la série statistique composée des nombres strictement positifs suivants : $1$, $x$, et $x+1$ dont la moyenne vaut $\sqrt{7}/3$. Que vaut $x$?
+
+::: options
+- $(\sqrt{7}/2)-1$
+- $1/3$
+- $\sqrt{7}$
+- $(1/2) + \sqrt{7}$
+:::
+
+
+::: indice
+Écris la moyenne des trois nombres en fonction de $x$.
+
+:::
+
+::: indice
+$\dfrac{1+x+(x+1)}{3}=\dfrac{\sqrt7}{3}$ : multiplie les deux membres par $3$.
+
+:::
+
+::: details
+Réponse A.
+
+$\dfrac{1+x+(x+1)}{3}=\dfrac{2x+2}{3}=\dfrac{\sqrt7}{3}$, donc $2x+2=\sqrt7$ et $x=\dfrac{\sqrt7}{2}-1$.
+
+Ce nombre est bien strictement positif, car $\sqrt7>2$.
+
+:::
+
+::: pieges
+- Diviser par $2$ au lieu de $3$ : la série contient trois valeurs.
+- $\sqrt7$ : on a oublié de diviser par le nombre de valeurs, ou de retirer les termes constants.
+
+:::
+
+:::::
+
+::::: {.qcm #sta-q02 source="Examen 2019" reponse="C" theorie="sta-moyenne sta-ecart-type sta-variance-calcul"}
+<!-- support 2026 : Q43 -->
+Considérons la série statistique composée des $5$ termes distincts suivants : $a$, $3$, $4$, $5$ et $a+4$ avec $a$ un entier strictement positif. Notons $\overline{x}$ la moyenne de la série et supposons que $\overline{x}=4$. Que vaut l'écart-type de la série?
+
+::: options
+- $0$
+- ${\displaystyle \frac{\sqrt{10}}{5}}$
+- ${\displaystyle \sqrt{2}}$
+- $\sqrt{10}$
+:::
+
+
+::: indice
+Commence par trouver $a$ grâce à la moyenne.
+
+:::
+
+::: indice
+$\frac{2a+16}{5}=4$ donne $a=2$ ; la série est $2,3,4,5,6$. Calcule la moyenne des carrés des écarts à $4$.
+
+:::
+
+::: details
+Réponse C.
+
+La somme des termes vaut $2a+16=5\cdot4=20$, donc $a=2$ et la série est $2,3,4,5,6$.
+
+Les écarts à la moyenne sont $-2,-1,0,1,2$ ; la variance vaut $\dfrac{4+1+0+1+4}{5}=2$ et l'écart-type $\sqrt2$.
+
+:::
+
+::: pieges
+- $\sqrt{10}$ : la somme des carrés des écarts n'a pas été divisée par $5$.
+- $\frac{\sqrt{10}}{5}$ : on a divisé la racine par $5$ au lieu de diviser sous la racine.
+- $0$ : l'écart-type n'est nul que si toutes les valeurs sont égales.
+
+:::
+
+:::::
+
+::::: {.qcm #sta-q03 source="Examen 2018" reponse="C" theorie="sta-ecart-type sta-ecart-type-prop"}
+<!-- support 2026 : Q44 -->
+Considérons les trois séries de données :
+
+- série (1) : $\{1;3;5;7;9;11\}$
+-   série (2) : $\{1;2;5;7;10;11\}$
+- série (3) : $\{1;4;5;7;8;11\}$
+
+Laquelle a le plus petit écart-type?
+
+::: options
+- La série (1)
+- La série (2)
+- La série (3)
+- Les trois séries ont le même écart-type.
+:::
+
+
+::: indice
+Les trois séries ont-elles la même moyenne ? Dans laquelle les valeurs sont-elles les plus proches de la moyenne ?
+
+:::
+
+::: indice
+Les trois moyennes valent $6$. Compare les sommes des carrés des écarts à $6$.
+
+:::
+
+::: details
+Réponse C.
+
+Les trois séries ont six valeurs et la même moyenne $6$. Les sommes des carrés des écarts valent :
+
+- série (1) : $25+9+1+1+9+25=70$ ;
+- série (2) : $25+16+1+1+16+25=84$ ;
+- série (3) : $25+4+1+1+4+25=60$.
+
+La série (3) a la plus petite variance, donc le plus petit écart-type : ses valeurs intermédiaires sont les plus proches de la moyenne.
+
+:::
+
+::: pieges
+- Même minimum, même maximum et même moyenne ne suffisent pas pour avoir le même écart-type.
+- La série (2) a le plus **grand** écart-type.
+
+:::
+
+:::::
+
+::::: {.qcm #sta-q04 source="Examen 2022" reponse="D" theorie="sta-ecart-type sta-ecart-type-prop"}
+<!-- support 2026 : Q45 -->
+Vous obtenez un écart-type pour une série de vingt données. Après vérification, deux
+de ces données paraissent erronées. On les retire de la série et on recalcule l'écart-type.
+Parmi les affirmations suivantes concernant le nouvel écart-type sur les dix-huit données par rapport
+à l'ancien écart-type sur les vingt données, laquelle est nécessairement vraie ?
+
+::: options
+- Il va nécessairement diminuer par rapport à l'ancien.
+- Il va nécessairement rester inchangé par rapport à l'ancien.
+- Il va nécessairement augmenter par rapport à l'ancien.
+- Il peut diminuer, augmenter ou rester inchangé par rapport à l'ancien.
+:::
+
+
+::: indice
+L'écart-type mesure l'éloignement des valeurs par rapport à la moyenne. Dépend-il de la position des données retirées ?
+
+:::
+
+::: indice
+Imagine deux cas : on retire les deux valeurs les plus éloignées de la moyenne, puis deux valeurs égales à la moyenne.
+
+:::
+
+::: details
+Réponse D.
+
+Si les deux données retirées sont très éloignées de la moyenne, les valeurs restantes sont moins dispersées : l'écart-type diminue. Si elles sont égales à la moyenne, la somme des carrés des écarts ne change pas mais on la divise par $18$ au lieu de $20$ : l'écart-type augmente. Il peut aussi rester inchangé dans des cas intermédiaires.
+
+Sans connaître les données retirées, on ne peut rien affirmer.
+
+:::
+
+::: pieges
+- « Moins de données, donc moins de dispersion » : c'est faux, tout dépend des données retirées.
+- Croire que des données erronées sont forcément des valeurs extrêmes.
+
+:::
+
+:::::
+
+::::: {.qcm #sta-q05 source="Prépa UMONS" reponse="A" theorie="sta-mediane sta-moyenne"}
+<!-- support 2026 : Q46. Réponse A (médiane 17). Avec la convention de la théorie (médiane de la moitié inférieure), Q1 = 14,5 : B est fausse. -->
+Considérons la série statistique suivante : $8,10,14,15,15,16,18,20,50,80,100,120$. Parmi les propositions suivantes, laquelle est correcte?
+
+::: options
+- La médiane vaut $17$
+- Le premier quartile vaut $15$
+- $75\%$ des valeurs sont strictement inférieures  à $50$
+- La moyenne vaut $42$
+:::
+
+
+::: indice
+La série a $12$ valeurs, déjà ordonnées. Où se trouvent la médiane et le premier quartile ?
+
+:::
+
+::: indice
+La médiane est la moyenne des 6e et 7e valeurs. Pour la proposition C, compte les valeurs strictement inférieures à $50$.
+
+:::
+
+::: details
+Réponse A.
+
+La série ordonnée compte $12$ valeurs ; la médiane est la moyenne des 6e et 7e valeurs : $\dfrac{16+18}{2}=17$.
+
+Les autres propositions sont fausses :
+
+- la moitié inférieure est $8,10,14,15,15,16$, donc $Q_1=\dfrac{14+15}{2}=14{,}5$ ;
+- $8$ valeurs sur $12$, soit les deux tiers et non $75\,\%$, sont strictement inférieures à $50$ ;
+- la somme des valeurs vaut $466$, alors qu'une moyenne de $42$ demanderait une somme de $12\cdot42=504$.
+
+:::
+
+::: pieges
+- Prendre la 6e valeur ($16$) comme médiane : avec un nombre pair de valeurs, on fait la moyenne des deux valeurs du milieu.
+- Premier quartile : on prend la médiane de la moitié inférieure, pas simplement une de ses valeurs.
+- « Strictement inférieures » exclut la valeur $50$ elle-même.
+
+:::
+
+:::::

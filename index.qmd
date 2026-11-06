@@ -1,0 +1,26 @@
+---
+title: "Préparation au concours de médecine et dentisterie — Mathématiques"
+format: html
+---
+
+Chaque séance porte sur un thème et se déroule en deux temps.
+
+- **Entraînement (1 h)** : tu résous les QCM de la séance sur papier, sans calculatrice, au rythme du concours.
+- **Correction** : vote des réponses, discussion avec ton voisin, correction en direct des questions les moins réussies, puis travail en autonomie avec les indices et les solutions de ce site.
+
+Les solutions des QCM de la séance sont publiées à la fin de la phase d'entraînement. Les indices sont disponibles à tout moment.
+
+Le [plan des séances](plan.qmd) donne l'ordre des thèmes et le déroulement d'une séance.
+
+Chaque thème propose aussi des **exercices supplémentaires** : des QCM à résoudre chez toi, que tu corriges ensuite avec le bouton « Corriger ». Seules les bonnes réponses sont indiquées.
+
+```{=html}
+<div class="tuiles">
+  <a class="tuile" href="algebre/index.html"><strong>Algèbre</strong><span>Pourcentages, fractions, puissances et racines, systèmes, second degré.</span></a>
+  <a class="tuile" href="geometrie/index.html"><strong>Géométrie</strong><span>Angles, Pythagore, vecteurs, produit scalaire, droites.</span></a>
+  <a class="tuile" href="trigonometrie/index.html"><strong>Trigonométrie</strong><span>Cercle trigonométrique, formules, équations.</span></a>
+  <a class="tuile" href="analyse/index.html"><strong>Analyse</strong><span>Fonctions, limites, dérivées, intégrales.</span></a>
+  <a class="tuile" href="statistique/index.html"><strong>Statistique</strong><span>Représentations, moyenne, médiane, écart-type.</span></a>
+  <a class="tuile grise" href="mise-en-situation/index.html"><strong>Mise en situation</strong><span>11 questions en 50 minutes, dans les conditions du concours.</span></a>
+</div>
+```

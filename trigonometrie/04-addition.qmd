@@ -1,0 +1,34 @@
+---
+title: "3.4 Formules d'addition"
+subtitle: "Trigonométrie"
+prepa:
+  theme: trigonometrie
+  chapitre: 4
+---
+
+::: {.encadre #tri-addition nature="Propriété" titre="cosinus et sinus d'une somme, d'une différence"}
+Pour tous réels $a$ et $b$ :
+$$\cos(a+b)=\cos a\cos b-\sin a\sin b\qquad \cos(a-b)=\cos a\cos b+\sin a\sin b$$
+$$\sin(a+b)=\sin a\cos b+\cos a\sin b\qquad \sin(a-b)=\sin a\cos b-\cos a\sin b$$
+:::
+
+La formule de $\cos(a-b)$ vient du produit scalaire des vecteurs $(\cos a;\sin a)$ et $(\cos b;\sin b)$, de norme $1$ et d'angle $a-b$. Les trois autres s'en déduisent en remplaçant $b$ par $-b$ ou $a$ par $\frac\pi2-a$.
+
+::: {.encadre nature="Exemple"}
+$\cos15^\circ=\cos(45^\circ-30^\circ)=\dfrac{\sqrt2}{2}\cdot\dfrac{\sqrt3}{2}+\dfrac{\sqrt2}{2}\cdot\dfrac12=\dfrac{\sqrt6+\sqrt2}{4}$.
+:::
+
+Avec $a=b=x$, on obtient les formules de duplication. La relation fondamentale permet d'écrire $\cos2x$ de trois façons.
+
+::: {.encadre #tri-duplication nature="Propriété" titre="formules de duplication"}
+Pour tout réel $x$ :
+$$\sin2x=2\sin x\cos x\qquad\text{et}\qquad \cos2x=\cos^2x-\sin^2x=2\cos^2x-1=1-2\sin^2x.$$
+:::
+
+::: {.encadre nature="Exemple"}
+$\cos^4x-\sin^4x=(\cos^2x-\sin^2x)(\cos^2x+\sin^2x)=\cos2x$. Et $\sin x\cos x=\frac12\sin2x$.
+:::
+
+::: {.encadre nature="Remarque" titre="ce que ces formules ne disent pas"}
+$\sin2x\neq2\sin x$ et $\cos(a+b)\neq\cos a+\cos b$. De même, $\cos(x^2)$ (cosinus du carré) n'a rien à voir avec $\cos^2x=(\cos x)^2$.
+:::

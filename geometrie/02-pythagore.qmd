@@ -1,0 +1,33 @@
+---
+title: "2.2 Pythagore et sa généralisation"
+subtitle: "Géométrie"
+prepa:
+  theme: geometrie
+  chapitre: 2
+---
+
+::: {.encadre #geo-pythagore nature="Propriété" titre="théorème de Pythagore"}
+Le triangle $ABC$ est rectangle en $A$ si et seulement si $BC^2=AB^2+AC^2$.
+:::
+
+![](../static/figures/th-geo-pythagore.svg){.th}
+
+
+::: {.encadre nature="Exemple"}
+Un rectangle de côtés $9$ et $12$ a une diagonale de longueur $\sqrt{81+144}=\sqrt{225}=15$. Le triangle de côtés $3$, $4$, $5$ est rectangle car $9+16=25$.
+:::
+
+Dans un triangle quelconque, $BC^2$ n'est plus égal à $AB^2+AC^2$ : il faut tenir compte de l'angle en $A$. Le calcul vectoriel ci-dessous donne la correction. En notant $a=BC$, $b=AC$, $c=AB$ et $\hat A$ l'angle en $A$ :
+$$a^2=\left\|\overrightarrow{AC}-\overrightarrow{AB}\right\|^2=b^2+c^2-2\,\overrightarrow{AB}\cdot\overrightarrow{AC}=b^2+c^2-2bc\cos\hat A.$$
+
+::: {.encadre #geo-alkashi nature="Propriété" titre="Pythagore généralisé (formule d'Al-Kashi)"}
+Dans un triangle $ABC$ où $a=BC$, $b=AC$, $c=AB$ :
+$$a^2=b^2+c^2-2bc\cos\hat A.$$
+Si $\hat A=90^\circ$, $\cos\hat A=0$ et on retrouve Pythagore.
+:::
+
+![](../static/figures/th-geo-alkashi.svg){.th}
+
+::: {.encadre nature="Exemple"}
+Si $\hat A=45^\circ$, alors $\cos\hat A=\frac{\sqrt2}{2}$ et $a^2=b^2+c^2-\sqrt2\,bc$. Si $\hat A=150^\circ$, alors $\cos\hat A=-\frac{\sqrt3}{2}$ et $a^2=b^2+c^2+\sqrt3\,bc$.
+:::

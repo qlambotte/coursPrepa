@@ -1,0 +1,13 @@
+<script>
+// Le lien « Autres formats » généré par Quarto s'appelle « Typst » ; on l'affiche « PDF ».
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".quarto-alternate-formats a").forEach(function (a) {
+    var t = a.textContent.trim();
+    if (t === "Typst") {
+      a.childNodes.forEach(function (n) {
+        if (n.nodeType === 3 && n.textContent.trim() === "Typst") n.textContent = n.textContent.replace("Typst", "PDF");
+      });
+    }
+  });
+});
+</script>

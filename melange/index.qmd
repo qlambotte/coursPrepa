@@ -1,0 +1,13 @@
+---
+title: "Questions mélangées"
+prepa:
+  theme: melange
+---
+
+Questions de tous les thèmes, dans le désordre, comme au concours. Réponds à toutes les questions, puis clique sur « Corriger ». Seules les bonnes réponses sont données : si ta réponse est fausse, reprends l'exercice avant de demander de l'aide.
+
+:::::: quiz
+
+{{< include _exercices.qmd >}}
+
+::::::

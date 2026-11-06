@@ -1,0 +1,15 @@
+---
+title: "Télécharger les PDF"
+format: html
+---
+
+Chaque fichier rassemble tous les thèmes. La théorie et les QCM sont séparés.
+
+Deux mises en page sont proposées pour l'instant ; une seule sera gardée.
+
+| Contenu | Mise en page « onglet » | Mise en page « aérée » |
+|:--|:--|:--|
+| Théorie (chapitres 1.1 à 5.3 : algèbre, géométrie, trigonométrie, analyse, statistique) | [theorie-onglet.pdf](telechargements/theorie-onglet.pdf) | [theorie-aere.pdf](telechargements/theorie-aere.pdf) |
+| QCM des séances, exercices supplémentaires et mise en situation | [qcm-onglet.pdf](telechargements/qcm-onglet.pdf) | [qcm-aere.pdf](telechargements/qcm-aere.pdf) |
+
+Les QCM sont donnés sans les solutions des séances. Les réponses des exercices supplémentaires figurent à la fin de chaque thème.

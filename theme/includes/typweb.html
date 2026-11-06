@@ -1,0 +1,8 @@
+<script>
+// Réglages lus par tools.html (outils à côté du titre) : pas de PDF global, pas de mode d'emploi.
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  window.SITE_OFFSET = m ? m.getAttribute('content') : '';
+  window.TYPWEB = { cle: 'prepa', pdfs: [], modeEmploi: false };
+})();
+</script>

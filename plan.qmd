@@ -1,0 +1,32 @@
+---
+title: "Plan des séances"
+format: html
+---
+
+Le cours compte une séance par thème du programme du concours. La dernière séance se termine par une mise en situation dans les conditions de l'épreuve.
+
+## Déroulement d'une séance {#plan-deroulement}
+
+1. **Entraînement (1 h)** : tu résous les QCM de la séance sur papier, sans calculatrice, au rythme du concours.
+2. **Vote** : pour chaque question, tu indiques ta réponse.
+3. **Correction en direct** : seules les questions les moins réussies sont corrigées au tableau.
+4. **Travail en autonomie** : tu corriges les autres questions avec les indices et les solutions de ce site.
+5. **Ticket de sortie** : les questions jumelles de celles corrigées en direct (mêmes méthodes, autres nombres), pour vérifier que la méthode est comprise.
+
+Après la séance, les exercices supplémentaires du thème te permettent de t'entraîner davantage.
+
+## Les séances {#plan-seances}
+
+| Séance | Thème | Contenu | Pages |
+|:-:|:--|:--|:--|
+| 1 | Algèbre | Priorités, produits remarquables, factorisation, puissances et racines, polynômes, équations du premier et du second degré, systèmes linéaires, règle de trois, pourcentages | [Chapitres](algebre/index.qmd) · [QCM](algebre/qcm.qmd) · [Exercices](algebre/exercices.qmd) |
+| 2 | Géométrie | Angles et parallélisme, Pythagore et sa généralisation, calcul vectoriel, produit scalaire, équations de droites | [Chapitres](geometrie/index.qmd) · [QCM](geometrie/qcm.qmd) · [Exercices](geometrie/exercices.qmd) |
+| 3 | Trigonométrie | Triangle rectangle, cercle trigonométrique et radians, angles associés, relation fondamentale, formules d'addition, équations | [Chapitres](trigonometrie/index.qmd) · [QCM](trigonometrie/qcm.qmd) · [Exercices](trigonometrie/exercices.qmd) |
+| 4 | Analyse | Domaine et composée, fonctions de référence, exponentielle et logarithme, limites et asymptotes, dérivées, primitives et intégrales | [Chapitres](analyse/index.qmd) · [QCM](analyse/qcm.qmd) · [Exercices](analyse/exercices.qmd) |
+| 5 | Statistique, puis mise en situation | Représentations de données, moyenne, médiane et quartiles, écart-type ; puis épreuve de 11 questions en 50 minutes, tous thèmes confondus | [Chapitres](statistique/index.qmd) · [QCM](statistique/qcm.qmd) · [Exercices](statistique/exercices.qmd) · [Épreuve](mise-en-situation/epreuve.qmd) |
+
+## Mise en situation {#plan-mise-en-situation}
+
+La mise en situation n'est pas corrigée en séance. Son correctif est publié sur ce site, et tu peux poser tes questions lors de la séance de questions-réponses.
+
+Les questions de la page [Mélange](melange/index.qmd) portent sur plusieurs thèmes : elles servent de révision avant la mise en situation.

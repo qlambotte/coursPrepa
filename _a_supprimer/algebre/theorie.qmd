@@ -1,0 +1,590 @@
+---
+title: "Théorie essentielle — Algèbre"
+prepa:
+  theme: algebre
+---
+
+Cette page rassemble ce qu'il faut maîtriser pour les QCM d'algèbre. Rien n'y est nouveau : tout a été vu au secondaire. Les questions du concours ne demandent pas de longs calculs, mais elles piègent souvent sur un détail (un signe, une racine carrée, un cas oublié). Les remarques signalent ces détails.
+
+## Calcul littéral {#alge-s-calcul}
+
+Une expression comme $2+3\cdot 4^2$ doit avoir une seule valeur. On convient donc d'un ordre pour effectuer les opérations.
+
+::: {.encadre #alge-priorites nature="Propriété" titre="priorité des opérations"}
+On effectue dans l'ordre :
+
+1. les calculs entre parenthèses (en commençant par les plus intérieures) ;
+2. les puissances et les racines ;
+3. les multiplications et les divisions, de gauche à droite ;
+4. les additions et les soustractions, de gauche à droite.
+
+Une barre de fraction joue le rôle de parenthèses autour du numérateur et autour du dénominateur.
+:::
+
+::: {.encadre nature="Exemple"}
+$2+3\cdot 4^2=2+3\cdot 16=50$ ; $(2+3)\cdot 4^2=80$ ; $12:4\cdot 3=3\cdot 3=9$ (et non $12:12=1$) ; $\dfrac{6+4}{2}=5$ (et non $6+2=8$).
+:::
+
+::: {.encadre nature="Remarque" titre="le signe moins devant une parenthèse"}
+$-(a-b+c)=-a+b-c$ : le signe moins change le signe de **chaque** terme de la parenthèse. De même, $5-2(x-3)=5-2x+6=11-2x$.
+:::
+
+Les expressions comme $3x^2-x+5$ sont des polynômes. Leur degré est la plus grande puissance de $x$ qui apparaît vraiment.
+
+::: {.encadre #alge-poly nature="Définition" titre="polynôme et degré"}
+Un **polynôme** en $x$ est une expression de la forme $a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$, où $n$ est un naturel et les **coefficients** $a_0,\dots,a_n$ sont des réels.
+
+Si $a_n\neq 0$, le polynôme est de **degré** $n$ et $a_n$ est son coefficient dominant. Un polynôme du premier degré s'écrit $ax+b$ ($a\neq 0$), un polynôme du second degré $ax^2+bx+c$ ($a\neq 0$).
+:::
+
+Pour additionner deux polynômes, on additionne les coefficients des termes de même degré. Pour les multiplier, on distribue chaque terme du premier sur chaque terme du second, puis on regroupe. Le terme de plus haut degré du produit vient du produit des termes dominants : $a_nx^n\cdot b_mx^m=a_nb_m\,x^{n+m}$.
+
+::: {.encadre #alge-poly-op nature="Propriété" titre="somme et produit de polynômes"}
+Si $P$ est de degré $n$ et $Q$ de degré $m$ :
+
+- le degré de $P+Q$ est au plus le plus grand des deux nombres $n$ et $m$ (il peut être plus petit si les termes dominants s'annulent) ;
+- le degré de $P\cdot Q$ est exactement $n+m$.
+:::
+
+::: {.encadre nature="Exemple"}
+Avec $P(x)=2x^2-x+1$ et $Q(x)=-2x^2+3x$ : $P(x)+Q(x)=2x+1$ est de degré $1$ seulement. Et
+$$(x+2)(x^2-3x+1)=x^3-3x^2+x+2x^2-6x+2=x^3-x^2-5x+2,$$
+de degré $1+2=3$.
+:::
+
+Factoriser, c'est écrire une somme sous forme de produit. C'est l'opération inverse du développement. Une forme factorisée permet de trouver les valeurs qui annulent l'expression ou d'étudier son signe, car un produit est nul si et seulement si un de ses facteurs est nul.
+
+::: {.encadre #alge-fact nature="Propriété" titre="méthodes de factorisation"}
+Pour factoriser une expression, on essaie dans l'ordre :
+
+1. la **mise en évidence** d'un facteur commun : $ab+ac=a(b+c)$ ;
+2. les **produits remarquables** lus de droite à gauche : $a^2-b^2=(a-b)(a+b)$, $a^2\pm2ab+b^2=(a\pm b)^2$ ;
+3. pour un trinôme $ax^2+bx+c$, ses **racines** : $ax^2+bx+c=a(x-x_1)(x-x_2)$ ;
+4. le **groupement** de termes, qui fait apparaître un facteur commun.
+:::
+
+::: {.encadre nature="Exemple"}
+- $6x^3-9x^2=3x^2(2x-3)$.
+- $x^3-4x=x(x^2-4)=x(x-2)(x+2)$.
+- $x^3+2x^2-x-2=x^2(x+2)-(x+2)=(x+2)(x^2-1)=(x+2)(x-1)(x+1)$.
+:::
+
+::: {.encadre #alge-prod-nul nature="Propriété" titre="produit nul"}
+Un produit de facteurs est nul si et seulement si au moins un des facteurs est nul : $ab=0\iff a=0$ ou $b=0$.
+:::
+
+Graphiquement, les solutions de $P(x)=0$ sont les abscisses des points où le graphique coupe l'axe des abscisses : la forme factorisée les donne directement.
+
+![](../static/figures/th-alge-prodnul.svg){.th}
+
+
+::: {.encadre nature="Remarque" titre="ne pas diviser par l'inconnue"}
+Pour résoudre $x^2=3x$, diviser par $x$ fait perdre la solution $x=0$. On écrit plutôt $x^2-3x=x(x-3)=0$, d'où $x=0$ ou $x=3$.
+:::
+
+## Pourcentages et proportionnalité {#alge-s-pourcentages}
+
+Un pourcentage décrit toujours une fraction **d'une grandeur de référence**. Augmenter un prix de $20\,\%$, c'est lui ajouter $\frac{20}{100}$ de lui-même. Plutôt que de calculer l'augmentation puis de l'ajouter, on multiplie directement par un seul nombre, le **coefficient multiplicateur**.
+
+::: {.encadre #alge-pct nature="Propriété" titre="augmentation et diminution en pourcentage"}
+Augmenter une grandeur de $p\,\%$ revient à la multiplier par $1+\dfrac{p}{100}$.
+
+Diminuer une grandeur de $p\,\%$ revient à la multiplier par $1-\dfrac{p}{100}$.
+:::
+
+En effet, si la grandeur vaut $x$, l'augmenter de $p\,\%$ donne $x+\dfrac{p}{100}\,x=\left(1+\dfrac{p}{100}\right)x$.
+
+::: {.encadre nature="Exemple"}
+Un article coûte $80$ €. Après une réduction de $25\,\%$, il coûte $80\cdot 0{,}75=60$ €. La réduction vaut $80\cdot 0{,}25=20$ €.
+:::
+
+::: {.encadre nature="Remarque" titre="retrouver la valeur de départ"}
+Pour retrouver le prix avant réduction, on **divise** par le coefficient multiplicateur. Le prix soldé $60$ € correspond à un prix de départ de $\dfrac{60}{0{,}75}=80$ €.
+
+Augmenter $60$ € de $25\,\%$ donne $75$ €, et non $80$ € : les $25\,\%$ ne portent plus sur la même grandeur de référence.
+:::
+
+Lorsque plusieurs variations se suivent, chacune porte sur le résultat de la précédente. Il suffit donc d'enchaîner les multiplications.
+
+::: {.encadre #alge-pct-succ nature="Propriété" titre="variations successives"}
+Des variations successives en pourcentage reviennent à multiplier la grandeur par le **produit** des coefficients multiplicateurs.
+:::
+
+::: {.encadre nature="Exemple"}
+Une hausse de $10\,\%$ suivie d'une baisse de $10\,\%$ revient à multiplier par $1{,}1\cdot 0{,}9=0{,}99$. Le prix final a donc **diminué** de $1\,\%$ par rapport au prix initial : les deux variations ne se compensent pas.
+:::
+
+::: {.encadre #alge-pct-diff nature="Propriété" titre="variation d'une différence"}
+Si deux grandeurs $a$ et $b$ sont multipliées par un même coefficient $c$, leur différence est elle aussi multipliée par $c$ :
+$$ca-cb=c\,(a-b).$$
+:::
+
+::: {.encadre nature="Exemple"}
+Un commerçant achète un article $40$ € et le revend $50$ € : sa marge est de $10$ €. Si le prix d'achat et le prix de vente augmentent tous deux de $5\,\%$, la marge devient $1{,}05\cdot 50-1{,}05\cdot 40=1{,}05\cdot 10=10{,}50$ € : elle augmente aussi de $5\,\%$.
+:::
+
+Beaucoup de problèmes concrets reposent sur une relation de proportionnalité entre grandeurs. Il faut savoir la traduire par une formule.
+
+::: {.encadre #alge-prop nature="Définition" titre="proportionnalité directe"}
+Une grandeur $y$ est **directement proportionnelle** à une grandeur $x$ s'il existe une constante $k$ telle que $y=kx$.
+
+Une grandeur $y$ est directement proportionnelle **à la fois** à $x$ et à $z$ s'il existe une constante $k$ telle que $y=kxz$.
+:::
+
+![](../static/figures/th-alge-prop.svg){.th}
+
+::: {.encadre nature="Exemple"}
+- Si $y$ est proportionnelle à $x$ et à $z$, et si l'on double $x$ et triple $z$, alors $y$ est multipliée par $2\cdot 3=6$.
+- Le coût d'une location composé de frais fixes $F$ et d'un montant proportionnel au nombre $j$ de jours s'écrit $C=F+kj$. Ce coût n'est **pas** proportionnel à $j$ : louer deux fois plus longtemps ne coûte pas deux fois plus cher.
+:::
+
+La proportionnalité directe justifie la **règle de trois** : puisque $y=kx$, le rapport $\dfrac{y}{x}$ est le même pour tous les couples de valeurs.
+
+::: {.encadre #alge-regle-trois nature="Propriété" titre="règle de trois"}
+Si $y$ est directement proportionnelle à $x$ et si la valeur $x_1$ correspond à $y_1$ (avec $x_1\neq 0$), alors la valeur $x_2$ correspond à
+$$y_2=\frac{y_1}{x_1}\cdot x_2.$$
+On passe par l'unité : on divise par $x_1$, puis on multiplie par $x_2$.
+:::
+
+::: {.encadre nature="Exemple"}
+Une perfusion apporte $150\,\mathrm{mg}$ de médicament en $40$ minutes, à débit constant. En une minute, elle apporte $\dfrac{150}{40}\,\mathrm{mg}$ ; en $60$ minutes, $\dfrac{150}{40}\cdot 60=225\,\mathrm{mg}$.
+:::
+
+::: {.encadre nature="Remarque" titre="vérifier la proportionnalité"}
+La règle de trois ne s'applique que si les grandeurs sont proportionnelles. Si $3$ ouvriers construisent un mur en $6$ jours, $6$ ouvriers ne mettent pas $12$ jours : la durée est inversement proportionnelle au nombre d'ouvriers (voir ci-dessous), et ils mettent $3$ jours.
+:::
+
+::: {.encadre nature="Remarque" titre="proportionnalité inverse"}
+On dit que $y$ est **inversement proportionnelle** à $x$ s'il existe une constante $k$ telle que $y=\dfrac{k}{x}$. Doubler $x$ divise alors $y$ par deux.
+:::
+
+## Fractions {#alge-s-fractions}
+
+Pour additionner deux fractions, il faut d'abord les écrire avec un même dénominateur. En prenant le produit des dénominateurs, on obtient la formule générale ci-dessous. Diviser par une fraction revient à multiplier par son inverse.
+
+::: {.encadre #alge-frac-op nature="Propriété" titre="opérations sur les fractions"}
+Pour des réels $a$, $c$ et des réels non nuls $b$, $d$ :
+$$\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}\qquad\text{et}\qquad \frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}.$$
+Si de plus $c\neq 0$ :
+$$\frac{a/b}{c/d}=\frac{a}{b}\cdot\frac{d}{c}=\frac{ad}{bc}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+$\dfrac{1}{3}+\dfrac{7}{4}=\dfrac{4+21}{12}=\dfrac{25}{12}$ et $\dfrac{1/3}{7/4}=\dfrac{1}{3}\cdot\dfrac{4}{7}=\dfrac{4}{21}$.
+:::
+
+Une fraction étagée contient des fractions à son numérateur ou à son dénominateur. On la simplifie en partant de l'étage le plus bas, en appliquant chaque fois la règle de la division.
+
+::: {.encadre #alge-frac-etagee nature="Propriété" titre="fraction étagée"}
+Pour $a$ réel et $b$, $c$ réels non nuls :
+$$\frac{a}{b/c}=\frac{ac}{b}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+Pour $x\notin\{-1;0\}$ :
+$$\frac{1}{1+\frac{1}{x}}=\frac{1}{\frac{x+1}{x}}=\frac{x}{x+1}.$$
+:::
+
+::: {.encadre nature="Remarque" titre="on ne simplifie que des facteurs"}
+Dans $\dfrac{x+2}{x+5}$, on ne peut rien simplifier : $x$ n'est pas un facteur commun au numérateur et au dénominateur, c'est un terme. Par contre, $\dfrac{x(x+2)}{x(x+5)}=\dfrac{x+2}{x+5}$ pour $x\neq 0$.
+:::
+
+## Puissances {#alge-s-puissances}
+
+Pour un exposant naturel non nul, une puissance est un produit de facteurs égaux. En comptant les facteurs, on voit par exemple que $\dfrac{a^5}{a^2}=\dfrac{a\cdot a\cdot a\cdot a\cdot a}{a\cdot a}=a^3$ : on soustrait les exposants.
+
+On souhaite que cette règle reste vraie dans tous les cas. Comme $\dfrac{a^2}{a^2}=1$, on doit avoir $a^{2-2}=a^0=1$. Comme $\dfrac{a^2}{a^5}=\dfrac{1}{a^3}$, on doit avoir $a^{2-5}=a^{-3}=\dfrac{1}{a^3}$. C'est ce qui motive la définition suivante.
+
+::: {.encadre #alge-puiss-def nature="Définition" titre="puissances entières"}
+Pour $a$ réel et $n$ naturel non nul :
+$$a^n=\underbrace{a\cdot a\cdots a}_{n\text{ facteurs}}.$$
+Pour $a$ réel non nul : $a^0=1$ et $a^{-n}=\dfrac{1}{a^n}$.
+:::
+
+::: {.encadre nature="Exemple"}
+$2^{-3}=\dfrac{1}{8}$ ; $\dfrac{1}{5^{-1}}=5$ ; $(-3)^2=9$ alors que $-3^2=-9$.
+:::
+
+::: {.encadre nature="Remarque" titre="la place du signe moins"}
+Dans $-3^2$, l'exposant ne porte que sur $3$ : $-3^2=-(3\cdot 3)=-9$. Pour élever $-3$ au carré, il faut des parenthèses. Un exposant négatif, lui, ne rend pas le nombre négatif : $2^{-3}>0$.
+:::
+
+Les règles de calcul s'obtiennent toutes en comptant les facteurs. Par exemple, $a^2\cdot a^3=(a\cdot a)\cdot(a\cdot a\cdot a)=a^5$ et $(a^2)^3=a^2\cdot a^2\cdot a^2=a^6$.
+
+::: {.encadre #alge-puiss-prop nature="Propriété" titre="règles de calcul"}
+Pour $a$, $b$ réels non nuls et $m$, $n$ entiers :
+$$a^m\cdot a^n=a^{m+n}\qquad \frac{a^m}{a^n}=a^{m-n}\qquad (a^m)^n=a^{mn}\qquad (ab)^n=a^n\,b^n\qquad \left(\frac{a}{b}\right)^n=\frac{a^n}{b^n}.$$
+Ces règles restent vraies pour des exposants rationnels lorsque $a>0$ et $b>0$.
+:::
+
+::: {.encadre nature="Exemple"}
+$2^5\cdot 2^{-3}=2^2=4$ ; $\left(\dfrac{2}{3}\right)^{-2}=\left(\dfrac{3}{2}\right)^{2}=\dfrac{9}{4}$ ; $9^n=(3^2)^n=3^{2n}$.
+:::
+
+::: {.encadre nature="Remarque" titre="pas de règle pour une somme"}
+Il n'existe pas de règle pour une somme de puissances : $2^3+2^2=12$, qui n'est pas une puissance de $2$. De même, $(a+b)^2\neq a^2+b^2$ (voir les produits remarquables).
+:::
+
+Lorsqu'une somme contient des puissances d'une même base, on peut cependant mettre en évidence la plus petite d'entre elles.
+
+::: {.encadre #alge-puiss-evid nature="Propriété" titre="mise en évidence d'une puissance"}
+Puisque $a^{n+k}=a^n\cdot a^k$, une somme de puissances d'une même base se factorise par la puissance de plus petit exposant.
+:::
+
+::: {.encadre nature="Exemple"}
+$2^{n+3}+2^{n}=2^n\cdot 2^3+2^n=2^n\left(2^3+1\right)=9\cdot 2^n$.
+:::
+
+## Racines {#alge-s-racines}
+
+Le nombre $9$ est le carré de $3$, mais aussi le carré de $-3$. Pour que $\sqrt{9}$ désigne un seul nombre, on convient de choisir le nombre **positif**.
+
+::: {.encadre #alge-rac-def nature="Définition" titre="racine carrée et racine n-ième"}
+Pour $a\ge 0$, la **racine carrée** $\sqrt{a}$ est le réel positif dont le carré vaut $a$.
+
+Pour $n$ pair et $a\ge 0$, $\sqrt[n]{a}$ est le réel positif dont la puissance $n$-ième vaut $a$. Pour $n$ impair et $a$ réel quelconque, $\sqrt[n]{a}$ est l'unique réel dont la puissance $n$-ième vaut $a$.
+:::
+
+::: {.encadre nature="Exemple"}
+$\sqrt{9}=3$ et non $\pm 3$ ; $\sqrt[3]{-8}=-2$ car $(-2)^3=-8$ ; $\sqrt[4]{-16}$ n'existe pas dans $\mathbb{R}$.
+:::
+
+::: {.encadre nature="Remarque" titre="équation et racine carrée"}
+L'équation $x^2=9$ a **deux** solutions : $\sqrt{9}=3$ et $-\sqrt{9}=-3$. Le symbole $\sqrt{9}$, lui, ne désigne qu'un seul nombre.
+:::
+
+Que vaut $\sqrt{a^2}$ ? C'est le nombre positif dont le carré vaut $a^2$. Si $a\ge 0$, c'est $a$ ; si $a<0$, c'est $-a$. On reconnaît la valeur absolue de $a$.
+
+::: {.encadre #alge-rac-abs nature="Propriété" titre="racine d'un carré"}
+Pour tout réel $a$ : $\sqrt{a^2}=|a|$.
+
+Pour tout réel $a\ge 0$ : $\left(\sqrt{a}\right)^2=a$.
+:::
+
+![](../static/figures/th-alge-racine-abs.svg){.th}
+
+
+::: {.encadre nature="Exemple"}
+$\sqrt{(-5)^2}=\sqrt{25}=5=|-5|$. Pour tout réel $x$ : $\sqrt{x^2+2x+1}=\sqrt{(x+1)^2}=|x+1|$, qui ne vaut $x+1$ que si $x\ge -1$.
+:::
+
+Une racine peut s'écrire comme une puissance. Si l'on veut que la règle $(a^m)^n=a^{mn}$ reste vraie, le nombre $a^{1/n}$ doit vérifier $\left(a^{1/n}\right)^n=a^1=a$ : c'est donc $\sqrt[n]{a}$.
+
+::: {.encadre #alge-rac-puiss nature="Propriété" titre="racine et exposant rationnel"}
+Pour $a>0$, $m$ entier et $n$ naturel supérieur ou égal à $2$ :
+$$\sqrt[n]{a^m}=a^{m/n}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+$27^{2/3}=\left(\sqrt[3]{27}\right)^2=3^2=9$ ; pour $x>0$, $\sqrt{x^3}=x^{3/2}=x\sqrt{x}$.
+:::
+
+Comme pour les puissances, la racine se comporte bien avec les produits et les quotients, mais pas avec les sommes.
+
+::: {.encadre #alge-rac-prod nature="Propriété" titre="racine d'un produit, d'un quotient"}
+Pour $a\ge 0$ et $b\ge 0$ : $\sqrt{ab}=\sqrt{a}\,\sqrt{b}$.
+
+Pour $a\ge 0$ et $b>0$ : $\sqrt{\dfrac{a}{b}}=\dfrac{\sqrt{a}}{\sqrt{b}}$.
+
+En général, $\sqrt{a+b}\neq\sqrt{a}+\sqrt{b}$.
+:::
+
+::: {.encadre nature="Exemple"}
+- $\sqrt{12}=\sqrt{4}\,\sqrt{3}=2\sqrt{3}$.
+- $\sqrt{9+16}=\sqrt{25}=5$ alors que $\sqrt{9}+\sqrt{16}=3+4=7$.
+- Pour supprimer une racine au dénominateur, on multiplie par le **binôme conjugué** : $\dfrac{1}{\sqrt{3}-1}=\dfrac{\sqrt{3}+1}{(\sqrt{3}-1)(\sqrt{3}+1)}=\dfrac{\sqrt{3}+1}{3-1}=\dfrac{\sqrt{3}+1}{2}$.
+:::
+
+## Valeur absolue et produits remarquables {#alge-s-abs}
+
+La valeur absolue d'un nombre est sa distance à $0$ sur la droite des réels. Elle ne garde que la « taille » du nombre et oublie son signe.
+
+::: {.encadre #alge-abs nature="Définition" titre="valeur absolue"}
+Pour tout réel $a$ : $|a|=a$ si $a\ge 0$ et $|a|=-a$ si $a<0$.
+
+Pour tous réels $a$ et $b$ : $|ab|=|a|\,|b|$ et $|a+b|\le |a|+|b|$, avec égalité si et seulement si $a$ et $b$ ont le même signe ($ab\ge 0$).
+:::
+
+![](../static/figures/th-alge-abs.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$|-3|=3$ ; $|2+(-5)|=3$ alors que $|2|+|-5|=7$ ; $|x-2|$ est la distance entre $x$ et $2$.
+:::
+
+::: {.encadre nature="Remarque" titre="« −a » peut être positif"}
+Si $a<0$, alors $-a>0$ : écrire $|a|=-a$ n'est pas une erreur de signe. Par exemple, $|-7|=-(-7)=7$.
+:::
+
+Les produits remarquables s'obtiennent en distribuant. Par exemple, $(a+b)^2=(a+b)(a+b)=a^2+ab+ba+b^2=a^2+2ab+b^2$. Ils servent dans les deux sens : pour développer, mais aussi pour reconnaître un carré ou une différence de carrés et factoriser.
+
+::: {.encadre #alge-prod-rem nature="Propriété" titre="produits remarquables"}
+Pour tous réels $a$ et $b$ :
+$$(a+b)^2=a^2+2ab+b^2\qquad (a-b)^2=a^2-2ab+b^2\qquad (a+b)(a-b)=a^2-b^2.$$
+:::
+
+![](../static/figures/th-alge-carre.svg){.th}
+
+Les deux autres produits remarquables se voient aussi avec des aires. Pour $(a-b)^2$, on retire du carré de côté $a$ deux bandes de largeur $b$ ; comme les deux bandes se recouvrent sur le petit carré $b^2$, chacune vaut $ab-b^2$. Pour $a^2-b^2$, on découpe la figure restante en deux rectangles et on les met bout à bout.
+
+![](../static/figures/th-alge-carre2.svg){.th}
+
+![](../static/figures/th-alge-diffcarres.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$(x-3)^2=x^2-6x+9$ ; $x^2-4x+4=(x-2)^2$ ; $51\cdot 49=(50+1)(50-1)=50^2-1^2=2\,499$.
+:::
+
+::: {.encadre nature="Remarque" titre="le double produit"}
+L'erreur la plus fréquente est d'oublier le double produit : $(1+1)^2=4$ alors que $1^2+1^2=2$.
+:::
+
+## Équations et systèmes du premier degré {#alge-s-systemes}
+
+Pour résoudre une équation, on la transforme en équations équivalentes (qui ont les mêmes solutions) jusqu'à isoler l'inconnue. On peut ajouter un même nombre aux deux membres, ou les multiplier par un même nombre **non nul**.
+
+::: {.encadre #alge-1deg nature="Propriété" titre="équation du premier degré"}
+L'équation $ax+b=0$ :
+
+- a une seule solution, $x=-\dfrac{b}{a}$, si $a\neq 0$ ;
+- n'a aucune solution si $a=0$ et $b\neq 0$ ;
+- est vérifiée par tout réel si $a=0$ et $b=0$.
+:::
+
+Graphiquement, $ax+b$ est représenté par une droite : résoudre $ax+b=0$, c'est chercher où elle coupe l'axe des abscisses.
+
+![](../static/figures/th-alge-1deg.svg){.th}
+
+
+::: {.encadre nature="Exemple"}
+$3(x-2)=x+4\iff 3x-6=x+4\iff 2x=10\iff x=5$. L'équation $2(x+1)=2x+3$ se ramène à $0x=1$ : elle n'a pas de solution.
+:::
+
+::: {.encadre nature="Remarque" titre="équation à paramètre"}
+Dans $(m-2)x=m+1$, on ne peut diviser par $m-2$ que si $m\neq 2$ ; on obtient alors $x=\dfrac{m+1}{m-2}$. Pour $m=2$, l'équation devient $0x=3$ et n'a pas de solution.
+:::
+
+### Systèmes de deux équations à deux inconnues
+
+Chaque équation $ax+by=c$ (avec $a$ et $b$ non tous deux nuls) a pour graphique une droite. Résoudre le système, c'est chercher les points communs aux deux droites. Deux droites peuvent se couper en un point, être parallèles et distinctes, ou être confondues : il y a donc trois cas possibles.
+
+::: {.encadre #alge-sys-vocab nature="Définition" titre="système déterminé, impossible, indéterminé"}
+Un système est **déterminé** s'il admet une unique solution, **impossible** s'il n'admet aucune solution, **indéterminé** s'il admet une infinité de solutions.
+
+Pour deux équations à deux inconnues, ces trois cas correspondent à deux droites sécantes, parallèles distinctes ou confondues.
+:::
+
+![](../static/figures/th-alge-sys.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$\begin{cases}x+y=2\\x-y=0\end{cases}$ est déterminé (solution $(1;1)$) ; $\begin{cases}x+y=2\\x+y=3\end{cases}$ est impossible ; $\begin{cases}x+y=2\\2x+2y=4\end{cases}$ est indéterminé.
+:::
+
+Pour résoudre, on combine les équations de façon à faire disparaître une inconnue. Cette méthode est justifiée par la propriété suivante.
+
+::: {.encadre #alge-sys-comb nature="Propriété" titre="combinaison d'équations"}
+Tout couple $(x;y)$ solution des équations $(E_1)$ et $(E_2)$ est aussi solution de toute combinaison $\lambda(E_1)+\mu(E_2)$, où $\lambda$ et $\mu$ sont des réels.
+:::
+
+En effet, si les deux égalités sont vraies, on obtient encore une égalité vraie en les multipliant par des nombres puis en les additionnant membre à membre.
+
+::: {.encadre nature="Exemple"}
+$\begin{cases}x+3y=7&(E_1)\\3x+y=5&(E_2)\end{cases}$
+
+$(E_1)+(E_2)$ donne $4x+4y=12$, donc $x+y=3$. $(E_1)-(E_2)$ donne $-2x+2y=2$, donc $y-x=1$. On en déduit $x=1$ et $y=2$.
+
+Si la question ne demande que $x+y$, la première combinaison suffit : il est inutile de résoudre complètement le système.
+:::
+
+Les deux droites sont parallèles (ou confondues) lorsque les coefficients de $x$ et de $y$ sont proportionnels, c'est-à-dire lorsque $\dfrac{a_1}{a_2}=\dfrac{b_1}{b_2}$, ou encore $a_1b_2-a_2b_1=0$. Ce nombre suffit donc à reconnaître le cas déterminé.
+
+::: {.encadre #alge-sys-det nature="Propriété" titre="discussion d'un système"}
+On considère le système $\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ et on pose $D=a_1b_2-a_2b_1$.
+
+- Si $D\neq 0$, le système est déterminé.
+- Si $D=0$, le système est impossible ou indéterminé. Il est indéterminé si et seulement si une des équations est un multiple de l'autre, termes indépendants compris.
+:::
+
+::: {.encadre nature="Exemple"}
+$\begin{cases}x+2y=3\\2x+4y=5\end{cases}$ : $D=1\cdot 4-2\cdot 2=0$. La seconde équation n'est pas le double de la première, car $2\cdot 3\neq 5$ : le système est impossible. Avec $2x+4y=6$ comme seconde équation, il serait indéterminé.
+:::
+
+::: {.encadre nature="Remarque" titre="système à paramètre"}
+Lorsque les coefficients dépendent d'un paramètre $m$, on calcule $D$ en fonction de $m$. Pour les valeurs de $m$ qui annulent $D$, on remplace $m$ par sa valeur dans le système et on regarde s'il est impossible ou indéterminé.
+:::
+
+### Systèmes de trois équations à trois inconnues
+
+La même méthode s'applique avec trois inconnues : on combine les équations deux à deux pour éliminer une inconnue, ce qui ramène à un système de deux équations à deux inconnues.
+
+::: {.encadre #alge-sys3 nature="Propriété" titre="résolution par élimination"}
+Pour résoudre un système de trois équations à trois inconnues $x$, $y$, $z$ :
+
+1. on choisit une inconnue, par exemple $z$, et on l'élimine dans deux combinaisons différentes des équations ;
+2. on résout le système de deux équations en $x$ et $y$ obtenu ;
+3. on remplace $x$ et $y$ dans une équation de départ pour trouver $z$.
+
+Comme pour deux inconnues, le système peut être déterminé, impossible ou indéterminé.
+:::
+
+::: {.encadre nature="Exemple"}
+$\begin{cases}x+y+z=6&(E_1)\\2x-y+z=3&(E_2)\\x+2y-z=2&(E_3)\end{cases}$
+
+$(E_1)+(E_3)$ : $2x+3y=8$. $(E_2)+(E_3)$ : $3x+y=5$. De la seconde, $y=5-3x$ ; dans la première, $2x+15-9x=8$, donc $x=1$ et $y=2$. Enfin $(E_1)$ donne $z=6-1-2=3$.
+
+Vérification dans $(E_2)$ : $2-2+3=3$.
+:::
+
+::: {.encadre nature="Remarque" titre="ne pas tout résoudre"}
+Si la question porte seulement sur $x+y+z$, il suffit parfois d'additionner les trois équations. Par exemple, avec $x+y=5$, $y+z=7$ et $x+z=6$, la somme donne $2(x+y+z)=18$, donc $x+y+z=9$.
+:::
+
+## Second degré {#alge-s-second-degre}
+
+Toutes les fonctions du second degré se déduisent de la fonction carré $x\mapsto x^2$, dont le graphique est la parabole de sommet $(0;0)$, symétrique par rapport à l'axe des ordonnées. On transforme ce graphique en trois étapes.
+
+- Multiplier par $a$ : le graphique de $a\,x^2$ s'obtient en multipliant toutes les ordonnées par $a$. Si $|a|>1$, la parabole se resserre ; si $|a|<1$, elle s'élargit ; si $a<0$, elle est en plus retournée (symétrie par rapport à l'axe des abscisses).
+- Remplacer $x$ par $x-\alpha$ : le graphique de $a\,(x-\alpha)^2$ est le précédent déplacé horizontalement de $\alpha$. En effet, la valeur que $a\,x^2$ prenait en $0$, $a\,(x-\alpha)^2$ la prend en $x=\alpha$.
+- Ajouter $\beta$ : le graphique de $a\,(x-\alpha)^2+\beta$ est déplacé verticalement de $\beta$.
+
+![](../static/figures/th-alge-transfo.svg){.th}
+
+::: {.encadre #alge-2deg-canon nature="Définition" titre="forme canonique"}
+Une fonction du second degré est écrite sous **forme canonique** lorsqu'elle s'écrit
+$$f(x)=a\,(x-\alpha)^2+\beta\qquad(a\neq 0).$$
+Son graphique est la parabole de la fonction carré, multipliée par $a$ puis déplacée de façon que son sommet soit le point $S(\alpha;\beta)$.
+:::
+
+::: {.encadre #alge-2deg-parab nature="Propriété" titre="parabole"}
+Le graphique de $f(x)=a\,(x-\alpha)^2+\beta$ est une parabole :
+
+- tournée vers le haut si $a>0$ (le sommet est un minimum) et vers le bas si $a<0$ (le sommet est un maximum) ;
+- de sommet $S(\alpha;\beta)$ ;
+- d'axe de symétrie la droite d'équation $x=\alpha$.
+:::
+
+::: {.encadre nature="Exemple"}
+$f(x)=2(x-1)^2-3$ : la parabole de $x^2$ est resserrée ($a=2$), puis déplacée de $1$ vers la droite et de $3$ vers le bas. Son sommet est $(1;-3)$, c'est un minimum, et son axe de symétrie est la droite $x=1$.
+:::
+
+Une fonction du second degré est souvent donnée sous forme développée $ax^2+bx+c$. Pour faire le lien avec la forme canonique, on développe celle-ci :
+$$a\,(x-\alpha)^2+\beta=ax^2-2a\alpha\,x+a\alpha^2+\beta.$$
+Deux polynômes sont égaux pour tout $x$ lorsqu'ils ont les mêmes coefficients. En identifiant avec $ax^2+bx+c$, on obtient $b=-2a\alpha$ et $c=a\alpha^2+\beta$.
+
+::: {.encadre #alge-2deg-alpha nature="Propriété" titre="lien entre forme développée et forme canonique"}
+Si $ax^2+bx+c=a\,(x-\alpha)^2+\beta$ pour tout $x$ (avec $a\neq0$), alors
+$$\alpha=-\frac{b}{2a}\qquad\text{et}\qquad\beta=f(\alpha)=c-a\alpha^2=-\frac{\Delta}{4a},\quad\text{où }\Delta=b^2-4ac.$$
+Le coefficient $a$ est le même dans les deux écritures.
+:::
+
+::: {.encadre nature="Exemple"}
+$f(x)=x^2-2x-3$ : $a=1$, donc $\alpha=-\frac{-2}{2}=1$ et $\beta=f(1)=1-2-3=-4$. Ainsi $x^2-2x-3=(x-1)^2-4$.
+
+Vérification : $(x-1)^2-4=x^2-2x+1-4=x^2-2x-3$.
+:::
+
+La forme canonique permet de résoudre l'équation $f(x)=0$ en isolant le carré :
+$$a\,(x-\alpha)^2+\beta=0\iff (x-\alpha)^2=-\frac{\beta}{a}=\frac{\Delta}{4a^2}.$$
+Un carré n'est jamais négatif. Il y a donc deux solutions si $\Delta>0$ (alors $x-\alpha=\pm\frac{\sqrt\Delta}{2|a|}$), une seule si $\Delta=0$ et aucune si $\Delta<0$. Graphiquement, les solutions sont les abscisses des points où la parabole coupe l'axe des abscisses : tout dépend de l'orientation de la parabole et de la position du sommet par rapport à cet axe.
+
+::: {.encadre #alge-2deg-delta nature="Propriété" titre="résolution d'une équation du second degré"}
+On considère l'équation $ax^2+bx+c=0$ avec $a\neq 0$ et on pose $\Delta=b^2-4ac$.
+
+- Si $\Delta<0$, l'équation n'a pas de solution réelle.
+- Si $\Delta=0$, elle a une seule solution : $x=-\dfrac{b}{2a}$.
+- Si $\Delta>0$, elle a deux solutions distinctes : $x=\dfrac{-b-\sqrt{\Delta}}{2a}$ et $x=\dfrac{-b+\sqrt{\Delta}}{2a}$.
+:::
+
+![](../static/figures/th-alge-profils.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$x^2-5x+6=0$ : $\Delta=25-24=1$, d'où $x=\dfrac{5-1}{2}=2$ ou $x=\dfrac{5+1}{2}=3$. Le sommet est sous l'axe des abscisses ($\beta=-\frac14$) et la parabole est tournée vers le haut : elle coupe l'axe en deux points.
+:::
+
+La formule ne s'applique que si $a\neq 0$. Quand le coefficient de $x^2$ dépend d'un paramètre, il faut donc traiter à part les valeurs qui l'annulent : c'est un cas souvent oublié.
+
+::: {.encadre #alge-2deg-param nature="Propriété" titre="coefficient de x² dépendant d'un paramètre"}
+Une équation $a(m)\,x^2+bx+c=0$ n'est du second degré que pour les valeurs du paramètre $m$ telles que $a(m)\neq 0$. Pour les valeurs qui annulent $a(m)$, l'équation est du premier degré (ou ne contient plus l'inconnue) et s'étudie séparément.
+:::
+
+::: {.encadre nature="Exemple"}
+$(m-1)x^2+2x+1=0$. Pour $m=1$, l'équation devient $2x+1=0$ et a une seule solution, $x=-\dfrac{1}{2}$, alors que le calcul de $\Delta=4-4(m-1)=8-4m$ donnerait $\Delta=4>0$, donc « deux solutions ».
+:::
+
+Le signe de $\Delta$ se lit parfois sans calcul : si $a$ et $c$ sont de signes contraires, $-4ac$ est positif, et $\Delta=b^2-4ac$ est une somme d'un carré et d'un nombre strictement positif.
+
+::: {.encadre #alge-2deg-ac nature="Propriété" titre="coefficients a et c de signes contraires"}
+Si $ac<0$, alors $\Delta>0$ : l'équation $ax^2+bx+c=0$ a deux solutions réelles distinctes.
+:::
+
+::: {.encadre nature="Exemple"}
+$3x^2+7x-2=0$ : $a=3$ et $c=-2$ sont de signes contraires, l'équation a deux solutions distinctes. On le sait sans calculer $\Delta$.
+:::
+
+En additionnant les deux solutions de la formule, les racines carrées s'éliminent : $\dfrac{-b-\sqrt{\Delta}}{2a}+\dfrac{-b+\sqrt{\Delta}}{2a}=-\dfrac{b}{a}$. En les multipliant, on reconnaît une différence de carrés : $\dfrac{b^2-\Delta}{4a^2}=\dfrac{4ac}{4a^2}=\dfrac{c}{a}$.
+
+::: {.encadre #alge-2deg-sp nature="Propriété" titre="somme et produit des solutions"}
+Si $\Delta\ge 0$ et si $x_1$, $x_2$ sont les solutions de $ax^2+bx+c=0$ (avec $x_1=x_2$ si $\Delta=0$) :
+$$x_1+x_2=-\frac{b}{a}\qquad\text{et}\qquad x_1\,x_2=\frac{c}{a}.$$
+:::
+
+::: {.encadre nature="Exemple"}
+Les solutions de $x^2-5x+6=0$ ont pour somme $5$ et pour produit $6$ : ce sont $2$ et $3$. Si $x_1x_2<0$, les deux solutions sont de signes contraires.
+:::
+
+::: {.encadre #alge-2deg-fact nature="Propriété" titre="factorisation"}
+Si $\Delta\ge 0$ et si $x_1$, $x_2$ sont les racines de $ax^2+bx+c$, alors
+$$ax^2+bx+c=a\,(x-x_1)(x-x_2).$$
+Un polynôme du second degré dont on connaît les racines $x_1$ et $x_2$ s'écrit donc $a\,(x-x_1)(x-x_2)$ ; il reste à déterminer $a\neq 0$, par exemple à l'aide d'un point du graphique.
+:::
+
+::: {.encadre nature="Exemple"}
+$2x^2-2x-4$ a pour racines $-1$ et $2$, donc $2x^2-2x-4=2\,(x+1)(x-2)$.
+:::
+
+Une même fonction du second degré peut donc s'écrire de trois façons. Chacune se lit directement sur le graphique.
+
+::: {.encadre #alge-2deg-ecritures nature="Propriété" titre="trois écritures et leur lecture graphique"}
+- **Forme développée** $f(x)=ax^2+bx+c$ : $c=f(0)$ est l'**ordonnée à l'origine** ; $b$ est la **pente de la tangente** à la parabole au point $(0;c)$ ; le signe de $a$ donne l'orientation.
+- **Forme canonique** $f(x)=a\,(x-\alpha)^2+\beta$ : le **sommet** est $(\alpha;\beta)$ et l'axe de symétrie est $x=\alpha$.
+- **Forme factorisée** $f(x)=a\,(x-x_1)(x-x_2)$, qui n'existe que si $\Delta\ge0$ : $x_1$ et $x_2$ sont les **racines**, abscisses des points d'intersection avec l'axe des abscisses. L'axe de symétrie passe au milieu : $\alpha=\frac{x_1+x_2}{2}$.
+:::
+
+Pourquoi $b$ est-il la pente de la tangente en $(0;c)$ ? Près de $x=0$, le terme $ax^2$ est beaucoup plus petit que $bx$ (pour $x=0{,}01$, $x^2=0{,}0001$) : la parabole se confond avec la droite $y=bx+c$, qui est sa tangente.
+
+![](../static/figures/th-alge-lecture.svg){.th}
+
+::: {.encadre nature="Exemple"}
+$f(x)=x^2-2x-3=(x-1)^2-4=(x+1)(x-3)$. Sur le graphique, on lit l'ordonnée à l'origine $-3$ et une tangente de pente $-2$ en $(0;-3)$ (forme développée), le sommet $(1;-4)$ (forme canonique) et les racines $-1$ et $3$ (forme factorisée).
+:::
+
+::: {.encadre #alge-2deg-signe nature="Propriété" titre="signe d'un trinôme"}
+Le trinôme $ax^2+bx+c$ a le signe de $a$, sauf entre ses racines (lorsque $\Delta>0$), où il a le signe contraire de $a$. Il s'annule en ses racines.
+:::
+
+![](../static/figures/th-alge-parab.svg){.th}
+
+C'est ce qu'on voit sur la parabole : si $a>0$, elle est tournée vers le haut et ne passe sous l'axe des abscisses qu'entre ses racines.
+
+::: {.encadre nature="Exemple"}
+$x^2-5x+6=(x-2)(x-3)$ et $a=1>0$, donc $x^2-5x+6<0 \iff x\in\,]2;3[$.
+:::
+
+### Technique : compléter le carré {#alge-s-completer}
+
+Pour faire apparaître un carré dans une expression $x^2+px$, on part du produit remarquable $(x+k)^2=x^2+2kx+k^2$ : le terme $2kx$ doit être $px$, donc $k=\frac p2$. Il reste à retirer le terme $k^2$ ajouté.
+
+::: {.encadre #alge-completer nature="Méthode" titre="compléter le carré"}
+$$x^2+px=\left(x+\frac p2\right)^2-\frac{p^2}{4}.$$
+Pour $ax^2+bx+c$ avec $a\neq0$, on met d'abord $a$ en évidence dans les termes en $x$ : $ax^2+bx+c=a\left(x^2+\frac bax\right)+c$, puis on complète le carré dans la parenthèse.
+:::
+
+::: {.encadre nature="Exemple"}
+$x^2+6x+5$ : $x^2+6x=(x+3)^2-9$, donc $x^2+6x+5=(x+3)^2-4$.
+
+$2x^2-8x+3=2\left(x^2-4x\right)+3=2\left[(x-2)^2-4\right]+3=2(x-2)^2-5$.
+:::
+
+::: {.encadre nature="Remarque" titre="à quoi sert la technique"}
+Compléter le carré donne la forme canonique sans retenir de formule, et permet de résoudre une équation du second degré en isolant le carré : $x^2+6x+5=0\iff(x+3)^2=4\iff x+3=\pm2\iff x=-1$ ou $x=-5$. C'est d'ailleurs ainsi que s'obtient la formule de résolution avec $\Delta$.
+:::
+

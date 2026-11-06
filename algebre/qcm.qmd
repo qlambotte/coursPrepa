@@ -1,0 +1,555 @@
+---
+title: "QCM de la séance — Algèbre"
+prepa:
+  theme: algebre
+  version: eleve
+---
+
+Résous d'abord les questions sur papier, sans calculatrice. En cas de blocage, ouvre les indices dans l'ordre. Les solutions sont publiées à la fin de la phase d'entraînement.
+
+<!-- Ticket de sortie : les jumeaux apparaissent quand la page de pilotage les sélectionne (etat.json). -->
+
+:::::: ticket
+
+::::: {.qcm .jumeau #alge-j01 source="Prépa UMONS" reponse="B" theorie="alge-pct" jumeau-de="alge-q01"}
+Un article est soldé à $-25\,\%$. La réduction est de $15$ euros. Quel était le prix avant la réduction ?
+
+::: options
+- $40$ euros
+- $60$ euros
+- $75$ euros
+- $45$ euros
+:::
+
+::: details
+$0{,}25\,P=15$, donc $P=60$ euros.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j02 source="Prépa UMONS" reponse="B" theorie="alge-sys-comb alge-prod-rem" jumeau-de="alge-q02"}
+On considère le système $\begin{cases}4x+3y=10\\3x+4y=4\end{cases}$. Que vaut $x^2-y^2$ ?
+
+::: options
+- $-12$
+- $12$
+- $4$
+- $36$
+:::
+
+::: details
+En additionnant : $7x+7y=14$, donc $x+y=2$. En soustrayant : $x-y=6$. Donc $x^2-y^2=2\cdot 6=12$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j03 source="Prépa UMONS" reponse="C" theorie="alge-2deg-param alge-2deg-delta" jumeau-de="alge-q03"}
+Quel est l'ensemble des réels $m$ tels que l'équation $(m+1)x^2-4x+2=0$ admette exactement deux racines distinctes ?
+
+::: options
+- $\left]-\infty;1\right[$
+- $\left]-\infty;1\right]\backslash\{-1\}$
+- $\left]-\infty;1\right[\backslash\{-1\}$
+- $\left]1;+\infty\right[$
+:::
+
+::: details
+Pour $m=-1$, l'équation $-4x+2=0$ a une seule solution. Pour $m\neq -1$ : $\Delta=16-8(m+1)=8-8m>0\iff m<1$. Ensemble : $\left]-\infty;1\right[\backslash\{-1\}$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j04 source="Prépa UMONS" reponse="A" theorie="alge-prop" jumeau-de="alge-q04"}
+Le prix $P$ de la location de vélos comprend des frais de dossier fixes $F$ et un montant directement proportionnel à la fois au nombre $V$ de vélos et au nombre $J$ de jours. Quelle formule convient, $k$, $k_1$, $k_2$ étant des constantes positives ?
+
+::: options
+- $P=F+kVJ$
+- $P=kFVJ$
+- $P=F+k(V+J)$
+- $P=F+k_1V+k_2J$
+:::
+
+::: details
+Partie fixe $F$, partie proportionnelle à la fois à $V$ et à $J$ : $kVJ$. Donc $P=F+kVJ$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j05 source="Prépa UMONS" reponse="B" theorie="alge-rac-def alge-rac-prod alge-prod-rem" jumeau-de="alge-q05"}
+Que vaut $\sqrt{3+\sqrt{5}}+\sqrt{3-\sqrt{5}}$ ?
+
+::: options
+- $\sqrt{6}$
+- $\sqrt{10}$
+- $2\sqrt{3}$
+- $4$
+:::
+
+::: details
+L'expression $E$ est positive et $E^2=3+\sqrt{5}+3-\sqrt{5}+2\sqrt{9-5}=6+4=10$. Donc $E=\sqrt{10}$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j06 source="Prépa UMONS" reponse="B" theorie="alge-2deg-fact" jumeau-de="alge-q06"}
+Le polynôme $P(x)=ax^2+bx+c$ a pour racines $-1$ et $2$, et $P(1)=4$. Que vaut $P(0)$ ?
+
+::: options
+- $-4$
+- $4$
+- $-2$
+- $2$
+:::
+
+::: details
+$P(x)=a(x+1)(x-2)$ et $P(1)=-2a=4$, donc $a=-2$. $P(0)=-2\cdot 1\cdot(-2)=4$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j07 source="Prépa UMONS" reponse="A" theorie="alge-frac-etagee alge-frac-op" jumeau-de="alge-q07"}
+Parmi les propositions suivantes, une seule est égale à $1+\dfrac{x}{1-\frac{1}{1+\frac{1}{2x}}}$ en tout réel $x$ où cette expression est définie. Laquelle ?
+
+::: options
+- $2x^2+x+1$
+- $\dfrac{1+x}{1-2x}$
+- $1+\dfrac{x^2}{2}$
+- $\dfrac{3}{2}$
+:::
+
+::: details
+$1+\frac{1}{2x}=\frac{2x+1}{2x}$, donc $1-\frac{2x}{2x+1}=\frac{1}{2x+1}$ et $\frac{x}{1/(2x+1)}=2x^2+x$. L'expression vaut $2x^2+x+1$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j08 source="Prépa UMONS" reponse="B" theorie="alge-sys-det alge-sys-vocab" jumeau-de="alge-q08"}
+On considère le système $\begin{cases}(t-1)x+2y=3\\2x+(t-1)y=t+1\end{cases}$. Laquelle des propositions suivantes est correcte ?
+
+::: options
+- Le système est indéterminé pour $t=3$.
+- Le système est impossible pour $t=-1$.
+- Le système admet une unique solution pour $t=3$.
+- Le système est impossible pour $t=0$.
+:::
+
+::: details
+$D=(t-1)^2-4=(t-3)(t+1)$. Pour $t=-1$ : $-2x+2y=3$ et $2x-2y=0$, soit $x-y=-\frac{3}{2}$ et $x-y=0$ : impossible. Pour $t=3$ : $2x+2y=3$ et $2x+2y=4$, impossible (A et C fausses). Pour $t=0$, $D\neq 0$ (D fausse).
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j09 source="Prépa UMONS" reponse="C" theorie="alge-puiss-def alge-puiss-evid" jumeau-de="alge-q09"}
+On considère le nombre entier $n$. Que vaut $5^{n+1}-5^{n-1}+\dfrac{1}{5^{2-n}}$ ?
+
+::: options
+- $5^{n-1}$
+- $121\cdot 5^{n-1}$
+- $121\cdot 5^{n-2}$
+- $5^{2n-2}$
+:::
+
+::: details
+$\frac{1}{5^{2-n}}=5^{n-2}$ et $5^{n+1}-5^{n-1}+5^{n-2}=5^{n-2}(125-5+1)=121\cdot 5^{n-2}$.
+
+:::
+
+:::::
+
+::::: {.qcm .jumeau #alge-j10 source="Prépa UMONS" reponse="A" theorie="alge-rac-abs alge-rac-prod alge-puiss-def" jumeau-de="alge-q10"}
+Parmi les propositions suivantes, laquelle est vraie ?
+
+::: options
+- $\forall a\in\mathbb{R} : \sqrt{a^2}=|a|$
+- $\forall a,b\in\mathbb{R} : \sqrt{a^2+b^2}=|a|+|b|$
+- $\forall a\in\mathbb{R} : (-a)^2=-a^2$
+- $\forall a,b\ge 0 : \sqrt{a+b}=\sqrt{a}+\sqrt{b}$
+:::
+
+::: details
+A est la propriété $\sqrt{a^2}=|a|$. Contre-exemples : B avec $a=b=1$ ($\sqrt{2}\neq 2$), C avec $a=1$ ($1\neq -1$), D avec $a=b=1$ ($\sqrt{2}\neq 2$).
+
+:::
+
+:::::
+
+::::::
+
+::::: {.qcm #alge-q01 source="Examen 2017" reponse="B" theorie="alge-pct"}
+Un commerçant propose une réduction de $40\,\%$ sur les prix affichés. Quel est le prix affiché si la réduction est de $20$ euros ?
+
+::: options
+- $40$ euros
+- $50$ euros
+- $60$ euros
+- $80$ euros
+:::
+
+::: indice
+Les $20$ euros représentent quelle part du prix affiché ?
+
+:::
+
+::: indice
+Si $P$ est le prix affiché, la réduction vaut $0{,}4\,P$.
+
+:::
+
+::: details
+Soit $P$ le prix affiché. La réduction vaut $40\,\%$ de $P$ : $0{,}4\,P=20$, d'où $P=\dfrac{20}{0{,}4}=50$.
+
+Le prix affiché est de $50$ euros.
+
+:::
+
+::: pieges
+- $60$ euros : $20+40$ additionne un montant et un pourcentage.
+- $80$ euros : $20\cdot 4$ correspond à une réduction de $25\,\%$.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q02 source="Examen 2018" reponse="B" theorie="alge-sys-comb alge-prod-rem"}
+On considère le système $\begin{cases}3x+2y=5\\2x+3y=10\end{cases}$. Que vaut $x^2-y^2$ ?
+
+::: options
+- $-25$
+- $-15$
+- $9$
+- $25$
+:::
+
+::: indice
+Faut-il calculer $x$ et $y$ ? Comment s'écrit $x^2-y^2$ sous forme de produit ?
+
+:::
+
+::: indice
+Additionne les deux équations, puis soustrais-les.
+
+:::
+
+::: details
+$(E_1)+(E_2)$ : $5x+5y=15$, donc $x+y=3$.
+
+$(E_1)-(E_2)$ : $x-y=-5$.
+
+Donc $x^2-y^2=(x+y)(x-y)=3\cdot(-5)=-15$.
+
+Vérification : $x=-1$ et $y=4$ vérifient les deux équations, et $1-16=-15$.
+
+:::
+
+::: pieges
+- $9=(x+y)^2$ et $25=(x-y)^2$ : confusion entre $x^2-y^2$ et le carré d'une somme ou d'une différence.
+- $-25$ : erreur de signe sur $(x-y)^2$.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q03 source="Examen 2018" reponse="A" theorie="alge-2deg-param alge-2deg-delta"}
+Quel est l'ensemble des nombres réels $m$ tels que l'équation $(m-3)x^2-2x+2=0$ admette exactement deux racines distinctes ?
+
+::: options
+- $\left]-\infty;\frac{7}{2}\right[\,\backslash\{3\}$
+- $\left]-\infty;\frac{7}{2}\right]\backslash\{3\}$
+- $\left]\frac{7}{2};+\infty\right[$
+- $\left[\frac{7}{2};+\infty\right[$
+:::
+
+::: indice
+Pour quelle valeur de $m$ l'équation n'est-elle pas du second degré ?
+
+:::
+
+::: indice
+Pour $m\neq 3$, calcule $\Delta$ en fonction de $m$ et résous $\Delta>0$.
+
+:::
+
+::: details
+Si $m=3$, l'équation devient $-2x+2=0$ : elle a une seule solution. On exclut $m=3$.
+
+Si $m\neq 3$, l'équation est du second degré et $\Delta=(-2)^2-4\cdot(m-3)\cdot 2=28-8m$. Elle a deux racines distinctes si et seulement si $\Delta>0$, c'est-à-dire $m<\frac{7}{2}$.
+
+L'ensemble cherché est $\left]-\infty;\frac{7}{2}\right[\backslash\{3\}$.
+
+:::
+
+::: pieges
+- $\frac{7}{2}$ inclus : pour $\Delta=0$, il n'y a qu'une racine (double).
+- Oublier d'exclure $m=3$, où l'équation n'est plus du second degré.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q04 source="Examen 2018" reponse="B" theorie="alge-prop"}
+Anna fait du babysitting. Elle demande par séance une somme fixe $F$ augmentée d'une part variable directement proportionnelle à la fois au nombre $N$ d'enfants à garder et à la durée $T$ de sa présence.
+
+Parmi les propositions suivantes (où les constantes $k$, $k_1$ et $k_2$ sont des réels positifs), une seule correspond à la somme $S$ que devront payer les parents, quelles que soient les valeurs de $F$, $N$ et $T$. Laquelle ?
+
+::: options
+- $S=kFNT$
+- $S=F+kNT$
+- $S=F+k_1N+k_2T$
+- $S=F+k_1(N+T)$
+:::
+
+::: indice
+La somme fixe $F$ doit-elle être multipliée par quelque chose ?
+
+:::
+
+::: indice
+Une grandeur proportionnelle à la fois à $N$ et à $T$ s'écrit $kNT$.
+
+:::
+
+::: details
+La somme se compose de la partie fixe $F$ et d'une partie variable proportionnelle à la fois à $N$ et à $T$, qui s'écrit $kNT$.
+
+Donc $S=F+kNT$.
+
+:::
+
+::: pieges
+- $S=F+k_1N+k_2T$ : la partie variable n'est pas proportionnelle à la fois à $N$ et à $T$ (doubler $N$ ne double pas la partie variable).
+- $S=kFNT$ : la somme fixe ne doit pas être multipliée.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q05 source="Examen 2022" reponse="C" theorie="alge-rac-def alge-rac-prod alge-prod-rem"}
+On considère les nombres réels positifs $a$ et $b$ tels que $a^2\ge b$. Parmi les propositions suivantes, laquelle est égale à
+$$\sqrt{\frac{a+\sqrt{a^2-b}}{2}}+\sqrt{\frac{a-\sqrt{a^2-b}}{2}}\ ?$$
+
+::: options
+- $\sqrt{\dfrac{a+b}{2}}$
+- $\sqrt{a-\sqrt{b}}$
+- $\sqrt{a+\sqrt{b}}$
+- $\sqrt{\sqrt{a}-b}$
+:::
+
+::: indice
+L'expression est positive. Que vaut son carré ?
+
+:::
+
+::: indice
+Développe $E^2$ avec $(u+v)^2=u^2+2uv+v^2$ et calcule le produit $\left(a+\sqrt{a^2-b}\right)\left(a-\sqrt{a^2-b}\right)$.
+
+:::
+
+::: details
+Notons $E$ l'expression et $s=\sqrt{a^2-b}$. On a $E\ge 0$ et
+$$E^2=\frac{a+s}{2}+\frac{a-s}{2}+2\sqrt{\frac{(a+s)(a-s)}{4}}=a+2\cdot\frac{\sqrt{a^2-s^2}}{2}=a+\sqrt{b}$$
+car $a^2-s^2=a^2-(a^2-b)=b$.
+
+Comme $E\ge 0$, $E=\sqrt{a+\sqrt{b}}$.
+
+:::
+
+::: pieges
+- Additionner les deux radicandes : $\sqrt{u}+\sqrt{v}\neq\sqrt{u+v}$.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q06 source="Examen 2022" reponse="A" theorie="alge-2deg-fact"}
+On considère le polynôme $P$ défini par $P(x)=ax^2+bx+c$ où $a$, $b$ et $c$ sont trois nombres réels. On sait que $x=1$ et $x=3$ sont deux racines de $P$ et que $P(2)=2$. Que vaut $P(0)$ ?
+
+::: options
+- $-6$
+- $-4$
+- $4$
+- $6$
+:::
+
+::: indice
+Connaissant les deux racines, quelle forme a $P(x)$ ?
+
+:::
+
+::: indice
+Écris $P(x)=a(x-1)(x-3)$ et utilise $P(2)=2$ pour trouver $a$.
+
+:::
+
+::: details
+Comme $1$ et $3$ sont racines, $P(x)=a(x-1)(x-3)$.
+
+$P(2)=a\cdot 1\cdot(-1)=-a=2$, donc $a=-2$.
+
+$P(0)=-2\cdot(-1)\cdot(-3)=-6$.
+
+:::
+
+::: pieges
+- $6$ : erreur de signe sur $a$ ou sur le produit $(-1)(-3)$.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q07 source="Examen 2019" reponse="D" theorie="alge-frac-etagee alge-frac-op"}
+Parmi les propositions suivantes, une seule est égale à
+$$1+\frac{x}{1-\frac{2}{2+\frac{1}{4x}}}$$
+en tout réel $x$ où l'expression ci-dessus est définie. Laquelle ?
+
+::: options
+- $\dfrac{1-3x}{1-4x}$
+- $\dfrac{7}{8}$
+- $1+\dfrac{x^2}{8}$
+- $8x^2+x+1$
+:::
+
+::: indice
+Par quel étage de la fraction faut-il commencer ?
+
+:::
+
+::: indice
+$2+\dfrac{1}{4x}=\dfrac{8x+1}{4x}$.
+
+:::
+
+::: details
+$2+\dfrac{1}{4x}=\dfrac{8x+1}{4x}$, donc $\dfrac{2}{2+\frac{1}{4x}}=\dfrac{8x}{8x+1}$.
+
+$1-\dfrac{8x}{8x+1}=\dfrac{1}{8x+1}$, donc $\dfrac{x}{1/(8x+1)}=x(8x+1)=8x^2+x$.
+
+L'expression vaut $8x^2+x+1$.
+
+Vérification avec $x=1$ : $1+\dfrac{1}{1-\frac{2}{9/4}}=1+\dfrac{1}{1/9}=10$ et $8+1+1=10$.
+
+:::
+
+::: pieges
+- Commencer par l'étage du haut : $\dfrac{x}{1-\cdots}$ ne se simplifie pas tant que le dénominateur n'est pas réduit.
+- Une valeur test ne prouve pas l'égalité, mais elle élimine des propositions : avec $x=1$, seule D donne $10$.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q08 source="Examen 2022" reponse="C D" annulee="true" theorie="alge-sys-det alge-sys-vocab"}
+<!-- Erreur de l'examen 2022 : C et D sont correctes ; la question a été annulée. Gardée pour en parler. -->
+On considère le système linéaire
+$$\begin{cases}(t^2-9)x+(2t-6)y=15-t\\(t+3)x+(t-3)y=t\end{cases}$$
+Parmi les propositions suivantes, laquelle est correcte ?
+
+::: options
+- Le système est impossible pour $t=-5$.
+- Le système est indéterminé pour $t=-3$.
+- Le système admet une solution pour $t=1$.
+- Le système est indéterminé pour $t=5$.
+:::
+
+::: indice
+Pour quelles valeurs de $t$ le système n'est-il pas déterminé ?
+
+:::
+
+::: indice
+$D=(t^2-9)(t-3)-(2t-6)(t+3)$ ; mets $(t-3)(t+3)$ en évidence.
+
+:::
+
+::: details
+$D=(t^2-9)(t-3)-(2t-6)(t+3)=(t-3)(t+3)\big[(t-3)-2\big]=(t-3)(t+3)(t-5)$.
+
+- $t=-5$ : $D\neq 0$, le système est déterminé. A est fausse.
+- $t=-3$ : le système devient $-12y=18$ et $-6y=-3$, soit $y=-\frac{3}{2}$ et $y=\frac{1}{2}$ : il est impossible. B est fausse.
+- $t=1$ : $D=(-2)\cdot 4\cdot(-4)=32\neq 0$, le système est déterminé : il admet une solution (unique). C est correcte.
+- $t=5$ : le système devient $16x+4y=10$ et $8x+2y=5$ ; la première équation est le double de la seconde, le système est indéterminé. D est correcte.
+
+:::
+
+::: pieges
+- $D=0$ ne suffit pas pour conclure à un système indéterminé : il faut comparer les équations (cas $t=-3$).
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q09 source="Examen 2021" reponse="A" theorie="alge-puiss-def alge-puiss-evid"}
+On considère le nombre entier $n$. Que vaut l'expression $3^{n+1}+3^{n-2}-\dfrac{1}{3^{1-n}}$ ?
+
+::: options
+- $25\cdot 3^{n-2}$
+- $3^{n-1}$
+- $25\cdot 3^{n-1}$
+- $3^{2n-1}$
+:::
+
+::: indice
+Comment écrire $\dfrac{1}{3^{1-n}}$ comme une puissance de $3$ ?
+
+:::
+
+::: indice
+Mets $3^{n-2}$ en évidence.
+
+:::
+
+::: details
+$\dfrac{1}{3^{1-n}}=3^{n-1}$. Donc
+$$3^{n+1}+3^{n-2}-3^{n-1}=3^{n-2}\left(3^3+1-3\right)=25\cdot 3^{n-2}.$$
+
+:::
+
+::: pieges
+- Mettre $3^{n-1}$ en évidence au lieu de $3^{n-2}$ fait apparaître une fraction : $3^{n-1}\left(9+\frac{1}{3}-1\right)$.
+
+:::
+
+:::::
+
+::::: {.qcm #alge-q10 source="Prépa UMONS" reponse="D" theorie="alge-rac-abs alge-abs alge-prod-rem"}
+Parmi les propositions suivantes, laquelle est vraie ?
+
+::: options
+- $\forall a\in\mathbb{R} : \sqrt{a^2}=a$
+- $\forall a,b\in\mathbb{R} : |a+b|=|a|+|b|$
+- $\forall a,b\in\mathbb{R} : (a+b)^2=a^2+b^2$
+- Aucune des autres propositions n'est vraie.
+:::
+
+::: indice
+Pour chaque égalité, cherche un contre-exemple.
+
+:::
+
+::: indice
+Essaie avec un nombre négatif, par exemple $a=-1$ (et $b=1$).
+
+:::
+
+::: details
+- A : pour $a=-1$, $\sqrt{(-1)^2}=1\neq -1$.
+- B : pour $a=-1$ et $b=1$, $|a+b|=0$ alors que $|a|+|b|=2$.
+- C : pour $a=b=1$, $(a+b)^2=4$ alors que $a^2+b^2=2$.
+
+Aucune des trois égalités n'est vraie pour tous les réels.
+
+:::
+
+::: pieges
+- $\sqrt{a^2}=|a|$, et non $a$.
+
+:::
+
+:::::
