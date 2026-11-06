@@ -15,3 +15,6 @@ __pycache__/
 /melange/*.typ
 /mise-en-situation/*.typ
 /autoevaluation/*.typ
+
+# Index des questions, regénéré à chaque rendu (pre-render)
+/static/questions.json

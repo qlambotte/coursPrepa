@@ -116,6 +116,8 @@ quarto preview
 
 Les pages relisent `etat.json` à chaque chargement ; après un commit, le redéploiement prend une à deux minutes.
 
+`etat.json` est écrit par la page « Pilotage Prépa » du tableau de bord (`portail/board/prepa.html`), qui lit `static/questions.json` : index des questions créé à chaque rendu par `outils/index_questions.py` (pre-render, non versionné). Les modifications à la main restent possibles.
+
 ## Mise en ligne (une fois)
 
 1. Déplacer le workflow : `mkdir -p .github/workflows && mv ci/deploy.yml .github/workflows/ && rmdir ci`.

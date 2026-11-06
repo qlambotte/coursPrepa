@@ -4,6 +4,8 @@ project:
   render:
     - "*.qmd"
     - "!autoevaluation/"
+  pre-render:
+    - outils/index_questions.py
   post-render:
     - outils/pdf_complets.py
   resources:
