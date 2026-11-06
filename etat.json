@@ -1,6 +1,6 @@
 {
   "algebre": {
-    "solutions": true,
+    "solutions": false,
     "ticket": [],
     "ticket_solutions": false,
     "votes": {}
