@@ -26,6 +26,8 @@ Pour retrouver le prix avant réduction, on **divise** par le coefficient multip
 Augmenter $60$ € de $25\,\%$ donne $75$ €, et non $80$ € : les $25\,\%$ ne portent plus sur la même grandeur de référence.
 :::
 
+![](../static/figures/th-alge-pct.svg){.th}
+
 Lorsque plusieurs variations se suivent, chacune porte sur le résultat de la précédente. Il suffit donc d'enchaîner les multiplications.
 
 ::: {.encadre #alge-pct-succ nature="Propriété" titre="variations successives"}

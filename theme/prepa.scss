@@ -38,6 +38,10 @@ label.qcm-option:hover { background: var(--q); }
   border-radius: 99px; padding: .45rem 1.2rem; cursor: pointer; }
 .actions-quiz button.nouvelle-serie { background: var(--ard); }
 .score { margin: 0; font-weight: 600; color: var(--h); }
+.actions-quiz button:disabled { opacity: .45; cursor: not-allowed; }
+.attente-quiz { margin: 0; color: var(--muted); font-style: italic; }
+.attente-quiz::before { content: "🔒  "; font-style: normal; }
+.qcm-exo .aides { margin: .6rem 0 .2rem; }
 
 // Tuiles des pages d'accueil
 .tuiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }

@@ -59,7 +59,8 @@ def questions(fichier, type_fixe):
                 else:
                     type_ = type_fixe or "seance"
                 q = {"id": ident, "type": type_, "source": kv.get("source", ""),
-                     "masquee": kv.get("masquee") == "true", "enonce": enonce_court(contenu)}
+                     "enonce": enonce_court(contenu),
+                     "aides": any(re.match(r"^:{3,}\s*(indice|details)\s*$", l) for l in contenu)}
                 if kv.get("jumeau-de"):
                     q["jumeau_de"] = kv["jumeau-de"]
                 yield q

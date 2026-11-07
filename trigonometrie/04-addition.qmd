@@ -14,6 +14,8 @@ $$\sin(a+b)=\sin a\cos b+\cos a\sin b\qquad \sin(a-b)=\sin a\cos b-\cos a\sin b$
 
 La formule de $\cos(a-b)$ vient du produit scalaire des vecteurs $(\cos a;\sin a)$ et $(\cos b;\sin b)$, de norme $1$ et d'angle $a-b$. Les trois autres s'en déduisent en remplaçant $b$ par $-b$ ou $a$ par $\frac\pi2-a$.
 
+![](../static/figures/th-tri-addition.svg){.th}
+
 ::: {.encadre nature="Exemple"}
 $\cos15^\circ=\cos(45^\circ-30^\circ)=\dfrac{\sqrt2}{2}\cdot\dfrac{\sqrt3}{2}+\dfrac{\sqrt2}{2}\cdot\dfrac12=\dfrac{\sqrt6+\sqrt2}{4}$.
 :::

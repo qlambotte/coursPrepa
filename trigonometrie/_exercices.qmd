@@ -1,4 +1,4 @@
-::::: {.qcm .exo #tri-e01 source="Examen 2018" reponse="C" theorie=""}
+::::: {.qcm .exo #tri-e01 source="Examen 2018" reponse="C" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q85 -->
 Soit un triangle rectangle $A$ dont un des angles a une amplitude de $30^\circ$ et dont l'hypoténuse mesure $8\,\mathrm{cm}$. Quelle est l'aire du triangle $A$?
 
@@ -9,9 +9,26 @@ Soit un triangle rectangle $A$ dont un des angles a une amplitude de $30^\circ$ 
 - $16\,\mathrm{cm²}$
 :::
 
+::: indice
+Quelles sont les longueurs des deux côtés de l'angle droit ?
+
+:::
+
+::: indice
+Les côtés de l'angle droit valent $8\sin30^\circ$ et $8\cos30^\circ$.
+
+:::
+
+::: details
+Les côtés de l'angle droit mesurent $8\sin30^\circ=4\,\mathrm{cm}$ et $8\cos30^\circ=4\sqrt3\,\mathrm{cm}$.
+
+Aire : $\frac{4\cdot4\sqrt3}2=8\sqrt3\,\mathrm{cm}^2$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e02 source="Prépa UMONS" reponse="B" theorie=""}
+::::: {.qcm .exo #tri-e02 source="Prépa UMONS" reponse="B" theorie="tri-associes tri-addition"}
 <!-- support 2026 : Q86 -->
 Considérons $ABC$ un triangle quelconque dont les côtés $a$, $b$ et $c$ sont opposés respectivement aux sommets $A$, $B$ et $C$ et les amplitudes, mesurées en radians, $\alpha$, $\beta$ et $\gamma$ sont celles des angles des sommets $A$, $B$ et $C$ respectivement. Parmi les propositions suivantes, laquelle est erronée?
 
@@ -22,9 +39,28 @@ Considérons $ABC$ un triangle quelconque dont les côtés $a$, $b$ et $c$ sont 
 - $ \sin(\alpha)\cos(\beta) + \sin(\beta) \cos(\alpha)$ $= \sin(\alpha+\beta) $
 :::
 
+::: indice
+Comment écrire $\alpha$ à l'aide de $\beta+\gamma$ ? Que deviennent le cosinus et le sinus d'angles supplémentaires ?
+
+:::
+
+::: indice
+$\alpha=\pi-(\beta+\gamma)$, et $\cos(\pi-u)=-\cos u$, $\sin(\pi-u)=\sin u$.
+
+:::
+
+::: details
+$\alpha+\beta+\gamma=\pi$, donc $\alpha=\pi-(\beta+\gamma)$.
+
+$\sin\alpha=\sin(\beta+\gamma)$, mais $\cos\alpha=-\cos(\beta+\gamma)$ : la proposition $\cos\alpha=\cos(\beta+\gamma)$ est erronée.
+
+La dernière proposition est la formule de $\sin(\alpha+\beta)$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e03 source="Examen 2017" reponse="B" theorie=""}
+::::: {.qcm .exo #tri-e03 source="Examen 2017" reponse="B" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q87 -->
 En considérant l'illustration donnée à la figure ci-dessous (pas à l'échelle), si $\alpha = 60^\circ$ et $s=3\,\mathrm{cm}$, que vaut $r$?
 
@@ -37,9 +73,24 @@ En considérant l'illustration donnée à la figure ci-dessous (pas à l'échell
 - Il manque des données pour répondre à la question
 :::
 
+::: indice
+Quels côtés sont adjacent et opposé à l'angle $\alpha$ ? Quel nombre trigonométrique les relie ?
+
+:::
+
+::: indice
+$s$ est adjacent à $\alpha$ et $r$ lui est opposé : $\tan\alpha=\frac rs$.
+
+:::
+
+::: details
+$\tan\alpha=\frac rs$, donc $r=s\tan60^\circ=3\sqrt3\,\mathrm{cm}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e04 source="Examen 2021" reponse="C" theorie=""}
+::::: {.qcm .exo #tri-e04 source="Examen 2021" reponse="C" theorie="tri-associes"}
 <!-- support 2026 : Q88 -->
 On considère le nombre $x$ tel que $0<x<2\pi$ et vérifiant ${\displaystyle \cos \left( x-\frac{\pi}{2}\right)=1}$. Que vaut ${\displaystyle \sin \left(x+\frac{\pi}{2} \right)}$?
 
@@ -50,9 +101,26 @@ On considère le nombre $x$ tel que $0<x<2\pi$ et vérifiant ${\displaystyle \co
 - $\sqrt{2}/2$
 :::
 
+::: indice
+Comment simplifier $\cos\left(x-\frac\pi2\right)$ et $\sin\left(x+\frac\pi2\right)$ ?
+
+:::
+
+::: indice
+$\cos\left(x-\frac\pi2\right)=\sin x$ et $\sin\left(x+\frac\pi2\right)=\cos x$.
+
+:::
+
+::: details
+$\cos\left(x-\frac\pi2\right)=\sin x=1$, donc $x=\frac\pi2$ dans $]0;2\pi[$.
+
+$\sin\left(x+\frac\pi2\right)=\cos x=\cos\frac\pi2=0$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e05 source="Examen 2020" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e05 source="Examen 2020" reponse="D" theorie="tri-fondamentale tri-signes"}
 <!-- support 2026 : Q89 -->
 On considère le nombre $x$ tel que ${\displaystyle -\frac{\pi}{2}<x<0}$ et vérifiant $\sin(x) = -2/3$. Que vaut $\cos(x)$?
 
@@ -63,9 +131,26 @@ On considère le nombre $x$ tel que ${\displaystyle -\frac{\pi}{2}<x<0}$ et vér
 - $\sqrt{5}/3$
 :::
 
+::: indice
+Quelle relation lie $\cos x$ et $\sin x$ ? Quel est le signe de $\cos x$ sur $\left]-\frac\pi2;0\right[$ ?
+
+:::
+
+::: indice
+$\cos^2x=1-\frac49=\frac59$, et $\cos x>0$ dans le quatrième quadrant.
+
+:::
+
+::: details
+$\cos^2x=1-\sin^2x=1-\frac49=\frac59$.
+
+Sur $\left]-\frac\pi2;0\right[$, $\cos x>0$, donc $\cos x=\frac{\sqrt5}3$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e06 source="Examen 2020" reponse="C" theorie=""}
+::::: {.qcm .exo #tri-e06 source="Examen 2020" reponse="C" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q90 -->
 Considérons un triangle $ABC$. Supposons que le côté $[BC]$ mesure $5\,\mathrm{cm}$, que l'angle $\widehat{ACB}$ a une amplitude de $30^\circ$ et que l'angle $\widehat{CBA}$ a une amplitude de $90^\circ$.
 
@@ -78,9 +163,24 @@ Quelle est la longueur du côté $[AB]$?
 - $5\sqrt{3}\,\mathrm{cm}$
 :::
 
+::: indice
+Où est l'angle droit ? Quels côtés sont adjacent et opposé à l'angle de $30^\circ$ ?
+
+:::
+
+::: indice
+L'angle droit est en $B$. Pour l'angle en $C$, $[BC]$ est adjacent et $[AB]$ opposé : $\tan30^\circ=\frac{AB}{BC}$.
+
+:::
+
+::: details
+$AB=BC\tan30^\circ=5\cdot\frac{\sqrt3}3=\frac{5\sqrt3}3\,\mathrm{cm}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e07 source="Examen 2018" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e07 source="Examen 2018" reponse="D" theorie="tri-rect"}
 <!-- support 2026 : Q91 -->
 La figure ci-dessous présente un triangle rectangle.
 
@@ -95,9 +195,24 @@ La figure ci-dessous présente un triangle rectangle.
 - ${\displaystyle \frac{y}{x}}$
 :::
 
+::: indice
+Quel côté est opposé à $\alpha$ ? Lequel est adjacent ?
+
+:::
+
+::: indice
+$y$ est opposé à $\alpha$ et $x$ lui est adjacent ; $z$ est l'hypoténuse.
+
+:::
+
+::: details
+$\tan\alpha=\dfrac{\text{opposé}}{\text{adjacent}}=\dfrac yx$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e08 source="Examen 2021" reponse="A" theorie=""}
+::::: {.qcm .exo #tri-e08 source="Examen 2021" reponse="A" theorie="tri-cercle tri-signes"}
 <!-- support 2026 : Q92 -->
 Considérons le cosinus et le sinus d'un angle $\alpha$ dont l'amplitude est strictement comprise entre $3\pi/4$ et $\pi$. Pour un tel angle, laquelle de ces combinaisons d'inégalités est correcte?
 
@@ -108,9 +223,26 @@ Considérons le cosinus et le sinus d'un angle $\alpha$ dont l'amplitude est str
 - $\sin(\alpha) < 0$ et $|\sin(\alpha)| > |\cos(\alpha)|$
 :::
 
+::: indice
+Dans quel quadrant se trouve $\alpha$ ? Dessine le point correspondant sur le cercle trigonométrique.
+
+:::
+
+::: indice
+Entre $\frac{3\pi}4$ et $\pi$, le point est dans le deuxième quadrant, plus près de l'axe horizontal que de l'axe vertical.
+
+:::
+
+::: details
+Pour $\alpha\in\left]\frac{3\pi}4;\pi\right[$, $\cos\alpha<0$ et $\sin\alpha>0$.
+
+En $\frac{3\pi}4$, $|\sin\alpha|=|\cos\alpha|=\frac{\sqrt2}2$ ; en se rapprochant de $\pi$, $|\cos\alpha|$ augmente vers $1$ et $\sin\alpha$ diminue vers $0$. Donc $|\sin\alpha|<|\cos\alpha|$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e09 source="Prépa UMONS" reponse="A" theorie=""}
+::::: {.qcm .exo #tri-e09 source="Prépa UMONS" reponse="A" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q93 -->
 Un poteau parfaitement vertical par rapport au sol parfaitement horizontal projette une ombre sur le sol. La longueur de cette ombre vaut $11\,\mathrm{m}$ quand le soleil fait un angle de $30^\circ$ au dessus de l'horizon.
 
@@ -123,9 +255,24 @@ Parmi les propositions suivantes, laquelle est correcte?
 - Les autres propositions sont toutes fausses.
 :::
 
+::: indice
+Quel triangle rectangle forment le poteau, l'ombre et le rayon de soleil ? Où est l'angle de $30^\circ$ ?
+
+:::
+
+::: indice
+L'ombre est adjacente à l'angle de $30^\circ$ et le poteau lui est opposé : $\tan30^\circ=\frac h{11}$.
+
+:::
+
+::: details
+$h=11\tan30^\circ=11\cdot\frac{\sqrt3}3=\frac{11\sqrt3}3\,\mathrm{m}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e10 source="Examen 2021" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e10 source="Examen 2021" reponse="D" theorie="tri-valeurs"}
 <!-- support 2026 : Q94 -->
 Considérons un triangle $ABC$ pour lequel les côtés $[AB]$ et $[BC]$ ont la même longueur et où $${\displaystyle \cos (\widehat{ABC})=\frac{\sqrt{3}}{2}}.$$ Que vaut l'amplitude de $\widehat{ACB}$?
 
@@ -136,9 +283,26 @@ Considérons un triangle $ABC$ pour lequel les côtés $[AB]$ et $[BC]$ ont la m
 - $75^\circ$
 :::
 
+::: indice
+Quel angle a pour cosinus $\frac{\sqrt3}2$ ? Que sait-on des angles d'un triangle isocèle ?
+
+:::
+
+::: indice
+$\widehat{ABC}=30^\circ$, et les angles en $A$ et en $C$ sont égaux.
+
+:::
+
+::: details
+$\cos\widehat{ABC}=\frac{\sqrt3}2$, donc $\widehat{ABC}=30^\circ$.
+
+Le triangle est isocèle en $B$ : $\widehat{BAC}=\widehat{ACB}=\frac{180^\circ-30^\circ}2=75^\circ$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e11 source="Examen 2022" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e11 source="Examen 2022" reponse="D" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q95 -->
 Dans le plan muni d'un repère cartésien orthonormé, on considère les points $A(0;0))$, $B(x;3)$, $C(x;0)$, où le nombre réel $x$ vérifie $x>0$ et $\widehat{CAB}=30^\circ$. Que vaut $x$?
 
@@ -149,9 +313,24 @@ Dans le plan muni d'un repère cartésien orthonormé, on considère les points 
 - $3\sqrt{3}$
 :::
 
+::: indice
+Où est l'angle droit du triangle $ABC$ ? Quelles longueurs connais-tu ?
+
+:::
+
+::: indice
+L'angle droit est en $C$ ; $BC=3$ est opposé à l'angle en $A$ et $AC=x$ lui est adjacent.
+
+:::
+
+::: details
+$\tan30^\circ=\frac3x$, donc $x=\frac3{\tan30^\circ}=\frac{3\cdot3}{\sqrt3}=3\sqrt3$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e12 source="Examen 2023" reponse="C" theorie=""}
+::::: {.qcm .exo #tri-e12 source="Examen 2023" reponse="C" theorie="tri-aire tri-valeurs"}
 <!-- Examen 2023 (matin) : maths Q3 -->
 Le périmètre d'un losange vaut $80\,\mathrm{m}$ et l'amplitude d'un de ses angles vaut $60^\circ$.
 
@@ -164,9 +343,26 @@ Que vaut l'aire définie par ce losange?
 - $400\sqrt{3}\,\mathrm{m}^2$
 :::
 
+::: indice
+Que vaut un côté du losange ? Comment calculer l'aire d'un parallélogramme à partir de deux côtés et d'un angle ?
+
+:::
+
+::: indice
+Le côté vaut $\frac{80}4=20\,\mathrm{m}$ ; l'aire vaut $20\cdot20\cdot\sin60^\circ$.
+
+:::
+
+::: details
+Les quatre côtés mesurent $20\,\mathrm{m}$.
+
+Aire : $20\cdot20\cdot\sin60^\circ=400\cdot\frac{\sqrt3}2=200\sqrt3\,\mathrm{m}^2$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e13 source="Examen 2023" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e13 source="Examen 2023" reponse="D" theorie="tri-duplication"}
 <!-- Examen 2023 (matin) : maths Q8 -->
 Si $x$ est un angle quelconque, quelle est, parmi les relations suivantes, celle qui est toujours vérifiée?
 
@@ -177,9 +373,26 @@ Si $x$ est un angle quelconque, quelle est, parmi les relations suivantes, celle
 - $\cos(x^2)=2\left(\cos\dfrac{x^2}{2}\right)^2-1$
 :::
 
+::: indice
+Quel est l'argument du cosinus ? Quelle formule de duplication donne $\cos(2u)$ ?
+
+:::
+
+::: indice
+$\cos(2u)=2\cos^2u-1$, avec $2u=x^2$.
+
+:::
+
+::: details
+Avec $u=\frac{x^2}2$ : $\cos(x^2)=\cos(2u)=2\cos^2u-1=2\left(\cos\frac{x^2}2\right)^2-1$.
+
+Les autres propositions appliquent la formule à $x$ au lieu de $x^2$ : elles donnent $\cos(2x)$, $\sin(2x)$ ou $\cos x$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e14 source="Examen 2025" reponse="C" theorie=""}
+::::: {.qcm .exo #tri-e14 source="Examen 2025" reponse="C" theorie="tri-equations tri-valeurs"}
 <!-- Examen 2025 (matin) : maths Q5 -->
 On considère l'équation
 $$\cos(x^2)+\sin(x^2)=1$$
@@ -194,9 +407,26 @@ Dans les propositions suivantes, quel ensemble fait partie de l'ensemble des sol
 - $\left\{\sqrt{k\dfrac{\pi}{2}} : k=0,1,2,\ldots\right\}$
 :::
 
+::: indice
+Pose $u=x^2$. Pour quelles valeurs simples de $u$ a-t-on $\cos u+\sin u=1$ ? Teste les ensembles proposés.
+
+:::
+
+::: indice
+$u=0$ et $u=\frac\pi2$ conviennent, ainsi que $u=2k\pi$ et $u=\frac\pi2+2k\pi$.
+
+:::
+
+::: details
+Avec $u=x^2$, on a $\cos u+\sin u=1$ pour $u=\frac\pi2+2k\pi$ ($\cos u=0$ et $\sin u=1$). L'ensemble $\left\{\sqrt{\frac\pi2+2k\pi}\right\}$ fait donc partie des solutions.
+
+Les autres ne conviennent pas : $u=\frac\pi4$ donne $\sqrt2$ ; $u=\pi$ donne $-1$ ; $x=1$ donne $\cos1+\sin1\neq1$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e15 source="Examen 2025" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e15 source="Examen 2025" reponse="D" theorie="tri-signes tri-valeurs"}
 <!-- Examen 2025 (matin) : maths Q8 -->
 Quelle est la valeur de l'expression $\cos\left(\dfrac{17\pi}{3}\right)$ parmi les propositions ci-dessous?
 
@@ -207,9 +437,24 @@ Quelle est la valeur de l'expression $\cos\left(\dfrac{17\pi}{3}\right)$ parmi l
 - $\dfrac{1}{2}$
 :::
 
+::: indice
+Combien de tours complets contient $\frac{17\pi}3$ ? Quel angle reste-t-il ?
+
+:::
+
+::: indice
+$\frac{17\pi}3=6\pi-\frac\pi3$.
+
+:::
+
+::: details
+$\frac{17\pi}3=6\pi-\frac\pi3$ et le cosinus est de période $2\pi$ : $\cos\frac{17\pi}3=\cos\left(-\frac\pi3\right)=\cos\frac\pi3=\frac12$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e16 source="Examen 2026" reponse="C" theorie=""}
+::::: {.qcm .exo #tri-e16 source="Examen 2026" reponse="C" theorie="tri-equations"}
 <!-- Examen 2026 (matin) : maths Q5 -->
 On considère l'équation
 $$2\cos(2x)+1=0$$
@@ -222,9 +467,26 @@ Parmi les propositions suivantes, laquelle correspond à l'ensemble des solution
 - $\left\{x=\dfrac{\pi}{3}+k\dfrac{\pi}{2} : k\in\mathbb{Z}\right\}\cup\left\{x=-\dfrac{\pi}{3}+k\dfrac{\pi}{2} : k\in\mathbb{Z}\right\}$
 :::
 
+::: indice
+Que vaut $\cos(2x)$ ? Quels angles ont ce cosinus ?
+
+:::
+
+::: indice
+$\cos(2x)=-\frac12$, donc $2x=\frac{2\pi}3+2k\pi$ ou $2x=-\frac{2\pi}3+2k\pi$.
+
+:::
+
+::: details
+$\cos(2x)=-\frac12\iff 2x=\pm\frac{2\pi}3+2k\pi\iff x=\pm\frac\pi3+k\pi$.
+
+$-\frac\pi3+k\pi$ s'écrit aussi $\frac{2\pi}3+(k-1)\pi$ : l'ensemble des solutions est $\left\{\frac\pi3+k\pi\right\}\cup\left\{\frac{2\pi}3+k\pi\right\}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #tri-e17 source="Examen 2026" reponse="D" theorie=""}
+::::: {.qcm .exo #tri-e17 source="Examen 2026" reponse="D" theorie="tri-equations tri-signes"}
 <!-- Examen 2026 (matin) : maths Q6 -->
 On considère les relations $\sin(x)=-\dfrac{1}{2}$ et $\cos(x)>0$.
 
@@ -235,6 +497,25 @@ Parmi les propositions suivantes, quelle est la valeur de $x$ qui satisfait ces 
 - $19\pi/6$
 - $22\pi/6$
 - $23\pi/6$
+:::
+
+::: indice
+Dans quel quadrant le sinus est-il négatif et le cosinus positif ? Ramène chaque proposition entre $0$ et $2\pi$.
+
+:::
+
+::: indice
+Il faut le quatrième quadrant : $x=-\frac\pi6+2k\pi$, par exemple $\frac{11\pi}6$.
+
+:::
+
+::: details
+$\sin x<0$ et $\cos x>0$ : quatrième quadrant, donc $x=-\frac\pi6+2k\pi$.
+
+$\frac{23\pi}6=4\pi-\frac\pi6$ convient.
+
+Les autres : $\frac{17\pi}6=2\pi+\frac{5\pi}6$ (sinus positif), $\frac{19\pi}6=2\pi+\frac{7\pi}6$ (cosinus négatif), $\frac{22\pi}6=2\pi+\frac{5\pi}3$ (sinus $-\frac{\sqrt3}2$).
+
 :::
 
 :::::
@@ -248,6 +529,23 @@ On considère un angle $\alpha\in\left[0;\frac{\pi}{2}\right]$ tel que ${\displa
 - ${\displaystyle \frac{25}{16}}$
 - ${\displaystyle \frac{9}{16}}$
 - ${\displaystyle \frac{16}{9}}$
+:::
+
+::: indice
+Que vaut $\cos\alpha$ ? Ou : comment s'écrit $1+\tan^2\alpha$ à l'aide de $\cos\alpha$ ?
+
+:::
+
+::: indice
+$1+\tan^2\alpha=\frac{\cos^2\alpha+\sin^2\alpha}{\cos^2\alpha}=\frac1{\cos^2\alpha}$.
+
+:::
+
+::: details
+$\cos^2\alpha=1-\frac9{25}=\frac{16}{25}$.
+
+$1+\tan^2\alpha=\frac1{\cos^2\alpha}=\frac{25}{16}$.
+
 :::
 
 :::::

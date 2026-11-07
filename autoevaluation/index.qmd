@@ -5,7 +5,7 @@ prepa:
 format: html
 ---
 
-Une série de $11$ questions tirées au hasard parmi tous les thèmes et les questions mélangées : c'est le nombre de questions de la partie mathématique du concours. Compte $50$ minutes, sans calculatrice, puis clique sur « Corriger ». « Nouvelle série » tire d'autres questions.
+Une série de $11$ questions tirées au hasard parmi tous les thèmes et les questions mélangées : c'est le nombre de questions de la partie mathématique du concours. Compte $50$ minutes, sans calculatrice, puis clique sur « Corriger ». « Nouvelle série » tire d'autres questions. Seuls les exercices dont la correction est publiée sont corrigés.
 
 :::::: {.quiz tirage="11"}
 

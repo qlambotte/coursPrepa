@@ -22,6 +22,10 @@ $$\log_a y=x\iff a^x=y.$$
 On note $\ln=\log_\mathrm{e}$ (logarithme népérien) et $\log=\log_{10}$ (logarithme décimal).
 :::
 
+La fonction $\ln$ est la réciproque de $x\mapsto\mathrm{e}^x$ : leurs graphiques sont symétriques par rapport à la droite $y=x$. Le point $(1;\mathrm{e})$ du graphique de l'exponentielle correspond au point $(\mathrm{e};1)$ de celui de $\ln$, car $\ln\mathrm{e}=1$.
+
+![](../static/figures/th-ana-ln.svg){.th}
+
 ::: {.encadre nature="Exemple"}
 $\log1000=3$ car $10^3=1000$ ; $\ln\mathrm{e}^5=5$ ; $\mathrm{e}^{\ln7}=7$ ; $\log_2\frac18=-3$.
 :::

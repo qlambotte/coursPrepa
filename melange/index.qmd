@@ -4,7 +4,7 @@ prepa:
   theme: melange
 ---
 
-Questions de tous les thèmes, dans le désordre, comme au concours. Réponds à toutes les questions, puis clique sur « Corriger ». Seules les bonnes réponses sont données : si ta réponse est fausse, reprends l'exercice avant de demander de l'aide.
+Questions de tous les thèmes, dans le désordre, comme au concours. Sous chaque exercice, les coups de pouce donnent trois indices puis la solution : consulte-les dans l'ordre. Réponds à toutes les questions, puis clique sur « Corriger ». La correction est publiée après la séance ; avant, la page affiche « Correction bientôt disponible ».
 
 :::::: quiz
 

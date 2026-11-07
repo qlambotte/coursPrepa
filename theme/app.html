@@ -1,16 +1,19 @@
 <script>
-// Site prépa : solutions verrouillées par etat.json, réponses masquées, ticket de sortie,
+// Site prépa : solutions verrouillées par etat.json, ticket de sortie,
 // quiz d'autoévaluation (avec tirage aléatoire sur la page globale).
+// Exercices : chaque exercice a une catégorie (data-categorie : algebre…, melange) ;
+// sa correction n'est donnée que si etat[catégorie].exercices vaut true.
 (function () {
   "use strict";
   const meta = document.getElementById("prepa-meta");
   if (!meta) return;
   const themeId = meta.dataset.theme;
   const racine = meta.dataset.racine || "";
-  const activees = new Set(); // ids dont la réponse masquée est publiée
+  let etat = null; // etat.json, une fois chargé
 
-  function masquee(el, id) {
-    return el.dataset.masquee === "true" && !activees.has(id);
+  function corrige(ex) {
+    const c = etat && etat[ex.dataset.categorie || themeId];
+    return !!c && c.exercices === true;
   }
   function titre(boite, texte) {
     const t = boite.querySelector(".exo-titre");
@@ -21,11 +24,12 @@
   fetch(racine + "etat.json?t=" + Date.now(), { cache: "no-store" })
     .then((r) => (r.ok ? r.json() : {}))
     .catch(() => ({}))
-    .then((etat) => {
-      (etat.reponses_activees || []).forEach((id) => activees.add(id));
+    .then((x) => {
+      etat = x || {};
       const e = etat[themeId] || {};
       document.querySelectorAll(".verrou").forEach((v) => {
-        const ouvert = e[v.dataset.verrou] === true && !masquee(v, v.dataset.id);
+        const c = v.dataset.categorie ? etat[v.dataset.categorie] || {} : e;
+        const ouvert = c[v.dataset.verrou] === true;
         v.querySelector(".verrou-attente").hidden = ouvert;
         v.querySelector(".verrou-contenu").hidden = !ouvert;
       });
@@ -40,6 +44,7 @@
         });
         ticket.hidden = n === 0;
       }
+      document.querySelectorAll("form.quiz").forEach((f) => f.dispatchEvent(new Event("etat")));
     });
 
   // ---------- Quiz d'autoévaluation
@@ -75,7 +80,16 @@
       score.hidden = true; corriger.hidden = false; recommencer.hidden = true;
       delete form.dataset.confirme;
     }
+    // « Corriger » n'est actif que si au moins un exercice affiché a sa correction publiée.
+    const attente = form.querySelector(".attente-quiz");
+    function verrouiller() {
+      const ok = etat !== null && exos.some(corrige);
+      corriger.disabled = !ok;
+      if (attente) attente.hidden = ok || etat === null;
+    }
+    form.addEventListener("etat", verrouiller);
     if (tirage > 0) tirer();
+    verrouiller();
 
     corriger.addEventListener("click", () => {
       const vides = exos.filter((ex) => !ex.querySelector("input:checked")).length;
@@ -90,8 +104,8 @@
         const verdict = ex.querySelector(".verdict");
         ex.querySelectorAll("input").forEach((i) => (i.disabled = true));
         verdict.hidden = false;
-        if (masquee(ex, ex.id)) {
-          verdict.textContent = "Réponse non publiée : elle est donnée en séance.";
+        if (!corrige(ex)) {
+          verdict.textContent = "Correction bientôt disponible.";
           verdict.className = "verdict";
           return;
         }
@@ -110,7 +124,7 @@
         }
       });
       score.hidden = false;
-      score.textContent = "Score : " + bons + " / " + comptes + (comptes < exos.length ? " (questions à réponse publiée)" : "");
+      score.textContent = "Score : " + bons + " / " + comptes + (comptes < exos.length ? " (exercices dont la correction est publiée)" : "");
       corriger.hidden = true; recommencer.hidden = false;
       delete form.dataset.confirme;
     });
@@ -120,7 +134,7 @@
       window.scrollTo({ top: form.offsetTop - 80, behavior: "smooth" });
     });
     if (nouvelle) nouvelle.addEventListener("click", () => {
-      remettre(); tirer();
+      remettre(); tirer(); verrouiller();
       window.scrollTo({ top: form.offsetTop - 80, behavior: "smooth" });
     });
   });

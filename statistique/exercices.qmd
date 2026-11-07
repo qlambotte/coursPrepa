@@ -4,7 +4,7 @@ prepa:
   theme: statistique
 ---
 
-Ces exercices prolongent la séance. Réponds à toutes les questions, puis clique sur « Corriger » : seules les bonnes réponses sont données. Si ta réponse est fausse, reprends l'exercice avant de demander de l'aide.
+Ces exercices prolongent la séance. Sous chaque exercice, les coups de pouce donnent trois indices puis la solution : consulte-les dans l'ordre. Réponds à toutes les questions, puis clique sur « Corriger ». La correction est publiée après la séance ; avant, la page affiche « Correction bientôt disponible ».
 
 :::::: quiz
 

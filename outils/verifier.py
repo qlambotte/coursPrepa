@@ -6,7 +6,8 @@
 - chaque jumeau renvoie à un QCM existant de la séance ;
 - signale les encadrés de théorie qu'aucun QCM ni exercice n'utilise ;
 - chaque image `static/figures/*.svg` citée existe, et chaque `figures/*.typ` (sauf `commun.typ`) a son SVG ;
-- `reponses_activees` (etat.json) ne contient que des ids de questions `masquee="true"` existantes ;
+- les renvois « theorie » du mélange peuvent viser n'importe quel thème ;
+- signale (info) les exercices sans indices ni solution détaillée, par thème ;
 - les clés de thème d'etat.json correspondent à des dossiers existants ;
 - signale (avertissement) toute expression `\\mathrm{}` vide.
 
@@ -64,8 +65,13 @@ def nb_options(contenu):
 
 
 tous_ids = {}
-masquees = set()
-for dossier in sorted(p for p in RACINE.iterdir() if p.is_dir() and not p.name.startswith((".", "_"))):
+DOSSIERS = sorted(p for p in RACINE.iterdir() if p.is_dir() and not p.name.startswith((".", "_")))
+theorie_globale = set()
+for d in DOSSIERS:
+    for ft in d.glob("[0-9][0-9]-*.qmd"):
+        theorie_globale |= {ident for _, ident, _, _ in blocs(ft, "encadre") if ident}
+exos_sans_aide = {}
+for dossier in DOSSIERS:
     theme = dossier.name
     chapitres = sorted(dossier.glob("[0-9][0-9]-*.qmd"))
     theorie = set()
@@ -90,8 +96,10 @@ for dossier in sorted(p for p in RACINE.iterdir() if p.is_dir() and not p.name.s
                 erreurs.append(f"{ou} : identifiant déjà utilisé dans {tous_ids[ident]}")
             else:
                 tous_ids[ident] = f"{theme}/{page}"
-            if kv.get("masquee") == "true" and ident:
-                masquees.add(ident)
+            if "exo" in classes:
+                aide = any(re.match(r"^:{3,}\s*(indice|details)\s*$", l) for l in contenu)
+                total, sans = exos_sans_aide.get(theme, (0, 0))
+                exos_sans_aide[theme] = (total + 1, sans + (0 if aide else 1))
             if not kv.get("source"):
                 erreurs.append(f"{ou} : source manquante")
             reps = kv.get("reponse", "").split()
@@ -102,7 +110,7 @@ for dossier in sorted(p for p in RACINE.iterdir() if p.is_dir() and not p.name.s
             if nb_options(contenu) != 4:
                 erreurs.append(f"{ou} : {nb_options(contenu)} options au lieu de 4")
             for t in kv.get("theorie", "").split():
-                if t not in theorie:
+                if t not in (theorie if chapitres else theorie_globale):
                     erreurs.append(f"{ou} : théorie inconnue {t}")
                 utilises.add(t)
             if "jumeau" in classes:
@@ -142,9 +150,8 @@ if etat_fichier.exists():
     for cle, valeur in etat.items():
         if isinstance(valeur, dict) and not (RACINE / cle).is_dir():
             erreurs.append(f"etat.json : clé de thème « {cle} » sans dossier correspondant")
-    for ident in etat.get("reponses_activees", []):
-        if ident not in masquees:
-            erreurs.append(f"etat.json : reponses_activees contient {ident}, qui n'est pas une question masquee=\"true\"")
+        if isinstance(valeur, dict) and "exercices" in valeur and not isinstance(valeur["exercices"], bool):
+            erreurs.append(f"etat.json : {cle}.exercices doit valoir true ou false")
 
 for a in avertissements:
     print("Avertissement :", a)
@@ -153,5 +160,8 @@ for e in erreurs:
 themes_sans_theorie = sorted(d.name for d in RACINE.iterdir() if (d / "qcm.qmd").exists() and not any(".encadre" in c.read_text(encoding="utf-8") for c in d.glob("[0-9][0-9]-*.qmd")))
 if themes_sans_theorie:
     print("Info : théorie encore vide pour", ", ".join(themes_sans_theorie))
+incomplets = [f"{th} {s}/{n}" for th, (n, s) in sorted(exos_sans_aide.items()) if s]
+if incomplets:
+    print("Info : exercices sans indices ni solution :", ", ".join(incomplets))
 print(f"{len(tous_ids)} questions, {len(erreurs)} erreur(s), {len(avertissements)} avertissement(s).")
 sys.exit(1 if erreurs else 0)

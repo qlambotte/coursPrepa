@@ -8,6 +8,10 @@ prepa:
 
 Pour un exposant naturel non nul, une puissance est un produit de facteurs égaux. En comptant les facteurs, on voit par exemple que $\dfrac{a^5}{a^2}=\dfrac{a\cdot a\cdot a\cdot a\cdot a}{a\cdot a}=a^3$ : on soustrait les exposants.
 
+Dans la suite des puissances de $2$, avancer d'un cran multiplie par $2$. En reculant d'un cran, on divise par $2$, et la suite se prolonge à gauche de $2^1$.
+
+![](../static/figures/th-alge-puissances.svg){.th}
+
 On souhaite que cette règle reste vraie dans tous les cas. Comme $\dfrac{a^2}{a^2}=1$, on doit avoir $a^{2-2}=a^0=1$. Comme $\dfrac{a^2}{a^5}=\dfrac{1}{a^3}$, on doit avoir $a^{2-5}=a^{-3}=\dfrac{1}{a^3}$. C'est ce qui motive la définition suivante.
 
 ::: {.encadre #alge-puiss-def nature="Définition" titre="puissances entières"}

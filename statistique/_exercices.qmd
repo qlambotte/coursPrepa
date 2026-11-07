@@ -1,4 +1,4 @@
-::::: {.qcm .exo #sta-e01 source="Examen 2018" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e01 source="Examen 2018" reponse="B" theorie="sta-graphiques"}
 <!-- support 2026 : Q96 -->
 Dans une Faculté de médecine de $3000$ étudiants, il y a trois sections : les Sciences biomédicales, la Médecine et la Dentisterie. Les étudiants sont répartis dans les sections comme illustré dans le graphique ci-dessous.
 
@@ -13,9 +13,26 @@ Dans une Faculté de médecine de $3000$ étudiants, il y a trois sections : les
 - $2100$
 :::
 
+::: indice
+Quelle fraction du disque occupe chaque section ? Peux-tu lire les angles ?
+
+:::
+
+::: indice
+Médecine occupe la moitié du disque. Le secteur des Sciences biomédicales va de $18^\circ$ à $90^\circ$ : $72^\circ$, soit $\frac15$ du disque.
+
+:::
+
+::: details
+Médecine : $\frac12\cdot3\,000=1\,500$ étudiants. Sciences biomédicales : $\frac{72}{360}=\frac15$ du disque, soit $600$ étudiants.
+
+Différence : $1\,500-600=900$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e02 source="Examen 2022" reponse="D" theorie=""}
+::::: {.qcm .exo #sta-e02 source="Examen 2022" reponse="D" theorie="sta-moyenne"}
 <!-- support 2026 : Q97 -->
 On considère la série statistique suivante : $-1$, $-x^2$, $2x$, $-3x^2$, $-1$ dont la moyenne est notée $m$. Laquelle des propositions suivantes est vraie quel que soit le nombre réel $x$?
 
@@ -26,9 +43,28 @@ On considère la série statistique suivante : $-1$, $-x^2$, $2x$, $-3x^2$, $-1$
 - $m\neq 0$
 :::
 
+::: indice
+Que vaut la somme des cinq valeurs ? Quel est son signe ?
+
+:::
+
+::: indice
+La somme vaut $-4x^2+2x-2$ : c'est un trinôme dont le discriminant est négatif.
+
+:::
+
+::: details
+$m=\dfrac{-4x^2+2x-2}5$. Le trinôme $-4x^2+2x-2$ a pour discriminant $4-32<0$ et un coefficient de $x^2$ négatif : il est toujours strictement négatif.
+
+Donc $m<0$, et en particulier $m\neq0$.
+
+$m=-1$ et $m<-2$ ne sont pas toujours vrais : pour $x=0$, $m=-\frac25$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e03 source="Examen 2022" reponse="C" theorie=""}
+::::: {.qcm .exo #sta-e03 source="Examen 2022" reponse="C" theorie="sta-moyenne"}
 <!-- support 2026 : Q98 -->
 Un étudiant a présenté successivement trois examens.
 Si au quatrième examen il obtient une note égale à celle du premier examen, sa moyenne (des quatre
@@ -44,9 +80,26 @@ Quelles ont été, dans l'ordre chronologique, les notes des trois premiers exam
 - $5$, $9$ et $21$.
 :::
 
+::: indice
+Avec $a$, $b$ et $c$ les trois notes, quelles sont les trois équations ? Que donne leur somme ?
+
+:::
+
+::: indice
+$2a+b+c=40$, $a+2b+c=48$, $a+b+2c=56$. La somme donne $4(a+b+c)=144$.
+
+:::
+
+::: details
+Les trois moyennes donnent $2a+b+c=40$, $a+2b+c=48$ et $a+b+2c=56$.
+
+En additionnant : $4(a+b+c)=144$, donc $a+b+c=36$. Puis $a=40-36=4$, $b=48-36=12$ et $c=56-36=20$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e04 source="Examen 2022" reponse="D" theorie=""}
+::::: {.qcm .exo #sta-e04 source="Examen 2022" reponse="D" theorie="sta-graphiques"}
 <!-- support 2026 : Q99 -->
 Le diagramme en bâtons ci-dessous correspond au nombre d'enfants, dans l'ensemble des différentes écoles d'une grande commune, infectés par la COVID-19 durant les 10 derniers mois, en fonction de l'âge des enfants (en années).
 
@@ -61,9 +114,26 @@ Le diagramme en bâtons ci-dessous correspond au nombre d'enfants, dans l'ensemb
 - $400$
 :::
 
+::: indice
+Quels bâtons correspondent aux enfants de $2$ à $5$ ans ? Combien vaut une graduation de l'axe vertical ?
+
+:::
+
+::: indice
+Une graduation vaut $40$ enfants. Lis les bâtons de $2$, $3$, $4$ et $5$ ans.
+
+:::
+
+::: details
+Les bâtons de $2$, $3$, $4$ et $5$ ans valent $40$, $80$, $120$ et $160$ enfants.
+
+Total : $40+80+120+160=400$ enfants.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e05 source="Prépa UMONS" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e05 source="Prépa UMONS" reponse="B" theorie="sta-mediane"}
 <!-- support 2026 : Q100 -->
 Une entreprise donne les renseignements suivants sur le salaire mensuel brut des employés.
 
@@ -80,9 +150,26 @@ Parmi les propositions suivantes, laquelle est correcte?
 - Une personne employée sur deux gagne moins de $3 400$ euros
 :::
 
+::: indice
+Que signifient la médiane et les quartiles en termes de proportion de personnes ?
+
+:::
+
+::: indice
+Un quart des personnes gagne moins que $Q_1$, un quart gagne plus que $Q_3$.
+
+:::
+
+::: details
+Entre $Q_1=1\,780$ et $Q_3=3\,720$ euros se trouve la moitié des personnes employées.
+
+Les autres sont fausses : la moyenne n'indique pas combien de personnes gagnent $3\,400$ euros ; la médiane n'est pas le salaire le plus fréquent ; et comme la médiane vaut $2\,590$ euros, plus de la moitié des personnes gagne moins de $3\,400$ euros.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e06 source="Examen 2017" reponse="D" theorie=""}
+::::: {.qcm .exo #sta-e06 source="Examen 2017" reponse="D" theorie="sta-ecart-type sta-graphiques"}
 <!-- support 2026 : Q101 -->
 Des quatre histogrammes représentés ci-dessous, lequel correspond au jeu de
 données ayant le plus petit écart-type ?
@@ -94,9 +181,26 @@ données ayant le plus petit écart-type ?
 - ![](../static/figures/2017_stats_histoD.svg)
 :::
 
+::: indice
+Les quatre histogrammes ont presque la même forme. Les axes horizontaux ont-ils la même graduation ?
+
+:::
+
+::: indice
+Compare l'étendue des données sur chaque axe horizontal : de $-12$ à $12$, de $-3$ à $3$, de $0{,}7$ à $1{,}3$, de $4{,}997$ à $5{,}003$.
+
+:::
+
+::: details
+L'écart-type mesure la dispersion autour de la moyenne, dans l'unité des données.
+
+Les formes sont semblables, mais les données D s'étalent sur un intervalle de longueur $0{,}006$, contre $0{,}6$ pour C, $6$ pour B et $24$ pour A. L'écart-type de D est le plus petit.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e07 source="Prépa UMONS" reponse="D" theorie=""}
+::::: {.qcm .exo #sta-e07 source="Prépa UMONS" reponse="D" theorie="sta-mediane sta-moyenne"}
 <!-- support 2026 : Q102 -->
 Considérons le diagramme en bâtonnets donné ci-après, illustrant le nombre de personnes ayant lu une certaine quantité de livres durant les vacances d'été.
 
@@ -111,9 +215,26 @@ Considérons le diagramme en bâtonnets donné ci-après, illustrant le nombre d
 - La moyenne vaut ${\displaystyle \frac{89}{15}}$
 :::
 
+::: indice
+Quel est l'effectif de chaque bâton ? Quel est l'effectif total ?
+
+:::
+
+::: indice
+Les effectifs sont $15$, $20$, $5$, $25$ et $10$ pour $4$, $5$, $6$, $7$ et $8$ livres : $75$ personnes.
+
+:::
+
+::: details
+Moyenne : $\dfrac{4\cdot15+5\cdot20+6\cdot5+7\cdot25+8\cdot10}{75}=\dfrac{445}{75}=\dfrac{89}{15}$.
+
+Les autres sont fausses : $75$ personnes ont été interrogées ; le mode vaut $7$ ; la médiane est la $38^\text{e}$ valeur, soit $6$ (les effectifs cumulés valent $15$, $35$, $40$).
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e08 source="Prépa UMONS" reponse="A" theorie=""}
+::::: {.qcm .exo #sta-e08 source="Prépa UMONS" reponse="A" theorie="sta-moyenne sta-graphiques"}
 <!-- support 2026 : Q103 -->
 Au concours de Mathématiques sans Frontières, le nombre de points obtenus par les
 écoles de Belgique se répartit selon l'histogramme suivant :
@@ -129,9 +250,25 @@ Quel est, en point, le score moyen des écoles?
 - Il manque au moins une information pour répondre
 :::
 
+::: indice
+Quel est l'effectif de chaque classe ? Quelle valeur prendre pour représenter une classe ?
+
+:::
+
+::: indice
+Les effectifs sont $1$, $4$, $4$, $15$, $9$, $10$, $6$, $2$, $2$, $1$ (total $54$) ; on prend le centre de chaque classe, de $15$ à $105$.
+
+:::
+
+::: details
+Avec les centres des classes :
+$$\bar x=\frac{15\cdot1+25\cdot4+35\cdot4+45\cdot15+55\cdot9+65\cdot10+75\cdot6+85\cdot2+95\cdot2+105\cdot1}{54}=\frac{2\,990}{54}=\frac{1\,495}{27}.$$
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e09 source="Prépa UMONS" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e09 source="Prépa UMONS" reponse="B" theorie="sta-graphiques sta-vocabulaire"}
 <!-- support 2026 : Q104 -->
 Considérons le diagramme circulaire donné ci-après, représentant les fréquences d'un sondage sur la couleur préférée de $600$ personnes.
 
@@ -146,9 +283,28 @@ Parmi les propositions suivantes, laquelle est correcte?
 - $37,5\%$ des personnes n'ont pas répondu « rouge ».
 :::
 
+::: indice
+Quel angle correspond à chaque couleur ? Quelle fraction du disque cela représente-t-il ?
+
+:::
+
+::: indice
+Bleu et jaune : $90^\circ$ chacun ; vert : $45^\circ$ ; rouge : le reste, $135^\circ$.
+
+:::
+
+::: details
+Bleu $25\,\%$, jaune $25\,\%$, vert $12{,}5\,\%$, rouge $\frac{135}{360}=37{,}5\,\%$.
+
+Jaune ou rouge : $25\,\%+37{,}5\,\%=62{,}5\,\%$.
+
+Les autres sont fausses : $150$ personnes ont répondu « bleu » ; il y a trois fois plus de « rouge » que de « vert » ; $62{,}5\,\%$ n'ont pas répondu « rouge ».
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e10 source="Prépa UMONS" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e10 source="Prépa UMONS" reponse="B" theorie="sta-vocabulaire sta-mediane"}
 <!-- support 2026 : Q105 -->
 Considérons le graphe des effectifs donné ci-après.
 
@@ -163,9 +319,26 @@ Parmi les propositions suivantes, laquelle est correcte?
 - Le mode est « rouge »
 :::
 
+::: indice
+Que vaut une graduation de l'axe vertical ? Quel est l'effectif total ?
+
+:::
+
+::: indice
+Une graduation vaut $20$ : bleu $60$, rouge $40$, vert $100$, jaune $120$, violet $80$, soit $400$ au total.
+
+:::
+
+::: details
+Fréquence de « vert » : $\frac{100}{400}=25\,\%$.
+
+Les autres sont fausses : l'effectif de « violet » est $80$, la fréquence de « jaune » est $30\,\%$ et le mode est « jaune ».
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e11 source="Prépa UMONS" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e11 source="Prépa UMONS" reponse="B" theorie="sta-nature-outils"}
 <!-- support 2026 : Q106 -->
 Considérons une série statistique quelconque. Laquelle des valeurs suivantes peut toujours être déterminées?
 
@@ -176,9 +349,26 @@ Considérons une série statistique quelconque. Laquelle des valeurs suivantes p
 - L'écart-type
 :::
 
+::: indice
+Une série peut être qualitative. Quelles valeurs peut-on calculer pour une variable qualitative ?
+
+:::
+
+::: indice
+Pour des couleurs, par exemple, on ne peut ni additionner ni ranger les valeurs.
+
+:::
+
+::: details
+Le mode est la valeur la plus fréquente : il existe pour toute série, même qualitative.
+
+La moyenne et l'écart-type demandent une variable quantitative, la médiane des valeurs que l'on peut ranger.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e12 source="Prépa UMONS" reponse="C" theorie=""}
+::::: {.qcm .exo #sta-e12 source="Prépa UMONS" reponse="C" theorie="sta-moyenne"}
 <!-- support 2026 : Q107 -->
 Les résultats de Luke aux dernières évaluations sont les suivants : $12/20$, $20/30$ et $8/10$. La dernière évaluation est sur $40$. Parmi les propositions suivantes, laquelle est correcte?
 
@@ -189,9 +379,28 @@ Les résultats de Luke aux dernières évaluations sont les suivants : $12/20$, 
 - Un score de $30$ à la quatrième évaluation laisse la moyenne inchangée sur l'ensemble des évaluations par rapport à la moyenne sur les trois premières.
 :::
 
+::: indice
+Comment calculer la moyenne sur l'ensemble des évaluations, qui n'ont pas le même total ?
+
+:::
+
+::: indice
+Additionne les points : $12+20+8=40$ sur $60$ ; avec la dernière, on obtient $40+x$ points sur $100$.
+
+:::
+
+::: details
+Avec $x$ points sur $40$ à la dernière évaluation, la moyenne vaut $\frac{40+x}{100}$.
+
+Avec $x\ge10$ : $\frac{40+x}{100}\ge50\,\%$ (exactement $50\,\%$ pour $x=10$).
+
+Les autres sont fausses : $70\,\%$ donne $x=28$ et $\frac{68}{100}$, soit $13{,}6/20$ ; $x=40$ donne $16/20$ ; $x=30$ donne $70\,\%$ contre $\frac{40}{60}\approx66{,}7\,\%$ avant.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e13 source="Examen 2023" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e13 source="Examen 2023" reponse="B" theorie="sta-moyenne sta-graphiques"}
 <!-- Examen 2023 (matin) : maths Q5 -->
 Voici un graphique représentant le taux d'accès à l'enseignement supérieur des hommes et des femmes ayant obtenu un diplôme de secondaire.
 
@@ -208,9 +417,26 @@ Que vaut le taux d'accès (en $\%$) à l'enseignement supérieur hors universit�
 - $87{,}0\,\%$
 :::
 
+::: indice
+Quel est le taux d'accès hors université chez les hommes et chez les femmes ? Comment combiner les deux groupes ?
+
+:::
+
+::: indice
+Hors université : $42\,\%$ des hommes et $45\,\%$ des femmes. C'est une moyenne pondérée par $0{,}4$ et $0{,}6$.
+
+:::
+
+::: details
+$0{,}4\cdot42\,\%+0{,}6\cdot45\,\%=16{,}8\,\%+27\,\%=43{,}8\,\%$.
+
+La moyenne non pondérée $\frac{42+45}2=43{,}5\,\%$ ne tient pas compte de la proportion de femmes et d'hommes.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e14 source="Examen 2025" reponse="B" theorie=""}
+::::: {.qcm .exo #sta-e14 source="Examen 2025" reponse="B" theorie="sta-graphiques"}
 <!-- Examen 2025 (matin) : maths Q3 -->
 Un hôpital emploie $2\,000$ personnes soignantes. On retrouve la répartition de ce personnel dans le diagramme circulaire ci-dessous.
 
@@ -227,9 +453,26 @@ Quel pourcentage du personnel soignant seront des infirmières après ce changem
 - $70\,\%$
 :::
 
+::: indice
+Combien y a-t-il d'infirmières et de personnes du personnel psychosocial ? Sur quelle grandeur portent les $20\,\%$ ?
+
+:::
+
+::: indice
+Infirmières : $50\,\%$ de $2\,000$, soit $1\,000$ ; personnel psychosocial : $500$, dont $20\,\%$ sont remplacés.
+
+:::
+
+::: details
+$20\,\%$ de $500$ font $100$ personnes, remplacées par des infirmières : il y a $1\,100$ infirmières sur $2\,000$, soit $55\,\%$.
+
+Les $20\,\%$ portent sur le personnel psychosocial, pas sur l'ensemble : $50\,\%+20\,\%=70\,\%$ est faux.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #sta-e15 source="Examen 2026" reponse="C" theorie=""}
+::::: {.qcm .exo #sta-e15 source="Examen 2026" reponse="C" theorie="sta-ecart-type"}
 <!-- Examen 2026 (matin) : maths Q2 -->
 On considère la série définie par les quatre nombres suivants : $-1$ ; $-1$ ; $1$ ; $1$.
 
@@ -240,6 +483,21 @@ Que valent respectivement la moyenne et l'écart-type de cette série?
 - $0$ et $1/2$
 - $0$ et $1$
 - $0$ et $\sqrt{2}$
+:::
+
+::: indice
+Que vaut la moyenne ? À quelle distance de la moyenne se trouve chaque valeur ?
+
+:::
+
+::: indice
+La moyenne vaut $0$ et chaque valeur est à distance $1$ de la moyenne.
+
+:::
+
+::: details
+Moyenne : $\frac{-1-1+1+1}4=0$. Variance : $\frac{1+1+1+1}4=1$, donc l'écart-type vaut $1$.
+
 :::
 
 :::::
@@ -255,6 +513,21 @@ Une série de $7$ valeurs a une moyenne de $12$. On ajoute une valeur $x$ et la 
 - $21$
 :::
 
+::: indice
+Que vaut la somme des $7$ valeurs ? Et celle des $8$ valeurs ?
+
+:::
+
+::: indice
+La somme passe de $7\cdot12=84$ à $8\cdot13=104$.
+
+:::
+
+::: details
+$x=8\cdot13-7\cdot12=104-84=20$.
+
+:::
+
 :::::
 
 ::::: {.qcm .exo #sta-e17 source="Prépa UMONS" reponse="B" theorie="sta-variance-calcul sta-ecart-type"}
@@ -268,6 +541,25 @@ Quel est le nouvel écart-type ?
 - $2{,}4$
 - $2{,}6$
 - $3$
+:::
+
+::: indice
+Que valent la somme des valeurs et la somme de leurs carrés ?
+
+:::
+
+::: indice
+$\sum x_i=40$ et $\sigma^2=\frac{\sum x_i^2}4-10^2=4$, donc $\sum x_i^2=416$.
+
+:::
+
+::: details
+$\sum x_i=40$ et $\sum x_i^2=4\,(4+100)=416$.
+
+Avec $14$ : $\sum x_i=54$, $\sum x_i^2=416+196=612$, $n=5$. Moyenne $10{,}8$, variance $\frac{612}5-10{,}8^2=122{,}4-116{,}64=5{,}76$.
+
+Écart-type : $\sqrt{5{,}76}=2{,}4$.
+
 :::
 
 :::::

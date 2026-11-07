@@ -8,6 +8,18 @@ prepa:
 
 Pour additionner deux fractions, il faut d'abord les écrire avec un même dénominateur. En prenant le produit des dénominateurs, on obtient la formule générale ci-dessous. Diviser par une fraction revient à multiplier par son inverse.
 
+Pour additionner $\frac13$ et $\frac14$, on découpe l'unité en $3\cdot4=12$ cases : chaque fraction s'écrit alors en douzièmes. Le produit $\frac23\cdot\frac34$ est la partie hachurée dans les deux sens : $2\cdot3$ cases sur $3\cdot4$.
+
+![](../static/figures/th-alge-fractions.svg){.th}
+
+Diviser $\frac23$ par $\frac14$, c'est chercher combien de fois $\frac14$ est contenu dans $\frac23$. Sur la même grille, $\frac23$ occupe $2\cdot4=8$ cases et $\frac14$ en occupe $1\cdot3=3$ : le quotient vaut $\frac83$. En général, $\frac ab$ occupe $ad$ cases et $\frac cd$ en occupe $bc$, d'où $\frac{a/b}{c/d}=\frac{ad}{bc}$.
+
+![](../static/figures/th-alge-fractions-div.svg){.th}
+
+Le comptage fonctionne aussi quand le diviseur est le plus grand : $\frac34$ occupe $3\cdot7=21$ cases d'une grille de $4\cdot7$, et $\frac67$ en occupe $6\cdot4=24$. $\frac34$ ne contient pas une fois $\frac67$, mais $21$ cases sur $24$ : $\frac34:\frac67=\frac{21}{24}=\frac78$.
+
+![](../static/figures/th-alge-fractions-div2.svg){.th}
+
 ::: {.encadre #alge-frac-op nature="Propriété" titre="opérations sur les fractions"}
 Pour des réels $a$, $c$ et des réels non nuls $b$, $d$ :
 $$\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}\qquad\text{et}\qquad \frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}.$$

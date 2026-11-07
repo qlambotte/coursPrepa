@@ -61,7 +61,7 @@ Modèle : `algebre/qcm.qmd`, bloc `:::::: ticket`.
 1. Retranscrire chaque question fidèlement (énoncé, 4 propositions dans l'ordre, LaTeX entre `$…$`), avec `source="Examen 2023"` etc.
 2. Classer par thème selon le contenu ; si le thème n'est pas clair, mettre la question dans `melange/_exercices.qmd`.
 3. Placement : dans `<theme>/_exercices.qmd` (exercices supplémentaires, format `{.qcm .exo …}` sans indices). Ne pas toucher aux QCM de séance sans l'accord de Q.
-4. Réponse : si le PDF donne la réponse, `reponse="X"`. Si la question est traitée en séance de questions-réponses sans réponse finale publiée, mettre la réponse **et** `masquee="true"`. Si plusieurs réponses sont correctes (erreur de l'énoncé) : `reponse="C D" annulee="true"`.
+4. Réponse : si le PDF donne la réponse, `reponse="X"`. Si plusieurs réponses sont correctes (erreur de l'énoncé) : `reponse="C D" annulee="true"`.
 5. Doublons : chercher si l'énoncé existe déjà (`grep` sur un morceau d'énoncé) ; ne pas dupliquer.
 6. Figures : refaire **fidèlement** en CeTZ (`figures/<nom>.typ`, fonctions communes de `figures/commun.typ`), compiler avec `bash outils/figures.sh <nom>`, insérer `![](../static/figures/<nom>.svg)`. Commiter le SVG.
 7. Mettre à jour `banque/inventaire.csv` (une ligne par question, mêmes colonnes) et les tableaux de `banque/synthese.md`.
@@ -70,7 +70,6 @@ Modèle : `algebre/qcm.qmd`, bloc `:::::: ticket`.
 
 Ajouter :
 - chaque image `../static/figures/*.svg` citée dans un `.qmd` existe, et chaque `figures/*.typ` (sauf `commun.typ`) a son SVG ;
-- chaque id de `reponses_activees` (etat.json) correspond à une question `masquee="true"` existante ;
 - les clés de thème d'etat.json (`algebre`, …) correspondent à des dossiers existants ;
 - signaler (avertissement) toute expression `\mathrm{}` vide.
 

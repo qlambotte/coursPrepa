@@ -63,7 +63,15 @@ end
 local numero_theme = "1"
 local numero_chapitre = nil
 local fichier_theorie = {}
-local function charger_theorie(theme)
+local NUMEROS = { algebre = "1", geometrie = "2", trigonometrie = "3", analyse = "4", statistique = "5" }
+local THEMES = { "algebre", "geometrie", "trigonometrie", "analyse", "statistique" }
+-- Catégorie d'un exercice (verrou « exercices » de etat.json), d'après le préfixe de son identifiant
+local CATEGORIES = { alge = "algebre", geo = "geometrie", tri = "trigonometrie", ana = "analyse", sta = "statistique", mel = "melange" }
+local function categorie(id) return CATEGORIES[id:match("^(%a+)%-") or ""] or meta_theme end
+-- prefixe : chemin du dossier du thème vu depuis la page ("" sur une page du thème, "../algebre/" ailleurs)
+local function charger_theorie(theme, prefixe)
+  prefixe = prefixe or ""
+  local num = NUMEROS[theme] or numero_theme
   local racine = (quarto and quarto.project and quarto.project.directory) or "."
   local dossier = racine .. "/" .. theme
   local fichiers = {}
@@ -83,8 +91,8 @@ local function charger_theorie(theme)
           local nature = ligne:match('nature="([^"]*)"') or "Propriété"
           compte[nature] = (compte[nature] or 0) + 1
           if id then
-            titres_theorie[id] = nature .. " " .. numero_theme .. "." .. chap .. "." .. compte[nature] .. (titre ~= "" and (" — " .. titre) or "")
-            fichier_theorie[id] = nom
+            titres_theorie[id] = nature .. " " .. num .. "." .. chap .. "." .. compte[nature] .. (titre ~= "" and (" — " .. titre) or "")
+            fichier_theorie[id] = prefixe .. nom
           end
         end
       end
@@ -166,7 +174,6 @@ local function qcm(div)
     table.insert(reps, L)
   end
   local annulee = div.attributes["annulee"] == "true"
-  local masquee = div.attributes["masquee"] == "true"
   if #reps == 0 then erreur(id .. " : reponse manquante") end
   if #reps > 1 and not annulee then erreur(id .. " : plusieurs réponses sans annulee=\"true\"") end
   if exo and #reps > 1 then erreur(id .. " : un exercice en autoévaluation n'a qu'une réponse") end
@@ -205,26 +212,30 @@ local function qcm(div)
       pandoc.Span({ pandoc.Str("✎ " .. titre) }, pandoc.Attr("", { "exo-titre" })), pandoc.Space(),
       pandoc.Span({ pandoc.Str(source) }, pandoc.Attr("", { "exo-source" })) })
     local attrs = { ["data-source"] = source }
-    if exo then attrs["data-reponse"] = rep end
-    if masquee then attrs["data-masquee"] = "true" end
-    local boite = pandoc.Div({ pandoc.Div({ tete }, pandoc.Attr("", { "exo-tete" })),
-                               pandoc.Div(corps, pandoc.Attr("", { "exo-corps" })) },
+    local cat = exo and categorie(id) or nil
+    if exo then attrs["data-reponse"] = rep; attrs["data-categorie"] = cat end
+    local contenu_boite = { pandoc.Div({ tete }, pandoc.Attr("", { "exo-tete" })),
+                            pandoc.Div(corps, pandoc.Attr("", { "exo-corps" })) }
+    local boite = pandoc.Div(contenu_boite,
                              pandoc.Attr(id, exo and { "exo", "qcm", "qcm-exo" } or { "exo", "qcm" }, attrs))
     local b = { boite }
 
-    if not exo then
+    -- Aides : sous chaque question de séance ; dans la boîte d'un exercice (qui peut être déplacé par le tirage),
+    -- seulement s'il a des indices ou une solution détaillée.
+    local avec_aides = not exo or #ids_theorie > 0 or #p.indices > 0 or p.details ~= nil
+    if avec_aides then
       local onglets = {}
       local function onglet(nom, blocs)
         table.insert(onglets, pandoc.Header(2, { pandoc.Str(nom) }, pandoc.Attr("", { "unlisted" })))
         ajouter(onglets, blocs)
       end
       local function verrou(blocs)
-        local v = jumeau and "ticket_solutions" or "solutions"
+        local v = exo and "exercices" or (jumeau and "ticket_solutions" or "solutions")
         local att = { ["data-verrou"] = v, ["data-id"] = id }
-        if masquee then att["data-masquee"] = "true" end
-        local attente = masquee and "Cette réponse est donnée en séance de questions-réponses."
-                                 or (meta_theme == "mise-en-situation" and "Le correctif sera publié après l'épreuve."
-                                     or "La solution sera disponible à la fin de la phase d'entraînement.")
+        if exo then att["data-categorie"] = cat end
+        local attente = exo and "Correction bientôt disponible."
+                         or (meta_theme == "mise-en-situation" and "Le correctif sera publié après l'épreuve."
+                             or "La solution sera disponible à la fin de la phase d'entraînement.")
         return { pandoc.Div({
           pandoc.Div({ pandoc.Para({ pandoc.Str(attente) }) }, pandoc.Attr("", { "verrou-attente" })),
           pandoc.Div(blocs, pandoc.Attr("", { "verrou-contenu" }, { hidden = "" })) },
@@ -241,7 +252,8 @@ local function qcm(div)
       end
       onglet("Solution", verrou(sol))
       if p.pieges then onglet("Pièges", verrou(p.pieges)) end
-      table.insert(b, pandoc.Div({ pandoc.Div(onglets, pandoc.Attr("", { "panel-tabset" })) }, pandoc.Attr("", { "aides" })))
+      local aides = pandoc.Div({ pandoc.Div(onglets, pandoc.Attr("", { "panel-tabset" })) }, pandoc.Attr("", { "aides" }))
+      if exo then table.insert(boite.content, aides) else table.insert(b, aides) end
     end
     if jumeau then
       return { pandoc.Div(b, pandoc.Attr("", { "jumeau" }, { ["data-jumeau-de"] = div.attributes["jumeau-de"] or "", hidden = "" })) }
@@ -264,7 +276,7 @@ local function qcm(div)
     table.insert(b, typ(")"))
     table.insert(b, typ("]"))
     if exo then
-      table.insert(reponses_exos, { titre = titre, rep = masquee and "séance" or rep })
+      table.insert(reponses_exos, { titre = titre, rep = rep })
     elseif version_prof then
       local a = {}
       table.insert(a, typ('#solution(titre: [' .. titre .. '], source: [' .. echap_typst(source) .. '])['))
@@ -352,7 +364,8 @@ local function quiz(div)
     ajouter(b, div.content)
     table.insert(b, html('<div class="actions-quiz"><button type="button" class="corriger">Corriger</button>' ..
       (tirage and '<button type="button" class="nouvelle-serie">Nouvelle série</button>' or '') ..
-      '<button type="button" class="recommencer" hidden>Recommencer</button><p class="score" hidden></p></div></form>'))
+      '<button type="button" class="recommencer" hidden>Recommencer</button><p class="score" hidden></p>' ..
+      '<p class="attente-quiz" hidden>Correction bientôt disponible.</p></div></form>'))
     return b
   end
   return div.content
@@ -365,10 +378,14 @@ function Pandoc(doc)
   meta_theme = prepa.theme and pandoc.utils.stringify(prepa.theme) or ""
   version_prof = prepa.version and pandoc.utils.stringify(prepa.version) == "prof"
   local impression = prepa.impression ~= nil and pandoc.utils.stringify(prepa.impression) == "true"
-  local numeros = { algebre = "1", geometrie = "2", trigonometrie = "3", analyse = "4", statistique = "5" }
-  numero_theme = prepa.numero and pandoc.utils.stringify(prepa.numero) or numeros[meta_theme] or "1"
+  numero_theme = prepa.numero and pandoc.utils.stringify(prepa.numero) or NUMEROS[meta_theme] or "1"
   numero_chapitre = prepa.chapitre and pandoc.utils.stringify(prepa.chapitre) or nil
-  if meta_theme ~= "" then charger_theorie(meta_theme) end
+  if NUMEROS[meta_theme] then
+    charger_theorie(meta_theme)
+  elseif meta_theme ~= "" then
+    -- mélange, autoévaluation globale : renvois vers la théorie de tous les thèmes
+    for _, th in ipairs(THEMES) do charger_theorie(th, "../" .. th .. "/") end
+  end
 
   doc = doc:walk({
     RawBlock = function(r)

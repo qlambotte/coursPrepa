@@ -63,10 +63,9 @@ Solution détaillée.
 - Question annulée au concours (plusieurs bonnes réponses) : `reponse="C D" annulee="true"` ; la solution explique que l'énoncé contient une erreur, que cela arrive au concours et que la question est alors annulée.
 - L'indice 1 est généré à partir de `theorie` (ids des encadrés des chapitres `<theme>/NN-nom.qmd`, séparés par des espaces).
 - Jumeau du ticket de sortie : `{.qcm .jumeau #alge-j01 jumeau-de="alge-q01" …}`, placé dans `:::::: ticket`.
-- Exercice supplémentaire : `{.qcm .exo …}`, placé dans `:::::: quiz` (options, réponse ; pas d'indices).
+- Exercice supplémentaire ou du mélange : `{.qcm .exo …}`, placé dans `:::::: quiz`. Comme une question de séance : indice 1 par `theorie` (le mélange peut renvoyer vers tous les thèmes), indices 2 et 3 par `::: indice`, solution par `::: details` ; pas de pièges. Les aides sont dans la boîte de l'exercice, sous « Coups de pouce ».
 - Encadré de théorie : `::: {.encadre #alge-pct nature="Propriété" titre="…"}` (natures : Définition, Propriété, Exemple, Remarque, Méthode, À retenir ; numérotés « Propriété 1.3 », le numéro du thème suit l'ordre algèbre 1, géométrie 2, trigonométrie 3, analyse 4, statistique 5). Les exemples et remarques n'ont pas besoin d'id.
 - N'utilise pas les préfixes d'id réservés par Quarto (`alg-`, `fig-`, `tbl-`, `eq-`, `thm-`, `def-`, `exm-`, `rem-`, `sol-`…) : c'est ce qui affichait « Algorithme ».
-- Réponse masquée par défaut (question traitée en séance de questions-réponses) : `masquee="true"`. La réponse reste dans le fichier mais n'est pas affichée ; pour la publier, ajoute l'id dans `reponses_activees` d'`etat.json` (ou retire l'attribut).
 - Les commentaires `<!-- … -->` ne sont publiés ni sur le site ni dans le PDF.
 
 ## Figures
@@ -112,9 +111,9 @@ quarto preview
 - `ticket` : ids des QCM corrigés en direct ; la page affiche leurs jumeaux.
 - `ticket_solutions` : affiche les solutions du ticket.
 - `votes` : taux de réussite (0–1), conservés pour l'édition suivante.
-- `reponses_activees` (à la racine) : ids des questions `masquee="true"` dont la réponse est publiée.
+- `exercices` : publie la correction des exercices de la catégorie (bouton « Corriger » et onglet « Solution ») ; la clé existe aussi pour `melange`. La catégorie d'un exercice vient du préfixe de son id (`alge-`, `geo-`, `tri-`, `ana-`, `sta-`, `mel-`), y compris sur la page d'autoévaluation globale. Sans elle, la page affiche « Correction bientôt disponible » ; les indices restent visibles.
 
-Les pages relisent `etat.json` à chaque chargement ; après un commit, le redéploiement prend une à deux minutes.
+Les pages relisent `etat.json` à chaque chargement ; après un commit, le redéploiement prend plusieurs minutes.
 
 `etat.json` est écrit par la page « Pilotage Prépa » du tableau de bord (`portail/board/prepa.html`), qui lit `static/questions.json` : index des questions créé à chaque rendu par `outils/index_questions.py` (pre-render, non versionné). Les modifications à la main restent possibles.
 

@@ -1,4 +1,4 @@
-::::: {.qcm .exo #mel-e01 source="Examen 2020" reponse="A" theorie=""}
+::::: {.qcm .exo #mel-e01 source="Examen 2020" reponse="A" theorie="ana-lim-infini"}
 <!-- support 2026 : Q119 -->
 On considère la limite pour $x$ tendant vers l'infini de ${\displaystyle \frac{4x^2-3x+1}{3-2x^2}}$. Cette limite a pour valeur :
 
@@ -9,9 +9,24 @@ On considère la limite pour $x$ tendant vers l'infini de ${\displaystyle \frac{
 - $+\infty$
 :::
 
+::: indice
+Quels sont les termes de plus haut degré du numérateur et du dénominateur ?
+
+:::
+
+::: indice
+À l'infini, la fraction se comporte comme $\frac{4x^2}{-2x^2}$.
+
+:::
+
+::: details
+$\lim\limits_{x\to\infty}\dfrac{4x^2-3x+1}{3-2x^2}=\lim\limits_{x\to\infty}\dfrac{4x^2}{-2x^2}=-2$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e02 source="Examen 2017" reponse="A" theorie=""}
+::::: {.qcm .exo #mel-e02 source="Examen 2017" reponse="A" theorie="geo-norme geo-mult"}
 <!-- support 2026 : Q120 -->
 Dans le plan muni d'un système d'axes orthonormés, on considère $A(1;1)$ et $B(3;2)$. Quelle est la norme (longueur) du vecteur $3\overrightarrow{AB}$?
 
@@ -22,9 +37,24 @@ Dans le plan muni d'un système d'axes orthonormés, on considère $A(1;1)$ et $
 - $ \sqrt{5}$
 :::
 
+::: indice
+Quelles sont les coordonnées de $\overrightarrow{AB}$ ? Comment la norme change-t-elle quand on multiplie un vecteur par $3$ ?
+
+:::
+
+::: indice
+$\overrightarrow{AB}=(2;1)$ et $\|3\overrightarrow{AB}\|=3\,\|\overrightarrow{AB}\|$.
+
+:::
+
+::: details
+$\overrightarrow{AB}=(2;1)$, donc $\|\overrightarrow{AB}\|=\sqrt{4+1}=\sqrt5$ et $\|3\overrightarrow{AB}\|=3\sqrt5$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e03 source="Examen 2018" reponse="C" theorie=""}
+::::: {.qcm .exo #mel-e03 source="Examen 2018" reponse="C" theorie="alge-1deg"}
 <!-- support 2026 : Q121 -->
 Dans le cadre d'une expérience de remise en forme appelée « un kiwi pour la vie », Julie mange un kiwi tous les matins depuis quelques jours. Séduit par l'initiative, son collègue Marc a commencé la même démarche 10 jours après Julie. Dans 2 jours (à la fin de la journée), le nombre de kiwis mangés par Julie depuis qu'elle a commencé l'expérience sera égal au double du nombre de kiwis mangés par Marc depuis qu'il a commencé l'expérience.
 
@@ -37,9 +67,26 @@ Combien de kiwis auront été mangés par Julie ce soir depuis le début de l'ex
 - $20$
 :::
 
+::: indice
+Note $J$ le nombre de kiwis mangés par Julie ce soir. Combien en a mangé Marc ? Et dans deux jours ?
+
+:::
+
+::: indice
+Ce soir, Marc en a mangé $J-10$. Dans deux jours : $J+2=2\,(J-10+2)$.
+
+:::
+
+::: details
+$J+2=2(J-8)\iff J+2=2J-16\iff J=18$.
+
+Vérification : dans deux jours, Julie en aura mangé $20$ et Marc $10$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e04 source="Examen 2019" reponse="D" theorie=""}
+::::: {.qcm .exo #mel-e04 source="Examen 2019" reponse="D" theorie="ana-lim-infini"}
 <!-- support 2026 : Q122 -->
 Considérons la limite $${\displaystyle L = \lim\limits_{x \to -\infty} \frac{\frac{4x+1}{x^2}}{\frac{1}{x}+\frac{2}{x^3}+\frac{3}{x^5}+\frac{4}{x^7}+\frac{5}{x^9}}}.$$
 
@@ -52,9 +99,25 @@ Parmi les propositions suivantes, laquelle est vraie?
 - $L=4$
 :::
 
+::: indice
+Comment simplifier cette fraction de fractions ? Que devient le dénominateur quand $x\to-\infty$ ?
+
+:::
+
+::: indice
+Multiplie numérateur et dénominateur par $x^2$ : le numérateur devient $4x+1$ et le dénominateur $x+\frac2x+\frac3{x^3}+\frac4{x^5}+\frac5{x^7}$
+
+:::
+
+::: details
+En multipliant numérateur et dénominateur par $x^2$ :
+$$L=\lim\limits_{x\to-\infty}\frac{4x+1}{x+\frac2x+\frac3{x^3}+\frac4{x^5}+\frac5{x^7}}=\lim\limits_{x\to-\infty}\frac{4x}{x}=4.$$
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e05 source="Examen 2019" reponse="C" theorie=""}
+::::: {.qcm .exo #mel-e05 source="Examen 2019" reponse="C" theorie="ana-arc ana-conditions"}
 <!-- support 2026 : Q123 -->
 Considérons la fonction $f$ dont l'expression analytique est donnée par ${\displaystyle f(x) = \arcsin\left(\frac{x^2}{2}-3 \right)}$.
 
@@ -67,9 +130,26 @@ Quel est le domaine de définition de $f$?
 - $]-\infty ; -2\sqrt{2}] \cup [-2;2] \cup [2\sqrt{2};+\infty[$
 :::
 
+::: indice
+Pour quelles valeurs l'arcsinus est-il défini ? Quelle double inégalité doit vérifier $\frac{x^2}2-3$ ?
+
+:::
+
+::: indice
+Il faut $-1\le\frac{x^2}2-3\le1$, soit $4\le x^2\le8$.
+
+:::
+
+::: details
+$-1\le\frac{x^2}2-3\le1\iff2\le\frac{x^2}2\le4\iff4\le x^2\le8\iff2\le|x|\le2\sqrt2$.
+
+Le domaine est $[-2\sqrt2;-2]\cup[2;2\sqrt2]$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e06 source="Examen 2019" reponse="C" theorie=""}
+::::: {.qcm .exo #mel-e06 source="Examen 2019" reponse="C" theorie="ana-derivees-regles tri-valeurs"}
 <!-- support 2026 : Q124 -->
 Considérons la fonction réelle $f$ dont l'expression analytique est donnée par ${\displaystyle f(x) = \frac{\sin\left(\frac{x}{3}\right)}{\cos\left( \frac{x}{4}\right)}}$ en tout point où le dénominateur est non nul. Que vaut $f'(\pi)$?
 
@@ -80,9 +160,28 @@ Considérons la fonction réelle $f$ dont l'expression analytique est donnée pa
 - ${\displaystyle \frac{\sqrt{6}}{6}+\frac{\sqrt{2}}{8}}$
 :::
 
+::: indice
+Quelle règle utiliser pour un quotient ? Que vaut la dérivée de $\sin\frac x3$ ?
+
+:::
+
+::: indice
+$f'(x)=\dfrac{\frac13\cos\frac x3\cos\frac x4+\frac14\sin\frac x3\sin\frac x4}{\cos^2\frac x4}$.
+
+:::
+
+::: details
+En $x=\pi$ : $\cos\frac\pi3=\frac12$, $\sin\frac\pi3=\frac{\sqrt3}2$, $\cos\frac\pi4=\sin\frac\pi4=\frac{\sqrt2}2$.
+
+Numérateur : $\frac13\cdot\frac12\cdot\frac{\sqrt2}2+\frac14\cdot\frac{\sqrt3}2\cdot\frac{\sqrt2}2=\frac{\sqrt2}{12}+\frac{\sqrt6}{16}$. Dénominateur : $\frac12$.
+
+$f'(\pi)=\frac{\sqrt2}6+\frac{\sqrt6}8$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e07 source="Examen 2017" reponse="A" theorie=""}
+::::: {.qcm .exo #mel-e07 source="Examen 2017" reponse="A" theorie="alge-prop"}
 <!-- support 2026 : Q125 -->
 Une patiente hospitalisée en réanimation chirurgicale nécessite du Loxen IV selon la prescription : $3\,\mathrm{mg/h}$ en solution pure, au pousse-seringue électrique. Vous disposez d'ampoules de $10\,\mathrm{mL}$ de Loxen IV dosées à $1\,\mathrm{mg/mL}$. La seringue est à préparer avec quatre ampoules. À $8\,\mathrm{h}00$ ce matin, il restait $16\,\mathrm{mL}$ de Loxen IV dans la seringue. À quelle heure la seringue a-t-elle été posée?
 
@@ -93,9 +192,26 @@ Une patiente hospitalisée en réanimation chirurgicale nécessite du Loxen IV s
 - $02\,\mathrm{h}00$
 :::
 
+::: indice
+Combien de millilitres contenait la seringue au départ ? Combien de millilitres passent en une heure ?
+
+:::
+
+::: indice
+Quatre ampoules font $40\,\mathrm{mL}$ ; à $1\,\mathrm{mg/mL}$, $3\,\mathrm{mg/h}$ correspondent à $3\,\mathrm{mL/h}$.
+
+:::
+
+::: details
+La seringue contenait $40\,\mathrm{mL}$. À $8\,\mathrm h$, $40-16=24\,\mathrm{mL}$ ont été injectés, à raison de $3\,\mathrm{mL}$ par heure : cela prend $8$ heures.
+
+La seringue a été posée à $0\,\mathrm h00$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e08 source="Examen 2024" reponse="B" theorie=""}
+::::: {.qcm .exo #mel-e08 source="Examen 2024" reponse="B" theorie="sta-ecart-type-prop"}
 <!-- support 2026 : Q126 -->
 Étant donné un nombre réel $x$, on considère les deux séries statistiques suivantes :
 
@@ -111,9 +227,24 @@ Une patiente hospitalisée en réanimation chirurgicale nécessite du Loxen IV s
 - L'écart-type de la série 1 est plus petit que celui de la série 2.
 :::
 
+::: indice
+Comment passe-t-on de la série 1 à la série 2 ? Qu'arrive-t-il à l'écart-type quand on ajoute une constante ?
+
+:::
+
+::: indice
+Chaque valeur de la série 2 vaut la valeur correspondante de la série 1 augmentée de $2$.
+
+:::
+
+::: details
+La série 2 s'obtient en ajoutant $2$ à chaque valeur de la série 1. La moyenne augmente de $2$, mais les écarts à la moyenne ne changent pas : les deux écarts-types sont égaux.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e09 source="Examen 2024" reponse="D" theorie=""}
+::::: {.qcm .exo #mel-e09 source="Examen 2024" reponse="D" theorie="tri-cercle tri-signes"}
 <!-- support 2026 : Q127 -->
 On considère le cosinus et le sinus d'un angle $\alpha \in ]3\pi/2;7\pi/4[$ (en radians). Laquelle des combinaisons d'inégalités suivantes est correcte ?
 
@@ -124,9 +255,26 @@ On considère le cosinus et le sinus d'un angle $\alpha \in ]3\pi/2;7\pi/4[$ (en
 - $\sin(\alpha) < 0$ et $|\sin(\alpha)| > |\cos(\alpha)|$
 :::
 
+::: indice
+Dans quel quadrant se trouve $\alpha$ ? Dessine le point sur le cercle trigonométrique.
+
+:::
+
+::: indice
+Entre $\frac{3\pi}2$ et $\frac{7\pi}4$, le point est dans le quatrième quadrant, plus près de l'axe vertical que de l'axe horizontal.
+
+:::
+
+::: details
+Dans le quatrième quadrant, $\cos\alpha>0$ et $\sin\alpha<0$.
+
+En $\frac{3\pi}2$, $\sin\alpha=-1$ et $\cos\alpha=0$ ; en $\frac{7\pi}4$, $|\sin\alpha|=|\cos\alpha|$. Entre les deux, $|\sin\alpha|>|\cos\alpha|$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e10 source="Examen 2024" reponse="B" theorie=""}
+::::: {.qcm .exo #mel-e10 source="Examen 2024" reponse="B" theorie="ana-variations ana-derivees-regles"}
 <!-- support 2026 : Q128 -->
 Étant donné la fonction $f$ définie pour tout nombre réel $x$ par ${\displaystyle f(x) = \ln (x^2+3)}$, on considère la fonction $g$ définie par $g(x) = f(x-1)$.
 
@@ -139,9 +287,28 @@ Sur quelles parties de la droite réelle la fonction $g$ est-elle strictement d�
 - $]1;+\infty$
 :::
 
+::: indice
+Que vaut $g(x)$ ? Quel est le signe de sa dérivée ?
+
+:::
+
+::: indice
+$g(x)=\ln\left((x-1)^2+3\right)$ et $g'(x)=\dfrac{2(x-1)}{(x-1)^2+3}$.
+
+:::
+
+::: details
+Le dénominateur de $g'(x)$ est strictement positif : $g'(x)<0\iff x<1$.
+
+$g$ est strictement décroissante sur $]-\infty;1[$.
+
+Le graphique de $g$ est celui de $f$ décalé d'une unité vers la droite : $f$ décroît sur $]-\infty;0[$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e11 source="Examen 2024" reponse="A" theorie=""}
+::::: {.qcm .exo #mel-e11 source="Examen 2024" reponse="A" theorie="tri-duplication alge-prod-rem"}
 <!-- support 2026 : Q129 -->
 Parmi les quatre expressions suivantes, laquelle est équivalente à $\cos^4(x)-\sin^4(x)$ pour tout réel $x$?
 
@@ -152,9 +319,24 @@ Parmi les quatre expressions suivantes, laquelle est équivalente à $\cos^4(x)-
 - $2\cos^2(x)$
 :::
 
+::: indice
+$\cos^4x-\sin^4x$ est une différence de deux carrés. Comment la factoriser ?
+
+:::
+
+::: indice
+$\cos^4x-\sin^4x=(\cos^2x-\sin^2x)(\cos^2x+\sin^2x)$.
+
+:::
+
+::: details
+$\cos^4x-\sin^4x=(\cos^2x-\sin^2x)(\cos^2x+\sin^2x)=\cos(2x)\cdot1=\cos(2x)$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e12 source="Examen 2024" reponse="B" theorie=""}
+::::: {.qcm .exo #mel-e12 source="Examen 2024" reponse="B" theorie="ana-lim-calcul alge-fact"}
 <!-- support 2026 : Q130 -->
 Que vaut l'expression ${\displaystyle \lim\limits_{x \to -3} \left(\frac{x+3}{x^3+27} \right)^{1/3}}$?
 
@@ -165,9 +347,26 @@ Que vaut l'expression ${\displaystyle \lim\limits_{x \to -3} \left(\frac{x+3}{x^
 - $3$
 :::
 
+::: indice
+Que donne la fraction en $x=-3$ ? Comment factoriser $x^3+27$ ?
+
+:::
+
+::: indice
+$x^3+27=(x+3)(x^2-3x+9)$.
+
+:::
+
+::: details
+Pour $x\neq-3$ : $\dfrac{x+3}{x^3+27}=\dfrac1{x^2-3x+9}$, qui tend vers $\frac1{27}$.
+
+La racine cubique est continue : la limite vaut $\left(\frac1{27}\right)^{\frac13}=\frac13$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e13 source="Examen 2024" reponse="A" theorie=""}
+::::: {.qcm .exo #mel-e13 source="Examen 2024" reponse="A" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q131 -->
 Un triangle rectangle définit une aire de $200\sqrt{3}\,\mathrm{cm²}$ et un de ses angles a une
 amplitude de $30^\circ$. Quelle est la longueur (en centimètre) de son hypoténuse?
@@ -179,14 +378,28 @@ amplitude de $30^\circ$. Quelle est la longueur (en centimètre) de son hypotén
 - $100\sqrt{3}$
 :::
 
+::: indice
+Avec $h$ l'hypoténuse, que valent les deux côtés de l'angle droit ?
+
+:::
+
+::: indice
+Les côtés de l'angle droit valent $\frac h2$ et $\frac{h\sqrt3}2$ ; l'aire vaut $\frac{h^2\sqrt3}8$.
+
+:::
+
+::: details
+$\frac12\cdot\frac h2\cdot\frac{h\sqrt3}2=\frac{h^2\sqrt3}8=200\sqrt3$, donc $h^2=1\,600$ et $h=40\,\mathrm{cm}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e14 source="Examen 2024" reponse="D" theorie=""}
+::::: {.qcm .exo #mel-e14 source="Examen 2024" reponse="D" theorie="alge-sys-det"}
 <!-- support 2026 : Q132 -->
 Étant donné un paramètre $\beta$ réel, on considère le système suivant : $$\begin{cases}
-\beta x + \beta y = 1
-
- 1+\beta y = 1
+\beta x + \beta y = 1\\
+1+\beta y = 1
 \end{cases}  $$ où $x$ et $y$ sont les inconnues.
 Parmi les propositions suivantes, laquelle est correcte ?
 
@@ -197,9 +410,28 @@ Parmi les propositions suivantes, laquelle est correcte ?
 - Le système n'admet pas de solution pour certaine(s) valeur(s) de $\beta$ uniquement.
 :::
 
+::: indice
+Que donne la deuxième équation ? Faut-il distinguer des cas selon $\beta$ ?
+
+:::
+
+::: indice
+La deuxième équation donne $\beta y=0$. Distingue $\beta=0$ et $\beta\neq0$.
+
+:::
+
+::: details
+Si $\beta=0$, la première équation devient $0=1$ : pas de solution.
+
+Si $\beta\neq0$, la deuxième donne $y=0$, puis la première $x=\frac1\beta$ : une seule solution.
+
+Le système n'a pas de solution pour $\beta=0$ uniquement.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e15 source="Examen 2024" reponse="B" theorie=""}
+::::: {.qcm .exo #mel-e15 source="Examen 2024" reponse="B" theorie="alge-rac-prod alge-rac-abs alge-frac-op"}
 <!-- support 2026 : Q133 -->
 On considère l'expression ${\displaystyle \sqrt{\frac{a+b}{a-b}} + \sqrt{\frac{a-b}{a+b}} }$. Parmi les quatre expressions suivantes, quelle est celle qui est équivalente à celle donnée ci-dessus ?
 
@@ -210,9 +442,27 @@ On considère l'expression ${\displaystyle \sqrt{\frac{a+b}{a-b}} + \sqrt{\frac{
 - ${\displaystyle \sqrt{2} \sqrt{\frac{a^2+b^2}{a^2-b^2}} }$
 :::
 
+::: indice
+Comment mettre les deux termes au même dénominateur ? Attention aux signes de $a+b$ et $a-b$.
+
+:::
+
+::: indice
+Avec $u=a+b$ et $v=a-b$ de même signe : $\sqrt{\frac uv}=\frac{|u|}{\sqrt{uv}}$ et $\sqrt{\frac vu}=\frac{|v|}{\sqrt{uv}}$.
+
+:::
+
+::: details
+$a+b$ et $a-b$ ont le même signe (le quotient est positif). Donc
+$$\sqrt{\frac{a+b}{a-b}}+\sqrt{\frac{a-b}{a+b}}=\frac{|a+b|+|a-b|}{\sqrt{(a+b)(a-b)}}=\frac{|(a+b)+(a-b)|}{\sqrt{a^2-b^2}}=\frac{2|a|}{\sqrt{a^2-b^2}}.$$
+
+Vérification avec $a=5$, $b=3$ : $\sqrt4+\sqrt{\frac14}=\frac52$ et $\frac{10}{\sqrt{16}}=\frac52$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e16 source="Examen 2024" reponse="D" theorie=""}
+::::: {.qcm .exo #mel-e16 source="Examen 2024" reponse="D" theorie="ana-parties ana-log-prop"}
 <!-- support 2026 : Q134 -->
 Que vaut ${\displaystyle \int \mathrm{e} ^{-2\ln(x)} \ln(x) \,\mathrm{d}x}$ à une constante additive près?
 
@@ -223,9 +473,27 @@ Que vaut ${\displaystyle \int \mathrm{e} ^{-2\ln(x)} \ln(x) \,\mathrm{d}x}$ à u
 - ${\displaystyle - \frac{\ln(x)}{x} - \frac{1}{x}}$
 :::
 
+::: indice
+Comment simplifier $\mathrm e^{-2\ln x}$ ? Quelle méthode d'intégration convient ensuite ?
+
+:::
+
+::: indice
+$\mathrm e^{-2\ln x}=x^{-2}$. Intègre $\frac{\ln x}{x^2}$ par parties, en dérivant $\ln x$.
+
+:::
+
+::: details
+$\mathrm e^{-2\ln x}=\mathrm e^{\ln(x^{-2})}=\frac1{x^2}$.
+
+Par parties, avec $u=\ln x$ et $v'=\frac1{x^2}$ ($v=-\frac1x$) :
+$$\int\frac{\ln x}{x^2}\,\mathrm dx=-\frac{\ln x}x+\int\frac1{x^2}\,\mathrm dx=-\frac{\ln x}x-\frac1x+C.$$
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e17 source="Examen 2022" reponse="D" theorie=""}
+::::: {.qcm .exo #mel-e17 source="Examen 2022" reponse="D" theorie="sta-moyenne alge-2deg-signe"}
 <!-- support 2026 : Q135 -->
 On considère la série statistique suivante : $-1$, $-x^2$, $2x$, $-3x^2$, $-1$ dont la moyenne est notée $m$. Laquelle des propositions suivantes est vraie quel que soit le nombre réel $x$?
 
@@ -236,9 +504,26 @@ On considère la série statistique suivante : $-1$, $-x^2$, $2x$, $-3x^2$, $-1$
 - $m\neq 0$
 :::
 
+::: indice
+Que vaut la somme des cinq valeurs ? Quel est son signe ?
+
+:::
+
+::: indice
+La somme vaut $-4x^2+2x-2$ : c'est un trinôme dont le discriminant est négatif.
+
+:::
+
+::: details
+$m=\dfrac{-4x^2+2x-2}5$. Le trinôme $-4x^2+2x-2$ a pour discriminant $4-32<0$ et un coefficient de $x^2$ négatif : il est toujours strictement négatif.
+
+Donc $m<0$, et en particulier $m\neq0$. Pour $x=0$, $m=-\frac25$ : $m=-1$ et $m<-2$ ne sont pas toujours vrais.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e18 source="TOSS 2017" reponse="B" theorie=""}
+::::: {.qcm .exo #mel-e18 source="TOSS 2017" reponse="B" theorie="sta-moyenne"}
 <!-- support 2026 : Q136 -->
 Arthur a une moyenne de $12/20$ à l'issue de ses cinq premières interrogations. Quel doit être le résultat à la sixième interrogation pour porter sa moyenne à $13/20$ (toutes les interrogations sont sur $20$)
 
@@ -249,9 +534,24 @@ Arthur a une moyenne de $12/20$ à l'issue de ses cinq premières interrogations
 - $20/20$
 :::
 
+::: indice
+Quel est le total des points après cinq interrogations ? Quel total faut-il après six ?
+
+:::
+
+::: indice
+Le total passe de $5\cdot12=60$ à $6\cdot13=78$.
+
+:::
+
+::: details
+Il faut $78-60=18$ : la sixième note doit valoir $18/20$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e19 source="Examen 2018" reponse="C" theorie=""}
+::::: {.qcm .exo #mel-e19 source="Examen 2018" reponse="C" theorie="ana-log-prop"}
 <!-- support 2026 : Q137 -->
 Soient $a$, $b$ et $c$ trois nombres réels strictement positifs et ${\displaystyle R = \frac{a^2b}{c}}$.
 
@@ -264,9 +564,26 @@ Parmi les égalités suivantes, une seule est vérifiée pour toutes les valeurs
 - $\ln(R-b)=2\ln(a-c)$
 :::
 
+::: indice
+Comment développer $\ln R=\ln\frac{a^2b}c$ ?
+
+:::
+
+::: indice
+$\ln R=2\ln a+\ln b-\ln c$.
+
+:::
+
+::: details
+$\ln R=\ln(a^2)+\ln b-\ln c=2\ln a+\ln b-\ln c$, donc $\ln R-\ln b=2\ln a-\ln c$.
+
+Les autres confondent produit et somme : $\ln(Rc)=\ln(a^2b)=2\ln a+\ln b$, qui n'est pas $\ln(2a)+\ln b$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e20 source="Examen 2020" reponse="C" theorie=""}
+::::: {.qcm .exo #mel-e20 source="Examen 2020" reponse="C" theorie="ana-conditions alge-abs"}
 <!-- support 2026 : Q138 -->
 Soit $f$ la fonction définie explicitement par $f(x) = \ln \big( 1-2|x-1|\big)$. Quel est le domaine de définition de $f$?
 
@@ -277,9 +594,26 @@ Soit $f$ la fonction définie explicitement par $f(x) = \ln \big( 1-2|x-1|\big)$
 - $[1/2;3/2]$
 :::
 
+::: indice
+Quelle condition doit vérifier l'argument du logarithme ? Comment résoudre une inéquation avec une valeur absolue ?
+
+:::
+
+::: indice
+Il faut $1-2|x-1|>0$, soit $|x-1|<\frac12$.
+
+:::
+
+::: details
+$|x-1|<\frac12\iff-\frac12<x-1<\frac12\iff\frac12<x<\frac32$.
+
+Le domaine est $\left]\frac12;\frac32\right[$, ouvert car l'argument d'un logarithme doit être strictement positif.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e21 source="Examen 2020" reponse="D" theorie=""}
+::::: {.qcm .exo #mel-e21 source="Examen 2020" reponse="D" theorie="tri-rect tri-valeurs"}
 <!-- support 2026 : Q139 -->
 On considère un triangle $ABC$ qui est rectangle en $C$ et dont l'hypoténuse est deux fois plus longue que le côté $[BC]$. Que vaut l'amplitude de $\widehat{ABC}$?
 
@@ -290,9 +624,24 @@ On considère un triangle $ABC$ qui est rectangle en $C$ et dont l'hypoténuse e
 - $60^\circ$
 :::
 
+::: indice
+Quel côté est l'hypoténuse ? Par rapport à l'angle en $B$, le côté $[BC]$ est-il adjacent ou opposé ?
+
+:::
+
+::: indice
+$[AB]$ est l'hypoténuse et $[BC]$ est adjacent à l'angle en $B$ : $\cos\widehat{ABC}=\frac{BC}{AB}=\frac12$.
+
+:::
+
+::: details
+$\cos\widehat{ABC}=\frac{BC}{AB}=\frac12$, donc $\widehat{ABC}=60^\circ$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e22 source="TOSS 2017" reponse="A" theorie=""}
+::::: {.qcm .exo #mel-e22 source="TOSS 2017" reponse="A" theorie="geo-chasles geo-coord"}
 <!-- support 2026 : Q140 -->
 On se place dans un repère du plan et on se donne les points $A(1;0)$, $B(5;4)$ et $C(1;8)$. Soit $X$ le point du plan tel que $2\overrightarrow{XA}-3\overrightarrow{XB}+2\overrightarrow{XC} = \vec 0$. Quelle est la somme des coordonnées de $X$?
 
@@ -303,9 +652,26 @@ On se place dans un repère du plan et on se donne les points $A(1;0)$, $B(5;4)$
 - $7$
 :::
 
+::: indice
+Comment écrire chaque vecteur $\overrightarrow{XA}$, $\overrightarrow{XB}$, $\overrightarrow{XC}$ avec les coordonnées de $X$ ?
+
+:::
+
+::: indice
+$\overrightarrow{XA}=A-X$, etc. L'égalité devient $2A-3B+2C=(2-3+2)\,X=X$.
+
+:::
+
+::: details
+$2(A-X)-3(B-X)+2(C-X)=\vec0\iff X=2A-3B+2C$.
+
+$X=(2-15+2;\,0-12+16)=(-11;4)$. La somme des coordonnées vaut $-7$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e23 source="Examen 2020" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e23 source="Examen 2020" reponse="C" theorie="ana-exp alge-rac-puiss"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Un virus se propage à une vitesse exponentielle dans une population. D'après le modèle calculé par les épidémiologistes, le nombre de personnes infectées triple tous les sept jours. Que vaut, selon ce modèle, le rapport entre le nombre de personnes infectées un jour et le nombre de personnes infectées la veille?
 
@@ -316,9 +682,24 @@ Un virus se propage à une vitesse exponentielle dans une population. D'après l
 - $\ln(3/7)$
 :::
 
+::: indice
+Si le nombre est multiplié par $r$ chaque jour, par quoi est-il multiplié en sept jours ?
+
+:::
+
+::: indice
+En sept jours, il est multiplié par $r^7$, et $r^7=3$.
+
+:::
+
+::: details
+$r^7=3$, donc $r=3^{\frac17}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e24 source="Examen 2019" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e24 source="Examen 2019" reponse="B" theorie="alge-1deg"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans le pays P, il y a deux types de médecins : ceux qui sont conventionnés et ceux qui ne le sont pas. Si je vais chez un médecin conventionné, il me facturera des honoraires dont une partie sera payée par la mutuelle. Je dois alors payer $8$ euros, le reste étant pris en charge par la mutuelle. Si je vais chez un médecin non conventionné, ses honoraires sont le double de ceux d'un médecin conventionné et la mutualité ne payera que la moitié de la somme qu'elle aurait payée pour un médecin conventionné. Je paye alors $40$ euros, le reste étant pris en charge par la mutuelle. Quels sont les honoraires d'un médecin non conventionné?
 
@@ -329,9 +710,28 @@ Dans le pays P, il y a deux types de médecins : ceux qui sont conventionnés et
 - $56$ euros
 :::
 
+::: indice
+Avec $H$ les honoraires d'un médecin conventionné, combien paie la mutuelle ? Et chez un médecin non conventionné ?
+
+:::
+
+::: indice
+La mutuelle paie $H-8$ chez le conventionné et $\frac{H-8}2$ chez le non conventionné : $2H-\frac{H-8}2=40$.
+
+:::
+
+::: details
+$2H-\frac{H-8}2=40\iff4H-H+8=80\iff H=24$.
+
+Les honoraires d'un médecin non conventionné valent $2H=48$ euros.
+
+Vérification : la mutuelle paie $8$ euros, je paie $48-8=40$ euros.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e25 source="Examen 2020" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e25 source="Examen 2020" reponse="C" theorie="alge-prop"}
 <!-- support 2026 : hors document (après \end{document}) -->
 La consommation en carburant d'un véhicule est proportionnelle à sa vitesse $v$ (supposée constante) et à la longueur $L$ du trajet qu'il parcourt à cette vitesse. Laquelle de ces formules décrit la consommation de ce véhicule en sachant que $k$ et $k'$ sont des constantes réelles et positives?
 
@@ -342,9 +742,26 @@ La consommation en carburant d'un véhicule est proportionnelle à sa vitesse $v
 - $kv+L$
 :::
 
+::: indice
+Si la vitesse double, que devient la consommation ? Et si la longueur double ?
+
+:::
+
+::: indice
+Une grandeur proportionnelle à $v$ et à $L$ est proportionnelle au produit $vL$.
+
+:::
+
+::: details
+La consommation est multipliée par $2$ quand $v$ double et par $2$ quand $L$ double : elle vaut $kvL$.
+
+Avec $k(v+L)$ ou $kv+k'L$, doubler $L$ ne double pas la consommation.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e26 source="Examen 2022" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e26 source="Examen 2022" reponse="D" theorie="alge-sys-comb alge-pct"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Un médecin doit administrer $50\,\mathrm{mL}$ d'une solution glucosée contenant $5\,\mathrm{mg}$ de glucose par $100\,\mathrm{mL}$ de solution à un patient.
 
@@ -359,9 +776,28 @@ Un médecin doit administrer $50\,\mathrm{mL}$ d'une solution glucosée contenan
 - $40\,\mathrm{mL}$
 :::
 
+::: indice
+Quelles sont les deux inconnues ? Quelle quantité de glucose doit contenir le mélange ?
+
+:::
+
+::: indice
+Avec $x$ mL de la solution à $4\,\mathrm{mg}$ et $50-x$ mL de celle à $9\,\mathrm{mg}$ : $0{,}04\,x+0{,}09\,(50-x)=2{,}5$.
+
+:::
+
+::: details
+Le mélange doit contenir $0{,}05\cdot50=2{,}5\,\mathrm{mg}$ de glucose.
+
+$0{,}04\,x+4{,}5-0{,}09\,x=2{,}5\iff0{,}05\,x=2\iff x=40\,\mathrm{mL}$.
+
+Vérification : $1{,}6+0{,}9=2{,}5\,\mathrm{mg}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e27 source="Examen 2019" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e27 source="Examen 2019" reponse="B" theorie="alge-frac-op"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Soient $a$ et $b$ deux nombres réels non nuls tels que ${\displaystyle 0> \frac{1}{a} > \frac{1}{b}}$. Parmi les propositions suivantes concernant ces deux nombres, laquelle est nécessairement vraie?
 
@@ -372,9 +808,26 @@ Soient $a$ et $b$ deux nombres réels non nuls tels que ${\displaystyle 0> \frac
 - $b^2<a^2-1$
 :::
 
+::: indice
+Quel est le signe de $a$ et de $b$ ? Essaie avec des valeurs simples.
+
+:::
+
+::: indice
+$a$ et $b$ sont négatifs, et $\frac1a$ est plus proche de $0$ que $\frac1b$ : $|a|>|b|$.
+
+:::
+
+::: details
+$\frac1a<0$ et $\frac1b<0$ : $a$ et $b$ sont négatifs. De $\left|\frac1a\right|<\left|\frac1b\right|$, on tire $|a|>|b|$, donc $b^2<a^2$.
+
+Exemple : $a=-1$, $b=-\frac12$ ($\frac1a=-1>-2=\frac1b$). Alors $b^2=\frac14<1=a^2$, mais $b^2<a^2-1=0$ est faux.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e28 source="Examen 2020" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e28 source="Examen 2020" reponse="B" theorie="alge-prop alge-regle-trois"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Pour fabriquer un litre de désinfectant, il faut $0,832\,\mathrm{L}$ d'alcool, $42\,\mathrm{mL}$ d'eau oxygénée, $15\,\mathrm{mL}$ de glycérine et de l'eau. Quelle est la quantité d'alcool nécessaire pour fabriquer $3/4 \,\mathrm{L}$ de désinfectant?
 
@@ -385,9 +838,24 @@ Pour fabriquer un litre de désinfectant, il faut $0,832\,\mathrm{L}$ d'alcool, 
 - $75\,\mathrm{cL}$
 :::
 
+::: indice
+La quantité d'alcool est-elle proportionnelle à la quantité de désinfectant ?
+
+:::
+
+::: indice
+Il faut $\frac34$ de $0{,}832\,\mathrm L$.
+
+:::
+
+::: details
+$\frac34\cdot0{,}832=0{,}624\,\mathrm L=624\,\mathrm{mL}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e29 source="Examen 2020" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e29 source="Examen 2020" reponse="D" theorie="alge-prod-rem alge-rac-abs"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Laquelle de ces expressions est égale à $\sqrt{4-2\sqrt{3}}$?
 
@@ -398,9 +866,26 @@ Laquelle de ces expressions est égale à $\sqrt{4-2\sqrt{3}}$?
 - $\sqrt{3}-1$
 :::
 
+::: indice
+$4-2\sqrt3$ est-il le carré d'une expression $a-b$ ?
+
+:::
+
+::: indice
+$(\sqrt3-1)^2=3-2\sqrt3+1=4-2\sqrt3$.
+
+:::
+
+::: details
+$4-2\sqrt3=(\sqrt3-1)^2$, donc $\sqrt{4-2\sqrt3}=|\sqrt3-1|=\sqrt3-1$, car $\sqrt3>1$.
+
+$1-\sqrt3$ est négatif : ce ne peut pas être une racine carrée.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e30 source="Examen 2021" reponse="A" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e30 source="Examen 2021" reponse="A" theorie="alge-2deg-signe"}
 <!-- support 2026 : hors document (après \end{document}) -->
 On considère l'ensemble $A$ des nombres réels $a$ pour lesquels l'expression $a^2-9-a-3$ est strictement positive. Parmi les ensembles ci-dessous, un seul est égal à $A$. Lequel?
 
@@ -411,9 +896,26 @@ On considère l'ensemble $A$ des nombres réels $a$ pour lesquels l'expression $
 - $]2;3[$
 :::
 
+::: indice
+Quel trinôme obtiens-tu en regroupant les termes ? Où est-il positif ?
+
+:::
+
+::: indice
+$a^2-9-a-3=a^2-a-12=(a-4)(a+3)$.
+
+:::
+
+::: details
+$a^2-a-12$ a pour racines $-3$ et $4$, et son coefficient de $a^2$ est positif : il est strictement positif en dehors des racines.
+
+$A=\,]-\infty;-3[\,\cup\,]4;+\infty[$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e31 source="Examen 2018" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e31 source="Examen 2018" reponse="C" theorie="alge-prop"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Une grand-mère a décidé de récompenser le travail scolaire de ses petits-enfants en leur donnant une somme d'argent s'ils ont bien travaillé. En espérant favoriser les bons résultats, elle a choisi d'attribuer un montant proportionnel à la différence entre le pire résultat (évalué en $\%$) obtenu au bulletin que lui montre l'enfant et $50\%$. Sachant qu'elle a donné $15$€ à Elias dont le pire résultat est de $95\%$, laquelle des valeurs suivantes correspond au montant donné par la grand-mère à Jean dont le pire résultat est de $86\%$?
 
@@ -424,9 +926,26 @@ Une grand-mère a décidé de récompenser le travail scolaire de ses petits-enf
 - $13$€
 :::
 
+::: indice
+Le montant est proportionnel à quelle grandeur ? Que vaut cette grandeur pour Elias et pour Jean ?
+
+:::
+
+::: indice
+Le montant est proportionnel à « pire résultat $-50$ » : $45$ pour Elias, $36$ pour Jean.
+
+:::
+
+::: details
+Elias : $15$ euros pour $95-50=45$ points, soit $\frac13$ euro par point.
+
+Jean : $86-50=36$ points, donc $\frac{36}3=12$ euros.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e32 source="Examen 2018" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e32 source="Examen 2018" reponse="B" theorie="alge-frac-op"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Parmi les expressions suivantes supposées définies, une seule est égale à $${\displaystyle \frac{1}{(x-y)(y-z)} - \frac{1}{(y-z)(z-x)} - \frac{1}{(z-x)(x-y)}  }$$ Laquelle?
 
@@ -437,9 +956,26 @@ Parmi les expressions suivantes supposées définies, une seule est égale à $$
 - ${\displaystyle \frac{x+y}{(x-y)(y-z)(z-x)}}$
 :::
 
+::: indice
+Quel dénominateur commun choisir ? Par quoi multiplier chaque numérateur ?
+
+:::
+
+::: indice
+Le dénominateur commun est $(x-y)(y-z)(z-x)$ ; les numérateurs deviennent $(z-x)$, $-(x-y)$ et $-(y-z)$.
+
+:::
+
+::: details
+Sur le dénominateur $(x-y)(y-z)(z-x)$, le numérateur vaut $(z-x)-(x-y)-(y-z)=2z-2x=2(z-x)$.
+
+En simplifiant par $z-x$ : l'expression vaut $\dfrac2{(x-y)(y-z)}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e33 source="Examen 2021" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e33 source="Examen 2021" reponse="B" theorie="sta-ecart-type"}
 <!-- support 2026 : hors document (après \end{document}) -->
 On considère la série de données suivantes : $2$, $4$, $6$, $8$. Parmi les données ci-dessous, laquelle fera diminuer l'écart-type?
 
@@ -450,9 +986,28 @@ On considère la série de données suivantes : $2$, $4$, $6$, $8$. Parmi les do
 - $9$
 :::
 
+::: indice
+Que vaut la moyenne de la série ? Quelle valeur ajoutée n'augmente pas les écarts à la moyenne ?
+
+:::
+
+::: indice
+La moyenne vaut $5$ ; une valeur égale à la moyenne ajoute un écart nul.
+
+:::
+
+::: details
+Moyenne $5$, variance $\frac{9+1+1+9}4=5$.
+
+Avec la valeur $5$ : la moyenne reste $5$ et la variance devient $\frac{20}5=4$. L'écart-type diminue.
+
+$0$, $8$ et $9$ sont loin de la moyenne : ils augmentent l'écart-type (par exemple avec $8$, la variance devient $5{,}44$).
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e34 source="Examen 2021" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e34 source="Examen 2021" reponse="D" theorie="alge-pct"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Une friterie vend son petit paquet de frites au prix de $2,5$ euros et son grand paquet au prix de $4$ euros. Un habitué remarque que le grand paquet contient le double de frites par rapport au petit paquet.
 
@@ -465,9 +1020,26 @@ Que peut-on conclure quant au prix par frite pour le petit paquet?
 - Il est $25\%$ plus élevé que pour le grand paquet.
 :::
 
+::: indice
+Avec $q$ la quantité de frites du petit paquet, que vaut le prix par frite de chaque paquet ?
+
+:::
+
+::: indice
+Petit paquet : $\frac{2{,}5}q$ ; grand paquet : $\frac4{2q}=\frac2q$.
+
+:::
+
+::: details
+$\dfrac{2{,}5/q}{2/q}=1{,}25$ : le prix par frite du petit paquet est $25\,\%$ plus élevé que celui du grand.
+
+À l'inverse, le grand paquet est $20\,\%$ moins cher par frite ($\frac2{2{,}5}=0{,}8$) : les deux pourcentages ne portent pas sur la même référence.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e35 source="Examen 2021" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e35 source="Examen 2021" reponse="B" theorie="alge-2deg-delta"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Un citoyen veut constituer un stock de gel hydroalcoolique. Sur un premier site Internet, il constate que l'on vend le nombre de bouteilles qu'il souhaite pour un total de $80$ euros. Sur un second site, on vent un lot de bouteilles pour $90$ euros. Dans ce lot, il y a 10 bouteilles de plus que dans le lot du premier site. Le prix par bouteille sur le second site est inférieur de $1$ euro par rapport à celui du premier site.
 
@@ -480,9 +1052,28 @@ Quel est le prix de la bouteille de gel hydoalcoolique sur le premier site?
 - $8$ euros
 :::
 
+::: indice
+Avec $n$ bouteilles au prix $p$ sur le premier site, quelles sont les deux équations ?
+
+:::
+
+::: indice
+$np=80$ et $(n+10)(p-1)=90$. Développe la seconde et remplace $np$ par $80$.
+
+:::
+
+::: details
+$(n+10)(p-1)=90\iff np-n+10p-10=90\iff n=10p-20$.
+
+Dans $np=80$ : $p(10p-20)=80\iff p^2-2p-8=0\iff p=4$ ou $p=-2$. Le prix est positif : $p=4$ euros.
+
+Vérification : $20$ bouteilles à $4$ euros, puis $30$ bouteilles à $3$ euros.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e36 source="Examen 2020" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e36 source="Examen 2020" reponse="D" theorie="geo-norme geo-mult"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans le plan muni d'un repère orthonormé où les axes sont gradués en centimètres, on considère les points $A(7;-3)$ et $B(2;7)$. Que vaut la norme du vecteur $\vec u$ si $\vec u = -3 \overrightarrow{BA}$
 
@@ -493,9 +1084,26 @@ Dans le plan muni d'un repère orthonormé où les axes sont gradués en centim�
 - $15\sqrt{5} \,\mathrm{cm}$
 :::
 
+::: indice
+Quelles sont les coordonnées de $\overrightarrow{BA}$ ? Une norme peut-elle être négative ?
+
+:::
+
+::: indice
+$\overrightarrow{BA}=(5;-10)$ et $\|-3\overrightarrow{BA}\|=3\,\|\overrightarrow{BA}\|$.
+
+:::
+
+::: details
+$\|\overrightarrow{BA}\|=\sqrt{25+100}=\sqrt{125}=5\sqrt5$, donc $\|\vec u\|=3\cdot5\sqrt5=15\sqrt5\,\mathrm{cm}$.
+
+Le facteur $-3$ change le sens du vecteur, mais une norme est toujours positive.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e37 source="Examen 2019" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e37 source="Examen 2019" reponse="D" theorie="geo-intersection geo-par-perp"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans le plan muni d'un repère orthonormé, on considère les droites $d_1$ d'équation $x+5y+9=0$, $d_2$ d'équation $7x-3y=13$ et $d_3$ d'équation $6x-4y=9$. Les droites $d_1$ et $d_2$ se coupent en un point $P$. Parmi les propositions suivantes, laquelle correspond à une équation de la droite passant par $P$ et perpendiculaire à $d_3$?
 
@@ -506,9 +1114,26 @@ Dans le plan muni d'un repère orthonormé, on considère les droites $d_1$ d'é
 - $2x+3y+4=0$
 :::
 
+::: indice
+Quelles sont les coordonnées de $P$ ? Quelle est la pente d'une perpendiculaire à $d_3$ ?
+
+:::
+
+::: indice
+$P(1;-2)$. La pente de $d_3$ vaut $\frac32$, celle de la perpendiculaire $-\frac23$.
+
+:::
+
+::: details
+De $d_1$ : $x=-9-5y$ ; dans $d_2$ : $-63-38y=13$, donc $y=-2$ et $x=1$.
+
+La perpendiculaire à $d_3$ passant par $P$ : $y+2=-\frac23(x-1)$, soit $3y+6=-2x+2$ et $2x+3y+4=0$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e38 source="Examen 2021" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e38 source="Examen 2021" reponse="D" theorie="geo-pente geo-par-perp geo-intersection"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère les points $A(2;2)$, $B(4;1)$, $C(5;-2)$. Soit $d_1$ la droite comprenant les points $A$ et $B$ et $d_2$ la droite comprenant le point $C$ et perpendiculaire à $d_1$.
 
@@ -521,9 +1146,24 @@ Quelles sont les coordonnées du point d'intersection de $d_1$ et $d_2$?
 - $(6;0)$
 :::
 
+::: indice
+Quelles sont les équations de $d_1$ et de $d_2$ ?
+
+:::
+
+::: indice
+$d_1$ a pour pente $-\frac12$ : $y=-\frac x2+3$. $d_2$ a pour pente $2$ et passe par $C$ : $y=2x-12$.
+
+:::
+
+::: details
+$-\frac x2+3=2x-12\iff\frac52x=15\iff x=6$, et $y=0$. Le point d'intersection est $(6;0)$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e39 source="Examen 2018" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e39 source="Examen 2018" reponse="B" theorie="geo-ortho geo-ps-prop"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans le plan muni d'un repère orthonormé, on considère :
 
@@ -540,9 +1180,26 @@ Dans le plan muni d'un repère orthonormé, on considère :
 - $16$
 :::
 
+::: indice
+Quels vecteurs sont orthogonaux à $\vec u$ et de même norme ? Lequel a une composante en $x$ négative ?
+
+:::
+
+::: indice
+Les vecteurs $(2;3)$ et $(-2;-3)$ conviennent ; $\vec v=(-2;-3)$. Et $\overrightarrow{AB}=(-2;4)$.
+
+:::
+
+::: details
+$\vec v=(-2;-3)$ (orthogonal à $\vec u$ car $6-6=0$, et de norme $\sqrt{13}$).
+
+$\vec v\cdot\overrightarrow{AB}=(-2)(-2)+(-3)\cdot4=4-12=-8$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e40 source="Examen 2021" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e40 source="Examen 2021" reponse="D" theorie="ana-limite-gd ana-asymptotes"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Que vaut la limite suivante : ${\displaystyle \lim\limits_{x\to 2} \frac{8-6x^2}{x^2+2x-8}}$?
 
@@ -553,9 +1210,26 @@ Que vaut la limite suivante : ${\displaystyle \lim\limits_{x\to 2} \frac{8-6x^2}
 - La limite n'existe pas.
 :::
 
+::: indice
+Que valent le numérateur et le dénominateur en $x=2$ ? Quel est le signe du dénominateur à gauche et à droite de $2$ ?
+
+:::
+
+::: indice
+Le numérateur tend vers $-16$ et le dénominateur $(x-2)(x+4)$ vers $0$, en changeant de signe.
+
+:::
+
+::: details
+À gauche de $2$, le dénominateur est négatif et la fraction tend vers $+\infty$ ; à droite, il est positif et la fraction tend vers $-\infty$.
+
+Les limites à gauche et à droite sont différentes : la limite n'existe pas. La droite $x=2$ est une asymptote verticale.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e41 source="Examen 2017" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e41 source="Examen 2017" reponse="C" theorie="ana-lim-infini"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Que vaut la limite ${\displaystyle \lim\limits_{x \to + \infty} \frac{(x-2)x}{8+3x^2}}$?
 
@@ -566,9 +1240,24 @@ Que vaut la limite ${\displaystyle \lim\limits_{x \to + \infty} \frac{(x-2)x}{8+
 - $+\infty$
 :::
 
+::: indice
+Quels sont les termes de plus haut degré du numérateur et du dénominateur ?
+
+:::
+
+::: indice
+$(x-2)x=x^2-2x$ : à l'infini, la fraction se comporte comme $\frac{x^2}{3x^2}$.
+
+:::
+
+::: details
+$\lim\limits_{x\to+\infty}\dfrac{x^2-2x}{3x^2+8}=\lim\limits_{x\to+\infty}\dfrac{x^2}{3x^2}=\dfrac13$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e42 source="Examen 2018" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e42 source="Examen 2018" reponse="B" theorie="ana-lim-infini"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Que vaut la limite suivante : ${\displaystyle \lim\limits_{x \to -\infty} \frac{x^5-2x^7-2}{3x^7+2x^5+4}}$?
 
@@ -579,9 +1268,24 @@ Que vaut la limite suivante : ${\displaystyle \lim\limits_{x \to -\infty} \frac{
 - ${\displaystyle \frac{2}{3}}$
 :::
 
+::: indice
+Quels sont les termes de plus haut degré du numérateur et du dénominateur ?
+
+:::
+
+::: indice
+À l'infini, la fraction se comporte comme $\frac{-2x^7}{3x^7}$.
+
+:::
+
+::: details
+$\lim\limits_{x\to-\infty}\dfrac{x^5-2x^7-2}{3x^7+2x^5+4}=\lim\limits_{x\to-\infty}\dfrac{-2x^7}{3x^7}=-\dfrac23$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e43 source="Examen 2018" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e43 source="Examen 2018" reponse="C" theorie="ana-parties ana-integrale"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Que vaut ${\displaystyle \int_{-\frac{\pi}{2}}^\pi x \cos(2x) \,\mathrm{d}x}$?
 
@@ -592,9 +1296,28 @@ Que vaut ${\displaystyle \int_{-\frac{\pi}{2}}^\pi x \cos(2x) \,\mathrm{d}x}$?
 - $1$
 :::
 
+::: indice
+Quelle méthode utiliser pour intégrer un produit $x\cos(2x)$ ? Quel facteur dériver ?
+
+:::
+
+::: indice
+Par parties avec $u=x$ et $v'=\cos(2x)$ : une primitive est $\frac{x\sin(2x)}2+\frac{\cos(2x)}4$.
+
+:::
+
+::: details
+$\displaystyle\int x\cos(2x)\,\mathrm dx=\frac{x\sin(2x)}2-\int\frac{\sin(2x)}2\,\mathrm dx=\frac{x\sin(2x)}2+\frac{\cos(2x)}4$.
+
+En $\pi$ : $0+\frac14$. En $-\frac\pi2$ : $\sin(-\pi)=0$ et $\cos(-\pi)=-1$, donc $-\frac14$.
+
+L'intégrale vaut $\frac14-\left(-\frac14\right)=\frac12$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e44 source="Examen 2019" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e44 source="Examen 2019" reponse="B" theorie="ana-substitution ana-integrale"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Parmi les propositions suivantes, laquelle est égale à l'intégrale ${\displaystyle \int_1^2 3x \sqrt{x^2+1}\,\mathrm{d}x}$?
 
@@ -605,9 +1328,26 @@ Parmi les propositions suivantes, laquelle est égale à l'intégrale ${\display
 - $3\big(5\sqrt{5}-2\sqrt{2}\big)$
 :::
 
+::: indice
+Quelle partie de l'intégrande ressemble à la dérivée de $x^2+1$ ?
+
+:::
+
+::: indice
+Avec $u=x^2+1$, $\mathrm du=2x\,\mathrm dx$ : une primitive de $3x\sqrt{x^2+1}$ est $(x^2+1)^{\frac32}$.
+
+:::
+
+::: details
+La dérivée de $(x^2+1)^{\frac32}$ vaut $\frac32\cdot2x\,(x^2+1)^{\frac12}=3x\sqrt{x^2+1}$.
+
+$\displaystyle\int_1^2 3x\sqrt{x^2+1}\,\mathrm dx=\left[(x^2+1)^{\frac32}\right]_1^2=5^{\frac32}-2^{\frac32}=5\sqrt5-2\sqrt2$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e45 source="Examen 2019" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e45 source="Examen 2019" reponse="D" theorie="ana-derivees-regles ana-log-prop"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Considérons la fonction $f$ dont l'expression analytique est donnée par ${\displaystyle f(x) = \ln \left( \frac{3x+1}{1-2x}\right)}$.
 Parmi les propositions suivantes, laquelle correspond à la dérivée de $f$ en tout point du domaine de dérivabilité de $f$?
@@ -619,9 +1359,26 @@ Parmi les propositions suivantes, laquelle correspond à la dérivée de $f$ en 
 - ${\displaystyle \frac{5}{-6x^2+x+1}}$
 :::
 
+::: indice
+Peut-on écrire le logarithme d'un quotient comme une différence de deux logarithmes ?
+
+:::
+
+::: indice
+$f(x)=\ln(3x+1)-\ln(1-2x)$, donc $f'(x)=\frac3{3x+1}+\frac2{1-2x}$.
+
+:::
+
+::: details
+Sur le domaine, $3x+1>0$ et $1-2x>0$, donc $f(x)=\ln(3x+1)-\ln(1-2x)$.
+
+$f'(x)=\dfrac3{3x+1}+\dfrac2{1-2x}=\dfrac{3(1-2x)+2(3x+1)}{(3x+1)(1-2x)}=\dfrac5{-6x^2+x+1}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e46 source="Examen 2019" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e46 source="Examen 2019" reponse="C" theorie="alge-puiss-prop alge-rac-puiss"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Je souhaite fabriquer une flûte de Pan. Cette flûte est constituée de plusieurs tubes de longueurs différentes, rangés par ordre décroissant de longueur. Le premier tube, qui est le plus long, mesure $16\,\mathrm{cm}$. La longueur de chaque tube suivant est calculée à partir de celle du tube précédent de la façon suivante : la longueur de chaque tube est égale à celle du tube précédent divisée par $2^{1/12}$.
 
@@ -634,9 +1391,26 @@ Je souhaite fabriquer une flûte de Pan. Cette flûte est constituée de plusieu
 - $14$
 :::
 
+::: indice
+Quelle est la longueur du $k$-ième tube ? Pour quelle valeur de $k$ obtient-on $8\,\mathrm{cm}$ ?
+
+:::
+
+::: indice
+Après $k$ divisions, la longueur vaut $\frac{16}{2^{k/12}}$ ; elle vaut $8$ quand $2^{k/12}=2$.
+
+:::
+
+::: details
+$\frac{16}{2^{k/12}}=8\iff2^{k/12}=2\iff k=12$.
+
+Le tube le plus court est obtenu après $12$ divisions : avec le premier tube, la flûte compte $13$ tubes.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e47 source="Examen 2018" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e47 source="Examen 2018" reponse="C" theorie="ana-variations"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Soit la fonction réelle définie par $f(x) = 3x^5-5x^3$. Combien d'extrema locaux possède-t-elle?
 
@@ -647,9 +1421,26 @@ Soit la fonction réelle définie par $f(x) = 3x^5-5x^3$. Combien d'extrema loca
 - Plus de $2$.
 :::
 
+::: indice
+Où $f'$ s'annule-t-elle ? Change-t-elle de signe en chacun de ces points ?
+
+:::
+
+::: indice
+$f'(x)=15x^4-15x^2=15x^2(x-1)(x+1)$.
+
+:::
+
+::: details
+$f'$ s'annule en $-1$, $0$ et $1$. Le facteur $x^2$ est positif : $f'$ ne change pas de signe en $0$.
+
+$f'$ change de signe en $-1$ (maximum local) et en $1$ (minimum local) : $f$ a $2$ extrema locaux.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e48 source="Examen 2019" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e48 source="Examen 2019" reponse="C" theorie="ana-composee"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Considérons la fonction $f$ définie par ${\displaystyle f(x) = 1+\frac{2}{x}}$ pour tout réel $x$ strictement positif. Définissons la fonction $g$ par ${\displaystyle g(x) = \frac{f(3x)}{3}}$. Que vaut ${\displaystyle g\big(g(3)\big)}$?
 
@@ -660,9 +1451,24 @@ Considérons la fonction $f$ définie par ${\displaystyle f(x) = 1+\frac{2}{x}}$
 - ${\displaystyle \frac{29}{11}}$
 :::
 
+::: indice
+Quelle est l'expression de $g(x)$ ? Commence par calculer $g(3)$.
+
+:::
+
+::: indice
+$g(x)=\frac13\left(1+\frac2{3x}\right)$, donc $g(3)=\frac13\cdot\frac{11}9=\frac{11}{27}$.
+
+:::
+
+::: details
+$g(3)=\frac{11}{27}$. Puis $g\left(\frac{11}{27}\right)=\frac13\left(1+\frac2{11/9}\right)=\frac13\left(1+\frac{18}{11}\right)=\frac13\cdot\frac{29}{11}=\frac{29}{33}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e49 source="Examen 2019" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e49 source="Examen 2019" reponse="C" theorie="ana-substitution ana-primitives-usuelles"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Notons $\mathrm{e}$ la base des logarithmes naturels. Parmi les propositions suivantes, laquelle est égale à l'intégrale ${\displaystyle \int_1^{\mathrm{e}} \frac{\ln(x)}{x} \,\mathrm{d}x }$?
 
@@ -673,9 +1479,24 @@ Notons $\mathrm{e}$ la base des logarithmes naturels. Parmi les propositions sui
 - ${\displaystyle \frac{1}{\mathrm{e}}}$
 :::
 
+::: indice
+$\frac1x$ est la dérivée de quelle fonction présente dans l'intégrande ?
+
+:::
+
+::: indice
+Une primitive de $\frac{\ln x}x$ est $\frac{(\ln x)^2}2$.
+
+:::
+
+::: details
+$\displaystyle\int_1^{\mathrm e}\frac{\ln x}x\,\mathrm dx=\left[\frac{(\ln x)^2}2\right]_1^{\mathrm e}=\frac12-0=\frac12$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e50 source="Examen 2018" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e50 source="Examen 2018" reponse="B" theorie="ana-arc ana-reciproque"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Parmi les figures ci-dessous, une seule peut être une partie de la représentation graphique de la fonction $f$ définie par $f(x) = \arcsin(x)$. Laquelle?
 
@@ -686,9 +1507,26 @@ Parmi les figures ci-dessous, une seule peut être une partie de la représentat
 - ![](../static/figures/q170D_1.svg)
 :::
 
+::: indice
+Quel est le domaine de $\arcsin$ ? Est-elle croissante ? Que vaut $\arcsin1$ ?
+
+:::
+
+::: indice
+$\arcsin$ est définie sur $[-1;1]$, croissante, et $\arcsin1=\frac\pi2\approx1{,}57$.
+
+:::
+
+::: details
+Le graphique B est le seul défini uniquement sur $[-1;1]$, croissant, passant par l'origine et atteignant presque $1{,}57$ en $x=1$.
+
+Le graphique D est décroissant ; A et C existent au-delà de $x=1$ et restent loin de $\frac\pi2$ en $x=1$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e51 source="Examen 2020" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e51 source="Examen 2020" reponse="B" theorie="ana-exp"}
 <!-- support 2026 : hors document (après \end{document}) -->
 À un stade de l'épidémie de COVID-19, il a été indiqué qu'en Belgique le nombre de patients positifs à la COVID-19 doublait tous les $3,33$ jours ou $4 800$ minutes. Si $a$, $b$, $N_0$, $K$, $A$, $B$, $D$ et $\omega$ sont des constantes réelles positives, quelle est parmi les propositions suivantes la fonction $N$ qui caractérise la croissance du virus au cours du temps $t$?
 
@@ -699,9 +1537,26 @@ Parmi les figures ci-dessous, une seule peut être une partie de la représentat
 - $N(t) = D\sin(\omega t)$
 :::
 
+::: indice
+Doubler en des durées égales : par quoi le nombre est-il multiplié pendant chaque intervalle de $4\,800$ minutes ?
+
+:::
+
+::: indice
+Une grandeur multipliée par le même nombre pendant des durées égales a une croissance exponentielle.
+
+:::
+
+::: details
+Le nombre de patients est multiplié par $2$ tous les $3{,}33$ jours : c'est une croissance exponentielle, $N(t)=N_0\mathrm e^{Kt}$ avec $K=\frac{\ln2}{3{,}33}$ (par jour).
+
+Une fonction du premier degré augmente du même nombre, et non du même facteur, pendant des durées égales.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e52 source="Examen 2021" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e52 source="Examen 2021" reponse="C" theorie="geo-ps-def geo-ps-prop"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans un repère cartésien orthonormé, on considère le triangle de sommets $A(0;3)$, $B(3;6)$, $C(4;4)$. Que vaut le cosinus de l'angle $\widehat{ABC}$?
 
@@ -712,9 +1567,26 @@ Dans un repère cartésien orthonormé, on considère le triangle de sommets $A(
 - $\sqrt{12}/12$
 :::
 
+::: indice
+Quels vecteurs forment l'angle $\widehat{ABC}$ ? Comment le produit scalaire donne-t-il le cosinus ?
+
+:::
+
+::: indice
+$\overrightarrow{BA}=(-3;-3)$ et $\overrightarrow{BC}=(1;-2)$ : $\cos\widehat{ABC}=\dfrac{\overrightarrow{BA}\cdot\overrightarrow{BC}}{\|\overrightarrow{BA}\|\,\|\overrightarrow{BC}\|}$.
+
+:::
+
+::: details
+$\overrightarrow{BA}\cdot\overrightarrow{BC}=-3+6=3$, $\|\overrightarrow{BA}\|=3\sqrt2$, $\|\overrightarrow{BC}\|=\sqrt5$.
+
+$\cos\widehat{ABC}=\dfrac3{3\sqrt{10}}=\dfrac1{\sqrt{10}}=\dfrac{\sqrt{10}}{10}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e53 source="TOSS 2017" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e53 source="TOSS 2017" reponse="C" theorie="tri-associes"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Parmi les égalités suivantes, quelle est celle qui est vraie quels que soient les nombres réels $x$ et $y$ tels que $0<x<y$ et ${\displaystyle x+y=\frac{\pi}{2}}$?
 
@@ -725,9 +1597,26 @@ Parmi les égalités suivantes, quelle est celle qui est vraie quels que soient 
 - ${\displaystyle \cos(x) = \sin\left(y+\frac{\pi}{2}\right)}$
 :::
 
+::: indice
+Comment appelle-t-on deux angles dont la somme vaut $\frac\pi2$ ? Quelle relation lie leurs sinus et cosinus ?
+
+:::
+
+::: indice
+$y=\frac\pi2-x$, et $\cos\left(\frac\pi2-x\right)=\sin x$.
+
+:::
+
+::: details
+$x$ et $y$ sont complémentaires : $\cos y=\cos\left(\frac\pi2-x\right)=\sin x$.
+
+Les autres sont fausses : par exemple $\cos x=\sin y>0$, alors que la deuxième proposition donne $\cos x=-\sin y$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e54 source="Examen 2019" reponse="A" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e54 source="Examen 2019" reponse="A" theorie="geo-ps-prop geo-norme"}
 <!-- support 2026 : hors document (après \end{document}) -->
 La norme d'un vecteur $\vec v$ est notée $\|\vec v \|$ et le produit scalaire des vecteurs $\vec u$ et $\vec v$ est noté $\vec u \cdot \vec v$. Soient $\vec u$ et $\vec v$ des vecteurs tels que $\|\vec u\|=3$, $\|\vec v \| =12$ et $\vec u \cdot \vec v = 8$. Que vaut $\|\vec u + \vec v\|$?
 
@@ -738,9 +1627,26 @@ La norme d'un vecteur $\vec v$ est notée $\|\vec v \|$ et le produit scalaire d
 - $169$
 :::
 
+::: indice
+Comment calculer $\|\vec u+\vec v\|^2$ avec le produit scalaire ?
+
+:::
+
+::: indice
+$\|\vec u+\vec v\|^2=\|\vec u\|^2+2\,\vec u\cdot\vec v+\|\vec v\|^2$.
+
+:::
+
+::: details
+$\|\vec u+\vec v\|^2=9+16+144=169$, donc $\|\vec u+\vec v\|=13$.
+
+$169$ est le carré de la norme, pas la norme.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e55 source="Examen 2017" reponse="B" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e55 source="Examen 2017" reponse="B" theorie="sta-moyenne"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Pour quelle valeur de $x$ l'échantillon $\{1;3;5;7;x\}$ a-t-il une moyenne égale à $3$?
 
@@ -751,9 +1657,24 @@ Pour quelle valeur de $x$ l'échantillon $\{1;3;5;7;x\}$ a-t-il une moyenne éga
 - $5$
 :::
 
+::: indice
+Quelle doit être la somme des cinq valeurs ?
+
+:::
+
+::: indice
+La somme doit valoir $5\cdot3=15$, et $1+3+5+7=16$.
+
+:::
+
+::: details
+$16+x=15$, donc $x=-1$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e56 source="TOSS 2017" reponse="C" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e56 source="TOSS 2017" reponse="C" theorie="tri-associes tri-equations"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Soit $\alpha$ la mesure d'un angle en degrés comprise entre $0^\circ$ et $360^\circ$. Supposons que $\sin(\alpha) = -\sin(10^\circ)$. Quelle est l'affirmation correcte pour la valeur de $\alpha$?
 
@@ -764,9 +1685,26 @@ Soit $\alpha$ la mesure d'un angle en degrés comprise entre $0^\circ$ et $360^\
 - Aucune des affirmations précédentes n'est correcte.
 :::
 
+::: indice
+$-\sin10^\circ$ est le sinus de quel angle ? Quels angles de $[0^\circ;360^\circ]$ ont ce sinus ?
+
+:::
+
+::: indice
+$-\sin10^\circ=\sin(-10^\circ)=\sin350^\circ$, et $\sin(180^\circ-u)=\sin u$.
+
+:::
+
+::: details
+$\sin\alpha=\sin(-10^\circ)$, donc $\alpha=-10^\circ+360^\circ=350^\circ$ ou $\alpha=180^\circ+10^\circ=190^\circ$.
+
+Ces deux angles sont dans les troisième et quatrième quadrants, où le sinus est négatif.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e57 source="TOSS 2017" reponse="D" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e57 source="TOSS 2017" reponse="D" theorie="geo-par-perp geo-droite-point"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Dans le plan muni d'un repère orthonormé, on considère la droite $d$ d'équation cartésienne $3x+2y=6$. La droite $d'$ est perpendiculaire à $d$ et comprend le point $P$ ayant pour coordonnées $(1;1)$. Parmi les équations suivantes, laquelle est une équation de $d'$?
 
@@ -777,9 +1715,26 @@ Dans le plan muni d'un repère orthonormé, on considère la droite $d$ d'équat
 - $3y-2x=1$
 :::
 
+::: indice
+Quelle est la pente de $d$ ? Quelle est la pente d'une perpendiculaire ?
+
+:::
+
+::: indice
+$d$ : $y=-\frac32x+3$. La perpendiculaire a pour pente $\frac23$ et passe par $(1;1)$.
+
+:::
+
+::: details
+$d'$ : $y-1=\frac23(x-1)$, soit $3y-3=2x-2$ et $3y-2x=1$.
+
+Vérification : $(1;1)$ vérifie $3-2=1$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #mel-e58 source="Examen 2020" reponse="A" theorie="" masquee="true"}
+::::: {.qcm .exo #mel-e58 source="Examen 2020" reponse="A" theorie="ana-asymptotes ana-lim-infini"}
 <!-- support 2026 : hors document (après \end{document}) -->
 Soit $f$ la fonction définie explicitement par ${\displaystyle f(x) = \frac{x-2}{x+1}}$. On sait que la courbe d'équation $y=f(x)$ admet une asymptote horizontale et une asymptote verticale. Quel est le point d'intersection de ces deux asymptotes?
 
@@ -788,6 +1743,25 @@ Soit $f$ la fonction définie explicitement par ${\displaystyle f(x) = \frac{x-2
 - $(-1;2)$
 - $(1;-1)$
 - $(2;-1)$
+:::
+
+::: indice
+Où le dénominateur s'annule-t-il ? Vers quoi tend $f$ à l'infini ?
+
+:::
+
+::: indice
+Asymptote verticale : $x=-1$. À l'infini, $f(x)$ se comporte comme $\frac xx$.
+
+:::
+
+::: details
+Le dénominateur s'annule en $-1$ (où le numérateur vaut $-3$) : asymptote verticale $x=-1$.
+
+$\lim\limits_{x\to\pm\infty}f(x)=1$ : asymptote horizontale $y=1$.
+
+Les deux asymptotes se coupent en $(-1;1)$.
+
 :::
 
 :::::

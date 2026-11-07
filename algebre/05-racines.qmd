@@ -22,6 +22,10 @@ $\sqrt{9}=3$ et non $\pm 3$ ; $\sqrt[3]{-8}=-2$ car $(-2)^3=-8$ ; $\sqrt[4]{-16}
 L'équation $x^2=9$ a **deux** solutions : $\sqrt{9}=3$ et $-\sqrt{9}=-3$. Le symbole $\sqrt{9}$, lui, ne désigne qu'un seul nombre.
 :::
 
+Graphiquement, la droite $y=9$ coupe la parabole $y=x^2$ en deux points, d'abscisses $-\sqrt9$ et $\sqrt9$.
+
+![](../static/figures/th-alge-racine-eq.svg){.th}
+
 Que vaut $\sqrt{a^2}$ ? C'est le nombre positif dont le carré vaut $a^2$. Si $a\ge 0$, c'est $a$ ; si $a<0$, c'est $-a$. On reconnaît la valeur absolue de $a$.
 
 ::: {.encadre #alge-rac-abs nature="Propriété" titre="racine d'un carré"}

@@ -92,13 +92,19 @@ Pour résoudre un système de trois équations à trois inconnues $x$, $y$, $z$ 
 Comme pour deux inconnues, le système peut être déterminé, impossible ou indéterminé.
 :::
 
+Une équation $ax+by+cz=d$ représente un plan de l'espace, comme $ax+by=c$ représente une droite du plan. Résoudre le système, c'est chercher les points communs aux trois plans.
+
+![](../static/figures/th-alge-sys3.svg){.th}
+
 ::: {.encadre nature="Exemple"}
-$\begin{cases}x+y+z=6&(E_1)\\2x-y+z=3&(E_2)\\x+2y-z=2&(E_3)\end{cases}$
+$$\begin{cases}x+y+z=6&(E_1)\\2x-y+z=3&(E_2)\\x+2y-z=2&(E_3)\end{cases}$$
 
 $(E_1)+(E_3)$ : $2x+3y=8$. $(E_2)+(E_3)$ : $3x+y=5$. De la seconde, $y=5-3x$ ; dans la première, $2x+15-9x=8$, donc $x=1$ et $y=2$. Enfin $(E_1)$ donne $z=6-1-2=3$.
 
 Vérification dans $(E_2)$ : $2-2+3=3$.
 :::
+
+![](../static/figures/th-alge-sys3-elim.svg){.th}
 
 ::: {.encadre nature="Remarque" titre="ne pas tout résoudre"}
 Si la question porte seulement sur $x+y+z$, il suffit parfois d'additionner les trois équations. Par exemple, avec $x+y=5$, $y+z=7$ et $x+z=6$, la somme donne $2(x+y+z)=18$, donc $x+y+z=9$.

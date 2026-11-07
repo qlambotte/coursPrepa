@@ -139,6 +139,8 @@ $x^2-5x+6=(x-2)(x-3)$ et $a=1>0$, donc $x^2-5x+6<0 \iff x\in\,]2;3[$.
 
 Pour faire apparaître un carré dans une expression $x^2+px$, on part du produit remarquable $(x+k)^2=x^2+2kx+k^2$ : le terme $2kx$ doit être $px$, donc $k=\frac p2$. Il reste à retirer le terme $k^2$ ajouté.
 
+![](../static/figures/th-alge-completer.svg){.th}
+
 ::: {.encadre #alge-completer nature="Méthode" titre="compléter le carré"}
 $$x^2+px=\left(x+\frac p2\right)^2-\frac{p^2}{4}.$$
 Pour $ax^2+bx+c$ avec $a\neq0$, on met d'abord $a$ en évidence dans les termes en $x$ : $ax^2+bx+c=a\left(x^2+\frac bax\right)+c$, puis on complète le carré dans la parenthèse.

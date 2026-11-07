@@ -1,4 +1,4 @@
-::::: {.qcm .exo #geo-e01 source="Examen 2021" reponse="C" theorie=""}
+::::: {.qcm .exo #geo-e01 source="Examen 2021" reponse="C" theorie="geo-coord geo-mult"}
 <!-- support 2026 : Q65 -->
 Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère les points $A(1;2)$, $B(x;8)$ et $C(10;y)$ tels que $2\overrightarrow{AB} = \overrightarrow{BC}$. Que vaut $(x;y)$?
 
@@ -9,9 +9,26 @@ Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère les points $
 - $(8;20)$
 :::
 
+::: indice
+Quelles sont les coordonnées de $\overrightarrow{AB}$ et de $\overrightarrow{BC}$ en fonction de $x$ et $y$ ?
+
+:::
+
+::: indice
+$\overrightarrow{AB}=(x-1;6)$ et $\overrightarrow{BC}=(10-x;y-8)$. L'égalité des vecteurs donne une équation par coordonnée.
+
+:::
+
+::: details
+$\overrightarrow{AB}=(x-1;6)$ et $\overrightarrow{BC}=(10-x;y-8)$.
+
+$2\overrightarrow{AB}=\overrightarrow{BC}$ : $2(x-1)=10-x$, donc $x=4$ ; $12=y-8$, donc $y=20$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e02 source="Examen 2018" reponse="A" theorie=""}
+::::: {.qcm .exo #geo-e02 source="Examen 2018" reponse="A" theorie="geo-intersection geo-norme"}
 <!-- support 2026 : Q66 -->
 Dans le plan muni d'un repère orthonormé, on considère les trois droites suivantes :
 
@@ -30,9 +47,28 @@ Dans le plan muni d'un repère orthonormé, on considère les trois droites suiv
 - $\sqrt{26}$
 :::
 
+::: indice
+Quelles sont les coordonnées de $A$ et de $B$ ?
+
+:::
+
+::: indice
+$A$ : $x=-2$ dans $x+y=-2$. $B$ : additionne $x+y=-2$ et $y-x=4$.
+
+:::
+
+::: details
+$A$ : $x=-2$ et $y=-2-x=0$, donc $A(-2;0)$.
+
+$B$ : la somme des équations de $d_1$ et $d_3$ donne $2y=2$, donc $y=1$ et $x=-3$ : $B(-3;1)$.
+
+$\overrightarrow{AB}=(-1;1)$ et $\|\overrightarrow{AB}\|=\sqrt{1+1}=\sqrt2$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e03 source="Examen 2017" reponse="C" theorie=""}
+::::: {.qcm .exo #geo-e03 source="Examen 2017" reponse="C" theorie="geo-droite-eq geo-pente"}
 <!-- support 2026 : Q67 -->
 Dans le plan muni d'un système d'axes orthonormés, on considère une droite $L$ de pente négative qui coupe l'axe des ordonnées au point $(0;2)$. On considère également le triangle $D$ formé par $L$, l'axe des abscisses et l'axe des ordonnées. Si l'aire de $D$ vaut $6$ unités, quelles sont les coordonnées du point d'intersection de $L$ avec l'axe des abscisses?
 
@@ -43,9 +79,28 @@ Dans le plan muni d'un système d'axes orthonormés, on considère une droite $L
 - $(0;-2)$
 :::
 
+::: indice
+Quels sont les trois sommets du triangle $D$ ? Où se trouve le point d'intersection avec l'axe des abscisses, si la pente est négative ?
+
+:::
+
+::: indice
+Les sommets sont $(0;0)$, $(0;2)$ et $(a;0)$ avec $a>0$. L'aire vaut $\frac{a\cdot2}2$.
+
+:::
+
+::: details
+$L$ passe par $(0;2)$ et descend vers la droite : elle coupe l'axe des abscisses en un point $(a;0)$ avec $a>0$.
+
+Le triangle est rectangle en $O$, de côtés $a$ et $2$ : son aire vaut $\frac{2a}2=a=6$.
+
+Le point cherché est $(6;0)$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e04 source="Examen 2022" reponse="C" theorie=""}
+::::: {.qcm .exo #geo-e04 source="Examen 2022" reponse="C" theorie="geo-droite-point geo-intersection"}
 <!-- support 2026 : Q68 -->
 Dans le plan muni d'un repère cartésien orthonormé, on considère la courbe $(C)$ d'équation $y=2x^2-8$. Soit $d_1$ la droite tangente à $(C)$ au point d'abscisse $x=1$ et $d_2$ la droite d'équation $y=-x$.
 
@@ -58,9 +113,26 @@ Quelles sont les coordonnées du point d'intersection de $d_1$ et $d_2$?
 - ${\displaystyle \left(\frac{\sqrt{33}-1}{2};-\frac{\sqrt{33}-1}{2}\right)}$
 :::
 
+::: indice
+Quelle est la pente de la tangente à $(C)$ au point d'abscisse $1$ ? Par quel point passe-t-elle ?
+
+:::
+
+::: indice
+La dérivée de $2x^2-8$ est $4x$ : la pente vaut $4$, et le point de contact est $(1;-6)$.
+
+:::
+
+::: details
+Au point d'abscisse $1$ : $y=2-8=-6$, et la pente vaut $4\cdot1=4$. Donc $d_1$ : $y+6=4(x-1)$, soit $y=4x-10$.
+
+Avec $y=-x$ : $4x-10=-x$, donc $x=2$ et $y=-2$. Le point est $(2;-2)$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e05 source="Examen 2020" reponse="B" theorie=""}
+::::: {.qcm .exo #geo-e05 source="Examen 2020" reponse="B" theorie="geo-par-perp geo-droite-point"}
 <!-- support 2026 : Q69 -->
 Dans le plan muni d'un repère orthonormé $(OX;OY)$, on considère la droite $d_1$ d'équation $y+2x-10=0$ et la droite $d_2$ parallèle à $d_1$ et passant par $A(2;2)$.
 
@@ -73,9 +145,26 @@ Quelle sont les coordonnées de l'intersection de $d_2$ avec l'axe $OY$?
 - $(6;0)$
 :::
 
+::: indice
+Quelle est la pente de $d_1$ ? Que vaut la pente de $d_2$ ?
+
+:::
+
+::: indice
+$d_1$ : $y=-2x+10$. $d_2$ a la même pente et passe par $(2;2)$.
+
+:::
+
+::: details
+$d_1$ : $y=-2x+10$, de pente $-2$. $d_2$ est parallèle à $d_1$ : $y-2=-2(x-2)$, soit $y=-2x+6$.
+
+Avec l'axe $OY$ ($x=0$) : $y=6$. Le point est $(0;6)$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e06 source="Prépa UMONS" reponse="D" theorie=""}
+::::: {.qcm .exo #geo-e06 source="Prépa UMONS" reponse="D" theorie="geo-base geo-coord"}
 <!-- support 2026 : Q70 -->
 Considérons le vecteur $\vec v$ représenté dans le repère cartésien donné ci-après.
 
@@ -90,9 +179,28 @@ Considérons le vecteur $\vec v$ représenté dans le repère cartésien donné 
 - $\vec v = \begin{pmatrix}-4/3\\1/2\end{pmatrix}$
 :::
 
+::: indice
+Les unités sont-elles les mêmes sur les deux axes ? Combien de carreaux vaut une unité sur chaque axe ?
+
+:::
+
+::: indice
+Une unité vaut $3$ carreaux sur l'axe des abscisses et $4$ carreaux sur l'axe des ordonnées.
+
+:::
+
+::: details
+Le vecteur va de $4$ carreaux vers la gauche et de $2$ carreaux vers le haut.
+
+En abscisse, $4$ carreaux valent $\frac43$ d'unité ; en ordonnée, $2$ carreaux valent $\frac12$ unité.
+
+$\vec v=\begin{pmatrix}-4/3\\1/2\end{pmatrix}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e07 source="Examen 2018" reponse="C" theorie=""}
+::::: {.qcm .exo #geo-e07 source="Examen 2018" reponse="C" theorie="geo-par-perp geo-droite-point"}
 <!-- support 2026 : Q71 -->
 Dans le plan muni d'un repère orthonormé, on considère la droite $d$ d'équation $3y=2x+1$ et le point $A$ de coordonnées $(-3;1)$.
 
@@ -105,9 +213,28 @@ Parmi les propositions suivantes, une seule peut correspondre à une équation d
 - $2y=3x+11$
 :::
 
+::: indice
+Quelle est la pente de $d$ ? Quelle est la pente d'une droite perpendiculaire à $d$ ?
+
+:::
+
+::: indice
+$d$ : $y=\frac23x+\frac13$. La perpendiculaire a pour pente $-\frac32$ et passe par $(-3;1)$.
+
+:::
+
+::: details
+$d$ a pour pente $\frac23$, donc la perpendiculaire a pour pente $-\frac32$.
+
+Elle passe par $A(-3;1)$ : $y-1=-\frac32(x+3)$, soit $2y-2=-3x-9$ et $2y=-3x-7$.
+
+Vérification : $2\cdot1=-3\cdot(-3)-7$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e08 source="Examen 2024" reponse="A" theorie=""}
+::::: {.qcm .exo #geo-e08 source="Examen 2024" reponse="A" theorie="geo-pente geo-par-perp"}
 <!-- support 2026 : Q72 -->
 Dans le plan muni d'un repère cartésien $Oxy$, on considère la droite $d$ passant par le point $(1;5)$ et parallèle à la droite passant par les points $(0;240)$ et $(120;0)$. Quelle est l'abscisse de l'intersection entre la droite $d$ et l'axe $Ox$?
 
@@ -118,9 +245,26 @@ Dans le plan muni d'un repère cartésien $Oxy$, on considère la droite $d$ pas
 - $13/2$
 :::
 
+::: indice
+Quelle est la pente de la droite passant par $(0;240)$ et $(120;0)$ ?
+
+:::
+
+::: indice
+La pente vaut $\frac{0-240}{120-0}=-2$ ; $d$ : $y-5=-2(x-1)$.
+
+:::
+
+::: details
+La pente vaut $\frac{-240}{120}=-2$. La droite $d$ a la même pente et passe par $(1;5)$ : $y=-2x+7$.
+
+Avec l'axe $Ox$ ($y=0$) : $x=\frac72=\frac{14}4$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e09 source="Examen 2023" reponse="C" theorie=""}
+::::: {.qcm .exo #geo-e09 source="Examen 2023" reponse="C" theorie="geo-pente geo-intersection"}
 <!-- Examen 2023 (matin) : maths Q9 -->
 Dans un plan muni d'un repère cartésien orthonormé, on considère la droite qui passe par les points $(0;16)$ et $(10;0)$. On considère également une autre droite passant par l'origine et de pente $3/5$.
 
@@ -133,9 +277,24 @@ Que vaut l'abscisse $x$ du point d'intersection de ces deux droites?
 - $81/11$
 :::
 
+::: indice
+Quelles sont les équations des deux droites ?
+
+:::
+
+::: indice
+La première a pour pente $-\frac{16}{10}=-\frac85$ : $y=-\frac85x+16$. La seconde : $y=\frac35x$.
+
+:::
+
+::: details
+$\frac35x=-\frac85x+16$, donc $\frac{11}5x=16$ et $x=\frac{80}{11}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e10 source="Examen 2023" reponse="D" theorie=""}
+::::: {.qcm .exo #geo-e10 source="Examen 2023" reponse="D" theorie="geo-chasles geo-milieu"}
 <!-- Examen 2023 (matin) : maths Q10 -->
 Le dessin ci-dessous représente le parallélogramme $PQRS$ (les droites $PQ$ et $SR$ sont parallèles et les droites $PS$ et $QR$ sont parallèles). Notons $M$ le milieu du segment $[P,S]$ et $N$ le milieu du segment $[P,Q]$.
 
@@ -150,9 +309,28 @@ Parmi les propositions suivantes, laquelle exprime correctement le vecteur $2\ov
 - $2\overrightarrow{MN}=-\overrightarrow{PS}-\overrightarrow{RS}$
 :::
 
+::: indice
+Par quel point passer pour aller de $M$ à $N$ ? Quel vecteur est égal à $\overrightarrow{PQ}$ dans le parallélogramme ?
+
+:::
+
+::: indice
+$\overrightarrow{MN}=\overrightarrow{MP}+\overrightarrow{PN}=\frac12\overrightarrow{SP}+\frac12\overrightarrow{PQ}$, et $\overrightarrow{PQ}=\overrightarrow{SR}$.
+
+:::
+
+::: details
+$\overrightarrow{MN}=\overrightarrow{MP}+\overrightarrow{PN}=\frac12\overrightarrow{SP}+\frac12\overrightarrow{PQ}$.
+
+$\overrightarrow{SP}=-\overrightarrow{PS}$ et, dans le parallélogramme, $\overrightarrow{PQ}=\overrightarrow{SR}=-\overrightarrow{RS}$.
+
+Donc $2\overrightarrow{MN}=-\overrightarrow{PS}-\overrightarrow{RS}$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e11 source="Examen 2025" reponse="B" theorie=""}
+::::: {.qcm .exo #geo-e11 source="Examen 2025" reponse="B" theorie="geo-par-perp geo-droite-point"}
 <!-- Examen 2025 (matin) : maths Q7 -->
 Dans un plan muni d'un repère cartésien orthonormé, considérons la droite $d$ de pente $m=\sqrt{2}$ passant par le point $(-3;\sqrt{2})$ et la droite $d'$ perpendiculaire à $d$ et passant par le point $(0;3)$.
 
@@ -165,9 +343,28 @@ Que vaut l'abscisse du point d'intersection de $d'$ avec l'axe des abscisses?
 - $3-\sqrt{2}$
 :::
 
+::: indice
+La droite $d'$ est-elle entièrement déterminée ? Le point $(-3;\sqrt2)$ sert-il ?
+
+:::
+
+::: indice
+$d'$ a pour pente $-\frac1{\sqrt2}$ et passe par $(0;3)$ : $y=-\frac{x}{\sqrt2}+3$.
+
+:::
+
+::: details
+$d'$ est perpendiculaire à $d$ : sa pente vaut $-\frac1{\sqrt2}$. Elle passe par $(0;3)$, donc $y=-\frac x{\sqrt2}+3$.
+
+Avec $y=0$ : $x=3\sqrt2$.
+
+Le point $(-3;\sqrt2)$ ne sert pas : seule la pente de $d$ intervient.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e12 source="Examen 2025" reponse="B" theorie=""}
+::::: {.qcm .exo #geo-e12 source="Examen 2025" reponse="B" theorie="geo-ps-prop"}
 <!-- Examen 2025 (matin) : maths Q10 -->
 Dans le plan euclidien, on considère quatre points $P$, $Q$, $R$, $S$ qui forment un carré $PQRS$ de côtés de longueur $2$.
 
@@ -182,9 +379,28 @@ Que vaut le produit scalaire $\overrightarrow{PQ}\cdot\overrightarrow{RP}$?
 - $2$
 :::
 
+::: indice
+Quel est l'angle entre $\overrightarrow{PQ}$ et $\overrightarrow{RP}$ ? Ou : quelles coordonnées donner aux sommets ?
+
+:::
+
+::: indice
+Place le carré dans un repère : $P(0;2)$, $Q(2;2)$, $R(2;0)$, $S(0;0)$.
+
+:::
+
+::: details
+Avec $P(0;2)$, $Q(2;2)$ et $R(2;0)$ : $\overrightarrow{PQ}=(2;0)$ et $\overrightarrow{RP}=(-2;2)$.
+
+$\overrightarrow{PQ}\cdot\overrightarrow{RP}=2\cdot(-2)+0\cdot2=-4$.
+
+Autre méthode : $\overrightarrow{PQ}\cdot\overrightarrow{RP}=-\overrightarrow{PQ}\cdot\overrightarrow{PR}=-2\cdot2\sqrt2\cdot\cos45^\circ=-4$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e13 source="Examen 2026" reponse="C" theorie=""}
+::::: {.qcm .exo #geo-e13 source="Examen 2026" reponse="C" theorie="geo-ps-prop geo-milieu"}
 <!-- Examen 2026 (matin) : maths Q1 -->
 On donne trois points $P$, $Q$ et $R$ tels que les vecteurs $\overrightarrow{PQ}$ et $\overrightarrow{QR}$ sont orthogonaux et chacun de norme unité.
 
@@ -197,9 +413,26 @@ Si $M$ désigne le milieu du segment $[P,Q]$, que vaut le produit scalaire de $\
 - $1/2$
 :::
 
+::: indice
+Peux-tu placer $P$, $Q$ et $R$ dans un repère orthonormé bien choisi ?
+
+:::
+
+::: indice
+Prends $P(0;0)$, $Q(1;0)$ et $R(1;1)$ ; alors $M\left(\frac12;0\right)$.
+
+:::
+
+::: details
+Avec $P(0;0)$, $Q(1;0)$, $R(1;1)$ et $M\left(\frac12;0\right)$ : $\overrightarrow{PM}=\left(\frac12;0\right)$ et $\overrightarrow{MR}=\left(\frac12;1\right)$.
+
+$\overrightarrow{PM}\cdot\overrightarrow{MR}=\frac12\cdot\frac12+0\cdot1=\frac14$.
+
+:::
+
 :::::
 
-::::: {.qcm .exo #geo-e14 source="Examen 2026" reponse="A" theorie=""}
+::::: {.qcm .exo #geo-e14 source="Examen 2026" reponse="A" theorie="geo-pente geo-par-perp"}
 <!-- Examen 2026 (matin) : maths Q8 -->
 Dans un plan muni d'un repère cartésien $Oxy$, on considère la droite $d$ passant par le point $(3;0)$ et parallèle à la droite qui passe par les deux points $(210;10)$ et $(220;5)$.
 
@@ -210,6 +443,21 @@ Parmi les propositions ci-dessous, quelle est celle qui correspond à une équat
 - $2x+y=6$
 - $2x-y=6$
 - $x-2y=3$
+:::
+
+::: indice
+Quelle est la pente de la droite passant par $(210;10)$ et $(220;5)$ ?
+
+:::
+
+::: indice
+La pente vaut $\frac{5-10}{220-210}=-\frac12$ ; $d$ : $y=-\frac12(x-3)$.
+
+:::
+
+::: details
+La pente vaut $-\frac5{10}=-\frac12$. La droite $d$ passe par $(3;0)$ : $y=-\frac12(x-3)$, soit $2y=-x+3$ et $x+2y=3$.
+
 :::
 
 :::::
@@ -227,6 +475,27 @@ On considère le triangle $ABC$. Quelle affirmation est correcte ?
 - Le triangle est isocèle pour exactement une valeur de $t$.
 :::
 
+::: indice
+Si le triangle est rectangle, en quel sommet peut être l'angle droit ? Comment traduire un angle droit avec un produit scalaire ?
+
+:::
+
+::: indice
+Angle droit en $A$ : $\overrightarrow{AB}\cdot\overrightarrow{AC}=0$. Fais de même en $B$ et en $C$.
+
+:::
+
+::: details
+$\overrightarrow{AB}=(2;1)$, $\overrightarrow{AC}=(t;2)$, $\overrightarrow{BC}=(t-2;1)$.
+
+En $A$ : $2t+2=0$, donc $t=-1$. En $B$ : $\overrightarrow{BA}\cdot\overrightarrow{BC}=-2(t-2)-1=0$, donc $t=\frac32$. En $C$ : $\overrightarrow{CA}\cdot\overrightarrow{CB}=t^2-2t+2=0$, sans solution ($\Delta<0$).
+
+Le triangle est rectangle pour exactement deux valeurs, $t=-1$ et $t=\frac32$.
+
+Il est isocèle en $A$ pour $t=1$ et $t=-1$ (car $AB^2=5=t^2+4$) : la dernière proposition est fausse.
+
+:::
+
 :::::
 
 ::::: {.qcm .exo #geo-e16 source="Prépa UMONS" reponse="D" theorie="geo-par-perp geo-droite-point"}
@@ -238,6 +507,23 @@ On considère les points $A(2;1)$, $B(8;4)$ et $C(-3;-1)$. Soit $d$ la droite pe
 - ${\displaystyle \frac{21}{2}}$
 - $-17$
 - ${\displaystyle -\frac{21}{2}}$
+:::
+
+::: indice
+Quel vecteur est perpendiculaire à $d$ ? Comment écrire l'équation de $d$ avec ce vecteur ?
+
+:::
+
+::: indice
+$\overrightarrow{AB}=(6;3)$ est un vecteur normal à $d$ : $6(x+3)+3(y+1)=0$.
+
+:::
+
+::: details
+$\overrightarrow{AB}=(6;3)$ est perpendiculaire à $d$, qui passe par $C(-3;-1)$ : $6(x+3)+3(y+1)=0$, soit $2x+y+7=0$.
+
+Avec $y=14$ : $2x+21=0$, donc $x=-\frac{21}2$.
+
 :::
 
 :::::
