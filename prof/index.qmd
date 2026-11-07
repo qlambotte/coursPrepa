@@ -1,0 +1,277 @@
+---
+title: "Guide de l'enseignant"
+subtitle: "Utiliser et modifier le site des cours préparatoires"
+format: html
+search: false
+toc: true
+toc-depth: 2
+include-in-header:
+  text: '<meta name="robots" content="noindex, nofollow">'
+---
+
+Cette page n'apparaît ni dans le menu ni dans la recherche du site. Elle est cependant publique : elle ne contient aucun mot de passe ni aucun jeton.
+
+## Vue d'ensemble
+
+Trois éléments travaillent ensemble.
+
+| Élément | Adresse | Rôle |
+|:--|:--|:--|
+| Site des élèves | [qlambotte.github.io/coursPrepa](https://qlambotte.github.io/coursPrepa/) | Théorie, QCM de séance, exercices, mise en situation, PDF |
+| Page de pilotage | [qlambotte.github.io/board/prepa.html](https://qlambotte.github.io/board/prepa.html) | Publier les solutions, noter les taux de réussite, composer le ticket de sortie, publier la correction des exercices |
+| Dépôt GitHub | [github.com/qlambotte/coursPrepa](https://github.com/qlambotte/coursPrepa) | Sources du site et fichier `etat.json` |
+
+Le contenu (énoncés, indices, solutions) est déjà dans les pages publiées. Le fichier `etat.json` indique seulement ce qui est visible : chaque page le relit à son chargement et affiche ou masque les solutions en conséquence. La page de pilotage modifie `etat.json` par un commit sur le dépôt ; GitHub reconstruit alors le site.
+
+::: callout-warning
+## Délai de publication
+Entre un clic sur la page de pilotage et l'affichage sur le site, il faut compter plusieurs minutes (reconstruction du site par GitHub Actions). Publier les solutions quelques minutes avant d'en avoir besoin. Deux clics rapprochés ne posent pas de problème : le premier déploiement est annulé et le second contient les deux modifications.
+:::
+
+Les solutions verrouillées restent lisibles dans le code source des pages et dans le dépôt public. Le verrou organise le travail des élèves ; il ne protège pas un examen.
+
+## Ce que voient les élèves
+
+**Chapitres.** La théorie est découpée en chapitres numérotés (1.1 à 5.3). Les encadrés sont numérotés thème.chapitre.n, par exemple « Propriété 1.8.2 ».
+
+**QCM de séance** (une page par thème). Chaque question a des « coups de pouce » : indice 1 (renvoi vers l'encadré de théorie), indice 2 (une question à se poser), indice 3 (une étape), puis la solution et les pièges. Tant que les solutions du thème ne sont pas publiées, les onglets « Solution » et « Pièges » affichent « La solution sera disponible à la fin de la phase d'entraînement ». Les indices sont toujours visibles.
+
+**Ticket de sortie.** En haut de la page du QCM, une section apparaît quand des questions sont sélectionnées sur la page de pilotage : elle contient les jumeaux de ces questions (même difficulté, autres valeurs).
+
+**Exercices supplémentaires** (une page par thème) et **mélange** (questions de tous les thèmes). L'élève coche ses réponses puis clique sur « Corriger ». Chaque exercice a aussi des coups de pouce. Tant que la correction de la catégorie n'est pas publiée, « Corriger » est inactif, la page affiche « Correction bientôt disponible » et l'onglet « Solution » est verrouillé.
+
+**Mise en situation.** Onze questions en 50 minutes. Le correctif est verrouillé jusqu'à sa publication.
+
+**Télécharger.** Les PDF complets : la théorie d'une part, les QCM d'autre part.
+
+## Préparer la page de pilotage (une fois par appareil)
+
+La page de pilotage utilise le jeton GitHub déjà configuré pour la synchronisation du pilotage (clé de synchronisation du tableau de bord).
+
+1. Vérifier que le jeton a accès au dépôt `qlambotte/coursPrepa` avec la permission **Contents : lecture et écriture**. Sur GitHub : *Settings → Developer settings → Fine-grained tokens*, ouvrir le jeton, ajouter le dépôt et la permission. Sans cette permission, la page lit `etat.json` mais ne peut pas l'écrire.
+2. Ouvrir la page de pilotage. Si le jeton est chiffré, saisir la phrase secrète dans la carte « Connexion » ; elle reste en mémoire le temps de la visite et n'est jamais enregistrée.
+3. La pastille en haut à droite doit indiquer « etat.json à jour ». Un clic sur la pastille relit `etat.json`.
+
+Sur un appareil sans clé, la carte « Connexion » explique comment charger la clé depuis les réglages du pilotage UMONS.
+
+## Déroulement d'une séance
+
+### Avant la séance
+
+- Sur la page de pilotage, choisir le thème dans la carte « Séance ».
+- Vérifier que « Solutions de la séance » est sur **Verrouillées**.
+- Les élèves peuvent préparer les questions sur papier ou sur le site ; le PDF du QCM (lien « PDF » sous « Autres formats », dans la marge de la page) sert de feuille d'entraînement.
+
+### Phase d'entraînement (1 h)
+
+Les élèves travaillent les questions sans calculatrice. Les indices sont disponibles sur le site ; les solutions ne le sont pas.
+
+### Vote et correction des questions difficiles
+
+1. Faire voter les élèves sur chaque question (Wooclap, Moodle ou autre outil). Pour une question peu réussie, faire discuter puis revoter.
+2. Sur la page de pilotage, saisir le taux de réussite de chaque question dans les colonnes « Vote % » et, s'il y en a un, « Revote % ». Les taux s'écrivent en pour cent : `45`, `45,5` ou `45 %`. Une case vide signifie « pas de vote ».
+3. Corriger en direct les questions sous le seuil. « Proposer le ticket » coche automatiquement les questions dont le premier vote est sous le seuil (50 % par défaut, modifiable à côté du bouton). Les cases peuvent ensuite être cochées ou décochées à la main.
+4. Cliquer sur **Enregistrer taux et ticket**. Les taux sont gardés dans `etat.json` pour l'édition suivante ; les jumeaux des questions cochées apparaissent sur le site.
+
+Enregistrer avant de changer de thème ou de recharger la page : les saisies non enregistrées seraient perdues.
+
+### Fin de séance
+
+- **Solutions de la séance → Publier** : les élèves voient les solutions et les pièges de toutes les questions du thème.
+- Après le ticket, **Solutions du ticket → Publier**.
+
+Chaque bouton peut être utilisé dans l'autre sens (« Retirer ») si une publication a été faite trop tôt.
+
+## Exercices supplémentaires et mélange
+
+La carte « Exercices » de la page de pilotage a une ligne par catégorie : Algèbre, Géométrie, Trigonométrie, Analyse, Statistique et Mélange. Chaque ligne indique le nombre d'exercices, le nombre d'exercices qui ont des indices et l'état de la correction.
+
+- **Publier** sur une ligne : « Corriger » devient actif et l'onglet « Solution » s'ouvre pour tous les exercices de la catégorie.
+- **Tout publier** et **Tout retirer** écrivent les six catégories en un seul commit.
+
+La catégorie d'un exercice vient du début de son identifiant (`alge-`, `geo-`, `tri-`, `ana-`, `sta-`, `mel-`). Sur une page qui mélange des catégories, seuls les exercices dont la correction est publiée sont corrigés ; le score l'indique.
+
+## Mise en situation
+
+La mise en situation se passe pendant la dernière séance et n'est pas corrigée en classe. Après l'épreuve, choisir « Mise en situation » dans la carte « Séance » et cliquer sur **Publier** : le correctif apparaît sur le site. Les élèves posent leurs questions lors de la séance de questions-réponses.
+
+## Les PDF
+
+- **Par page.** Chaque chapitre, chaque QCM de séance et chaque page d'exercices a son PDF (lien « PDF » sous « Autres formats »).
+- **PDF complets** (page « Télécharger ») : théorie seule, puis QCM, exercices et mise en situation. Ils ont la page de garde UMONS – FMPB. Deux mises en page sont proposées pour l'instant (« onglet » et « aérée »).
+- **Version enseignant d'un QCM.** Dans l'en-tête de la page, `prepa: version: prof` ajoute en annexe les jumeaux, les indices et les solutions.
+- **Version photocopie.** `prepa: impression: true` met tout en noir.
+
+::: callout-note
+Les PDF ne suivent pas le verrou du site : les réponses des exercices supplémentaires figurent à la fin de chaque thème dans le PDF des QCM, même si leur correction n'est pas publiée sur le site. Les solutions des QCM de séance, elles, ne sont pas dans les PDF élèves.
+:::
+
+## Modifier le contenu
+
+### Principe
+
+Le site est un projet Quarto. Les fichiers `.qmd` contiennent le texte ; le filtre `filtres/prepa.lua` transforme les blocs `:::` en QCM, encadrés et quiz, pour le site et pour le PDF.
+
+| Fichier | Contenu |
+|:--|:--|
+| `<theme>/NN-nom.qmd` | Chapitre de théorie n° NN (en-tête : `prepa: chapitre: NN`) |
+| `<theme>/qcm.qmd` | QCM de la séance et jumeaux du ticket |
+| `<theme>/_exercices.qmd` | Exercices supplémentaires du thème |
+| `melange/_exercices.qmd` | Exercices du mélange |
+| `mise-en-situation/epreuve.qmd` | Questions de la mise en situation |
+| `figures/*.typ` | Figures (CeTZ), compilées en `static/figures/*.svg` |
+| `_quarto.yml` | Menu et réglages du site |
+| `etat.json` | Ce qui est publié (écrit par la page de pilotage) |
+
+Les thèmes sont `algebre`, `geometrie`, `trigonometrie`, `analyse` et `statistique`.
+
+### Cycle de travail
+
+1. Modifier les fichiers.
+2. Vérifier : `python3 outils/verifier.py` (doit finir par « 0 erreur(s) »).
+3. Prévisualiser : `quarto preview`.
+4. Récupérer les commits de la page de pilotage, puis publier :
+
+```bash
+git pull --rebase origin main
+git add -A
+git commit -m "Description de la modification"
+git push
+```
+
+Le `git pull --rebase` est nécessaire parce que la page de pilotage fait ses propres commits sur `etat.json`. Si `git push` est refusé (« fetch first »), refaire `git pull --rebase origin main` puis `git push`.
+
+Le vérificateur est aussi lancé par GitHub avant chaque déploiement : une erreur bloque la mise en ligne.
+
+### Écrire une question de séance
+
+```markdown
+::::: {.qcm #alge-q11 source="Examen 2024" reponse="C" theorie="alge-pct alge-pct-succ"}
+Énoncé, avec les formules entre $…$.
+
+::: options
+- $40$ euros
+- $50$ euros
+- $60$ euros
+- $80$ euros
+:::
+
+::: indice
+Indice 2 : une question à se poser.
+:::
+
+::: indice
+Indice 3 : une étape du raisonnement.
+:::
+
+::: details
+Solution détaillée (la ligne « Réponse : C — … » est ajoutée automatiquement au-dessus).
+:::
+
+::: pieges
+- $50$ euros : erreur fréquente expliquée.
+:::
+:::::
+```
+
+- `source` est obligatoire : « Examen 2018 », « Prépa UMONS »… Elle s'affiche dans l'encadré de la question.
+- `theorie` contient les identifiants des encadrés de théorie, séparés par des espaces : l'indice 1 est généré à partir d'eux.
+- Exactement quatre options, une seule réponse. Pour une question annulée au concours : `reponse="C D" annulee="true"`.
+- Les commentaires `<!-- … -->` ne sont publiés nulle part.
+
+### Écrire un jumeau (ticket de sortie)
+
+Le jumeau se place dans le bloc `:::::: ticket` de `qcm.qmd`, avec `.jumeau` et l'identifiant de la question qu'il double :
+
+```markdown
+::::: {.qcm .jumeau #alge-j11 source="Prépa UMONS" reponse="B" theorie="alge-pct" jumeau-de="alge-q11"}
+…
+:::::
+```
+
+Le vérificateur signale les questions de séance sans jumeau.
+
+### Écrire un exercice supplémentaire
+
+Même forme qu'une question de séance, avec la classe `.exo`, dans `_exercices.qmd`. Pas de pièges ; les aides apparaissent dans la boîte de l'exercice, sous « Coups de pouce ».
+
+```markdown
+::::: {.qcm .exo #alge-e29 source="Examen 2025" reponse="A" theorie="alge-2deg-delta"}
+…
+:::::
+```
+
+Le début de l'identifiant fixe la catégorie (et donc le bouton de publication). Les exercices du mélange (`mel-`) peuvent renvoyer vers la théorie de n'importe quel thème.
+
+### Écrire un encadré de théorie
+
+```markdown
+::: {.encadre #alge-pct nature="Propriété" titre="augmentation et diminution en pourcentage"}
+…
+:::
+```
+
+Natures possibles : Définition, Propriété, Exemple, Remarque, Méthode, À retenir. Les exemples et remarques n'ont pas besoin d'identifiant. Ne pas utiliser les préfixes réservés par Quarto (`alg-`, `fig-`, `tbl-`, `eq-`, `thm-`, `def-`…).
+
+### Ajouter une figure
+
+1. Écrire `figures/nom.typ` en partant d'une figure existante (outils communs dans `figures/commun.typ`).
+2. Compiler : `bash outils/figures.sh nom`.
+3. Insérer dans la page : `![](../static/figures/<nom>.svg){.th}` pour une figure de théorie, `![](../static/figures/<nom>.svg)` dans un énoncé.
+
+Les SVG sont commités : GitHub ne recompile pas les figures. Le vérificateur signale une figure citée mais absente.
+
+### Conventions de rédaction
+
+- Tutoiement, phrases courtes, pas de calculatrice.
+- Indice 1 : renvoi vers la théorie ; indice 2 : une question à se poser ; indice 3 : une étape. Solution : réponse finale d'abord, puis les étapes.
+- Unités : `$3\,\mathrm{cm}$` ; virgule décimale : `$0{,}25$` ; limites : `\lim\limits`.
+- Figures en noir et blanc, traits fins, sans gris (impression et photocopie).
+- Préfixes d'identifiants : `alge-`, `geo-`, `tri-`, `ana-`, `sta-`, `mel-`, `mes-` (mise en situation).
+
+## Le fichier etat.json
+
+La page de pilotage l'écrit ; on peut aussi le modifier à la main (puis commit et push).
+
+```json
+{
+  "algebre": {
+    "solutions": true,
+    "ticket": ["alge-q03", "alge-q08"],
+    "ticket_solutions": false,
+    "votes": { "alge-q03": { "vote": 0.28, "revote": 0.55 } },
+    "exercices": false
+  },
+  "melange": { "exercices": true },
+  "mise-en-situation": { "solutions": false }
+}
+```
+
+| Clé | Effet |
+|:--|:--|
+| `solutions` | Solutions et pièges des QCM de séance du thème |
+| `ticket` | Questions dont les jumeaux sont affichés |
+| `ticket_solutions` | Solutions des jumeaux |
+| `votes` | Taux de réussite (entre 0 et 1), gardés pour l'édition suivante |
+| `exercices` | Correction des exercices de la catégorie |
+
+Une clé absente vaut « non publié ». **Au début d'une nouvelle édition**, remettre toutes les clés `solutions`, `ticket_solutions` et `exercices` à `false` et vider les `ticket`, en gardant les `votes` comme référence.
+
+## En cas de problème
+
+**Les solutions publiées n'apparaissent pas.** Le site est en cours de reconstruction. Sur GitHub, l'onglet *Actions* montre le déploiement en cours (cercle jaune) ou terminé (coche verte). Une fois la coche verte, recharger la page. Si le dernier déploiement a été annulé ou a échoué, utiliser *Actions → Publier le site → Run workflow* sur `main` : « Re-run » reconstruit l'ancien commit, pas le dernier.
+
+**« Erreur d'écriture » sur la page de pilotage.** Le plus souvent, le jeton n'a pas la permission d'écrire dans `coursPrepa`. Vérifier la permission « Contents : lecture et écriture » (voir plus haut).
+
+**« Jeton verrouillé ».** Saisir la phrase secrète dans la carte « Connexion ».
+
+**« Index des questions indisponible ».** La page de pilotage lit la liste des questions dans `static/questions.json`, créé à chaque reconstruction du site. Attendre la fin du déploiement, puis recharger la page.
+
+**Le déploiement échoue.** Ouvrir le déploiement dans l'onglet *Actions* : l'étape `python3 outils/verifier.py` indique la question en cause. Corriger en local avec `python3 outils/verifier.py`.
+
+**Conflit entre la page de pilotage et un push.** La page relit `etat.json` et recommence automatiquement (trois essais). Côté ordinateur, `git pull --rebase origin main` avant de pousser.
+
+## Documentation technique
+
+- `README.md` du dépôt `coursPrepa` : structure du projet, filtre, PDF.
+- `README.md` du dossier `board` du portail : page de pilotage, configuration (`config.json`, section `prepa`) et tests (`node tests/prepa.test.js`).

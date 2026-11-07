@@ -26,7 +26,7 @@ etat.json                   état publié par la page de pilotage
 banque/                     inventaire et synthèse de la banque de questions
 ```
 
-Seule l'algèbre est remplie ; les autres pages affichent « en préparation ».
+Guide d'utilisation pour l'enseignant : `prof/index.qmd`, publié sur `…/coursPrepa/prof/` (hors menu, hors recherche).
 
 ## Écrire un QCM
 
