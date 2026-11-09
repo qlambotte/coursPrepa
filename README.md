@@ -11,7 +11,7 @@ index.qmd                   accueil
 <theme>/NN-nom.qmd          chapitre de théorie n° NN du thème (HTML + PDF) ; prepa: chapitre: NN dans l'en-tête
 <theme>/qcm.qmd             QCM de la séance + ticket de sortie (HTML + PDF)
 <theme>/exercices.qmd       exercices supplémentaires du thème (corrigés par « Corriger ») : inclut <theme>/_exercices.qmd
-melange/                    questions non triées, en quiz paramétrable : {.quiz parametrable="true"} (melange/_exercices.qmd)
+melange/                    questions non triées, en quiz paramétrable, correction simple et note du concours (+1, 0, −1/3) : {.quiz parametrable="true" correction="simple"} (melange/_exercices.qmd)
 autoevaluation/             (plus tard) questionnaires de 10 questions tirées d'une banque ; page retirée du menu
 mise-en-situation/          présentation + épreuve (11 questions)
 figures/                    figures en CeTZ (une par fichier .typ, outils communs dans commun.typ)

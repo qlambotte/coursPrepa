@@ -6,9 +6,9 @@ prepa:
 
 Questions de tous les thèmes, dans le désordre, comme au concours. Pour composer un questionnaire, choisis le nombre de questions puis clique sur « Tirer un questionnaire » : les questions sont tirées au hasard. Au concours, la partie mathématique compte $11$ questions en $50$ minutes.
 
-Sous chaque exercice, les coups de pouce donnent trois indices puis la solution : consulte-les dans l'ordre. Réponds à toutes les questions, puis clique sur « Corriger ». La correction est publiée après la séance ; avant, la page affiche « Correction bientôt disponible ».
+Sous chaque exercice, les coups de pouce donnent trois indices puis la solution : consulte-les dans l'ordre. Réponds aux questions, puis clique sur « Corriger » : chaque réponse est déclarée bonne ou mauvaise, et la note est calculée comme au concours, $+1$ par bonne réponse, $0$ par abstention et $-\frac13$ par mauvaise réponse. Les solutions détaillées sont publiées après la séance.
 
-:::::: {.quiz parametrable="true"}
+:::::: {.quiz parametrable="true" correction="simple"}
 
 {{< include _exercices.qmd >}}
 

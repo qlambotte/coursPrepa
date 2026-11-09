@@ -369,7 +369,8 @@ local function quiz(div)
     local tirage = div.attributes["tirage"]
     local param = div.attributes["parametrable"] == "true"
     local b = { html('<form class="quiz"' .. (tirage and (' data-tirage="' .. echap_html(tirage) .. '"') or '') ..
-      (param and ' data-parametrable="true"' or '') .. '>') }
+      (param and ' data-parametrable="true"' or '') ..
+      (div.attributes["correction"] and (' data-correction="' .. echap_html(div.attributes["correction"]) .. '"') or '') .. '>') }
     if param then
       table.insert(b, html('<div class="reglage-quiz"><label>Nombre de questions <input type="number" class="nb-questions" min="1" step="1" value="11"></label>' ..
         '<button type="button" class="tirer">Tirer un questionnaire</button><button type="button" class="tout-afficher">Toutes les questions</button>' ..
