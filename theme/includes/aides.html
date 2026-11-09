@@ -14,7 +14,7 @@
     btn.type = 'button';
     btn.className = 'aides-toggle';
     btn.setAttribute('aria-expanded', 'false');
-    btn.innerHTML = '<span class="aides-caret">▶</span> Coups de pouce';
+    btn.innerHTML = '<span class="aides-caret">▶</span> ' + (a.dataset.titre || 'Coups de pouce');
     a.insertBefore(btn, a.firstChild);
     btn.addEventListener('click', function () {
       var open = a.classList.toggle('open');

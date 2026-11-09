@@ -11,7 +11,7 @@ index.qmd                   accueil
 <theme>/NN-nom.qmd          chapitre de théorie n° NN du thème (HTML + PDF) ; prepa: chapitre: NN dans l'en-tête
 <theme>/qcm.qmd             QCM de la séance + ticket de sortie (HTML + PDF)
 <theme>/exercices.qmd       exercices supplémentaires du thème (corrigés par « Corriger ») : inclut <theme>/_exercices.qmd
-melange/                    questions non triées, en quiz (melange/_exercices.qmd)
+melange/                    questions non triées, en quiz paramétrable : {.quiz parametrable="true"} (melange/_exercices.qmd)
 autoevaluation/             (plus tard) questionnaires de 10 questions tirées d'une banque ; page retirée du menu
 mise-en-situation/          présentation + épreuve (11 questions)
 figures/                    figures en CeTZ (une par fichier .typ, outils communs dans commun.typ)
@@ -63,6 +63,7 @@ Solution détaillée.
 - Question annulée au concours (plusieurs bonnes réponses) : `reponse="C D" annulee="true"` ; la solution explique que l'énoncé contient une erreur, que cela arrive au concours et que la question est alors annulée.
 - L'indice 1 est généré à partir de `theorie` (ids des encadrés des chapitres `<theme>/NN-nom.qmd`, séparés par des espaces).
 - Jumeau du ticket de sortie : `{.qcm .jumeau #alge-j01 jumeau-de="alge-q01" …}`, placé dans `:::::: ticket`.
+- Mise en situation : pas d'indices (blocs `::: indice` et `theorie` ignorés) ; seul le correctif, sous « Correctif ».
 - Exercice supplémentaire ou du mélange : `{.qcm .exo …}`, placé dans `:::::: quiz`. Comme une question de séance : indice 1 par `theorie` (le mélange peut renvoyer vers tous les thèmes), indices 2 et 3 par `::: indice`, solution par `::: details` ; pas de pièges. Les aides sont dans la boîte de l'exercice, sous « Coups de pouce ».
 - Encadré de théorie : `::: {.encadre #alge-pct nature="Propriété" titre="…"}` (natures : Définition, Propriété, Exemple, Remarque, Méthode, À retenir ; numérotés « Propriété 1.3 », le numéro du thème suit l'ordre algèbre 1, géométrie 2, trigonométrie 3, analyse 4, statistique 5). Les exemples et remarques n'ont pas besoin d'id.
 - N'utilise pas les préfixes d'id réservés par Quarto (`alg-`, `fig-`, `tbl-`, `eq-`, `thm-`, `def-`, `exm-`, `rem-`, `sol-`…) : c'est ce qui affichait « Algorithme ».

@@ -222,6 +222,8 @@ local function qcm(div)
 
     -- Aides : sous chaque question de séance ; dans la boîte d'un exercice (qui peut être déplacé par le tirage),
     -- seulement s'il a des indices ou une solution détaillée.
+    -- Mise en situation : pas d'indices, seulement le correctif (verrouillé jusqu'à sa publication).
+    local sans_indices = meta_theme == "mise-en-situation"
     local avec_aides = not exo or #ids_theorie > 0 or #p.indices > 0 or p.details ~= nil
     if avec_aides then
       local onglets = {}
@@ -242,8 +244,10 @@ local function qcm(div)
           pandoc.Attr("", { "verrou" }, att)) }
       end
       local k = 0
-      if #ids_theorie > 0 then k = k + 1; onglet("Indice " .. k, renvoi_theorie(ids_theorie)) end
-      for _, ind in ipairs(p.indices) do k = k + 1; onglet("Indice " .. k, ind) end
+      if not sans_indices then
+        if #ids_theorie > 0 then k = k + 1; onglet("Indice " .. k, renvoi_theorie(ids_theorie)) end
+        for _, ind in ipairs(p.indices) do k = k + 1; onglet("Indice " .. k, ind) end
+      end
       local sol = { pandoc.Div({ solution_blocs(p, reps, annulee) }, pandoc.Attr("", { "reponse" })) }
       if p.details then
         table.insert(sol, html('<details class="tw-details"><summary>Je veux plus de détails</summary>'))
@@ -253,8 +257,11 @@ local function qcm(div)
       onglet("Solution", verrou(sol))
       if p.pieges then onglet("Pièges", verrou(p.pieges)) end
       local aides = pandoc.Div({ pandoc.Div(onglets, pandoc.Attr("", { "panel-tabset" })) }, pandoc.Attr("", { "aides" }))
-      if exo then table.insert(boite.content, aides) else table.insert(b, aides) end
+      if sans_indices then aides.attributes["data-titre"] = "Correctif" end
+      table.insert(b, aides)
     end
+    -- Exercice : la boîte et ses aides restent ensemble quand le tirage déplace ou masque l'exercice.
+    if exo then b = { pandoc.Div(b, pandoc.Attr("", { "exo-groupe" })) } end
     if jumeau then
       return { pandoc.Div(b, pandoc.Attr("", { "jumeau" }, { ["data-jumeau-de"] = div.attributes["jumeau-de"] or "", hidden = "" })) }
     end
@@ -280,7 +287,7 @@ local function qcm(div)
     elseif version_prof then
       local a = {}
       table.insert(a, typ('#solution(titre: [' .. titre .. '], source: [' .. echap_typst(source) .. '])['))
-      for k, ind in ipairs(p.indices) do
+      for k, ind in ipairs(meta_theme == "mise-en-situation" and {} or p.indices) do
         table.insert(a, pandoc.Para({ pandoc.Emph({ pandoc.Str("Indice " .. (k + 1) .. " :") }) }))
         ajouter(a, ind)
       end
@@ -360,7 +367,14 @@ end
 local function quiz(div)
   if est_html then
     local tirage = div.attributes["tirage"]
-    local b = { html('<form class="quiz"' .. (tirage and (' data-tirage="' .. echap_html(tirage) .. '"') or '') .. '>') }
+    local param = div.attributes["parametrable"] == "true"
+    local b = { html('<form class="quiz"' .. (tirage and (' data-tirage="' .. echap_html(tirage) .. '"') or '') ..
+      (param and ' data-parametrable="true"' or '') .. '>') }
+    if param then
+      table.insert(b, html('<div class="reglage-quiz"><label>Nombre de questions <input type="number" class="nb-questions" min="1" step="1" value="11"></label>' ..
+        '<button type="button" class="tirer">Tirer un questionnaire</button><button type="button" class="tout-afficher">Toutes les questions</button>' ..
+        '<span class="info-quiz"></span></div>'))
+    end
     ajouter(b, div.content)
     table.insert(b, html('<div class="actions-quiz"><button type="button" class="corriger">Corriger</button>' ..
       (tirage and '<button type="button" class="nouvelle-serie">Nouvelle série</button>' or '') ..

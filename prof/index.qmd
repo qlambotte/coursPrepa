@@ -38,9 +38,9 @@ Les solutions verrouillées restent lisibles dans le code source des pages et da
 
 **Ticket de sortie.** En haut de la page du QCM, une section apparaît quand des questions sont sélectionnées sur la page de pilotage : elle contient les jumeaux de ces questions (même difficulté, autres valeurs).
 
-**Exercices supplémentaires** (une page par thème) et **mélange** (questions de tous les thèmes). L'élève coche ses réponses puis clique sur « Corriger ». Chaque exercice a aussi des coups de pouce. Tant que la correction de la catégorie n'est pas publiée, « Corriger » est inactif, la page affiche « Correction bientôt disponible » et l'onglet « Solution » est verrouillé.
+**Exercices supplémentaires** (une page par thème) et **mélange** (questions de tous les thèmes). L'élève coche ses réponses puis clique sur « Corriger ». Chaque exercice a aussi des coups de pouce, sous sa boîte. Sur la page du mélange, l'élève peut composer un questionnaire : il choisit le nombre de questions (11 par défaut, comme au concours) et clique sur « Tirer un questionnaire » ; « Toutes les questions » réaffiche la liste complète. Tant que la correction de la catégorie n'est pas publiée, « Corriger » est inactif, la page affiche « Correction bientôt disponible » et l'onglet « Solution » est verrouillé.
 
-**Mise en situation.** Onze questions en 50 minutes. Le correctif est verrouillé jusqu'à sa publication.
+**Mise en situation.** Onze questions en 50 minutes, sans indices : sous chaque question, seul un bouton « Correctif » donne la solution, verrouillée jusqu'à sa publication. Les blocs `::: indice` et l'attribut `theorie` y sont ignorés.
 
 **Télécharger.** Les PDF complets : la théorie d'une part, les QCM d'autre part.
 

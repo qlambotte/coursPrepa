@@ -4,9 +4,11 @@ prepa:
   theme: melange
 ---
 
-Questions de tous les thèmes, dans le désordre, comme au concours. Sous chaque exercice, les coups de pouce donnent trois indices puis la solution : consulte-les dans l'ordre. Réponds à toutes les questions, puis clique sur « Corriger ». La correction est publiée après la séance ; avant, la page affiche « Correction bientôt disponible ».
+Questions de tous les thèmes, dans le désordre, comme au concours. Pour composer un questionnaire, choisis le nombre de questions puis clique sur « Tirer un questionnaire » : les questions sont tirées au hasard. Au concours, la partie mathématique compte $11$ questions en $50$ minutes.
 
-:::::: quiz
+Sous chaque exercice, les coups de pouce donnent trois indices puis la solution : consulte-les dans l'ordre. Réponds à toutes les questions, puis clique sur « Corriger ». La correction est publiée après la séance ; avant, la page affiche « Correction bientôt disponible ».
+
+:::::: {.quiz parametrable="true"}
 
 {{< include _exercices.qmd >}}
 

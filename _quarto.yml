@@ -24,10 +24,48 @@ website:
     collapse-level: 1
     search: true
     contents:
-      - text: Accueil
+      - section: Accueil
         href: index.qmd
+        contents:
+          - text: Plan des séances
+            href: plan.qmd
+          - text: Télécharger les PDF
+            href: telechargements.qmd
       - text: "---"
-      - text: "Chapitres"
+      - text: "Concours"
+      - section: "QCM de séance"
+        contents:
+          - text: "Algèbre"
+            href: algebre/qcm.qmd
+          - text: "Géométrie"
+            href: geometrie/qcm.qmd
+          - text: "Trigonométrie"
+            href: trigonometrie/qcm.qmd
+          - text: "Analyse"
+            href: analyse/qcm.qmd
+          - text: "Statistique"
+            href: statistique/qcm.qmd
+      - section: "Exercices supplémentaires"
+        contents:
+          - text: "Algèbre"
+            href: algebre/exercices.qmd
+          - text: "Géométrie"
+            href: geometrie/exercices.qmd
+          - text: "Trigonométrie"
+            href: trigonometrie/exercices.qmd
+          - text: "Analyse"
+            href: analyse/exercices.qmd
+          - text: "Statistique"
+            href: statistique/exercices.qmd
+      - text: Mélange
+        href: melange/index.qmd
+      - section: "Mise en situation"
+        href: mise-en-situation/index.qmd
+        contents:
+          - text: Épreuve (11 questions)
+            href: mise-en-situation/epreuve.qmd
+      - text: "---"
+      - text: "Théorie"
       - section: "I · Algèbre"
         href: algebre/index.qmd
         contents:
@@ -99,45 +137,6 @@ website:
             href: statistique/02-position.qmd
           - text: "5.3 Écart-type"
             href: statistique/03-dispersion.qmd
-      - text: "---"
-      - text: "Concours"
-      - section: "QCM de séance"
-        contents:
-          - text: "Algèbre"
-            href: algebre/qcm.qmd
-          - text: "Géométrie"
-            href: geometrie/qcm.qmd
-          - text: "Trigonométrie"
-            href: trigonometrie/qcm.qmd
-          - text: "Analyse"
-            href: analyse/qcm.qmd
-          - text: "Statistique"
-            href: statistique/qcm.qmd
-      - section: "Exercices supplémentaires"
-        contents:
-          - text: "Algèbre"
-            href: algebre/exercices.qmd
-          - text: "Géométrie"
-            href: geometrie/exercices.qmd
-          - text: "Trigonométrie"
-            href: trigonometrie/exercices.qmd
-          - text: "Analyse"
-            href: analyse/exercices.qmd
-          - text: "Statistique"
-            href: statistique/exercices.qmd
-      - text: Mélange
-        href: melange/index.qmd
-      - section: "Mise en situation"
-        href: mise-en-situation/index.qmd
-        contents:
-          - text: Épreuve (11 questions)
-            href: mise-en-situation/epreuve.qmd
-      - text: "---"
-      - text: "Infos"
-      - text: Plan des séances
-        href: plan.qmd
-      - text: Télécharger les PDF
-        href: telechargements.qmd
   page-footer:
     center: "UMONS · Cours préparatoires au concours d'entrée en médecine et dentisterie"
 

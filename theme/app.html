@@ -55,8 +55,10 @@
     const score = form.querySelector(".score");
     const actions = form.querySelector(".actions-quiz");
     const tous = Array.from(form.querySelectorAll(".qcm-exo"));
-    const tirage = parseInt(form.dataset.tirage || "0", 10);
+    let tirage = parseInt(form.dataset.tirage || "0", 10);
     let exos = tous;
+    // La boîte d'un exercice et ses aides sont dans un même bloc .exo-groupe, déplacé ou masqué d'un coup.
+    const groupe = (ex) => ex.closest(".exo-groupe") || ex;
 
     function renumeroter() { exos.forEach((ex, i) => titre(ex, "Exercice " + (i + 1))); }
     function tirer() {
@@ -66,12 +68,20 @@
         [melange[i], melange[k]] = [melange[k], melange[i]];
       }
       exos = melange.slice(0, Math.min(tirage, tous.length));
-      tous.forEach((ex) => { ex.hidden = !exos.includes(ex); });
-      exos.forEach((ex) => form.insertBefore(ex, actions));
+      tous.forEach((ex) => { groupe(ex).hidden = !exos.includes(ex); });
+      exos.forEach((ex) => form.insertBefore(groupe(ex), actions));
       renumeroter();
     }
+    function toutAfficher() {
+      exos = tous;
+      tous.forEach((ex) => { groupe(ex).hidden = false; form.insertBefore(groupe(ex), actions); });
+      renumeroter();
+    }
+    const nb = form.querySelector(".nb-questions");
     function remettre() {
+      const garde = nb ? nb.value : null;
       form.reset();
+      if (nb) nb.value = garde;
       tous.forEach((ex) => {
         ex.querySelectorAll(".qcm-option").forEach((o) => o.classList.remove("juste", "faux"));
         ex.querySelectorAll("input").forEach((i) => (i.disabled = false));
@@ -90,6 +100,27 @@
     form.addEventListener("etat", verrouiller);
     if (tirage > 0) tirer();
     verrouiller();
+
+    // Questionnaire paramétrable : l'élève choisit le nombre de questions tirées au hasard.
+    if (nb) {
+      const info = form.querySelector(".info-quiz");
+      nb.max = tous.length;
+      const afficherInfo = () => {
+        info.textContent = exos.length === tous.length ? tous.length + " questions affichées"
+          : exos.length + " questions tirées au hasard parmi " + tous.length;
+      };
+      form.querySelector(".tirer").addEventListener("click", () => {
+        const n = Math.max(1, Math.min(parseInt(nb.value, 10) || 11, tous.length));
+        nb.value = n; tirage = n;
+        remettre(); tirer(); verrouiller(); afficherInfo();
+        window.scrollTo({ top: form.offsetTop - 80, behavior: "smooth" });
+      });
+      form.querySelector(".tout-afficher").addEventListener("click", () => {
+        tirage = 0; remettre(); toutAfficher(); verrouiller(); afficherInfo();
+      });
+      nb.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { ev.preventDefault(); form.querySelector(".tirer").click(); } });
+      afficherInfo();
+    }
 
     corriger.addEventListener("click", () => {
       const vides = exos.filter((ex) => !ex.querySelector("input:checked")).length;
