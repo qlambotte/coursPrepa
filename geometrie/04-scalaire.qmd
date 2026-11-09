@@ -44,6 +44,12 @@ Deux vecteurs sont orthogonaux si et seulement si leur produit scalaire est nul 
 Dans un carré $ABCD$ de côté $3$, $\overrightarrow{AB}$ et $\overrightarrow{AC}$ forment un angle de $45^\circ$ et $AC=3\sqrt2$, donc $\overrightarrow{AB}\cdot\overrightarrow{AC}=3\cdot3\sqrt2\cdot\frac{\sqrt2}{2}=9$. Avec des coordonnées $A(0;0)$, $B(3;0)$, $C(3;3)$ : $(3;0)\cdot(3;3)=9$.
 :::
 
+::: {.encadre nature="Remarque" titre="Al-Kashi avec le produit scalaire"}
+Avec $a=BC$, $b=AC$, $c=AB$ : $a^2=\overrightarrow{BC}\cdot\overrightarrow{BC}=\left(\overrightarrow{AC}-\overrightarrow{AB}\right)\cdot\left(\overrightarrow{AC}-\overrightarrow{AB}\right)=b^2+c^2-2\,\overrightarrow{AB}\cdot\overrightarrow{AC}=b^2+c^2-2bc\cos\hat A$.
+
+Ce calcul retrouve la formule d'Al-Kashi ([Propriété 2.2.2](02-pythagore.qmd#geo-alkashi)), mais il ne la démontre pas : il utilise la distributivité du produit scalaire, admise ici, et la justifier avec les coordonnées ($xx'+yy'$, $\sqrt{x^2+y^2}$) demande Pythagore.
+:::
+
 ::: {.encadre nature="Remarque" titre="décomposer avec Chasles"}
 Pour calculer un produit scalaire dans une figure, on décompose les vecteurs en vecteurs dont on connaît les normes et les angles (souvent des vecteurs orthogonaux), puis on développe. Ainsi, si $\vec u\perp\vec v$ : $(\vec u+\vec v)\cdot(\vec u-\vec v)=\|\vec u\|^2-\|\vec v\|^2$.
 :::
